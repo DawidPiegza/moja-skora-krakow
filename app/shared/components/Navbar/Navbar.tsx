@@ -20,7 +20,7 @@ export default function Navbar({ setSideDrawerOpen }: INavbarProps) {
   const downMd = useMediaQuery(theme.breakpoints.down("md"));
 
   return (
-    <AppBar position="static" color="transparent">
+    <AppBar position="fixed" color="default">
       <Container maxWidth="xl">
         <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
           <Box

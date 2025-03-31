@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Stack } from "@mui/material";
 import Navbar from "../../shared/components/Navbar/Navbar";
 import SideDrawer from "../../shared/components/SideDrawer/SideDrawer";
+import LandingPageView from "../LandingPageView/LandingPageView";
 
 export default function AppContainer() {
   const [isSideDrawerOpen, setSideDrawerOpen] = useState<boolean>(false);
@@ -12,7 +13,8 @@ export default function AppContainer() {
         open={isSideDrawerOpen}
         setSideDrawerOpen={setSideDrawerOpen}
       />
-      <Navbar setSideDrawerOpen={setSideDrawerOpen}></Navbar>
+      <Navbar setSideDrawerOpen={setSideDrawerOpen} />
+      <LandingPageView />
     </Stack>
   );
 }
