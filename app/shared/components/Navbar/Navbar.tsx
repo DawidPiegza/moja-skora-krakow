@@ -11,12 +11,16 @@ import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import MenuIcon from "@mui/icons-material/Menu";
 
-export default function Navbar() {
+interface INavbarProps {
+  setSideDrawerOpen: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+export default function Navbar({ setSideDrawerOpen }: INavbarProps) {
   const theme = useTheme();
   const downMd = useMediaQuery(theme.breakpoints.down("md"));
 
   return (
-    <AppBar position="static">
+    <AppBar position="static" color="transparent">
       <Container maxWidth="xl">
         <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
           <Box
@@ -33,7 +37,11 @@ export default function Navbar() {
               <Button color="inherit">Kontakt</Button>
             </Box>
           ) : (
-            <IconButton size="large" color="inherit">
+            <IconButton
+              size="large"
+              color="inherit"
+              onClick={() => setSideDrawerOpen(true)}
+            >
               <MenuIcon />
             </IconButton>
           )}
