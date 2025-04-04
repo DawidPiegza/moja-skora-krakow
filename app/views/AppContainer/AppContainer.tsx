@@ -4,6 +4,7 @@ import Navbar from "../../shared/components/Navbar/Navbar";
 import SideDrawer from "../../shared/components/SideDrawer/SideDrawer";
 import LandingPageView from "../LandingPageView/LandingPageView";
 import OfferView from "../OfferView/OfferView";
+import OurBrandsView from "../OurBrandsView/OurBrandsView";
 
 export default function AppContainer() {
   const [isSideDrawerOpen, setSideDrawerOpen] = useState<boolean>(false);
@@ -17,6 +18,7 @@ export default function AppContainer() {
       <Navbar setSideDrawerOpen={setSideDrawerOpen} />
       <LandingPageView />
       <OfferView />
+      <OurBrandsView />
     </Stack>
   );
 }

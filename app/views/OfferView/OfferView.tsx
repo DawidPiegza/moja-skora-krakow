@@ -13,7 +13,7 @@ import booksy_logo_black from "../../../public/images/booksy_logo_black.png";
 export default function OfferView() {
   const theme = useTheme();
   const downXl = useMediaQuery(theme.breakpoints.down("xl"));
-  const downMd = useMediaQuery(theme.breakpoints.down("xl"));
+  const downMd = useMediaQuery(theme.breakpoints.down("md"));
 
   return (
     <Container maxWidth="xl">
