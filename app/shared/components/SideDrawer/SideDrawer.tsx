@@ -11,6 +11,8 @@ import {
 import HomeIcon from "@mui/icons-material/Home";
 import LocalOfferIcon from "@mui/icons-material/LocalOffer";
 import ContactPageIcon from "@mui/icons-material/ContactPage";
+import GroupsIcon from "@mui/icons-material/Groups";
+import CallIcon from "@mui/icons-material/Call";
 import React from "react";
 
 interface ISideDrawerProps {
@@ -39,9 +41,14 @@ export default function SideDrawer({
       icon: <ContactPageIcon />,
     },
     {
+      name: "O nas",
+      link: "/",
+      icon: <GroupsIcon />,
+    },
+    {
       name: "Kontakt",
       link: "/",
-      icon: <ContactPageIcon />,
+      icon: <CallIcon />,
     },
   ];
 

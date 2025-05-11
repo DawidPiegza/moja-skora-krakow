@@ -10,6 +10,7 @@ import sygnet_wektorowy from "../../../../public/images/sygnet_wektorowy.svg";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import MenuIcon from "@mui/icons-material/Menu";
+import { useNavigate } from "react-router";
 
 interface INavbarProps {
   setSideDrawerOpen: React.Dispatch<React.SetStateAction<boolean>>;
@@ -18,6 +19,8 @@ interface INavbarProps {
 export default function Navbar({ setSideDrawerOpen }: INavbarProps) {
   const theme = useTheme();
   const downMd = useMediaQuery(theme.breakpoints.down("md"));
+
+  const navTo = useNavigate();
 
   return (
     <AppBar position="fixed" color="default">
@@ -31,9 +34,14 @@ export default function Navbar({ setSideDrawerOpen }: INavbarProps) {
           />
           {!downMd ? (
             <Box>
-              <Button color="inherit">Strona Główna</Button>
-              <Button color="inherit">Ofeta</Button>
+              <Button color="inherit" onClick={() => navTo("/")}>
+                Strona Główna
+              </Button>
+              <Button color="inherit">Oferta</Button>
               <Button color="inherit">Cennik</Button>
+              <Button color="inherit" onClick={() => navTo("about_us")}>
+                O nas
+              </Button>
               <Button color="inherit">Kontakt</Button>
             </Box>
           ) : (
