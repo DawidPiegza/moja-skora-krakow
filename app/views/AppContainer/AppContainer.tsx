@@ -5,6 +5,7 @@ import SideDrawer from "../../shared/components/SideDrawer/SideDrawer";
 import LandingPageView from "../LandingPageView/LandingPageView";
 import OfferView from "../OfferView/OfferView";
 import OurBrandsView from "../OurBrandsView/OurBrandsView";
+import VoucherView from "../VoucherView/VoucherView";
 
 export default function AppContainer() {
   return (
@@ -14,6 +15,7 @@ export default function AppContainer() {
       <Divider variant="middle" sx={{ bgcolor: "text.primary" }} />
       <OurBrandsView />
       <Divider variant="middle" sx={{ bgcolor: "text.primary" }} />
+      <VoucherView />
     </Stack>
   );
 }
