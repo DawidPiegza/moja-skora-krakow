@@ -38,7 +38,9 @@ export default function Navbar({ setSideDrawerOpen }: INavbarProps) {
                 Strona Główna
               </Button>
               <Button color="inherit">Oferta</Button>
-              <Button color="inherit">Cennik</Button>
+              <Button color="inherit" onClick={() => navTo("price_list")}>
+                Cennik
+              </Button>
               <Button color="inherit" onClick={() => navTo("about_us")}>
                 O nas
               </Button>
