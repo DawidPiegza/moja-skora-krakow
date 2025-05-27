@@ -31,11 +31,6 @@ export default function SideDrawer({
       icon: <HomeIcon />,
     },
     {
-      name: "Ofeta",
-      link: "/",
-      icon: <LocalOfferIcon />,
-    },
-    {
       name: "Cennik",
       link: "/",
       icon: <ContactPageIcon />,
