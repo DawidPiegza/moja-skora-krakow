@@ -19,8 +19,12 @@ export default function OfferView() {
     <Container maxWidth="xl">
       <Grid container spacing={3} paddingY={5}>
         <Grid size={12}>
-          <Typography variant={downXl ? "h5" : "h4"} align="center">
-            OFERTA NASZEGO SALONU
+          <Typography
+            variant={downXl ? "h5" : "h4"}
+            align="center"
+            fontStyle="italic"
+          >
+            Zapoznaj się z ofertą naszych usług i wybierz najlepsze dla siebie.
           </Typography>
         </Grid>
         <Grid size={12}>

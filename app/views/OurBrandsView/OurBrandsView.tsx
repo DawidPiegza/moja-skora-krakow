@@ -28,6 +28,7 @@ export default function OurBrandsView() {
             textAlign="center"
             variant="body2"
             color="textDisabled"
+            fontStyle="italic"
             sx={{
               typography: {
                 xs: "body2",

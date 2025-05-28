@@ -1,4 +1,6 @@
 import {
+  BottomNavigation,
+  BottomNavigationAction,
   Box,
   Breadcrumbs,
   Card,
@@ -13,7 +15,9 @@ import {
   useTheme,
 } from "@mui/material";
 import nasz_zespol from "../../../public/images/nasz_zespol.jpg";
-
+import FacebookIcon from "@mui/icons-material/Facebook";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import GoogleIcon from "@mui/icons-material/Google";
 export default function AboutUsView() {
   const theme = useTheme();
   const downMd = useMediaQuery(theme.breakpoints.down("md"));
@@ -51,7 +55,7 @@ export default function AboutUsView() {
             </Typography>
           </Breadcrumbs>
         </Grid>
-        <Grid size={12}>
+        <Grid size={12} paddingBottom={10}>
           <Grid
             container
             direction={downMd ? "column" : "row"}
@@ -317,6 +321,20 @@ export default function AboutUsView() {
               </Grid>
             </Grid>
           </Grid>
+        </Grid>
+        <Grid
+          size={12}
+          marginTop={3}
+          sx={{ position: "fixed", bottom: 0, left: 0, right: 0 }}
+        >
+          <BottomNavigation showLabels component={Paper} variant="outlined">
+            <BottomNavigationAction label="Facebook" icon={<FacebookIcon />} />
+            <BottomNavigationAction
+              label="Instagram"
+              icon={<InstagramIcon />}
+            />
+            <BottomNavigationAction label="Google" icon={<GoogleIcon />} />
+          </BottomNavigation>
         </Grid>
       </Grid>
     </Container>

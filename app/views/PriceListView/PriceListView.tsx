@@ -1,4 +1,6 @@
 import {
+  BottomNavigation,
+  BottomNavigationAction,
   Breadcrumbs,
   Chip,
   Container,
@@ -17,6 +19,9 @@ import {
 } from "@mui/material";
 import { PriceList } from "./data/PriceList";
 import React from "react";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import GoogleIcon from "@mui/icons-material/Google";
 
 export default function PriceListView() {
   const theme = useTheme();
@@ -55,7 +60,7 @@ export default function PriceListView() {
             </Typography>
           </Breadcrumbs>
         </Grid>
-        <Grid size={12}>
+        <Grid size={12} paddingBottom={10}>
           <Grid
             container
             direction={downMd ? "column" : "row"}
@@ -123,6 +128,20 @@ export default function PriceListView() {
               </Table>
             </TableContainer>
           </Grid>
+        </Grid>
+        <Grid
+          size={12}
+          marginTop={3}
+          sx={{ position: "fixed", bottom: 0, left: 0, right: 0 }}
+        >
+          <BottomNavigation showLabels component={Paper} variant="outlined">
+            <BottomNavigationAction label="Facebook" icon={<FacebookIcon />} />
+            <BottomNavigationAction
+              label="Instagram"
+              icon={<InstagramIcon />}
+            />
+            <BottomNavigationAction label="Google" icon={<GoogleIcon />} />
+          </BottomNavigation>
         </Grid>
       </Grid>
     </Container>

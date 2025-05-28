@@ -17,8 +17,12 @@ export default function VoucherView() {
     <Container maxWidth="xl">
       <Grid container spacing={5} paddingY={5}>
         <Grid size={12}>
-          <Typography variant={downXl ? "h5" : "h4"} align="center">
-            VOUCHER
+          <Typography
+            variant={downXl ? "h5" : "h4"}
+            align="center"
+            fontStyle="italic"
+          >
+            Voucher – idealny prezent dla bliskiej osoby{" "}
           </Typography>
         </Grid>
         <Grid size={12}>
@@ -39,9 +43,6 @@ export default function VoucherView() {
               ></Box>
             </Grid>
             <Grid size={downMd ? 12 : 6}>
-              <Typography variant="h6" fontWeight="bold" gutterBottom>
-                Voucher – idealny prezent dla bliskiej osoby{" "}
-              </Typography>
               <Typography variant="body1" gutterBottom>
                 Szukasz wyjątkowego prezentu, który sprawi radość i pozwoli na
                 chwilę relaksu? Voucher do salonu Moja Skóra Kosmetologia to

@@ -2,7 +2,7 @@ import { createTheme } from "@mui/material/styles";
 
 export const theme = createTheme({
   typography: {
-    fontFamily: '"Lato", sans-serif', // Ustawienie czcionki Roboto
+    fontFamily: "Merriweather, serif", // Ustawienie czcionki Roboto
   },
   palette: {
     mode: "light",
