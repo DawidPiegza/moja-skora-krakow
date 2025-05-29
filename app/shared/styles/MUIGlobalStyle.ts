@@ -2,15 +2,15 @@ import { createTheme } from "@mui/material/styles";
 
 export const theme = createTheme({
   typography: {
-    fontFamily: "Merriweather, serif", // Ustawienie czcionki Roboto
+    fontFamily: "Merriweather, serif",
   },
   palette: {
     mode: "light",
     primary: {
-      main: "#ffe4c4",
+      main: "#EEE8AA",
     },
     secondary: {
-      main: "#6b5889",
+      main: "#02245c",
     },
     error: {
       main: "#c62828",

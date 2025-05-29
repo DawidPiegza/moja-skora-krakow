@@ -27,7 +27,7 @@ export default function OurBrandsView() {
           <Typography
             textAlign="center"
             variant="body2"
-            color="textDisabled"
+            color="primary.main"
             fontStyle="italic"
             sx={{
               typography: {
