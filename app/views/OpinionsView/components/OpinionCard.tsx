@@ -11,7 +11,7 @@ interface IOpinionCardProps {
 export default function OpinionCard({ opinion }: IOpinionCardProps) {
   return (
     <Box
-      sx={{ minWidth: "100%", height: "max-content" }}
+      sx={{ width: "75%", height: "max-content" }}
       component={Paper}
       py={3}
       px={1}
@@ -19,7 +19,7 @@ export default function OpinionCard({ opinion }: IOpinionCardProps) {
       flexDirection="column"
       rowGap={1}
     >
-      <Typography variant="h6" gutterBottom textAlign="center">
+      <Typography variant="body1" gutterBottom textAlign="center">
         {opinion.text}
       </Typography>
       <Typography variant="body1" color="text.secondary" textAlign="center">

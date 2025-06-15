@@ -28,7 +28,7 @@ export default function OpinionsView() {
       <Grid container spacing={2} paddingY={5}>
         <Grid size={12}>
           <Typography
-            variant={downXl ? "h5" : "h4"}
+            variant={downXl ? "h6" : "h5"}
             align="center"
             fontStyle="italic"
           >
@@ -43,7 +43,7 @@ export default function OpinionsView() {
             component="img"
             sx={{
               height: "auto",
-              width: 250,
+              width: 180,
             }}
             alt="The house from the offer."
             src={google_logo}
@@ -58,21 +58,8 @@ export default function OpinionsView() {
             }}
           >
             <Grid
-              size={1}
-              display="flex"
-              alignItems="center"
-              justifyContent="flex-end"
-            >
-              <IconButton
-                disabled={currentItem === 0}
-                onClick={() => setCurrentItem((prevState) => prevState - 1)}
-              >
-                <KeyboardArrowLeftIcon fontSize="large" />
-              </IconButton>
-            </Grid>
-            <Grid
               padding={2}
-              size={10}
+              size={12}
               height="max-content"
               display="flex"
               alignItems="center"
@@ -80,19 +67,6 @@ export default function OpinionsView() {
               sx={{ overflowX: "hidden" }}
             >
               <OpinionCard opinion={OpinionsList[currentItem]} />
-            </Grid>
-            <Grid
-              size={1}
-              display="flex"
-              alignItems="center"
-              justifyContent="flex-start"
-            >
-              <IconButton
-                disabled={currentItem === OpinionsList.length - 1}
-                onClick={() => setCurrentItem((prevState) => prevState + 1)}
-              >
-                <KeyboardArrowRightIcon fontSize="large" />
-              </IconButton>
             </Grid>
           </Grid>
         </Grid>

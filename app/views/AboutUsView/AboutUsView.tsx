@@ -14,10 +14,12 @@ import {
   useMediaQuery,
   useTheme,
 } from "@mui/material";
-import nasz_zespol from "../../../public/images/nasz_zespol.jpg";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import GoogleIcon from "@mui/icons-material/Google";
+import basia_profilowe from "../../../public/images/basia_profilowe.jpg";
+import karolina_profilowe from "../../../public/images/karolina_profilowe.jpg";
+
 export default function AboutUsView() {
   const theme = useTheme();
   const downMd = useMediaQuery(theme.breakpoints.down("md"));
@@ -182,7 +184,7 @@ export default function AboutUsView() {
                           xs: "auto",
                         },
                       }}
-                      image={nasz_zespol}
+                      image={karolina_profilowe}
                       alt="Description of the image"
                     />
                   </Card>
@@ -307,7 +309,7 @@ export default function AboutUsView() {
                           xs: "auto",
                         },
                       }}
-                      image={nasz_zespol}
+                      image={basia_profilowe}
                       alt="Description of the image"
                     />
                   </Card>
