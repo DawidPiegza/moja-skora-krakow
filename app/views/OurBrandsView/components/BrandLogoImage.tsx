@@ -1,10 +1,20 @@
-import { Card, CardMedia, Grid, Paper } from "@mui/material";
+import {
+  Card,
+  CardMedia,
+  Grid,
+  Paper,
+  useMediaQuery,
+  useTheme,
+} from "@mui/material";
 
 interface IBrandLogoImageProps {
   image: string;
 }
 
 export default function BrandLogoImage({ image }: IBrandLogoImageProps) {
+  const theme = useTheme();
+  const downMd = useMediaQuery(theme.breakpoints.down("md"));
+
   return (
     <Grid
       size={{
@@ -18,13 +28,7 @@ export default function BrandLogoImage({ image }: IBrandLogoImageProps) {
     >
       <Card
         sx={{
-          height: {
-            xl: "120px",
-            lg: "100px",
-            md: "80px",
-            sm: "50px",
-            xs: "50px",
-          },
+          height: downMd ? "100px" : "125px",
           width: "100%",
           display: "flex",
           flexDirection: "column",

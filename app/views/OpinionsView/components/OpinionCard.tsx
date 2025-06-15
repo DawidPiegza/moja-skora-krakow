@@ -18,6 +18,7 @@ export default function OpinionCard({ opinion }: IOpinionCardProps) {
       display="flex"
       flexDirection="column"
       rowGap={1}
+      variant="outlined"
     >
       <Typography variant="body1" gutterBottom textAlign="center">
         {opinion.text}

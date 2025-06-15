@@ -56,41 +56,6 @@ export default function OfferView() {
             ))}
           </Grid>
         </Grid>
-        <Grid size={12}>
-          <Grid
-            container
-            direction="row"
-            sx={{
-              justifyContent: "center",
-              alignItems: "stretch",
-            }}
-            py={2}
-            spacing={1}
-          >
-            <Grid
-              size={12}
-              display="flex"
-              alignItems="center"
-              justifyContent="center"
-            >
-              <Box
-                component="img"
-                src={booksy_logo_black}
-                alt="logo booksy"
-                sx={{
-                  height: downMd ? "40px" : "80px",
-                }}
-              />
-            </Grid>
-            <Grid size={12}>
-              <Typography align="center" variant={downMd ? "body2" : "body1"}>
-                Skorzystaj z wygodnej rezerwacji wizyty przez{" "}
-                <span style={{ fontWeight: "bold" }}>Booksy</span> <br />{" "}
-                Wybierz dogodny termin i umów się bez wychodzenia z domu!
-              </Typography>
-            </Grid>
-          </Grid>
-        </Grid>
       </Grid>
     </Container>
   );

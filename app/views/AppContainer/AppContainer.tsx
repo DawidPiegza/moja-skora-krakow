@@ -7,12 +7,13 @@ import OfferView from "../OfferView/OfferView";
 import OurBrandsView from "../OurBrandsView/OurBrandsView";
 import VoucherView from "../VoucherView/VoucherView";
 import OpinionsView from "../OpinionsView/OpinionsView";
+import OurCompanyView from "../OurCompanyView/OurCompanyView";
 
 export default function AppContainer() {
   return (
     <Stack width="100vw" height="100vh">
       <LandingPageView />
-      <OfferView />
+      <OurCompanyView />
       <Box
         sx={{ bgcolor: "secondary.main" }}
         width="100vw"
