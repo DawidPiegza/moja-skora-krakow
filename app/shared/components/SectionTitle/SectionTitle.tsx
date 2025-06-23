@@ -14,6 +14,7 @@ export default function SectionTitle({ title, textColor }: ISectionTitleProps) {
       align="center"
       color={textColor && textColor}
       gutterBottom
+      fontWeight="bold"
     >
       {title}
     </Typography>

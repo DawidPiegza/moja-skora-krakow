@@ -2,7 +2,7 @@ import { createTheme } from "@mui/material/styles";
 
 export const theme = createTheme({
   typography: {
-    fontFamily: "Merriweather, serif",
+    fontFamily: "Poppins, sans-serif",
   },
   palette: {
     mode: "light",

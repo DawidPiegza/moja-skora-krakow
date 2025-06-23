@@ -109,7 +109,7 @@ export default function AboutUsView() {
                         fontStyle="italic"
                         gutterBottom
                       >
-                        mgr. kosmetologii
+                        mgr kosmetolog
                       </Typography>
                     </Grid>
                     <Grid size={12}>
@@ -123,22 +123,49 @@ export default function AboutUsView() {
                         })}
                         gutterBottom
                       >
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Phasellus molestie a quam eu auctor. Aenean elementum
-                        ligula eu ipsum tristique, non dignissim massa congue.
-                        Curabitur id felis quis orci convallis lacinia sit amet
-                        quis eros. Mauris ultrices, leo sed sagittis egestas,
-                        velit mauris fringilla lacus, a viverra ex justo nec
-                        odio. Nunc sed lacus nulla. Sed est erat, mollis et
-                        suscipit a, rhoncus aliquam nunc. Fusce lobortis nisl eu
-                        vestibulum placerat. Sed vel varius nisl. Vestibulum
-                        malesuada felis eu ex pharetra, quis dictum enim
-                        tincidunt. Proin lobortis est lectus, sed facilisis enim
-                        pretium gravida. Vestibulum vel mi vel orci viverra
-                        venenatis sed quis leo. Praesent volutpat, lorem ut
-                        pretium iaculis, velit massa maximus leo, nec fringilla
-                        erat erat id nibh. Morbi faucibus dictum nibh, sed
-                        pellentesque metus blandit id.
+                        Jestem dyplomowanym kosmetologiem i certyfikowaną
+                        linergistką. Ukończyłam kosmetologię na Krakowskiej
+                        Wyższej Szkole Promocji Zdrowia, a po latach pracy w
+                        gabinecie postanowiłam stworzyć własną przestrzeń “Moja
+                        Skóra” miejsce świadomej, nowoczesnej pielęgnacji.{" "}
+                      </Typography>
+                      <Typography
+                        sx={(theme) => ({
+                          color: "text.primary",
+                          ...theme.typography.body1,
+                          [theme.breakpoints.up("xl")]: {
+                            ...theme.typography.h6,
+                          },
+                        })}
+                        gutterBottom
+                      >
+                        Specjalizuję się w pigmentacji ust i brwi metodą Ombre
+                        oraz modelowaniu ust techniką na płasko. W pracy kieruję
+                        się zasadą „mniej znaczy więcej”, stawiam na subtelne
+                        efekty, które podkreślają indywidualne piękno, a nie je
+                        przerysowują. Moją pasją jest także praca ze skórą
+                        problematyczną. Wspieram osoby zmagające się z
+                        trudnościami skórnymi oraz profilaktyce anti-aging,
+                        opierając terapię na wiedzy, doświadczeniu i pełnym
+                        zrozumieniu potrzeb skóry. W gabinecie najważniejsze są
+                        dla mnie: zaufanie, komfort i bezwarunkowy szacunek dla
+                        każdej osoby, która powierza mi swoją skórę.
+                      </Typography>
+                      <Typography
+                        sx={(theme) => ({
+                          color: "text.primary",
+                          ...theme.typography.body1,
+                          [theme.breakpoints.up("xl")]: {
+                            ...theme.typography.h6,
+                          },
+                        })}
+                        gutterBottom
+                      >
+                        {" "}
+                        Poza pracą czerpię energię z natury, fotografii, tańca,
+                        jogi i długich spacerów z moim psem. To właśnie te
+                        chwile dają mi balans, który przekładam na jakość i
+                        spokój w pracy z klientkami.
                       </Typography>
                     </Grid>
                   </Grid>
@@ -221,7 +248,7 @@ export default function AboutUsView() {
                           },
                         })}
                       >
-                        Karolina <br /> Sałdan
+                        Barbara <br /> Żelazo
                       </Typography>
                       <Typography
                         sx={(theme) => ({
@@ -234,7 +261,7 @@ export default function AboutUsView() {
                         fontStyle="italic"
                         gutterBottom
                       >
-                        mgr. kosmetologii
+                        mgr kosmetologi
                       </Typography>
                     </Grid>
                     <Grid size={12}>
@@ -248,22 +275,66 @@ export default function AboutUsView() {
                         })}
                         gutterBottom
                       >
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Phasellus molestie a quam eu auctor. Aenean elementum
-                        ligula eu ipsum tristique, non dignissim massa congue.
-                        Curabitur id felis quis orci convallis lacinia sit amet
-                        quis eros. Mauris ultrices, leo sed sagittis egestas,
-                        velit mauris fringilla lacus, a viverra ex justo nec
-                        odio. Nunc sed lacus nulla. Sed est erat, mollis et
-                        suscipit a, rhoncus aliquam nunc. Fusce lobortis nisl eu
-                        vestibulum placerat. Sed vel varius nisl. Vestibulum
-                        malesuada felis eu ex pharetra, quis dictum enim
-                        tincidunt. Proin lobortis est lectus, sed facilisis enim
-                        pretium gravida. Vestibulum vel mi vel orci viverra
-                        venenatis sed quis leo. Praesent volutpat, lorem ut
-                        pretium iaculis, velit massa maximus leo, nec fringilla
-                        erat erat id nibh. Morbi faucibus dictum nibh, sed
-                        pellentesque metus blandit id.
+                        Jestem magistrem kosmetologii i certyfikowaną
+                        linergistką, absolwentką Krakowskiej Wyższej Szkoły
+                        Promocji Zdrowia oraz Górnośląskiej Wyższej Szkoły
+                        Handlowej. Od dziewięciu lat rozwijam się w kosmetologii
+                        estetycznej, zdobywając doświadczenie w gabinetach,
+                        gdzie zrodziła się moja pasja do zabiegów anti-aging
+                        oraz pracy ze skórami problematycznymi. Specjalizuję się
+                        w makijażu permanentnym ust oraz brwi metodą ombre, a
+                        także modelowaniu ust na płasko. Skupiam się na
+                        naturalnych efektach – dopracowanych z wyczuciem,
+                        precyzją i dopasowując do urody oraz potrzeb klienta.{" "}
+                      </Typography>
+                      <Typography
+                        sx={(theme) => ({
+                          color: "text.primary",
+                          ...theme.typography.body1,
+                          [theme.breakpoints.up("xl")]: {
+                            ...theme.typography.h6,
+                          },
+                        })}
+                        gutterBottom
+                      >
+                        Z pasją dążę do realizacji swoich celów, co zaowocowało
+                        powstaniem mojego gabinetu – Moja Skóra. Każdy zabieg
+                        wykonuję z pełnym skupieniem i zaangażowaniem wsłuchując
+                        się w potrzeby i historię skóry. Na co dzień tworzę
+                        indywidualne plany zabiegowe, zaczynając od konsultacji
+                        i analizy skóry – by wspólnie dobrać skuteczny plan
+                        działania, również w pielęgnacji domowej.{" "}
+                      </Typography>
+                      <Typography
+                        sx={(theme) => ({
+                          color: "text.primary",
+                          ...theme.typography.body1,
+                          [theme.breakpoints.up("xl")]: {
+                            ...theme.typography.h6,
+                          },
+                        })}
+                        gutterBottom
+                      >
+                        W pracy kieruję się spokojem, empatią i uważnym
+                        słuchaniem – to właśnie one pozwalają mi budować relacje
+                        oparte na zaufaniu i poczuciu komfortu. Zależy mi, aby
+                        każda wizyta była nie tylko krokiem w stronę zdrowej
+                        skóry, ale również przyjemnym doświadczeniem, które
+                        poprawia nastrój.
+                      </Typography>
+                      <Typography
+                        sx={(theme) => ({
+                          color: "text.primary",
+                          ...theme.typography.body1,
+                          [theme.breakpoints.up("xl")]: {
+                            ...theme.typography.h6,
+                          },
+                        })}
+                        gutterBottom
+                      >
+                        Po pracy odpoczywam w podróżach, poznawaniu nowych
+                        kultur, tańcu i klimacie kina kostiumowego – to mój
+                        sposób na oddech i inspirację.
                       </Typography>
                     </Grid>
                   </Grid>

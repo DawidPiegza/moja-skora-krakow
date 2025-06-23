@@ -19,6 +19,7 @@ import GoogleIcon from "@mui/icons-material/Google";
 import PlaceOutlinedIcon from "@mui/icons-material/PlaceOutlined";
 import LocalPhoneOutlinedIcon from "@mui/icons-material/LocalPhoneOutlined";
 import AccessTimeOutlinedIcon from "@mui/icons-material/AccessTimeOutlined";
+import SectionTitle from "../../shared/components/SectionTitle/SectionTitle";
 export default function ContactView() {
   const theme = useTheme();
   const downMd = useMediaQuery(theme.breakpoints.down("md"));
@@ -71,10 +72,11 @@ export default function ContactView() {
                 variant={downMd ? "h6" : "h5"}
                 align="center"
                 fontStyle="italic"
-              >
-                Jesteśmy tu dla Ciebie! Skontaktuj się z nami, aby umówić wizytę
-                lub uzyskać więcej informacji o naszych usługach.
-              </Typography>
+              ></Typography>
+              <SectionTitle
+                title="Jesteśmy tu dla Ciebie! Skontaktuj się z nami, aby umówić wizytę
+                lub uzyskać więcej informacji o naszych usługach."
+              />
             </Grid>
             <Grid size={12}>
               <Grid container width="100%" spacing={1}>
