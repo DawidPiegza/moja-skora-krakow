@@ -23,7 +23,12 @@ export default function Navbar({ setSideDrawerOpen }: INavbarProps) {
   const navTo = useNavigate();
 
   return (
-    <AppBar position="fixed" color="default">
+    <AppBar
+      position="fixed"
+      color="transparent"
+      variant="outlined"
+      sx={{ border: "none" }}
+    >
       <Container maxWidth="xl">
         <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
           <Box
