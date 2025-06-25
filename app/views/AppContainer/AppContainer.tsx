@@ -11,6 +11,7 @@ export default function AppContainer() {
       <Divider />
       <Divider orientation="vertical" flexItem />
       <ServiceCategories />
+      <Divider orientation="vertical" flexItem />
     </Stack>
   );
 }
