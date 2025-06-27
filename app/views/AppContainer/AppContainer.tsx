@@ -2,6 +2,7 @@ import { Divider, Stack } from "@mui/material";
 import LandingPageView from "../LandingPageView/LandingPageView";
 import OurCompanyView from "../OurCompanyView/OurCompanyView";
 import ServiceCategories from "../ServiceCategoriesView/ServiceCategories";
+import OurBrandsView from "../OurBrandsView/OurBrandsView";
 
 export default function AppContainer() {
   return (
@@ -9,9 +10,10 @@ export default function AppContainer() {
       <LandingPageView />
       <OurCompanyView />
       <Divider />
-      <Divider orientation="vertical" flexItem />
       <ServiceCategories />
-      <Divider orientation="vertical" flexItem />
+      <Divider />
+      <OurBrandsView />
+      <Divider />
     </Stack>
   );
 }

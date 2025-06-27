@@ -6,7 +6,9 @@ import {
   CardHeader,
   CardMedia,
   Grid,
+  useMediaQuery,
 } from "@mui/material";
+import { theme } from "../../../../shared/styles/MUIGlobalStyle";
 
 interface IServiceCategoryCardProps {
   serviceCategory: IServiceCategory;
@@ -15,11 +17,13 @@ interface IServiceCategoryCardProps {
 export default function ServiceCategoryCard({
   serviceCategory,
 }: IServiceCategoryCardProps) {
+  const domwMd = useMediaQuery(theme.breakpoints.down("md"));
+
   return (
     <Grid
       size={{
         xs: 12,
-        md: 6,
+        sm: 6,
         lg: 3,
       }}
     >
@@ -27,7 +31,7 @@ export default function ServiceCategoryCard({
         <CardActionArea>
           <CardMedia
             component="img"
-            height="535px"
+            height={domwMd ? "250px" : "535px"}
             image={serviceCategory.pictureURL}
             alt={serviceCategory.title}
           />
