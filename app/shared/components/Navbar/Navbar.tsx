@@ -48,6 +48,9 @@ export default function Navbar({ setSideDrawerOpen }: INavbarProps) {
               <Button color="inherit" onClick={() => navTo("our_team")}>
                 Nasz zespół
               </Button>
+              <Button color="inherit" onClick={() => navTo("statute")}>
+                Regulamin
+              </Button>
               <Button color="inherit" onClick={() => navTo("contact")}>
                 Kontakt
               </Button>

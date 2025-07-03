@@ -33,7 +33,7 @@ export default function OurBrandsView() {
       setTimeout(() => {
         setCurrentIndex((prev) => (prev + 1) % logos.length);
         setFade(true);
-      }, 300); // fade out time
+      }, 300);
     }, 3000);
 
     return () => clearInterval(interval);

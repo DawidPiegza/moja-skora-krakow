@@ -3,6 +3,7 @@ import LandingPageView from "../LandingPageView/LandingPageView";
 import OurCompanyView from "../OurCompanyView/OurCompanyView";
 import ServiceCategories from "../ServiceCategoriesView/ServiceCategories";
 import OurBrandsView from "../OurBrandsView/OurBrandsView";
+import VoucherView from "../VoucherView/VoucherView";
 
 export default function AppContainer() {
   return (
@@ -12,8 +13,9 @@ export default function AppContainer() {
       <Divider />
       <ServiceCategories />
       <Divider />
-      <OurBrandsView />
+      <VoucherView />
       <Divider />
+      <OurBrandsView />
     </Stack>
   );
 }

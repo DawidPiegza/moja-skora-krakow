@@ -26,7 +26,6 @@ import GoogleIcon from "@mui/icons-material/Google";
 export default function PriceListView() {
   const theme = useTheme();
   const downMd = useMediaQuery(theme.breakpoints.down("md"));
-  const betweenMdAndLg = useMediaQuery(theme.breakpoints.between("sm", "lg"));
 
   return (
     <Container maxWidth="xl" sx={{ marginTop: "65px" }}>
