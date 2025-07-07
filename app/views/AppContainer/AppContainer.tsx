@@ -4,6 +4,7 @@ import OurCompanyView from "../OurCompanyView/OurCompanyView";
 import ServiceCategories from "../ServiceCategoriesView/ServiceCategories";
 import OurBrandsView from "../OurBrandsView/OurBrandsView";
 import VoucherView from "../VoucherView/VoucherView";
+import OpinionsView from "../OpinionsView/OpinionsView";
 
 export default function AppContainer() {
   return (
@@ -16,6 +17,8 @@ export default function AppContainer() {
       <VoucherView />
       <Divider />
       <OurBrandsView />
+      <Divider />
+      <OpinionsView />
     </Stack>
   );
 }

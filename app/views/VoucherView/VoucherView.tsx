@@ -1,19 +1,21 @@
 import {
+  Button,
   Card,
   CardMedia,
   Container,
   Grid,
-  Link,
   Typography,
   useMediaQuery,
   useTheme,
 } from "@mui/material";
 import SectionTitle from "../../shared/components/SectionTitle/SectionTitle";
 import salon_glowne_zdjecie from "../../../public/images/salon_glowne_zdjecie.jpeg";
+import { useNavigate } from "react-router";
 
 export default function VoucherView() {
   const theme = useTheme();
   const downMd = useMediaQuery(theme.breakpoints.down("md"));
+  let navigate = useNavigate();
   return (
     <Container maxWidth="xl">
       <Grid container spacing={3} paddingY={2}>
@@ -86,15 +88,15 @@ export default function VoucherView() {
             >
               Szczegółowe zasady zakupu, wysyłki oraz wykorzystania Vouchera
               znajdują się w{" "}
-              <Link
-                fontWeight="bold"
-                underline="hover"
-                color="secondary"
-                sx={{ cursor: "pointer" }}
-              >
-                Regulaminie
-              </Link>
             </Typography>
+            <Button
+              size="small"
+              variant="text"
+              sx={{ color: "secondary.main" }}
+              onClick={() => navigate("/voucher_statute")}
+            >
+              Regulaminie
+            </Button>
           </Grid>
         </Grid>
       </Grid>

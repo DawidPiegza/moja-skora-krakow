@@ -31,7 +31,7 @@ export default function ServiceCategoryCard({
         <CardActionArea>
           <CardMedia
             component="img"
-            height={domwMd ? "250px" : "535px"}
+            height={domwMd ? "250px" : "400px"}
             image={serviceCategory.pictureURL}
             alt={serviceCategory.title}
           />

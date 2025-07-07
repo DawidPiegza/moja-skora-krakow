@@ -45,7 +45,7 @@ export default function VoucherStatueView() {
                 [theme.breakpoints.up("md")]: theme.typography.body1,
               }}
             >
-              Regulamin
+              Reagulamin Voucheara
             </Typography>
           </Breadcrumbs>
         </Grid>
