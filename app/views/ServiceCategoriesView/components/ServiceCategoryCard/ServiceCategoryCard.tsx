@@ -9,6 +9,9 @@ import {
   useMediaQuery,
 } from "@mui/material";
 import { theme } from "../../../../shared/styles/MUIGlobalStyle";
+import * as motion from "motion/react-client";
+import { useInView } from "react-intersection-observer";
+import { useEffect, useState } from "react";
 
 interface IServiceCategoryCardProps {
   serviceCategory: IServiceCategory;
@@ -18,6 +21,13 @@ export default function ServiceCategoryCard({
   serviceCategory,
 }: IServiceCategoryCardProps) {
   const domwMd = useMediaQuery(theme.breakpoints.down("md"));
+  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1 });
+  const [show, setShow] = useState(false);
+
+  useEffect(() => {
+    if (inView) setShow(true);
+    if (!inView) setShow(false);
+  }, [inView]);
 
   return (
     <Grid
@@ -26,21 +36,38 @@ export default function ServiceCategoryCard({
         sm: 6,
         lg: 3,
       }}
+      ref={ref}
     >
-      <Card sx={{ width: "100%" }}>
-        <CardActionArea>
-          <CardMedia
-            component="img"
-            height={domwMd ? "250px" : "400px"}
-            image={serviceCategory.pictureURL}
-            alt={serviceCategory.title}
-          />
-          <CardHeader
-            subheader={serviceCategory.title}
-            sx={{ textAlign: "center" }}
-          />
-        </CardActionArea>
-      </Card>
+      {show && (
+        <Card
+          sx={{ width: "100%" }}
+          component={motion.div}
+          initial={{ opacity: 0, x: -500 }}
+          animate={{
+            opacity: 1,
+            x: 0,
+            transition: {
+              delay: 0.2,
+              type: "spring",
+              visualDuration: 1,
+              bounce: 0.4,
+            },
+          }}
+        >
+          <CardActionArea>
+            <CardMedia
+              component="img"
+              height={domwMd ? "250px" : "400px"}
+              image={serviceCategory.pictureURL}
+              alt={serviceCategory.title}
+            />
+            <CardHeader
+              subheader={serviceCategory.title}
+              sx={{ textAlign: "center" }}
+            />
+          </CardActionArea>
+        </Card>
+      )}
     </Grid>
   );
 }
