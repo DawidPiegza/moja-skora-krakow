@@ -47,7 +47,7 @@ export default function ServiceCategoryCard({
             opacity: 1,
             x: 0,
             transition: {
-              delay: 0.2,
+              delay: 0.5,
               type: "spring",
               visualDuration: 1,
               bounce: 0.4,

@@ -1,6 +1,4 @@
 import {
-  BottomNavigation,
-  BottomNavigationAction,
   Box,
   Breadcrumbs,
   Card,
@@ -14,11 +12,9 @@ import {
   useMediaQuery,
   useTheme,
 } from "@mui/material";
-import FacebookIcon from "@mui/icons-material/Facebook";
-import InstagramIcon from "@mui/icons-material/Instagram";
-import GoogleIcon from "@mui/icons-material/Google";
 import basia_profilowe from "../../../public/images/basia_profilowe.jpg";
 import karolina_profilowe from "../../../public/images/karolina_profilowe.jpg";
+import { motion } from "framer-motion";
 
 export default function AboutUsView() {
   const theme = useTheme();
@@ -57,7 +53,7 @@ export default function AboutUsView() {
             </Typography>
           </Breadcrumbs>
         </Grid>
-        <Grid size={12} paddingBottom={10}>
+        <Grid size={12}>
           <Grid
             container
             direction={downMd ? "column" : "row"}
@@ -195,6 +191,18 @@ export default function AboutUsView() {
                   alignItems="center"
                   justifyContent={betweenMdAndLg ? "flex-start" : "flex-end"}
                   py={1}
+                  component={motion.div}
+                  initial={{ opacity: 0, x: 500 }}
+                  animate={{
+                    opacity: 1,
+                    x: 0,
+                    transition: {
+                      delay: 0.5,
+                      type: "spring",
+                      visualDuration: 1,
+                      bounce: 0.4,
+                    },
+                  }}
                 >
                   <Card
                     component={Paper}
@@ -364,6 +372,18 @@ export default function AboutUsView() {
                   alignItems="center"
                   justifyContent={betweenMdAndLg ? "flex-start" : "flex-end"}
                   py={1}
+                  component={motion.div}
+                  initial={{ opacity: 0, x: 500 }}
+                  animate={{
+                    opacity: 1,
+                    x: 0,
+                    transition: {
+                      delay: 0.5,
+                      type: "spring",
+                      visualDuration: 1,
+                      bounce: 0.4,
+                    },
+                  }}
                 >
                   <Card
                     component={Paper}
@@ -394,20 +414,6 @@ export default function AboutUsView() {
               </Grid>
             </Grid>
           </Grid>
-        </Grid>
-        <Grid
-          size={12}
-          marginTop={3}
-          sx={{ position: "fixed", bottom: 0, left: 0, right: 0 }}
-        >
-          <BottomNavigation showLabels component={Paper} variant="outlined">
-            <BottomNavigationAction label="Facebook" icon={<FacebookIcon />} />
-            <BottomNavigationAction
-              label="Instagram"
-              icon={<InstagramIcon />}
-            />
-            <BottomNavigationAction label="Google" icon={<GoogleIcon />} />
-          </BottomNavigation>
         </Grid>
       </Grid>
     </Container>

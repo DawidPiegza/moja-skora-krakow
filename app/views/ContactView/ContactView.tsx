@@ -1,6 +1,4 @@
 import {
-  BottomNavigation,
-  BottomNavigationAction,
   Box,
   Breadcrumbs,
   Button,
@@ -13,20 +11,30 @@ import {
   useMediaQuery,
   useTheme,
 } from "@mui/material";
-import FacebookIcon from "@mui/icons-material/Facebook";
-import InstagramIcon from "@mui/icons-material/Instagram";
-import GoogleIcon from "@mui/icons-material/Google";
+
 import PlaceOutlinedIcon from "@mui/icons-material/PlaceOutlined";
 import LocalPhoneOutlinedIcon from "@mui/icons-material/LocalPhoneOutlined";
 import AccessTimeOutlinedIcon from "@mui/icons-material/AccessTimeOutlined";
 import SectionTitle from "../../shared/components/SectionTitle/SectionTitle";
+import { motion } from "framer-motion";
 export default function ContactView() {
   const theme = useTheme();
   const downMd = useMediaQuery(theme.breakpoints.down("md"));
   const betweenMdAndLg = useMediaQuery(theme.breakpoints.between("sm", "lg"));
 
   return (
-    <Container maxWidth="xl" sx={{ marginTop: "65px" }}>
+    <Container
+      maxWidth="xl"
+      sx={{ marginTop: "65px" }}
+      component={motion.div}
+      initial={{ opacity: 0, scale: 0.5 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{
+        duration: 0.8,
+        delay: 0.2,
+        ease: [0, 0.71, 0.2, 1.01],
+      }}
+    >
       <Grid container spacing={3} paddingY={2}>
         <Grid size={12}>
           <Breadcrumbs aria-label="breadcrumb">
@@ -140,7 +148,7 @@ export default function ContactView() {
                 </Grid>
               </Grid>
             </Grid>
-            <Grid size={12} paddingBottom={10}>
+            <Grid size={12}>
               <Grid container spacing={1}>
                 <Grid size={downMd ? 12 : 6}>
                   <Box
@@ -223,23 +231,6 @@ export default function ContactView() {
                   </Box>
                 </Grid>
               </Grid>
-            </Grid>
-            <Grid
-              size={12}
-              marginTop={3}
-              sx={{ position: "fixed", bottom: 0, left: 0, right: 0 }}
-            >
-              <BottomNavigation showLabels component={Paper} variant="outlined">
-                <BottomNavigationAction
-                  label="Facebook"
-                  icon={<FacebookIcon />}
-                />
-                <BottomNavigationAction
-                  label="Instagram"
-                  icon={<InstagramIcon />}
-                />
-                <BottomNavigationAction label="Google" icon={<GoogleIcon />} />
-              </BottomNavigation>
             </Grid>
           </Grid>
         </Grid>
