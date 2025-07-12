@@ -1,20 +1,14 @@
 import {
-  BottomNavigation,
-  BottomNavigationAction,
   Breadcrumbs,
   Container,
   Grid,
   Link,
-  Paper,
   Typography,
   useMediaQuery,
   useTheme,
 } from "@mui/material";
 import SectionTitle from "../../shared/components/SectionTitle/SectionTitle";
 import React from "react";
-import FacebookIcon from "@mui/icons-material/Facebook";
-import InstagramIcon from "@mui/icons-material/Instagram";
-import GoogleIcon from "@mui/icons-material/Google";
 import { voucherStatue } from "./data/voucherStatue";
 
 export default function VoucherStatueView() {
@@ -51,7 +45,6 @@ export default function VoucherStatueView() {
         </Grid>
         <Grid
           size={12}
-          paddingBottom={10}
           display="flex"
           flexDirection="column"
           justifyContent="center"
@@ -80,20 +73,6 @@ export default function VoucherStatueView() {
               })}
             </React.Fragment>
           ))}
-        </Grid>
-        <Grid
-          size={12}
-          marginTop={3}
-          sx={{ position: "fixed", bottom: 0, left: 0, right: 0 }}
-        >
-          <BottomNavigation showLabels component={Paper} variant="outlined">
-            <BottomNavigationAction label="Facebook" icon={<FacebookIcon />} />
-            <BottomNavigationAction
-              label="Instagram"
-              icon={<InstagramIcon />}
-            />
-            <BottomNavigationAction label="Google" icon={<GoogleIcon />} />
-          </BottomNavigation>
         </Grid>
       </Grid>
     </Container>

@@ -12,9 +12,10 @@ import {
   useMediaQuery,
   useTheme,
 } from "@mui/material";
+
 import basia_profilowe from "../../../public/images/basia_profilowe.jpg";
 import karolina_profilowe from "../../../public/images/karolina_profilowe.jpg";
-import { motion } from "framer-motion";
+import * as motion from "motion/react-client";
 
 export default function AboutUsView() {
   const theme = useTheme();
@@ -191,24 +192,8 @@ export default function AboutUsView() {
                   alignItems="center"
                   justifyContent={betweenMdAndLg ? "flex-start" : "flex-end"}
                   py={1}
-                  component={motion.div}
-                  initial={{ opacity: 0, x: 500 }}
-                  animate={{
-                    opacity: 1,
-                    x: 0,
-                    transition: {
-                      delay: 0.5,
-                      type: "spring",
-                      visualDuration: 1,
-                      bounce: 0.4,
-                    },
-                  }}
                 >
-                  <Card
-                    component={Paper}
-                    variant="outlined"
-                    sx={{ padding: 2 }}
-                  >
+                  <Card sx={{ padding: 2 }}>
                     <CardMedia
                       component="img"
                       sx={{
@@ -372,24 +357,8 @@ export default function AboutUsView() {
                   alignItems="center"
                   justifyContent={betweenMdAndLg ? "flex-start" : "flex-end"}
                   py={1}
-                  component={motion.div}
-                  initial={{ opacity: 0, x: 500 }}
-                  animate={{
-                    opacity: 1,
-                    x: 0,
-                    transition: {
-                      delay: 0.5,
-                      type: "spring",
-                      visualDuration: 1,
-                      bounce: 0.4,
-                    },
-                  }}
                 >
-                  <Card
-                    component={Paper}
-                    variant="outlined"
-                    sx={{ padding: 2 }}
-                  >
+                  <Card sx={{ padding: 2 }}>
                     <CardMedia
                       component="img"
                       sx={{

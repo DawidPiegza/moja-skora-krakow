@@ -51,7 +51,6 @@ export default function StatueView() {
         </Grid>
         <Grid
           size={12}
-          paddingBottom={10}
           display="flex"
           flexDirection="column"
           justifyContent="center"
@@ -107,20 +106,6 @@ export default function StatueView() {
               })}
             </React.Fragment>
           ))}
-        </Grid>
-        <Grid
-          size={12}
-          marginTop={3}
-          sx={{ position: "fixed", bottom: 0, left: 0, right: 0 }}
-        >
-          <BottomNavigation showLabels component={Paper} variant="outlined">
-            <BottomNavigationAction label="Facebook" icon={<FacebookIcon />} />
-            <BottomNavigationAction
-              label="Instagram"
-              icon={<InstagramIcon />}
-            />
-            <BottomNavigationAction label="Google" icon={<GoogleIcon />} />
-          </BottomNavigation>
         </Grid>
       </Grid>
     </Container>

@@ -24,7 +24,7 @@ export default function Navbar({ setSideDrawerOpen }: INavbarProps) {
 
   return (
     <AppBar
-      position="fixed"
+      position="absolute"
       color="transparent"
       variant="outlined"
       sx={{ border: "none" }}
@@ -37,7 +37,7 @@ export default function Navbar({ setSideDrawerOpen }: INavbarProps) {
             alt="logo booksy"
             height={downMd ? "30px" : "40px"}
           />
-          {!downMd ? (
+          {!downMd && (
             <Box>
               <Button color="inherit" onClick={() => navTo("/")}>
                 Strona Główna
@@ -48,14 +48,12 @@ export default function Navbar({ setSideDrawerOpen }: INavbarProps) {
               <Button color="inherit" onClick={() => navTo("our_team")}>
                 Nasz zespół
               </Button>
-              <Button color="inherit" onClick={() => navTo("statute")}>
-                Regulamin
-              </Button>
               <Button color="inherit" onClick={() => navTo("contact")}>
                 Kontakt
               </Button>
             </Box>
-          ) : (
+          )}
+          {downMd && (
             <IconButton
               size="large"
               color="inherit"

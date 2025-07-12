@@ -30,11 +30,11 @@ export default function App() {
 
   return (
     <ThemeProvider theme={theme}>
+      <Navbar setSideDrawerOpen={setSideDrawerOpen} />
       <SideDrawer
         open={isSideDrawerOpen}
         setSideDrawerOpen={setSideDrawerOpen}
       />
-      <Navbar setSideDrawerOpen={setSideDrawerOpen} />
       <Outlet />
     </ThemeProvider>
   );
