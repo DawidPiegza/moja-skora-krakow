@@ -15,10 +15,12 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import GoogleIcon from "@mui/icons-material/Google";
 import booksy_logo_black from "../../../public/images/booksy_logo_black.png";
+import { useNavigate } from "react-router";
 
 export default function FooterView() {
   const theme = useTheme();
   const domwMd = useMediaQuery(theme.breakpoints.down("md"));
+  let navigate = useNavigate();
 
   return (
     <Container maxWidth="xl">
@@ -38,49 +40,41 @@ export default function FooterView() {
           alignItems="center"
         >
           <Link
-            href="/statute"
             underline="none"
             sx={{ cursor: "pointer" }}
             color="text.primary"
             variant="caption"
+            onClick={() => navigate("/statute")}
+            component={Button}
           >
             REGULAMIN GABINETU
           </Link>
           <Link
-            href="/voucher_statute"
             underline="none"
             sx={{ cursor: "pointer" }}
             color="text.primary"
             variant="caption"
+            onClick={() => navigate("/voucher_statute")}
+            component={Button}
           >
             REGULAMIN VOUCHERU
           </Link>
           {!domwMd && (
             <Link
-              href="/contact"
               underline="none"
               sx={{ cursor: "pointer" }}
               color="text.primary"
               variant="caption"
+              onClick={() => navigate("/contact")}
+              component={Button}
             >
               KONTAKT
             </Link>
           )}
 
           {!domwMd && (
-            <Link
-              href="/"
-              underline="none"
-              sx={{ cursor: "pointer" }}
-              color="text.primary"
-              variant="caption"
-            >
-              STRONA GŁÓWNA
-            </Link>
-          )}
-
-          {!domwMd && (
             <Button
+              href="https://booksy.com/pl-pl/249371_moja-skora_salon-kosmetyczny_8820_krakow"
               sx={{
                 width: "80px",
                 height: "50px",
@@ -90,6 +84,7 @@ export default function FooterView() {
                 backgroundRepeat: "no-repeat",
                 cursor: "pointer",
               }}
+              target="_blank"
             />
           )}
         </Grid>

@@ -6,31 +6,43 @@ import OurBrandsView from "../OurBrandsView/OurBrandsView";
 import VoucherView from "../VoucherView/VoucherView";
 import OpinionsView from "../OpinionsView/OpinionsView";
 import FooterView from "../FooterView/FooterView";
+import { useEffect, useState } from "react";
+import React from "react";
 
 export default function AppContainer() {
+  const [isLoading, setLoading] = useState<boolean>(true);
+
+  useEffect(() => {
+    setLoading(false);
+  }, []);
+
   return (
-    <Stack width="100vw" height="max-content" rowGap={3}>
-      <LandingPageView />
-      <OurCompanyView />
-      <Divider />
-      <ServiceCategories />
-      <Divider />
-      <VoucherView />
-      <Divider />
-      <OurBrandsView />
-      <Divider />
-      <OpinionsView />
-      <Divider />
-      <Stack
-        width="100vw"
-        height="max-content"
-        bgcolor="primary.main"
-        direction="column"
-        alignItems="center"
-        justifyContent="flex-start"
-      >
-        <FooterView />
-      </Stack>
-    </Stack>
+    <React.Fragment>
+      {!isLoading && (
+        <Stack width="100vw" height="max-content" rowGap={3}>
+          <LandingPageView />
+          <OurCompanyView />
+          <Divider />
+          <ServiceCategories />
+          <Divider />
+          <VoucherView />
+          <Divider />
+          <OurBrandsView />
+          <Divider />
+          <OpinionsView />
+          <Divider />
+          <Stack
+            width="100vw"
+            height="max-content"
+            bgcolor="primary.main"
+            direction="column"
+            alignItems="center"
+            justifyContent="flex-start"
+          >
+            <FooterView />
+          </Stack>
+        </Stack>
+      )}
+    </React.Fragment>
   );
 }
