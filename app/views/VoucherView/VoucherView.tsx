@@ -9,7 +9,7 @@ import {
   useTheme,
 } from "@mui/material";
 import SectionTitle from "../../shared/components/SectionTitle/SectionTitle";
-import salon_glowne_zdjecie from "../../../public/images/salon_glowne_zdjecie.jpeg";
+import voucher_image from "../../../public/images/voucher_image.jpeg";
 import { useNavigate } from "react-router";
 import * as motion from "motion/react-client";
 import { useInView } from "react-intersection-observer";
@@ -45,7 +45,7 @@ export default function VoucherView() {
                   component="img"
                   alt="green iguana"
                   height="max-content"
-                  image={salon_glowne_zdjecie}
+                  image={voucher_image}
                 />
               </Card>
             )}

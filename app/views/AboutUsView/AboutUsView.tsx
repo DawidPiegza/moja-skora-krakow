@@ -216,7 +216,7 @@ export default function AboutUsView() {
                       py={1}
                       ref={ref}
                     >
-                      {inView && (
+                      {show && (
                         <Card
                           sx={{ padding: 2 }}
                           component={motion.div}
@@ -402,7 +402,7 @@ export default function AboutUsView() {
                       }
                       py={1}
                     >
-                      {inView && (
+                      {show && (
                         <Card
                           sx={{ padding: 2 }}
                           component={motion.div}

@@ -6,6 +6,7 @@ import "./app.css";
 import { useState } from "react";
 import SideDrawer from "./shared/components/SideDrawer/SideDrawer";
 import Navbar from "./shared/components/Navbar/Navbar";
+import WebsiteLanguageProvider from "./shared/contexts/LanguageContext";
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -30,12 +31,14 @@ export default function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <Navbar setSideDrawerOpen={setSideDrawerOpen} />
-      <SideDrawer
-        open={isSideDrawerOpen}
-        setSideDrawerOpen={setSideDrawerOpen}
-      />
-      <Outlet />
+      <WebsiteLanguageProvider>
+        <Navbar setSideDrawerOpen={setSideDrawerOpen} />
+        <SideDrawer
+          open={isSideDrawerOpen}
+          setSideDrawerOpen={setSideDrawerOpen}
+        />
+        <Outlet />
+      </WebsiteLanguageProvider>
     </ThemeProvider>
   );
 }

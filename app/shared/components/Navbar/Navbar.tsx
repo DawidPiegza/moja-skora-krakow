@@ -12,6 +12,9 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useNavigate } from "react-router";
 import React, { useEffect, useState } from "react";
+import { WebsiteLanguageContext } from "../../contexts/LanguageContext";
+import TranslateIcon from "@mui/icons-material/Translate";
+import LanguageMenu from "./components/LanguageMenu/LanguageMenu";
 
 interface INavbarProps {
   setSideDrawerOpen: React.Dispatch<React.SetStateAction<boolean>>;
@@ -21,9 +24,10 @@ export default function Navbar({ setSideDrawerOpen }: INavbarProps) {
   const theme = useTheme();
   const downMd = useMediaQuery(theme.breakpoints.down("md"));
 
-  const navTo = useNavigate();
+  const { language } = React.useContext(WebsiteLanguageContext)!;
 
   const [isLoading, setLoading] = useState<boolean>(true);
+  const navTo = useNavigate();
 
   useEffect(() => {
     setLoading(false);
@@ -32,12 +36,7 @@ export default function Navbar({ setSideDrawerOpen }: INavbarProps) {
   return (
     <React.Fragment>
       {!isLoading && (
-        <AppBar
-          position="absolute"
-          color="transparent"
-          variant="outlined"
-          sx={{ border: "none" }}
-        >
+        <AppBar position="fixed" color="inherit">
           <Container maxWidth="xl">
             <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
               <Box
@@ -49,17 +48,20 @@ export default function Navbar({ setSideDrawerOpen }: INavbarProps) {
               {!downMd && (
                 <Box>
                   <Button color="inherit" onClick={() => navTo("/")}>
-                    Strona Główna
-                  </Button>
-                  <Button color="inherit" onClick={() => navTo("price_list")}>
-                    Cennik
+                    {language.webLanguage === "PL"
+                      ? "Strona Główna"
+                      : "Main Page"}
                   </Button>
                   <Button color="inherit" onClick={() => navTo("our_team")}>
-                    Nasz zespół
+                    {language.webLanguage === "PL" ? "Nasz zespół" : "Our Team"}
+                  </Button>
+                  <Button color="inherit" onClick={() => navTo("price_list")}>
+                    {language.webLanguage === "PL" ? "Cennik" : "Price list"}
                   </Button>
                   <Button color="inherit" onClick={() => navTo("contact")}>
-                    Kontakt
+                    {language.webLanguage === "PL" ? "Kontakt" : "Contact"}
                   </Button>
+                  <LanguageMenu />
                 </Box>
               )}
               {downMd && (
