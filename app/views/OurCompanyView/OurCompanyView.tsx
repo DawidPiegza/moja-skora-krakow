@@ -12,9 +12,13 @@ import salon_glowne_zdjecie from "../../../public/images/salon_glowne_zdjecie.jp
 import * as motion from "motion/react-client";
 import { useInView } from "react-intersection-observer";
 import { useEffect, useState } from "react";
+import React from "react";
+import { WebsiteLanguageContext } from "../../shared/contexts/LanguageContext";
 
 export default function OurCompanyView() {
   const theme = useTheme();
+  const { language } = React.useContext(WebsiteLanguageContext)!;
+
   const downMd = useMediaQuery(theme.breakpoints.down("md"));
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1 });
   const [show, setShow] = useState(false);

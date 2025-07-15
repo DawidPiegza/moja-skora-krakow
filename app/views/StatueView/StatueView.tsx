@@ -1,25 +1,23 @@
 import {
-  BottomNavigation,
-  BottomNavigationAction,
   Breadcrumbs,
   Container,
   Grid,
   Link,
-  Paper,
   Typography,
   useMediaQuery,
   useTheme,
 } from "@mui/material";
 import { beautySalonStatue } from "./data/beautySalonStatue";
+import { beautySalonStatueEN } from "./data/beautySalonStatueEN";
+
 import SectionTitle from "../../shared/components/SectionTitle/SectionTitle";
 import React from "react";
-import FacebookIcon from "@mui/icons-material/Facebook";
-import InstagramIcon from "@mui/icons-material/Instagram";
-import GoogleIcon from "@mui/icons-material/Google";
+import { WebsiteLanguageContext } from "../../shared/contexts/LanguageContext";
 
 export default function StatueView() {
   const theme = useTheme();
   const downMd = useMediaQuery(theme.breakpoints.down("md"));
+  const { language } = React.useContext(WebsiteLanguageContext);
 
   return (
     <Container maxWidth="xl" sx={{ marginTop: "65px" }}>
@@ -57,55 +55,127 @@ export default function StatueView() {
           alignItems="center"
           rowGap={2}
         >
-          <SectionTitle title={beautySalonStatue.title} alignTextTo="center" />
-          {beautySalonStatue.sections.map((section) => (
-            <React.Fragment key={section.id}>
-              <Typography
-                variant={!downMd ? "h6" : "body1"}
-                fontWeight="bold"
-                textAlign="center"
-              >{`§ ${section.id}. ${section.title}`}</Typography>
+          {language.webLanguage === "PL" && (
+            <React.Fragment>
+              <SectionTitle
+                title={beautySalonStatue.title}
+                alignTextTo="center"
+              />
+              {beautySalonStatue.sections.map((section) => (
+                <React.Fragment key={section.id}>
+                  <Typography
+                    variant={!downMd ? "h6" : "body1"}
+                    fontWeight="bold"
+                    textAlign="center"
+                  >{`§ ${section.id}. ${section.title}`}</Typography>
 
-              {section.points.map((point, index) => {
-                if (typeof point === "string") {
-                  return (
-                    <Typography key={index} textAlign="center" variant="body1">
-                      {`${index + 1}. ${point}`}
-                    </Typography>
-                  );
-                }
-
-                if (
-                  typeof point === "object" &&
-                  point !== null &&
-                  "subpointTitle" in point &&
-                  Array.isArray(point.subpoints)
-                ) {
-                  return (
-                    <React.Fragment key={index}>
-                      <Typography
-                        variant={!downMd ? "body1" : "body2"}
-                        textAlign="center"
-                      >
-                        {`${index + 1}. ${point.subpointTitle}`}
-                      </Typography>
-                      {point.subpoints.map((sub, subIndex) => (
+                  {section.points.map((point, index) => {
+                    if (typeof point === "string") {
+                      return (
                         <Typography
-                          key={`${index}-${subIndex}`}
-                          variant={!downMd ? "body1" : "body2"}
+                          key={index}
                           textAlign="center"
+                          variant="body1"
                         >
-                          {`${index + 1}.${subIndex + 1} ${sub}`}
+                          {`${index + 1}. ${point}`}
                         </Typography>
-                      ))}
-                    </React.Fragment>
-                  );
-                }
+                      );
+                    }
 
-                return null;
-              })}
+                    if (
+                      typeof point === "object" &&
+                      point !== null &&
+                      "subpointTitle" in point &&
+                      Array.isArray(point.subpoints)
+                    ) {
+                      return (
+                        <React.Fragment key={index}>
+                          <Typography
+                            variant={!downMd ? "body1" : "body2"}
+                            textAlign="center"
+                          >
+                            {`${index + 1}. ${point.subpointTitle}`}
+                          </Typography>
+                          {point.subpoints.map((sub, subIndex) => (
+                            <Typography
+                              key={`${index}-${subIndex}`}
+                              variant={!downMd ? "body1" : "body2"}
+                              textAlign="center"
+                            >
+                              {`${index + 1}.${subIndex + 1} ${sub}`}
+                            </Typography>
+                          ))}
+                        </React.Fragment>
+                      );
+                    }
+
+                    return null;
+                  })}
+                </React.Fragment>
+              ))}
             </React.Fragment>
-          ))}
+          )}
+          {language.webLanguage === "ENG" && (
+            <React.Fragment>
+              <SectionTitle
+                title={beautySalonStatueEN.title}
+                alignTextTo="center"
+              />
+              {beautySalonStatueEN.sections.map((section) => (
+                <React.Fragment key={section.id}>
+                  <Typography
+                    variant={!downMd ? "h6" : "body1"}
+                    fontWeight="bold"
+                    textAlign="center"
+                  >{`§ ${section.id}. ${section.title}`}</Typography>
+
+                  {section.points.map((point, index) => {
+                    if (typeof point === "string") {
+                      return (
+                        <Typography
+                          key={index}
+                          textAlign="center"
+                          variant="body1"
+                        >
+                          {`${index + 1}. ${point}`}
+                        </Typography>
+                      );
+                    }
+
+                    if (
+                      typeof point === "object" &&
+                      point !== null &&
+                      "subpointTitle" in point &&
+                      Array.isArray(point.subpoints)
+                    ) {
+                      return (
+                        <React.Fragment key={index}>
+                          <Typography
+                            variant={!downMd ? "body1" : "body2"}
+                            textAlign="center"
+                          >
+                            {`${index + 1}. ${point.subpointTitle}`}
+                          </Typography>
+                          {point.subpoints.map((sub, subIndex) => (
+                            <Typography
+                              key={`${index}-${subIndex}`}
+                              variant={!downMd ? "body1" : "body2"}
+                              textAlign="center"
+                              fontStyle="italic"
+                            >
+                              {`${index + 1}.${subIndex + 1} ${sub}`}
+                            </Typography>
+                          ))}
+                        </React.Fragment>
+                      );
+                    }
+
+                    return null;
+                  })}
+                </React.Fragment>
+              ))}
+            </React.Fragment>
+          )}
         </Grid>
       </Grid>
     </Container>

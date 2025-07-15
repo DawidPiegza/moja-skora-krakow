@@ -48,7 +48,7 @@ export default function LanguageMenu() {
             handleClose();
           }}
         >
-          English
+          ENG
         </MenuItem>
         <MenuItem
           onClick={() => {
@@ -56,7 +56,7 @@ export default function LanguageMenu() {
             handleClose();
           }}
         >
-          Polski
+          PL
         </MenuItem>
       </Menu>
     </React.Fragment>
