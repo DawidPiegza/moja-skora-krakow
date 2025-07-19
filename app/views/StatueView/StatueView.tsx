@@ -7,12 +7,11 @@ import {
   useMediaQuery,
   useTheme,
 } from "@mui/material";
-import { beautySalonStatue } from "./data/beautySalonStatue";
-import { beautySalonStatueEN } from "./data/beautySalonStatueEN";
 
-import SectionTitle from "../../shared/components/SectionTitle/SectionTitle";
 import React from "react";
 import { WebsiteLanguageContext } from "../../shared/contexts/LanguageContext";
+import { regulaminMojaSkora } from "./data/reagulationsData";
+import SectionTitle from "../../shared/components/SectionTitle/SectionTitle";
 
 export default function StatueView() {
   const theme = useTheme();
@@ -51,131 +50,19 @@ export default function StatueView() {
           size={12}
           display="flex"
           flexDirection="column"
-          justifyContent="center"
-          alignItems="center"
-          rowGap={2}
+          justifyContent="flex-start"
+          alignItems="flex-start"
+          rowGap={3}
+          padding={2}
         >
-          {language.webLanguage === "PL" && (
-            <React.Fragment>
-              <SectionTitle
-                title={beautySalonStatue.title}
-                alignTextTo="center"
-              />
-              {beautySalonStatue.sections.map((section) => (
-                <React.Fragment key={section.id}>
-                  <Typography
-                    variant={!downMd ? "h6" : "body1"}
-                    fontWeight="bold"
-                    textAlign="center"
-                  >{`§ ${section.id}. ${section.title}`}</Typography>
-
-                  {section.points.map((point, index) => {
-                    if (typeof point === "string") {
-                      return (
-                        <Typography
-                          key={index}
-                          textAlign="center"
-                          variant="body1"
-                        >
-                          {`${index + 1}. ${point}`}
-                        </Typography>
-                      );
-                    }
-
-                    if (
-                      typeof point === "object" &&
-                      point !== null &&
-                      "subpointTitle" in point &&
-                      Array.isArray(point.subpoints)
-                    ) {
-                      return (
-                        <React.Fragment key={index}>
-                          <Typography
-                            variant={!downMd ? "body1" : "body2"}
-                            textAlign="center"
-                          >
-                            {`${index + 1}. ${point.subpointTitle}`}
-                          </Typography>
-                          {point.subpoints.map((sub, subIndex) => (
-                            <Typography
-                              key={`${index}-${subIndex}`}
-                              variant={!downMd ? "body1" : "body2"}
-                              textAlign="center"
-                            >
-                              {`${index + 1}.${subIndex + 1} ${sub}`}
-                            </Typography>
-                          ))}
-                        </React.Fragment>
-                      );
-                    }
-
-                    return null;
-                  })}
-                </React.Fragment>
-              ))}
-            </React.Fragment>
-          )}
-          {language.webLanguage === "ENG" && (
-            <React.Fragment>
-              <SectionTitle
-                title={beautySalonStatueEN.title}
-                alignTextTo="center"
-              />
-              {beautySalonStatueEN.sections.map((section) => (
-                <React.Fragment key={section.id}>
-                  <Typography
-                    variant={!downMd ? "h6" : "body1"}
-                    fontWeight="bold"
-                    textAlign="center"
-                  >{`§ ${section.id}. ${section.title}`}</Typography>
-
-                  {section.points.map((point, index) => {
-                    if (typeof point === "string") {
-                      return (
-                        <Typography
-                          key={index}
-                          textAlign="center"
-                          variant="body1"
-                        >
-                          {`${index + 1}. ${point}`}
-                        </Typography>
-                      );
-                    }
-
-                    if (
-                      typeof point === "object" &&
-                      point !== null &&
-                      "subpointTitle" in point &&
-                      Array.isArray(point.subpoints)
-                    ) {
-                      return (
-                        <React.Fragment key={index}>
-                          <Typography
-                            variant={!downMd ? "body1" : "body2"}
-                            textAlign="center"
-                          >
-                            {`${index + 1}. ${point.subpointTitle}`}
-                          </Typography>
-                          {point.subpoints.map((sub, subIndex) => (
-                            <Typography
-                              key={`${index}-${subIndex}`}
-                              variant={!downMd ? "body1" : "body2"}
-                              textAlign="center"
-                              fontStyle="italic"
-                            >
-                              {`${index + 1}.${subIndex + 1} ${sub}`}
-                            </Typography>
-                          ))}
-                        </React.Fragment>
-                      );
-                    }
-
-                    return null;
-                  })}
-                </React.Fragment>
-              ))}
-            </React.Fragment>
-          )}
+          <SectionTitle
+            title={
+              language.webLanguage === "PL"
+                ? "Regulamin vouchera podarunkowego"
+                : "TERMS AND CONDITIONS OF THE “MOJA SKÓRA” COSMETOLOGY CLINIC"
+            }
+            alignTextTo="center"
+          />
         </Grid>
       </Grid>
     </Container>

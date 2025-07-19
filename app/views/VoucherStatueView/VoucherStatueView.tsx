@@ -9,11 +9,13 @@ import {
 } from "@mui/material";
 import SectionTitle from "../../shared/components/SectionTitle/SectionTitle";
 import React from "react";
-import { voucherStatue } from "./data/voucherStatue";
+import { voucherTermsPL, voucherTermsEN } from "./data/voucherTerms";
+import { WebsiteLanguageContext } from "../../shared/contexts/LanguageContext";
 
 export default function VoucherStatueView() {
   const theme = useTheme();
   const downMd = useMediaQuery(theme.breakpoints.down("md"));
+  const { language } = React.useContext(WebsiteLanguageContext);
 
   return (
     <Container maxWidth="xl" sx={{ marginTop: "65px" }}>
@@ -51,8 +53,18 @@ export default function VoucherStatueView() {
           alignItems="center"
           rowGap={2}
         >
-          <SectionTitle title={voucherStatue.title} alignTextTo="center" />
-          {voucherStatue.sections.map((section) => (
+          <SectionTitle
+            title={
+              language.webLanguage === "PL"
+                ? "Regulamin vouchera podarunkowego"
+                : "TERMS AND CONDITIONS OF THE “MOJA SKÓRA” COSMETOLOGY CLINIC"
+            }
+            alignTextTo="center"
+          />
+          {(language.webLanguage === "PL"
+            ? voucherTermsPL
+            : voucherTermsEN
+          ).sections.map((section) => (
             <React.Fragment key={section.id}>
               <Typography
                 variant={!downMd ? "h6" : "body1"}
@@ -60,11 +72,11 @@ export default function VoucherStatueView() {
                 textAlign="center"
               >{`§ ${section.id}. ${section.title}`}</Typography>
 
-              {section.points.map((point, index) => {
-                if (typeof point === "string") {
+              {section.entries.map((entry, index) => {
+                if (typeof entry === "string") {
                   return (
                     <Typography key={index} textAlign="center" variant="body1">
-                      {`${index + 1}. ${point}`}
+                      {`${index + 1}. ${entry}`}
                     </Typography>
                   );
                 }

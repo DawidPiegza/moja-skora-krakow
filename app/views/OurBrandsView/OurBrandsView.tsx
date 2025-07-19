@@ -8,6 +8,8 @@ import filorga_logo from "../../../public/images/filorga_logo.png";
 import karisma_logo from "../../../public/images/karisma_logo.png";
 import nucleofill_logo from "../../../public/images/nucleofill_logo.png";
 import BrandCard from "./components/BrandCard/BrandCard";
+import { WebsiteLanguageContext } from "../../shared/contexts/LanguageContext";
+import React from "react";
 
 const logos = [
   revitacare_logo,
@@ -21,6 +23,7 @@ const logos = [
 export default function OurBrandsView() {
   const theme = useTheme();
   const domwMd = useMediaQuery(theme.breakpoints.down("md"));
+  const { language } = React.useContext(WebsiteLanguageContext);
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [fade, setFade] = useState(true);
@@ -43,7 +46,13 @@ export default function OurBrandsView() {
     <Container maxWidth="xl">
       <Grid container spacing={3} paddingY={2}>
         <Grid size={12}>
-          <SectionTitle title="Korzystamy wyłącznie z renomowanych produktów" />
+          <SectionTitle
+            title={
+              language.webLanguage === "PL"
+                ? "Korzystamy wyłącznie z renomowanych produktów"
+                : "We exclusively use reputable, high-quality products."
+            }
+          />
         </Grid>
 
         {domwMd ? (

@@ -12,6 +12,7 @@ import { theme } from "../../../../shared/styles/MUIGlobalStyle";
 import * as motion from "motion/react-client";
 import { useInView } from "react-intersection-observer";
 import { useEffect, useState } from "react";
+import { WebsiteLanguageContext } from "../../../../shared/contexts/LanguageContext";
 
 interface IServiceCategoryCardProps {
   serviceCategory: IServiceCategory;
@@ -21,6 +22,8 @@ export default function ServiceCategoryCard({
   serviceCategory,
 }: IServiceCategoryCardProps) {
   const domwMd = useMediaQuery(theme.breakpoints.down("md"));
+  const { language } = React.useContext(WebsiteLanguageContext);
+
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1 });
   const [show, setShow] = useState(false);
 
@@ -62,7 +65,11 @@ export default function ServiceCategoryCard({
               alt={serviceCategory.title}
             />
             <CardHeader
-              subheader={serviceCategory.title}
+              subheader={
+                language.webLanguage === "PL"
+                  ? serviceCategory.title
+                  : serviceCategory.titleENG
+              }
               sx={{ textAlign: "center" }}
             />
           </CardActionArea>

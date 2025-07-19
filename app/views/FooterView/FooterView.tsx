@@ -16,11 +16,14 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import GoogleIcon from "@mui/icons-material/Google";
 import booksy_logo_black from "../../../public/images/booksy_logo_black.png";
 import { useNavigate } from "react-router";
+import { WebsiteLanguageContext } from "../../shared/contexts/LanguageContext";
+import React from "react";
 
 export default function FooterView() {
   const theme = useTheme();
   const domwMd = useMediaQuery(theme.breakpoints.down("md"));
   let navigate = useNavigate();
+  const { language } = React.useContext(WebsiteLanguageContext)!;
 
   return (
     <Container maxWidth="xl">
@@ -47,7 +50,9 @@ export default function FooterView() {
             onClick={() => navigate("/statute")}
             component={Button}
           >
-            REGULAMIN GABINETU
+            {language.webLanguage === "PL"
+              ? "REGULAMIN GABINETU"
+              : "STUDIO POLICIES"}
           </Link>
           <Link
             underline="none"
@@ -57,7 +62,9 @@ export default function FooterView() {
             onClick={() => navigate("/voucher_statute")}
             component={Button}
           >
-            REGULAMIN VOUCHERU
+            {language.webLanguage === "PL"
+              ? "REGULAMIN VOUCHERU"
+              : "VOUCHER POLICIES"}
           </Link>
           {!domwMd && (
             <Link
@@ -68,7 +75,7 @@ export default function FooterView() {
               onClick={() => navigate("/contact")}
               component={Button}
             >
-              KONTAKT
+              {language.webLanguage === "PL" ? "KONTAKT" : "CONTACT"}
             </Link>
           )}
 

@@ -13,7 +13,6 @@ import MenuIcon from "@mui/icons-material/Menu";
 import { useNavigate } from "react-router";
 import React, { useEffect, useState } from "react";
 import { WebsiteLanguageContext } from "../../contexts/LanguageContext";
-import TranslateIcon from "@mui/icons-material/Translate";
 import LanguageMenu from "./components/LanguageMenu/LanguageMenu";
 
 interface INavbarProps {
@@ -55,9 +54,7 @@ export default function Navbar({ setSideDrawerOpen }: INavbarProps) {
                   <Button color="inherit" onClick={() => navTo("our_team")}>
                     {language.webLanguage === "PL" ? "Nasz zespół" : "Our Team"}
                   </Button>
-                  <Button color="inherit" onClick={() => navTo("price_list")}>
-                    {language.webLanguage === "PL" ? "Cennik" : "Price list"}
-                  </Button>
+
                   <Button color="inherit" onClick={() => navTo("contact")}>
                     {language.webLanguage === "PL" ? "Kontakt" : "Contact"}
                   </Button>

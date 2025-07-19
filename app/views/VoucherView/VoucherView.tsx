@@ -78,6 +78,7 @@ export default function VoucherView() {
                 align="center"
                 gutterBottom
                 variant={downMd ? "body2" : "body1"}
+                marginTop={2}
               >
                 {language.webLanguage === "PL" &&
                   "Voucher podarunkowy to coś więcej niż upominek - podaruj czas dla siebie, chwilę relaksu i profesjonalną pielęgnację dopasowaną do indywidualnych potrzeb."}

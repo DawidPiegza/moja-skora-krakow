@@ -13,10 +13,13 @@ import google_logo from "../../../public/images/google_logo.png";
 import { googleOpinions } from "./data/googleOpinions";
 import { useEffect, useState } from "react";
 import StarRateIcon from "@mui/icons-material/StarRate";
+import React from "react";
+import { WebsiteLanguageContext } from "../../shared/contexts/LanguageContext";
 
 export default function OpinionsView() {
   const theme = useTheme();
   const domwMd = useMediaQuery(theme.breakpoints.down("md"));
+  const { language } = React.useContext(WebsiteLanguageContext);
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [fade, setFade] = useState(true);
@@ -37,7 +40,13 @@ export default function OpinionsView() {
     <Container maxWidth="xl">
       <Grid container spacing={2} paddingY={2}>
         <Grid size={12}>
-          <SectionTitle title="Opinie naszych klientów są dla nas najważniejsze" />
+          <SectionTitle
+            title={
+              language.webLanguage === "PL"
+                ? "Opinie naszych klientów są dla nas najważniejsze"
+                : "Our clients feedback is the most important to us."
+            }
+          />
         </Grid>
         <Grid size={12} container justifyContent="center" alignItems="center">
           <Grid size={domwMd ? 12 : 8}>
