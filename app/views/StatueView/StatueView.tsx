@@ -10,7 +10,6 @@ import {
 
 import React from "react";
 import { WebsiteLanguageContext } from "../../shared/contexts/LanguageContext";
-import { regulaminMojaSkora } from "./data/reagulationsData";
 import SectionTitle from "../../shared/components/SectionTitle/SectionTitle";
 
 export default function StatueView() {
@@ -50,15 +49,14 @@ export default function StatueView() {
           size={12}
           display="flex"
           flexDirection="column"
-          justifyContent="flex-start"
-          alignItems="flex-start"
-          rowGap={3}
-          padding={2}
+          justifyContent="center"
+          alignItems="center"
+          rowGap={2}
         >
           <SectionTitle
             title={
               language.webLanguage === "PL"
-                ? "Regulamin vouchera podarunkowego"
+                ? "Regulamin "
                 : "TERMS AND CONDITIONS OF THE “MOJA SKÓRA” COSMETOLOGY CLINIC"
             }
             alignTextTo="center"

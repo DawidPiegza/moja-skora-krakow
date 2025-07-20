@@ -32,7 +32,7 @@ export default function VoucherStatueView() {
                 [theme.breakpoints.up("md")]: theme.typography.body1,
               }}
             >
-              Strona Główna
+              {language.webLanguage === "PL" ? "Strona Główna" : "Main Page"}
             </Link>
             <Typography
               sx={{
@@ -41,7 +41,9 @@ export default function VoucherStatueView() {
                 [theme.breakpoints.up("md")]: theme.typography.body1,
               }}
             >
-              Reagulamin Voucheara
+              {language.webLanguage === "PL"
+                ? "Regulamin vouchera"
+                : "Voucher policies"}
             </Typography>
           </Breadcrumbs>
         </Grid>

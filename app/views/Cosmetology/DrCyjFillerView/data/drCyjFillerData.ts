@@ -1,0 +1,60 @@
+import type { IServiceObject } from "../../../../shared/utils/interfaces/IServiceObject";
+import mezoterapia_iglowa_dr_cyj from "/public/images/mezoterapia_iglowa_dr_cyj.jpeg";
+
+export const drCyjFillerDataPL: IServiceObject = {
+  treatmentPhotoURL: mezoterapia_iglowa_dr_cyj,
+  description:
+    "Mezoterapia skóry głowy z wykorzystaniem preparatów Dr Cyj to nowoczesna, peptydowa terapia, która skutecznie przeciwdziała wypadaniu włosów oraz stymuluje ich wzrost. Dzięki specjalnie opracowanemu składowi, zabieg poprawia mikrokrążenie i wspomaga regenerację mieszków włosowych.",
+  infoTable: {
+    recommendedNumber: "4 zabiegi",
+    timeOfTreatment: "30 min",
+    intervals: "co 2 tygodnie",
+  },
+  indicationsToTreatment: [
+    "łysienie androgenowe",
+    "nadmierne wypadanie włosów spowodowane stresem",
+    "wypadanie włosów na tle niewłaściwej diety i niedoboru witamin",
+    "przesilenie sezonowe",
+    "uszkodzenie struktury włosów przez częste farbowanie lub wykonywania innych zabiegów chemicznych",
+    "przygotowanie skóry do przeszczepu włosów",
+    "poprawienie wzrostu włosów oraz ich kondycji po przeszczepie",
+  ],
+  compositionOfPreparation: `- 7 peptydów biomimetycznych – Dekapeptyd-28, Oligopeptyd-71, Oktapeptyd-2, Dekapeptyd-18, Oligopeptyd-54, Oktapeptyd-11, Dekapeptyd-10 – każdy z tych peptydów ma swoje unikalną funkcję, ale wzajemnie wzmacniają swoje działanie, co zapewnia maksymalną skuteczność terapii. Peptydy te blokują wpływ dihydrotestosteronu (DHT), hormonu odpowiedzialnego za wypadanie włosów w łysieniu androgenowym, stymulują wzrost nowych włosów oraz zapobiegają obumieraniu komórek skóry głowy. Dzięki tak dobranej kombinacji, peptydy skutecznie regenerują skórę głowy, wzmacniają mieszki włosowe i spowalniają proces wypadania włosów.\n\n- Kwas hialuronowy (0,7%) – częściowo stabilizowany kwas hialuronowy wspomaga wchłanianie składników aktywnych, umożliwiając ich głębsze wnikanie w skórę i zwiększając efektywność zabiegu.`,
+  descriptionOfPreparation: `Dr Cyj Hair Filler to innowacyjny preparat, który skutecznie przeciwdziała łysieniu i nadmiernemu wypadaniu włosów. Jego zaawansowana formuła, oparta na połączeniu 7 peptydów biomimetycznych i kwasu hialuronowego, oraz technologii Sustained Release Technology (technologia przedłużonego uwalniania substancji aktywnych), zapewnia stopniowe i długotrwałe uwalnianie składników aktywnych przez 14 dni po zabiegu. Dzięki temu, efekty działania preparatu utrzymują się przez dłuższy czas, a składniki aktywne mogą skutecznie działać na skórę głowy.`,
+  effectsOfTratment: [
+    "stymulacja wzrostu nowych włosów",
+    "redukcja wypadania włosów",
+    "poprawa gęstości i grubości włosów",
+    "wzmocnienie włosów przed i po przeszczepie",
+    "poprawa kondycji mieszków włosowych",
+  ],
+  courseOfTreatment: `Za pomocą cienkiej igły i ampułko-strzykawki preparat podawany jest punktowo, w formie niewielkich depozytów, bezpośrednio w owłosioną skórę głowy – zazwyczaj co kilka centymetrów. Technika ta pozwala skrócić czas trwania zabiegu i zminimalizować odczucia bólowe w porównaniu do klasycznej mezoterapii.`,
+  postTreatmentRecommendations: `Zabieg przeciw wypadaniu włosów nie wymaga przerwy w codziennej aktywności i nie wiąże się z efektami ubocznymi. Bezpośrednio po terapii mogą pojawić się drobne zgrubienia i strupki lub lekkie swędzenie w miejscu wkłucia, które ustępują w ciągu 24 godzin\n\nPo wykonaniu zabiegu warto przestrzegać kilku ważnych zasad: \n\n–  przez 24 godziny po zabiegu należy unikać mycia głowy oraz spożywania alkoholu.\n– w ciągu 7 dni po zabiegu warto unikać kontaktu z ekstremalnymi temperaturami, takich jak sauna czy krioterapia, oraz unikać chlorowanej wody (np. na basenie).\n–  po mezoterapii mogą pojawić się drobne strupki, których nie należy zdrapywać`,
+  interfalsInTreatment: `Aby osiągnąć i utrzymać najlepsze efekty, zaleca się wykonanie serii 4  zabiegów co 2 tygodnie. Po zakończeniu serii warto wykonać zabieg przypominający po 3 lub 6 miesiącach. Efekt utrzymuje się przez 12 miesięcy, po czym zaleca się powtórzenie całej serii.`,
+  contraindications: "",
+};
+
+export const drCyjFillerDataENG: IServiceObject = {
+  treatmentPhotoURL: mezoterapia_iglowa_dr_cyj,
+  description:
+    "Dr. CYJ scalp mesotherapy is a modern peptide-based therapy that effectively prevents hair loss and stimulates hair growth. Its advanced formula helps to improve microcirculation and supports the regeneration of hair follicles.",
+  infoTable: {
+    recommendedNumber: "4 treatments",
+    timeOfTreatment: "30 minutes",
+    intervals: "every 2 weeks",
+  },
+  indicationsToTreatment: [],
+  compositionOfPreparation: `– 7 biomimetic peptides – Decapeptide-28, Oligopeptide-71, Octapeptide-2, Decapeptide-18, Oligopeptide-54, Octapeptide-11, Decapeptide-10 – each of these peptides has a unique function, yet they work synergistically to enhance the overall effectiveness of the therapy.\nThese peptides block the effects of dihydrotestosterone (DHT) – the hormone responsible for hair loss in androgenic alopecia – stimulate the growth of new hair, and prevent scalp cell degradation. This carefully selected combination helps regenerate the scalp, strengthen hair follicles, and slow down the hair loss process.\n\n– Hyaluronic acid (0.7%) – A partially stabilized form of hyaluronic acid that enhances the absorption of active ingredients, allowing them to penetrate deeper into the skin and increasing the overall effectiveness of the treatment.`,
+  descriptionOfPreparation: `Dr. CYJ Hair Filler is an innovative product that effectively combats hair thinning and excessive hair loss. Its advanced formula combines 7 biomimetic peptides with hyaluronic acid and utilizes Sustained Release Technology – a delivery system that gradually releases active ingredients for up to 14 days after the treatment. This prolonged release ensures long-lasting results and allows the active ingredients to work more effectively on the scalp.`,
+  effectsOfTratment: [
+    "stimulation of new hair growth",
+    "reduction of hair loss",
+    "improved hair density and thickness",
+    "strengthening of hair before and after transplant",
+    "enhanced condition of hair follicles",
+  ],
+  contraindications: `Dr. CYJ Hair Filler is a safe and effective treatment for hair loss that requires no special preparation. In our clinic, a detailed medical interview is conducted before the procedure to rule out any contraindications, which include:\n\n– pregnancy and breastfeeding\n– cancer or history of cancer\n– allergy to any ingredient in the product\n– skin conditions, including active lesions\n– use of immunosuppressive medications\n– steroid or retinoid therapy\n– autoimmune diseases\n– uncontrolled diabetes\n– rheumatic diseases\n– recurrent tonsillitis\n– endocarditis\n– active herpes infection\n– inflammation or open wounds on the scalp`,
+  courseOfTreatment: `Using a fine needle and syringe, the product is injected point by point into the scalp in small deposits, typically spaced a few centimeters apart.\nThis technique shortens the duration of the procedure and minimizes discomfort compared to traditional mesotherapy.`,
+  postTreatmentRecommendations: `This anti-hair loss treatment does not interfere with your daily activities and does not typically cause side effects.\nImmediately after the procedure, you may experience small bumps, light scabbing, or mild itching at the injection sites — these symptoms usually disappear within 24 hours.\n\nTo support proper healing and maximize results, it is recommended to follow a few simple guidelines:\n\n– Avoid washing your hair and consuming alcohol for 24 hours after the treatment.\n– For 7 days, avoid exposure to extreme temperatures (such as saunas or cryotherapy) and stay away from chlorinated water (e.g. swimming pools).\n– Small scabs may appear after the procedure — do not scratch or pick them.`,
+  interfalsInTreatment: `To achieve and maintain the best results, a series of 4 sessions is recommended, performed every 2 weeks.\nAfter completing the series, a booster treatment is advised after 3 or 6 months.\nThe effects can last up to 12 months, after which it is recommended to repeat the full series.`,
+};

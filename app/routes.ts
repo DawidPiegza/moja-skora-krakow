@@ -7,4 +7,12 @@ export default [
   route("/contact", "./views/ContactView/ContactView.tsx"),
   route("/statute", "./views/StatueView/StatueView.tsx"),
   route("/voucher_statute", "./views/VoucherStatueView/VoucherStatueView.tsx"),
+  route(
+    "/cosmetology",
+    "./views/CosmetologyCategoryView/CosmetologyCategoryView.tsx"
+  ),
+  route(
+    "/cosmetology/mezoterapia_iglowa_dr_cyj",
+    "./views/Cosmetology/DrCyjFillerView/DrCyjFillerView.tsx"
+  ),
 ] satisfies RouteConfig;

@@ -17,10 +17,13 @@ import LocalPhoneOutlinedIcon from "@mui/icons-material/LocalPhoneOutlined";
 import AccessTimeOutlinedIcon from "@mui/icons-material/AccessTimeOutlined";
 import SectionTitle from "../../shared/components/SectionTitle/SectionTitle";
 import { motion } from "framer-motion";
+import { WebsiteLanguageContext } from "../../shared/contexts/LanguageContext";
+import React from "react";
 export default function ContactView() {
   const theme = useTheme();
   const downMd = useMediaQuery(theme.breakpoints.down("md"));
   const betweenMdAndLg = useMediaQuery(theme.breakpoints.between("sm", "lg"));
+  const { language } = React.useContext(WebsiteLanguageContext);
 
   return (
     <Container
@@ -50,7 +53,7 @@ export default function ContactView() {
                 },
               })}
             >
-              Strona Główna
+              {language.webLanguage === "PL" ? "Strona Główna" : "Main Page"}
             </Link>
             <Typography
               sx={(theme) => ({
@@ -61,7 +64,7 @@ export default function ContactView() {
                 },
               })}
             >
-              Kontakt
+              {language.webLanguage === "PL" ? "Kontakt" : "Contact"}
             </Typography>
           </Breadcrumbs>
         </Grid>
@@ -82,8 +85,11 @@ export default function ContactView() {
                 fontStyle="italic"
               ></Typography>
               <SectionTitle
-                title="Jesteśmy tu dla Ciebie! Skontaktuj się z nami, aby umówić wizytę
-                lub uzyskać więcej informacji o naszych usługach."
+                title={
+                  language.webLanguage === "PL"
+                    ? "Jesteśmy tu dla Ciebie! Skontaktuj się z nami, aby umówić wizytę lub uzyskać więcej informacji o naszych usługach."
+                    : "We are here for you! Contact us to schedule an appointment or to get more information about our services."
+                }
               />
             </Grid>
             <Grid size={12}>
@@ -102,7 +108,12 @@ export default function ContactView() {
                     rowGap={1}
                   >
                     <PlaceOutlinedIcon fontSize="large" />
-                    <Typography variant="h6">Adres salonu</Typography>
+                    <Typography variant="h6">
+                      {" "}
+                      {language.webLanguage === "PL"
+                        ? "Adres salonu"
+                        : "Address"}
+                    </Typography>
                     <Typography variant="body1">
                       Świętego Sebastiana 22/2C, 31-049 Kraków
                     </Typography>
@@ -122,7 +133,11 @@ export default function ContactView() {
                     rowGap={1}
                   >
                     <LocalPhoneOutlinedIcon fontSize="large" />
-                    <Typography variant="h6">Numer telefonu</Typography>
+                    <Typography variant="h6">
+                      {language.webLanguage === "PL"
+                        ? "Numer telefonu"
+                        : "Phone Number"}
+                    </Typography>
                     <Typography variant="body1">518 456 332</Typography>
                   </Box>
                 </Grid>
@@ -140,7 +155,11 @@ export default function ContactView() {
                     rowGap={1}
                   >
                     <AccessTimeOutlinedIcon fontSize="large" />
-                    <Typography variant="h6">Godziny otwarcia</Typography>
+                    <Typography variant="h6">
+                      {language.webLanguage === "PL"
+                        ? "Godziny otwarcia"
+                        : "Opening Hours"}
+                    </Typography>
                     <Typography variant="body1">
                       Pon - Pt: 8:00 – 21:00 oraz Sb: 8:00 – 16:00
                     </Typography>
@@ -166,16 +185,22 @@ export default function ContactView() {
                       width="100%"
                       align="center"
                     >
-                      FORMULARZ KONTAKTOWY
+                      {language.webLanguage === "PL"
+                        ? "FORMULARZ KONTAKTOWY"
+                        : "CONTACT FORM"}
                     </Typography>
                     <TextField
-                      placeholder="Imię"
+                      placeholder={
+                        language.webLanguage === "PL" ? "Imię" : "First Name"
+                      }
                       variant="standard"
                       fullWidth
                       size={downMd ? "small" : "medium"}
                     />
                     <TextField
-                      placeholder="Nazwisko"
+                      placeholder={
+                        language.webLanguage === "PL" ? "Nazwisko" : "Last Name"
+                      }
                       variant="standard"
                       fullWidth
                       size={downMd ? "small" : "medium"}
@@ -187,13 +212,21 @@ export default function ContactView() {
                       size={downMd ? "small" : "medium"}
                     />
                     <TextField
-                      placeholder="Numer kontaktowy"
+                      placeholder={
+                        language.webLanguage === "PL"
+                          ? "Numer kontaktowy"
+                          : "Contact Number"
+                      }
                       variant="standard"
                       fullWidth
                       size={downMd ? "small" : "medium"}
                     />
                     <TextField
-                      placeholder="Trść wiadomości..."
+                      placeholder={
+                        language.webLanguage === "PL"
+                          ? "Treść wiadomości"
+                          : "Message content..."
+                      }
                       multiline
                       rows={10}
                     />
@@ -202,7 +235,7 @@ export default function ContactView() {
                       color="inherit"
                       size={downMd ? "small" : "medium"}
                     >
-                      Wyślij
+                      {language.webLanguage === "PL" ? "Wyślij" : "Send"}
                     </Button>
                   </Box>
                 </Grid>

@@ -13,6 +13,7 @@ import * as motion from "motion/react-client";
 import { useInView } from "react-intersection-observer";
 import { useEffect, useState } from "react";
 import { WebsiteLanguageContext } from "../../../../shared/contexts/LanguageContext";
+import { useNavigate } from "react-router";
 
 interface IServiceCategoryCardProps {
   serviceCategory: IServiceCategory;
@@ -23,6 +24,7 @@ export default function ServiceCategoryCard({
 }: IServiceCategoryCardProps) {
   const domwMd = useMediaQuery(theme.breakpoints.down("md"));
   const { language } = React.useContext(WebsiteLanguageContext);
+  const navTo = useNavigate();
 
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1 });
   const [show, setShow] = useState(false);
@@ -57,7 +59,7 @@ export default function ServiceCategoryCard({
             },
           }}
         >
-          <CardActionArea>
+          <CardActionArea onClick={() => navTo(serviceCategory.categoryURL)}>
             <CardMedia
               component="img"
               height={domwMd ? "250px" : "400px"}

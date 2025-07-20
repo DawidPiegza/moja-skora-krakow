@@ -3,4 +3,5 @@ export interface IServiceCategory {
   titleENG: string;
   content: string;
   pictureURL: string;
+  categoryURL: string;
 }
