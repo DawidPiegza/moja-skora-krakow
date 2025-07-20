@@ -18,13 +18,22 @@ import { drCyjFillerDataPL, drCyjFillerDataENG } from "./data/drCyjFillerData";
 import AssignmentIcon from "@mui/icons-material/Assignment";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
+import { useInView } from "react-intersection-observer";
+import { motion } from "framer-motion";
 
 export default function DrCyjFillerView() {
   const { language } = React.useContext(WebsiteLanguageContext);
   const theme = useTheme();
   const downMd = useMediaQuery(theme.breakpoints.down("md"));
-
   const [isLoading, setLoading] = useState<boolean>(true);
+
+  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1 });
+  const [show, setShow] = useState(false);
+
+  useEffect(() => {
+    if (inView) setShow(true);
+    if (!inView) setShow(false);
+  }, [inView]);
 
   useEffect(() => {
     setLoading(false);
@@ -91,7 +100,20 @@ export default function DrCyjFillerView() {
             >
               <Grid size={12} container marginTop={2} alignItems="center">
                 <Grid size={downMd ? 12 : 6}>
-                  <Card>
+                  <Card
+                    component={motion.div}
+                    initial={{ opacity: 0, x: -500 }}
+                    animate={{
+                      opacity: 1,
+                      x: 0,
+                      transition: {
+                        delay: 0.5,
+                        type: "spring",
+                        visualDuration: 1,
+                        bounce: 0.4,
+                      },
+                    }}
+                  >
                     <CardMedia
                       sx={{ width: "100%", height: downMd ? "400px" : "700px" }}
                       component="img"
@@ -107,6 +129,18 @@ export default function DrCyjFillerView() {
                   rowGap={2}
                   container
                   direction="column"
+                  component={motion.div}
+                  initial={{ opacity: 0, x: 500 }}
+                  animate={{
+                    opacity: 1,
+                    x: 0,
+                    transition: {
+                      delay: 0.5,
+                      type: "spring",
+                      visualDuration: 1,
+                      bounce: 0.4,
+                    },
+                  }}
                 >
                   <Grid size={12}>
                     <Typography
