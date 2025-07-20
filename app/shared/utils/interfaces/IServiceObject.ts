@@ -10,7 +10,7 @@ export interface IServiceObject {
   descriptionOfPreparation?: string;
   compositionOfPreparation?: string;
   effectsOfTratment: string[];
-  contraindications: string;
+  contraindications: string[];
   courseOfTreatment: string;
   postTreatmentRecommendations: string;
   interfalsInTreatment: string;
