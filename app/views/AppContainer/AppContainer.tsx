@@ -30,10 +30,10 @@ export default function AppContainer() {
           <OurBrandsView />
           <Divider />
           <OpinionsView />
+          <Divider />
           <Stack
             width="100vw"
             height="max-content"
-            bgcolor="primary.main"
             direction="column"
             alignItems="center"
             justifyContent="flex-start"
