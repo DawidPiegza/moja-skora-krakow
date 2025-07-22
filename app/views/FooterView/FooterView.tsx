@@ -5,17 +5,13 @@ import {
   useTheme,
   Box,
   Button,
-  Stack,
-  IconButton,
-  Divider,
-  Link,
   Typography,
+  IconButton,
 } from "@mui/material";
 import sygnet_wektorowy from "../../../public/images/sygnet_wektorowy.svg";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import GoogleIcon from "@mui/icons-material/Google";
-import booksy_logo_black from "../../../public/images/booksy_logo_black.png";
 import { useNavigate } from "react-router";
 import { WebsiteLanguageContext } from "../../shared/contexts/LanguageContext";
 
@@ -30,39 +26,124 @@ export default function FooterView() {
   return (
     <Container maxWidth="xl">
       <Grid
-        size={12}
         container
-        paddingBottom={3}
-        alignItems="center"
-        justifyContent="space-between"
+        width={"100%"}
+        rowSpacing={domwMd ? 2 : 4}
+        paddingBottom={4}
+        sx={{
+          justifyContent: "space-around",
+          alignItems: "flex-start",
+        }}
       >
-        <Grid size={1}>
+        <Grid display="flex" flexDirection={"column"} rowGap={2}>
           <Box
             component="img"
             src={sygnet_wektorowy}
             alt="Moja Skóra"
-            sx={{ width: "auto", height: "100px" }}
+            sx={{ width: "auto", height: domwMd ? "40px" : "100px" }}
           />
         </Grid>
-        <Grid size={3}>
-          <Typography variant="body1" fontWeight="bold">
-            {language.webLanguage === "PL" ? "Adres salonu" : "Address"}
+        <Grid
+          display="flex"
+          size={domwMd && 12}
+          flexDirection="column"
+          textAlign="left"
+          alignItems={domwMd ? "center" : "auto"}
+        >
+          <Typography
+            variant={domwMd ? "body2" : "body1"}
+            fontWeight="bold"
+            component={Button}
+            color="text.primary"
+            width="max-content"
+            onClick={() => navigate("/statute")}
+          >
+            {language.webLanguage === "PL" ? "Regulamin" : "Terms & Conditions"}
           </Typography>
-          <Typography variant="body2">
-            Świętego Sebastiana 22/2C, 31-049 Kraków
-          </Typography>
-          <Typography variant="body1" fontWeight="bold">
+          <Typography
+            variant={domwMd ? "body2" : "body1"}
+            fontWeight="bold"
+            component={Button}
+            color="text.primary"
+            width="max-content"
+            onClick={() => navigate("/voucher_statute")}
+          >
             {language.webLanguage === "PL"
-              ? "Godziny otwarcia"
-              : "Opening Hours"}
+              ? "Regulamin vouchera"
+              : "Voucher Policy"}
           </Typography>
-          <Typography variant="body2">
-            Pon - Pt: 8:00 – 21:00 oraz Sb: 8:00 – 16:00
+          <Typography
+            variant={domwMd ? "body2" : "body1"}
+            fontWeight="bold"
+            component={Button}
+            color="text.primary"
+            width="max-content"
+            href="https://booksy.com/pl-pl/249371_moja-skora_salon-kosmetyczny_8820_krakow"
+          >
+            Booksy
           </Typography>
-          <Typography variant="body1" fontWeight="bold">
-            {language.webLanguage === "PL" ? "Numer telefonu" : "Phone Number"}
+        </Grid>
+        {!domwMd && (
+          <Grid>
+            <Typography variant="body1" fontWeight="bold">
+              {language.webLanguage === "PL" ? "Adres salonu" : "Address"}
+            </Typography>
+            <Typography variant="body2">
+              Świętego Sebastiana 22/2C, 31-049 Kraków
+            </Typography>
+            <Typography variant="body1" fontWeight="bold">
+              {language.webLanguage === "PL"
+                ? "Godziny otwarcia"
+                : "Opening Hours"}
+            </Typography>
+            <Typography variant="body2">
+              Pon - Pt: 8:00 – 21:00 oraz Sb: 8:00 – 16:00
+            </Typography>
+            <Typography variant="body1" fontWeight="bold">
+              {language.webLanguage === "PL"
+                ? "Numer telefonu"
+                : "Phone Number"}
+            </Typography>
+            <Typography variant="body1">518 456 332</Typography>
+          </Grid>
+        )}
+
+        <Grid display={"flex"} flexDirection={domwMd ? "row" : "column"}>
+          <IconButton
+            size="large"
+            sx={{ width: "max-content" }}
+            href="https://www.facebook.com/people/Moja-Sk%C3%B3ra-Kosmetologia-Makija%C5%BC-permanentny/61561822193882/"
+            target="blank"
+          >
+            <FacebookIcon />
+          </IconButton>
+          <IconButton
+            size="large"
+            sx={{ width: "max-content" }}
+            target="blank"
+            href="https://www.instagram.com/mojaskora.krakow/"
+          >
+            <InstagramIcon />
+          </IconButton>
+          <IconButton
+            size="large"
+            sx={{ width: "max-content" }}
+            href="https://share.google/32LRhJnCcYcSInxw7"
+            target="blank"
+          >
+            <GoogleIcon />
+          </IconButton>
+        </Grid>
+        <Grid size={12} display={"flex"} justifyContent={"center"}>
+          <Typography
+            textAlign={"center"}
+            variant="body1"
+            fontWeight="bold"
+            color="text.primary"
+            width="max-content"
+          >
+            Copywright © 2025 – Moja Skóra Kosmetologia • Makijaż permanentny
           </Typography>
-          <Typography variant="body1">518 456 332</Typography>
         </Grid>
       </Grid>
     </Container>
