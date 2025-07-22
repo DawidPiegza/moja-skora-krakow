@@ -14,6 +14,9 @@ import ContactPageIcon from "@mui/icons-material/ContactPage";
 import GroupsIcon from "@mui/icons-material/Groups";
 import CallIcon from "@mui/icons-material/Call";
 import React from "react";
+import { WebsiteLanguageContext } from "../../contexts/LanguageContext";
+import { useNavigate } from "react-router";
+import TranslateIcon from "@mui/icons-material/Translate";
 
 interface ISideDrawerProps {
   open: boolean;
@@ -24,25 +27,27 @@ export default function SideDrawer({
   open,
   setSideDrawerOpen,
 }: ISideDrawerProps) {
+  const { language, setPL_Language, setENG_Language } = React.useContext(
+    WebsiteLanguageContext
+  )!;
+  const navTo = useNavigate();
+  const [languageMenuOpen, setLanguageMenuOpen] = React.useState(false);
+
   const menuItems = [
     {
-      name: "Strona Główna",
+      name: language.webLanguage === "PL" ? "Strona Główna" : "Main Page",
       link: "/",
       icon: <HomeIcon />,
     },
     {
-      name: "Cennik",
-      link: "/",
+      name: language.webLanguage === "PL" ? "Nasz zespół" : "Our Team",
+      link: "/our_team",
       icon: <ContactPageIcon />,
     },
+
     {
-      name: "O nas",
-      link: "/",
-      icon: <GroupsIcon />,
-    },
-    {
-      name: "Kontakt",
-      link: "/",
+      name: language.webLanguage === "PL" ? "Kontakt" : "Contact",
+      link: "/contact",
       icon: <CallIcon />,
     },
   ];
@@ -52,16 +57,61 @@ export default function SideDrawer({
       <Box sx={{ width: 250 }} role="presentation">
         <List>
           {menuItems.map((item, index) => (
-            <React.Fragment key={index}>
+            <ListItem disablePadding key={index}>
+              <ListItemButton
+                onClick={() => {
+                  navTo(item.link);
+                  setSideDrawerOpen(false);
+                }}
+              >
+                <ListItemIcon>{item.icon}</ListItemIcon>
+                <ListItemText primary={item.name} />
+              </ListItemButton>
+            </ListItem>
+          ))}
+
+          <Divider />
+
+          <ListItem disablePadding>
+            <ListItemButton
+              onClick={(e) => {
+                e.stopPropagation();
+                setLanguageMenuOpen(!languageMenuOpen);
+              }}
+            >
+              <ListItemIcon>
+                <TranslateIcon />
+              </ListItemIcon>
+              <ListItemText
+                primary={language.webLanguage === "PL" ? "Język" : "Language"}
+              />
+            </ListItemButton>
+          </ListItem>
+
+          {languageMenuOpen && (
+            <>
               <ListItem disablePadding>
-                <ListItemButton>
-                  <ListItemIcon>{item.icon}</ListItemIcon>
-                  <ListItemText primary={item.name} />
+                <ListItemButton
+                  onClick={() => {
+                    setPL_Language();
+                    setSideDrawerOpen(false);
+                  }}
+                >
+                  <ListItemText primary="Polski" sx={{ pl: 4 }} />
                 </ListItemButton>
               </ListItem>
-              <Divider variant="middle" component="li" />
-            </React.Fragment>
-          ))}
+              <ListItem disablePadding>
+                <ListItemButton
+                  onClick={() => {
+                    setENG_Language();
+                    setSideDrawerOpen(false);
+                  }}
+                >
+                  <ListItemText primary="English" sx={{ pl: 4 }} />
+                </ListItemButton>
+              </ListItem>
+            </>
+          )}
         </List>
       </Box>
     </Drawer>

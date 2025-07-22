@@ -12,16 +12,14 @@ export default function LandingPageView() {
 
   return (
     <Box
-      id="landing_page"
       sx={{
         position: "relative",
         width: "100vw",
-        height: "100vh",
+        height: "calc(100vh - 56px)",
         overflow: "hidden",
         filter: "grayscale(100%)",
       }}
     >
-      {/* Tło */}
       <Box
         sx={{
           position: "absolute",

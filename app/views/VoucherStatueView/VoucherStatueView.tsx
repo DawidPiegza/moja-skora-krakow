@@ -18,7 +18,7 @@ export default function VoucherStatueView() {
   const { language } = React.useContext(WebsiteLanguageContext);
 
   return (
-    <Container maxWidth="xl" sx={{ marginTop: "65px" }}>
+    <Container maxWidth="xl">
       <Grid container spacing={3} paddingY={2}>
         <Grid size={12}>
           <Breadcrumbs aria-label="breadcrumb">

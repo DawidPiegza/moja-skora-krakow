@@ -78,6 +78,16 @@ export default function FooterView() {
             component={Button}
             color="text.primary"
             width="max-content"
+            onClick={() => navigate("/price_list")}
+          >
+            {language.webLanguage === "PL" ? "Cennik" : "Pricing"}
+          </Typography>
+          <Typography
+            variant={domwMd ? "body2" : "body1"}
+            fontWeight="bold"
+            component={Button}
+            color="text.primary"
+            width="max-content"
             href="https://booksy.com/pl-pl/249371_moja-skora_salon-kosmetyczny_8820_krakow"
           >
             Booksy

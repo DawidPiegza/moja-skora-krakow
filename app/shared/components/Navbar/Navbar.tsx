@@ -35,7 +35,7 @@ export default function Navbar({ setSideDrawerOpen }: INavbarProps) {
   return (
     <React.Fragment>
       {!isLoading && (
-        <AppBar position="fixed" color="inherit">
+        <AppBar position="sticky" color="inherit">
           <Container maxWidth="xl">
             <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
               <Box
