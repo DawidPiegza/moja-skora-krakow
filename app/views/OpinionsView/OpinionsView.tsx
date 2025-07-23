@@ -6,7 +6,6 @@ import {
   Box,
   Paper,
   Typography,
-  Rating,
 } from "@mui/material";
 import SectionTitle from "../../shared/components/SectionTitle/SectionTitle";
 import google_logo from "../../../public/images/google_logo.png";

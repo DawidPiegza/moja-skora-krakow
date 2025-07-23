@@ -9,6 +9,10 @@ import {
 } from "@mui/material";
 import SectionTitle from "../../shared/components/SectionTitle/SectionTitle";
 import salon_glowne_zdjecie from "../../../public/images/salon_glowne_zdjecie.jpeg";
+import gabinet_1 from "../../../public/images/zdjecie_strona_glowna.jpg";
+import gabinet_2 from "../../../public/images/zdjecie_strona_glowna.jpg";
+import gabinet_3 from "../../../public/images/zdjecie_strona_glowna.jpg";
+
 import * as motion from "motion/react-client";
 import { useInView } from "react-intersection-observer";
 import { useEffect, useState } from "react";
@@ -18,20 +22,34 @@ import { WebsiteLanguageContext } from "../../shared/contexts/LanguageContext";
 export default function OurCompanyView() {
   const theme = useTheme();
   const { language } = React.useContext(WebsiteLanguageContext)!;
-
   const downMd = useMediaQuery(theme.breakpoints.down("md"));
+
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1 });
   const [show, setShow] = useState(false);
 
+  // Lista zdjęć do slideshow
+  const imageList = [salon_glowne_zdjecie, gabinet_1, gabinet_2, gabinet_3];
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  // Pokazywanie komponentu przy wejściu w viewport
   useEffect(() => {
     if (inView) setShow(true);
     if (!inView) setShow(false);
   }, [inView]);
 
+  // Zmiana zdjęcia co kilka sekund
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % imageList.length);
+    }, 4000); // co 4 sekundy
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <Container maxWidth="xl" ref={ref}>
       <Grid container spacing={3} paddingY={2}>
-        <Grid size={12} container>
+        <Grid container size={12}>
           {show && (
             <Grid
               size={downMd ? 12 : 6}
@@ -96,18 +114,27 @@ export default function OurCompanyView() {
           <Grid size={downMd ? 12 : 6}>
             {show && (
               <Card
-                sx={{ width: "100%", height: "auto" }}
-                component={motion.div}
-                initial={{ opacity: 0.5, y: 50 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1 }}
+                sx={{
+                  width: "100%",
+                  height: "auto",
+                  overflow: "hidden",
+                  position: "relative",
+                }}
               >
-                <CardMedia
-                  component="img"
-                  alt="green iguana"
-                  height="max-content"
-                  image={salon_glowne_zdjecie}
-                />
+                <motion.div
+                  key={currentImageIndex}
+                  initial={{ opacity: 0, x: 30 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: -30 }}
+                  transition={{ duration: 0.8 }}
+                >
+                  <CardMedia
+                    component="img"
+                    alt="Gabinet Moja Skóra"
+                    image={imageList[currentImageIndex]}
+                    sx={{ width: "100%", height: "auto" }}
+                  />
+                </motion.div>
               </Card>
             )}
           </Grid>
