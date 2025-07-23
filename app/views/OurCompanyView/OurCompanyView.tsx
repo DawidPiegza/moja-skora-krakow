@@ -9,9 +9,9 @@ import {
 } from "@mui/material";
 import SectionTitle from "../../shared/components/SectionTitle/SectionTitle";
 import salon_glowne_zdjecie from "../../../public/images/salon_glowne_zdjecie.jpeg";
-import gabinet_1 from "../../../public/images/zdjecie_strona_glowna.jpg";
-import gabinet_2 from "../../../public/images/zdjecie_strona_glowna.jpg";
-import gabinet_3 from "../../../public/images/zdjecie_strona_glowna.jpg";
+import gabinet_1 from "../../../public/images/gabinet_1.jpg";
+import gabinet_2 from "../../../public/images/gabinet_2.jpg";
+import gabinet_3 from "../../../public/images/gabinet_3.jpg";
 
 import * as motion from "motion/react-client";
 import { useInView } from "react-intersection-observer";
@@ -27,21 +27,18 @@ export default function OurCompanyView() {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1 });
   const [show, setShow] = useState(false);
 
-  // Lista zdjęć do slideshow
   const imageList = [salon_glowne_zdjecie, gabinet_1, gabinet_2, gabinet_3];
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  // Pokazywanie komponentu przy wejściu w viewport
   useEffect(() => {
     if (inView) setShow(true);
     if (!inView) setShow(false);
   }, [inView]);
 
-  // Zmiana zdjęcia co kilka sekund
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % imageList.length);
-    }, 4000); // co 4 sekundy
+    }, 6000);
 
     return () => clearInterval(interval);
   }, []);
@@ -131,8 +128,12 @@ export default function OurCompanyView() {
                   <CardMedia
                     component="img"
                     alt="Gabinet Moja Skóra"
-                    image={imageList[currentImageIndex]}
-                    sx={{ width: "100%", height: "auto" }}
+                    image={
+                      downMd
+                        ? salon_glowne_zdjecie
+                        : imageList[currentImageIndex]
+                    }
+                    sx={{ width: "100%", height: "700px" }}
                   />
                 </motion.div>
               </Card>

@@ -11,6 +11,7 @@ import {
 import React from "react";
 import { WebsiteLanguageContext } from "../../shared/contexts/LanguageContext";
 import SectionTitle from "../../shared/components/SectionTitle/SectionTitle";
+import { statueDataEng, statueDataPL } from "./data/statueData";
 
 export default function StatueView() {
   const theme = useTheme();
@@ -32,7 +33,7 @@ export default function StatueView() {
                 [theme.breakpoints.up("md")]: theme.typography.body1,
               }}
             >
-              Strona Główna
+              {language.webLanguage === "PL" ? "Strona Główna" : "Main Page"}
             </Link>
             <Typography
               sx={{
@@ -41,7 +42,9 @@ export default function StatueView() {
                 [theme.breakpoints.up("md")]: theme.typography.body1,
               }}
             >
-              Regulamin
+              {language.webLanguage === "PL"
+                ? "Regulamin gabinetu Moja Skóra"
+                : "Terms and conditions of the Moja Skóra cosmetology clinic"}
             </Typography>
           </Breadcrumbs>
         </Grid>
@@ -55,12 +58,38 @@ export default function StatueView() {
         >
           <SectionTitle
             title={
-              language.webLanguage === "PL"
-                ? "Regulamin "
-                : "TERMS AND CONDITIONS OF THE “MOJA SKÓRA” COSMETOLOGY CLINIC"
+              language.webLanguage === "ENG"
+                ? "Terms and conditions of the Moja Skóra cosmetology clinic"
+                : "Regulamin gabinetu Moja Skóra"
             }
             alignTextTo="center"
           />
+          {(language.webLanguage === "PL"
+            ? statueDataPL
+            : statueDataEng
+          ).sections.map((section) => (
+            <React.Fragment key={section.id}>
+              <Typography
+                variant={!downMd ? "h6" : "body1"}
+                fontWeight="bold"
+                textAlign="center"
+              >
+                {section.title}
+              </Typography>
+
+              {section.entries.map((entry, index) => {
+                if (typeof entry === "string") {
+                  return (
+                    <Typography key={index} textAlign="center" variant="body1">
+                      {entry}
+                    </Typography>
+                  );
+                }
+
+                return null;
+              })}
+            </React.Fragment>
+          ))}
         </Grid>
       </Grid>
     </Container>

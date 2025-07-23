@@ -28,7 +28,6 @@ export default function PriceListView() {
   return (
     <Container
       maxWidth="xl"
-      sx={{ marginTop: "65px" }}
       component={motion.div}
       initial={{ opacity: 0, scale: 0.5 }}
       animate={{ opacity: 1, scale: 1 }}
