@@ -9,9 +9,8 @@ import {
   ListItemText,
 } from "@mui/material";
 import HomeIcon from "@mui/icons-material/Home";
-import LocalOfferIcon from "@mui/icons-material/LocalOffer";
 import ContactPageIcon from "@mui/icons-material/ContactPage";
-import GroupsIcon from "@mui/icons-material/Groups";
+import ListAltIcon from "@mui/icons-material/ListAlt";
 import CallIcon from "@mui/icons-material/Call";
 import React from "react";
 import { WebsiteLanguageContext } from "../../contexts/LanguageContext";
@@ -38,6 +37,11 @@ export default function SideDrawer({
       name: language.webLanguage === "PL" ? "Strona Główna" : "Main Page",
       link: "/",
       icon: <HomeIcon />,
+    },
+    {
+      name: language.webLanguage === "PL" ? "Zabiegi" : "Treatments",
+      link: "/",
+      icon: <ListAltIcon />,
     },
     {
       name: language.webLanguage === "PL" ? "Nasz zespół" : "Our Team",

@@ -128,12 +128,8 @@ export default function OurCompanyView() {
                   <CardMedia
                     component="img"
                     alt="Gabinet Moja Skóra"
-                    image={
-                      downMd
-                        ? salon_glowne_zdjecie
-                        : imageList[currentImageIndex]
-                    }
-                    sx={{ width: "100%", height: "700px" }}
+                    image={imageList[currentImageIndex]}
+                    sx={{ width: "100%", height: downMd ? "350px" : "700px" }}
                   />
                 </motion.div>
               </Card>
