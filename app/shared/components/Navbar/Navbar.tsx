@@ -57,6 +57,9 @@ export default function Navbar({ setSideDrawerOpen }: INavbarProps) {
                   <Button color="inherit" onClick={() => navTo("our_team")}>
                     {language.webLanguage === "PL" ? "Nasz zespół" : "Our Team"}
                   </Button>
+                  <Button color="inherit" onClick={() => navTo("/voucher")}>
+                    {language.webLanguage === "PL" ? "Voucher" : "Voucher"}
+                  </Button>
                   <Button color="inherit" onClick={() => navTo("contact")}>
                     {language.webLanguage === "PL" ? "Kontakt" : "Contact"}
                   </Button>

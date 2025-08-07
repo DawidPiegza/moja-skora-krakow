@@ -7,6 +7,7 @@ export default [
   route("/contact", "./views/ContactView/ContactView.tsx"),
   route("/statute", "./views/StatueView/StatueView.tsx"),
   route("/voucher_statute", "./views/VoucherStatueView/VoucherStatueView.tsx"),
+  route("/voucher", "./views/ClinicVoucherView/ClinicVoucherView.tsx"),
   route(
     "/cosmetology",
     "./views/CosmetologyCategoryView/CosmetologyCategoryView.tsx"
