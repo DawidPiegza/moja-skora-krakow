@@ -44,7 +44,7 @@ export default function SideDrawer({
       icon: <ListAltIcon />,
     },
     {
-      name: language.webLanguage === "PL" ? "Nasz zespół" : "Our Team",
+      name: language.webLanguage === "PL" ? "O Nas" : "About Us",
       link: "/our_team",
       icon: <ContactPageIcon />,
     },

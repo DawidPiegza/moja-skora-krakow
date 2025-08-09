@@ -53,15 +53,11 @@ export default function EmployeeSection({
         <Grid container direction="column" spacing={1}>
           <Grid size={12}>
             <Typography
-              variant="h3"
               sx={(theme) => ({
                 color: "text.primary",
-                ...theme.typography.h5,
-                [theme.breakpoints.up("md")]: {
-                  ...theme.typography.h4,
-                },
+                ...theme.typography.body1,
                 [theme.breakpoints.up("xl")]: {
-                  ...theme.typography.h4,
+                  ...theme.typography.h6,
                 },
               })}
             >
@@ -70,9 +66,9 @@ export default function EmployeeSection({
             <Typography
               sx={(theme) => ({
                 color: "text.primary",
-                ...theme.typography.body1,
+                ...theme.typography.body2,
                 [theme.breakpoints.up("xl")]: {
-                  ...theme.typography.h6,
+                  ...theme.typography.body1,
                 },
               })}
               gutterBottom
