@@ -115,6 +115,7 @@ export default function EmployeeSection({
               }}
             >
               <AccordionSummary
+                sx={{ padding: 0 }}
                 expandIcon={
                   <Box
                     sx={{
@@ -146,7 +147,7 @@ export default function EmployeeSection({
                 </Typography>
               </AccordionSummary>
 
-              <AccordionDetails>
+              <AccordionDetails sx={{ padding: 0 }}>
                 {(language.webLanguage === "PL"
                   ? aboutMeText
                   : aboutMeText

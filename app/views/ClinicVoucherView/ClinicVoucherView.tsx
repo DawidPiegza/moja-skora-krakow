@@ -1,4 +1,7 @@
 import {
+  Accordion,
+  AccordionDetails,
+  AccordionSummary,
   BottomNavigation,
   BottomNavigationAction,
   Box,
@@ -7,6 +10,7 @@ import {
   Card,
   CardMedia,
   Container,
+  Divider,
   Grid,
   Link,
   Paper,
@@ -14,14 +18,15 @@ import {
   useMediaQuery,
   useTheme,
 } from "@mui/material";
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router";
 import { WebsiteLanguageContext } from "../../shared/contexts/LanguageContext";
-import voucher_image from "../../../public/images/voucher_image.jpeg";
-import SectionTitle from "../../shared/components/SectionTitle/SectionTitle";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import GoogleIcon from "@mui/icons-material/Google";
+import voucher_imnage from "../../../public/images/voucher_image.jpeg";
+import { VoucherText } from "./data/VoucherText";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 export default function ClinicVoucherView() {
   const { language } = React.useContext(WebsiteLanguageContext);
@@ -29,9 +34,21 @@ export default function ClinicVoucherView() {
   const downMd = useMediaQuery(theme.breakpoints.down("md"));
   let navigate = useNavigate();
 
+  const [expanded, setExpanded] = useState(false);
+
+  const handleChange = (event: any, isExpanded: any) => {
+    setExpanded(isExpanded);
+  };
+
+  const summaryText =
+    language.webLanguage === "PL" ? VoucherText[0].PL : VoucherText[0].ENG;
+
+  const getShortText = (text: any) =>
+    text.length > 200 ? text.slice(0, 200) + "..." : text;
+
   return (
     <Container maxWidth="xl">
-      <Grid container spacing={3} paddingY={2}>
+      <Grid container spacing={2} paddingTop={2} paddingBottom={"60px"}>
         <Grid size={12}>
           <Breadcrumbs aria-label="breadcrumb">
             <Link
@@ -61,106 +78,138 @@ export default function ClinicVoucherView() {
             </Typography>
           </Breadcrumbs>
         </Grid>
-        <Grid container spacing={5} paddingY={2} alignItems={"stretch"}>
-          <Grid size={12} container>
-            <Grid
-              size={downMd ? 12 : 6}
-              display="flex"
-              flexDirection="column"
-              alignItems={downMd ? "center" : "flex-start"}
-              justifyContent="center"
-            >
-              <SectionTitle
-                alignTextTo={downMd ? "left" : "left"}
-                title={
-                  language.webLanguage === "PL"
-                    ? "Podaruj bliskiej osobie wyjątkowy prezent"
-                    : "Give your loved one a truly special gift"
-                }
-              />
-              <Typography
-                align="left"
-                gutterBottom
-                variant={downMd ? "body2" : "body1"}
-                marginTop={2}
-              >
-                {language.webLanguage === "PL" &&
-                  "Voucher podarunkowy to coś więcej niż upominek - podaruj czas dla siebie, chwilę relaksu i profesjonalną pielęgnację dopasowaną do indywidualnych potrzeb."}
+        <Grid size={12}>
+          <Divider />
+        </Grid>
 
-                {language.webLanguage === "ENG" &&
-                  `A gift voucher is more than just a present – it’s time for self-care, a moment of relaxation, and professional skincare tailored to individual needs.`}
-              </Typography>
-              <Typography
-                align="left"
-                gutterBottom
-                variant={downMd ? "body2" : "body1"}
+        <Grid
+          size={12}
+          display="flex"
+          justifyContent={"flex-start"}
+          py={downMd ? 1 : 4}
+          px={2}
+        >
+          <Typography variant={downMd ? "h5" : "h4"} textAlign="left">
+            {language.webLanguage === "PL"
+              ? "Podaruj bliskiej osobie wyjątkowy prezent"
+              : "Give your loved one a truly special gift"}
+          </Typography>
+        </Grid>
+        <Grid container size={12} spacing={downMd ? 3 : 1} paddingY={1}>
+          <Grid
+            size={downMd ? 12 : 6}
+            display="flex"
+            flexDirection="column"
+            alignItems={"flex-start"}
+            px={2}
+            container
+          >
+            {downMd ? (
+              <Grid size={12}>
+                <Accordion
+                  expanded={expanded}
+                  onChange={handleChange}
+                  sx={{
+                    boxShadow: "none",
+                    border: "none",
+                    borderRadius: 0,
+                    "&::before": {
+                      display: "none",
+                    },
+                  }}
+                >
+                  <AccordionSummary
+                    sx={{ padding: 0 }}
+                    expandIcon={
+                      <Box
+                        sx={{
+                          width: 32,
+                          height: 32,
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                          flexShrink: 0,
+                        }}
+                      >
+                        <ExpandMoreIcon
+                          sx={{
+                            fontSize: 24,
+                            width: 24,
+                            height: 24,
+                          }}
+                        />
+                      </Box>
+                    }
+                    aria-controls="panel1-content"
+                    id="panel1-header"
+                  >
+                    <Typography
+                      variant={downMd ? "body2" : "body1"}
+                      sx={{ flex: 1 }}
+                    >
+                      {expanded ? summaryText : getShortText(summaryText)}
+                    </Typography>
+                  </AccordionSummary>
+
+                  <AccordionDetails sx={{ padding: 0 }}>
+                    {(language.webLanguage === "PL"
+                      ? VoucherText
+                      : VoucherText
+                    ).map((text, index) =>
+                      index !== 0 ? (
+                        <Typography
+                          key={index}
+                          variant={downMd ? "body2" : "body1"}
+                          gutterBottom
+                        >
+                          {language.webLanguage === "PL" ? text.PL : text.ENG}
+                        </Typography>
+                      ) : null
+                    )}
+                  </AccordionDetails>
+                </Accordion>
+              </Grid>
+            ) : (
+              <Grid
+                size={12}
+                container
+                display={"flex"}
+                alignItems={"center"}
+                rowGap={3}
               >
                 {language.webLanguage === "PL" &&
-                  "To forma prezentu, która realnie wpływa na dobre samopoczucie – zarówno fizyczne, jak i emocjonalne. Efekty widać na zewnątrz w postaci zdrowszej, promiennej skóry, ale też czuć je wewnętrznie – w większym komforcie i pewności siebie."}
+                  VoucherText.map((text, index) => (
+                    <Typography variant="body1" key={index}>
+                      {text.PL}
+                    </Typography>
+                  ))}
                 {language.webLanguage === "ENG" &&
-                  "It’s a form of a gift that genuinely enhances well-being – both physical and emotional. The effects are visible on the outside as healthier, more radiant skin, and felt on the inside as increased comfort and self-confidence."}
-              </Typography>
-              <Typography
-                align="left"
-                gutterBottom
-                variant={downMd ? "body2" : "body1"}
-              >
-                {language.webLanguage === "PL" &&
-                  "Nasz voucher można zrealizować na dowolnie wybrane usługi: od konsultacji kosmetologicznej i analizy skóry, przez zabiegi pielęgnacyjne, aż po indywidualnie dobraną terapię. Dostępna jest również opcja vouchera kwotowego – osoba obdarowana sama zdecyduje, na co go wykorzysta."}
-                {language.webLanguage === "ENG" &&
-                  "Our voucher can be used for any chosen service – from a skin consultation and analysis to advanced skincare treatments or a personalized therapy plan. A value-based voucher option is also available, allowing the recipient to decide how they would like to use it."}
-              </Typography>
-              <Typography
-                align="left"
-                gutterBottom
-                variant={downMd ? "body2" : "body1"}
-              >
-                {language.webLanguage === "ENG" &&
-                  "It’s a universal, elegant gift for any occasion – for women, men, and anyone who deserves a moment of care and attention."}
-                {language.webLanguage === "PL" &&
-                  "To uniwersalny, elegancki prezent na każdą okazję – dla kobiety, dla mężczyzny, dla każdego, kto zasługuje na chwilę dla siebie."}
-              </Typography>
-              <Typography
-                align="left"
-                gutterBottom
-                variant={downMd ? "body2" : "body1"}
-              >
-                {language.webLanguage === "ENG" &&
-                  "Details regarding purchase, delivery, and redemption of the voucher can be found in the "}
-                {language.webLanguage === "PL" &&
-                  "Szczegółowe zasady zakupu, wysyłki oraz wykorzystania Vouchera znajdują się w "}
-              </Typography>
-              <Button
-                size="small"
-                variant="text"
-                sx={{ color: "secondary.main" }}
-                onClick={() => navigate("/voucher_statute")}
-              >
-                {language.webLanguage === "ENG"
-                  ? "Terms & Conditions"
-                  : "Regulaminie"}
-              </Button>
-            </Grid>
-            <Grid size={downMd ? 12 : 6}>
-              <Card sx={{ width: "100%", height: "auto" }}>
-                <CardMedia
-                  component="img"
-                  alt="voucher_image"
-                  height="max-content"
-                  image={voucher_image}
-                />
-              </Card>
-            </Grid>
+                  VoucherText.map((text, index) => (
+                    <Typography variant="body1" key={index}>
+                      {text.ENG}
+                    </Typography>
+                  ))}
+              </Grid>
+            )}
+          </Grid>
+          <Grid size={downMd ? 12 : 6} px={2}>
+            <Card sx={{ width: "100%", height: "auto" }} elevation={1}>
+              <CardMedia
+                component="img"
+                alt="voucher_image"
+                height="max-content"
+                image={voucher_imnage}
+              />
+            </Card>
           </Grid>
         </Grid>
       </Grid>
       <Box
         width="100%"
-        position="absolute"
-        bottom="1px"
-        left={"0px"}
+        sx={{ position: "fixed", bottom: 0, left: 0, right: 0 }}
         component={Paper}
-        variant="elevation"
+        zIndex={11}
+        elevation={6}
       >
         <BottomNavigation sx={{ width: "100%" }} showLabels>
           <BottomNavigationAction label="Facebook" icon={<FacebookIcon />} />

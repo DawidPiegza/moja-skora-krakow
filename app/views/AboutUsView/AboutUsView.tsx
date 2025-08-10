@@ -129,16 +129,17 @@ export default function AboutUsView() {
               <Grid
                 size={12}
                 display="flex"
-                justifyContent={"center"}
-                p={downMd ? 1 : 4}
+                justifyContent={"flex-start"}
+                py={downMd ? 1 : 4}
+                px={2}
               >
-                <Typography variant={downMd ? "h6" : "h5"} textAlign="center">
-                  {!downMd
-                    ? "Moja Skóra Kosmetologia • Makijaż permanentny"
-                    : "Moja Skóra"}
+                <Typography variant={downMd ? "h5" : "h4"} textAlign="left">
+                  {language.webLanguage === "PL"
+                    ? "Poznaj Moja Skóra"
+                    : "Meet Moja Skóra"}
                 </Typography>
               </Grid>
-              <Grid size={12} container alignItems={"center"}>
+              <Grid size={12} container alignItems={"flex-start"}>
                 {downMd ? (
                   <Grid size={12}>
                     <Accordion
@@ -313,10 +314,11 @@ export default function AboutUsView() {
               <Grid
                 size={12}
                 display="flex"
-                justifyContent={"center"}
-                p={downMd ? 1 : 4}
+                justifyContent={"flex-start"}
+                py={downMd ? 1 : 4}
+                px={2}
               >
-                <Typography variant={downMd ? "h6" : "h5"}>
+                <Typography variant={downMd ? "h5" : "h4"} textAlign="left">
                   {language.webLanguage === "PL"
                     ? "Poznaj naszych specjalistów"
                     : "Meet our specialists"}
