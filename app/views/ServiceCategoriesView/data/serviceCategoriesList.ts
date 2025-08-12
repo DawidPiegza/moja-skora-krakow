@@ -3,6 +3,7 @@ import makijaz_pernamentny from "../../../../public/images/makijaz_pernamentny.j
 import kosmetologia from "../../../../public/images/kosmetologia.jpg";
 import modelowanie_ust from "../../../../public/images/modelowanie_ust.jpg";
 import stylizacja_brwi_i_rzes from "../../../../public/images/stylizacja_brwi_i_rzes.jpg";
+import konsultacja from "../../../../public/images/konsultacja.png";
 
 export const serviceCategoriesList: IServiceCategory[] = [
   {
@@ -36,6 +37,14 @@ export const serviceCategoriesList: IServiceCategory[] = [
     content:
       "W naszym gabinecie stylizujemy brwi i rzęsy w sposób spójny z urodą klientki. Oferujemy laminację, lifting, koloryzację i precyzyjną regulację, wszystko po to, by subtelnie podkreślić oprawę oka i nadać jej wyrazistość w naturalnym stylu. Pracujemy z dbałością o detal i trwałość efektu, kierując się estetyką oraz komfortem skóry i włosków.",
     pictureURL: stylizacja_brwi_i_rzes,
+    categoryURL: "/Eyebrow_eylash_shaping",
+  },
+  {
+    title: "Konsultacja",
+    titleENG: "Consultation",
+    content:
+      "W naszym gabinecie stylizujemy brwi i rzęsy w sposób spójny z urodą klientki. Oferujemy laminację, lifting, koloryzację i precyzyjną regulację, wszystko po to, by subtelnie podkreślić oprawę oka i nadać jej wyrazistość w naturalnym stylu. Pracujemy z dbałością o detal i trwałość efektu, kierując się estetyką oraz komfortem skóry i włosków.",
+    pictureURL: konsultacja,
     categoryURL: "/Eyebrow_eylash_shaping",
   },
 ];

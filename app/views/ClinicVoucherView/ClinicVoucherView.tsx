@@ -81,7 +81,6 @@ export default function ClinicVoucherView() {
         <Grid size={12}>
           <Divider />
         </Grid>
-
         <Grid
           size={12}
           display="flex"
@@ -89,7 +88,11 @@ export default function ClinicVoucherView() {
           py={downMd ? 1 : 4}
           px={2}
         >
-          <Typography variant={downMd ? "h5" : "h4"} textAlign="left">
+          <Typography
+            textAlign="left"
+            variant={downMd ? "h4" : "h3"}
+            sx={{ fontWeight: "100" }}
+          >
             {language.webLanguage === "PL"
               ? "Podaruj bliskiej osobie wyjątkowy prezent"
               : "Give your loved one a truly special gift"}
@@ -209,7 +212,7 @@ export default function ClinicVoucherView() {
         sx={{ position: "fixed", bottom: 0, left: 0, right: 0 }}
         component={Paper}
         zIndex={11}
-        elevation={6}
+        elevation={1}
       >
         <BottomNavigation sx={{ width: "100%" }} showLabels>
           <BottomNavigationAction label="Facebook" icon={<FacebookIcon />} />

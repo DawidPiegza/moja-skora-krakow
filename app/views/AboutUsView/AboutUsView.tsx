@@ -133,7 +133,11 @@ export default function AboutUsView() {
                 py={downMd ? 1 : 4}
                 px={2}
               >
-                <Typography variant={downMd ? "h5" : "h4"} textAlign="left">
+                <Typography
+                  variant={downMd ? "h4" : "h3"}
+                  textAlign="left"
+                  sx={{ fontWeight: "100" }}
+                >
                   {language.webLanguage === "PL"
                     ? "Poznaj Moja Skóra"
                     : "Meet Moja Skóra"}
@@ -318,7 +322,11 @@ export default function AboutUsView() {
                 py={downMd ? 1 : 4}
                 px={2}
               >
-                <Typography variant={downMd ? "h5" : "h4"} textAlign="left">
+                <Typography
+                  variant={downMd ? "h4" : "h3"}
+                  textAlign="left"
+                  sx={{ fontWeight: "100" }}
+                >
                   {language.webLanguage === "PL"
                     ? "Poznaj naszych specjalistów"
                     : "Meet our specialists"}
@@ -358,7 +366,7 @@ export default function AboutUsView() {
             sx={{ position: "fixed", bottom: 0, left: 0, right: 0 }}
             component={Paper}
             zIndex={11}
-            elevation={6}
+            elevation={1}
           >
             <BottomNavigation sx={{ width: "100%" }} showLabels>
               <BottomNavigationAction

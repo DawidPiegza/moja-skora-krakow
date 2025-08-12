@@ -25,16 +25,13 @@ export default function LandingPageView() {
           position: "absolute",
           width: "100%",
           height: "100%",
-          backgroundImage: `url(${
-            downMd ? zdjecie_strona_glowna_xs : zdjecie_strona_glowna
-          })`,
+          backgroundImage: `url(${zdjecie_strona_glowna_xs})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
           zIndex: 0,
         }}
       />
-
       <Box
         sx={{
           position: "absolute",

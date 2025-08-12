@@ -7,7 +7,6 @@ import {
   Paper,
   Typography,
 } from "@mui/material";
-import SectionTitle from "../../shared/components/SectionTitle/SectionTitle";
 import google_logo from "../../../public/images/google_logo.png";
 import { googleOpinions } from "./data/googleOpinions";
 import { useEffect, useState } from "react";
@@ -17,7 +16,7 @@ import { WebsiteLanguageContext } from "../../shared/contexts/LanguageContext";
 
 export default function OpinionsView() {
   const theme = useTheme();
-  const domwMd = useMediaQuery(theme.breakpoints.down("md"));
+  const downMd = useMediaQuery(theme.breakpoints.down("md"));
   const { language } = React.useContext(WebsiteLanguageContext);
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -29,44 +28,44 @@ export default function OpinionsView() {
       setTimeout(() => {
         setCurrentIndex((prev) => (prev + 1) % googleOpinions.length);
         setFade(true);
-      }, 300);
-    }, 3000);
+      }, 500);
+    }, 5000);
 
     return () => clearInterval(interval);
   }, []);
 
   return (
     <Container maxWidth="xl">
-      <Grid container spacing={2} paddingY={2}>
+      <Grid container rowSpacing={downMd ? 5 : 10} py={downMd ? 2 : 5} px={2}>
         <Grid size={12}>
-          <SectionTitle
-            title={
-              language.webLanguage === "PL"
-                ? "Opinie naszych klientów są dla nas najważniejsze"
-                : "Our clients feedback is the most important to us."
-            }
-          />
+          <Typography
+            variant={downMd ? "h4" : "h3"}
+            textAlign="left"
+            sx={{ fontWeight: "100" }}
+          >
+            {language.webLanguage === "PL"
+              ? "Opinie naszych klientów są dla nas najważniejsze"
+              : "Our clients feedback is the most important to us."}
+          </Typography>
         </Grid>
         <Grid size={12} container justifyContent="center" alignItems="center">
-          <Grid size={domwMd ? 12 : 8}>
+          <Grid size={downMd ? 12 : 8}>
             <Box
               width="100%"
-              height={domwMd ? "350px" : "250px"}
-              component={Paper}
+              height={downMd ? "350px" : "250px"}
               display="flex"
               flexDirection="column"
               alignContent="center"
               justifyContent="center"
               overflow="hidden"
               textAlign="center"
-              p={2}
               sx={{
                 transition: "opacity 0.5s ease",
                 opacity: fade ? 1 : 0,
               }}
-              rowGap={domwMd ? 0.5 : 1}
+              rowGap={downMd ? 0.5 : 1}
             >
-              <Typography variant={domwMd ? "body2" : "body1"} gutterBottom>
+              <Typography variant={downMd ? "body2" : "body1"} gutterBottom>
                 {googleOpinions[currentIndex].opinionContent}
               </Typography>
               <Typography variant="caption" gutterBottom>
@@ -92,7 +91,7 @@ export default function OpinionsView() {
             component="img"
             alt="google logo"
             src={google_logo}
-            height={domwMd ? "35px" : "50px"}
+            height={downMd ? "35px" : "50px"}
           />
         </Grid>
       </Grid>

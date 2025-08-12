@@ -24,6 +24,7 @@ export default function BrandCard({ imageURL, fade }: IBrandCardProps) {
         lg: 2,
       }}
       component={!domwMd ? Paper : Grid}
+      elevation={1}
       display="flex"
       alignItems="center"
       sx={{

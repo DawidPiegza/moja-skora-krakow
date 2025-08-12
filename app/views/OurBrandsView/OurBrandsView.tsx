@@ -1,6 +1,12 @@
-import { Container, Grid, useMediaQuery, useTheme, Box } from "@mui/material";
+import {
+  Container,
+  Grid,
+  useMediaQuery,
+  useTheme,
+  Box,
+  Typography,
+} from "@mui/material";
 import { useState, useEffect } from "react";
-import SectionTitle from "../../shared/components/SectionTitle/SectionTitle";
 import revitacare_logo from "../../../public/images/revitacare_logo.png";
 import artpmu_logo from "../../../public/images/artpmu_logo.png";
 import dermomedica_logo from "../../../public/images/dermomedica_logo.jpg";
@@ -22,14 +28,14 @@ const logos = [
 
 export default function OurBrandsView() {
   const theme = useTheme();
-  const domwMd = useMediaQuery(theme.breakpoints.down("md"));
+  const downMd = useMediaQuery(theme.breakpoints.down("md"));
   const { language } = React.useContext(WebsiteLanguageContext);
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [fade, setFade] = useState(true);
 
   useEffect(() => {
-    if (!domwMd) return;
+    if (!downMd) return;
 
     const interval = setInterval(() => {
       setFade(false);
@@ -40,22 +46,24 @@ export default function OurBrandsView() {
     }, 3000);
 
     return () => clearInterval(interval);
-  }, [domwMd]);
+  }, [downMd]);
 
   return (
     <Container maxWidth="xl">
-      <Grid container spacing={3} paddingY={2}>
+      <Grid container rowSpacing={downMd ? 5 : 10} py={downMd ? 2 : 5} px={2}>
         <Grid size={12}>
-          <SectionTitle
-            title={
-              language.webLanguage === "PL"
-                ? "Korzystamy wyłącznie z renomowanych produktów"
-                : "We exclusively use reputable, high-quality products."
-            }
-          />
+          <Typography
+            variant={downMd ? "h4" : "h3"}
+            textAlign="left"
+            sx={{ fontWeight: "100" }}
+          >
+            {language.webLanguage === "PL"
+              ? "Korzystamy wyłącznie z renomowanych produktów"
+              : "We exclusively use reputable, high-quality products."}
+          </Typography>
         </Grid>
 
-        {domwMd ? (
+        {downMd ? (
           <Grid size={12} display="flex" justifyContent="center">
             <Box>
               <BrandCard imageURL={logos[currentIndex]} fade={fade} />

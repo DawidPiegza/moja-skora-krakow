@@ -1,8 +1,11 @@
 import {
+  BottomNavigation,
+  BottomNavigationAction,
   Box,
   Breadcrumbs,
   Button,
   Container,
+  Divider,
   Grid,
   Link,
   Paper,
@@ -15,29 +18,20 @@ import {
 import PlaceOutlinedIcon from "@mui/icons-material/PlaceOutlined";
 import LocalPhoneOutlinedIcon from "@mui/icons-material/LocalPhoneOutlined";
 import AccessTimeOutlinedIcon from "@mui/icons-material/AccessTimeOutlined";
-import SectionTitle from "../../shared/components/SectionTitle/SectionTitle";
-import { motion } from "framer-motion";
 import { WebsiteLanguageContext } from "../../shared/contexts/LanguageContext";
 import React from "react";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import GoogleIcon from "@mui/icons-material/Google";
+
 export default function ContactView() {
   const theme = useTheme();
   const downMd = useMediaQuery(theme.breakpoints.down("md"));
-  const betweenMdAndLg = useMediaQuery(theme.breakpoints.between("sm", "lg"));
   const { language } = React.useContext(WebsiteLanguageContext);
 
   return (
-    <Container
-      maxWidth="xl"
-      component={motion.div}
-      initial={{ opacity: 0, scale: 0.5 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{
-        duration: 0.8,
-        delay: 0.2,
-        ease: [0, 0.71, 0.2, 1.01],
-      }}
-    >
-      <Grid container spacing={3} paddingY={2}>
+    <Container maxWidth="xl">
+      <Grid container spacing={2} paddingTop={2} paddingBottom={"60px"}>
         <Grid size={12}>
           <Breadcrumbs aria-label="breadcrumb">
             <Link
@@ -68,6 +62,9 @@ export default function ContactView() {
           </Breadcrumbs>
         </Grid>
         <Grid size={12}>
+          <Divider />
+        </Grid>
+        <Grid size={12}>
           <Grid
             container
             direction={downMd ? "column" : "row"}
@@ -75,21 +72,18 @@ export default function ContactView() {
               justifyContent: "center",
               alignItems: "stretch",
             }}
-            spacing={5}
+            spacing={3}
           >
-            <Grid size={12}>
+            <Grid size={12} paddingBottom={5} py={downMd ? 1 : 4} px={2}>
               <Typography
-                variant={downMd ? "h6" : "h5"}
-                align="center"
-                fontStyle="italic"
-              ></Typography>
-              <SectionTitle
-                title={
-                  language.webLanguage === "PL"
-                    ? "Jesteśmy tu dla Ciebie! Skontaktuj się z nami, aby umówić wizytę lub uzyskać więcej informacji o naszych usługach."
-                    : "We are here for you! Contact us to schedule an appointment or to get more information about our services."
-                }
-              />
+                variant={downMd ? "h4" : "h3"}
+                textAlign="left"
+                sx={{ fontWeight: "100" }}
+              >
+                {language.webLanguage === "PL"
+                  ? "Skontaktuj się z nami, aby umówić wizytę lub uzyskać informacje."
+                  : "Contact us to book a visit or get info."}
+              </Typography>
             </Grid>
             <Grid size={12}>
               <Grid container width="100%" spacing={1}>
@@ -267,6 +261,19 @@ export default function ContactView() {
           </Grid>
         </Grid>
       </Grid>
+      <Box
+        width="100%"
+        sx={{ position: "fixed", bottom: 0, left: 0, right: 0 }}
+        component={Paper}
+        zIndex={11}
+        elevation={1}
+      >
+        <BottomNavigation sx={{ width: "100%" }} showLabels>
+          <BottomNavigationAction label="Facebook" icon={<FacebookIcon />} />
+          <BottomNavigationAction label="Google" icon={<GoogleIcon />} />
+          <BottomNavigationAction label="Instagram" icon={<InstagramIcon />} />
+        </BottomNavigation>
+      </Box>
     </Container>
   );
 }

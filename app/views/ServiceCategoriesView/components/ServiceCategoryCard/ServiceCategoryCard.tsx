@@ -26,57 +26,32 @@ export default function ServiceCategoryCard({
   const { language } = React.useContext(WebsiteLanguageContext);
   const navTo = useNavigate();
 
-  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1 });
-  const [show, setShow] = useState(false);
-
-  useEffect(() => {
-    if (inView) setShow(true);
-    if (!inView) setShow(false);
-  }, [inView]);
-
   return (
     <Grid
       size={{
         xs: 12,
         sm: 6,
-        lg: 3,
+        lg: 2.33,
       }}
-      ref={ref}
     >
-      {show && (
-        <Card
-          sx={{ width: "100%" }}
-          component={motion.div}
-          initial={{ opacity: 0, x: -500 }}
-          animate={{
-            opacity: 1,
-            x: 0,
-            transition: {
-              delay: 0.5,
-              type: "spring",
-              visualDuration: 1,
-              bounce: 0.4,
-            },
-          }}
-        >
-          <CardActionArea onClick={() => navTo(serviceCategory.categoryURL)}>
-            <CardMedia
-              component="img"
-              height={domwMd ? "250px" : "400px"}
-              image={serviceCategory.pictureURL}
-              alt={serviceCategory.title}
-            />
-            <CardHeader
-              subheader={
-                language.webLanguage === "PL"
-                  ? serviceCategory.title
-                  : serviceCategory.titleENG
-              }
-              sx={{ textAlign: "center" }}
-            />
-          </CardActionArea>
-        </Card>
-      )}
+      <Card sx={{ width: "100%" }} elevation={1}>
+        <CardActionArea onClick={() => navTo(serviceCategory.categoryURL)}>
+          <CardMedia
+            component="img"
+            height={domwMd ? "250px" : "400px"}
+            image={serviceCategory.pictureURL}
+            alt={serviceCategory.title}
+          />
+          <CardHeader
+            subheader={
+              language.webLanguage === "PL"
+                ? serviceCategory.title
+                : serviceCategory.titleENG
+            }
+            sx={{ textAlign: "center" }}
+          />
+        </CardActionArea>
+      </Card>
     </Grid>
   );
 }
