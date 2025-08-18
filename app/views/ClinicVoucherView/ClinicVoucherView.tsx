@@ -81,21 +81,28 @@ export default function ClinicVoucherView() {
         <Grid size={12}>
           <Divider />
         </Grid>
-        <Grid
-          size={12}
-          display="flex"
-          justifyContent={"flex-start"}
-          py={downMd ? 1 : 4}
-          px={2}
-        >
+        <Grid size={12} paddingBottom={5} py={downMd ? 1 : 4} px={2}>
           <Typography
+            variant={downMd ? "h5" : "h4"}
             textAlign="left"
-            variant={downMd ? "h4" : "h3"}
             sx={{ fontWeight: "100" }}
+            gutterBottom
+            width={"100%"}
           >
             {language.webLanguage === "PL"
-              ? "Podaruj bliskiej osobie wyjątkowy prezent"
-              : "Give your loved one a truly special gift"}
+              ? "VOUCHER PODARUNKOWY".toUpperCase()
+              : "VOUCHER".toUpperCase()}
+          </Typography>
+          <Typography
+            variant={downMd ? "h6" : "h5"}
+            textAlign="left"
+            sx={{ fontWeight: "100" }}
+            width={"100%"}
+            fontStyle="italic"
+          >
+            {language.webLanguage === "PL"
+              ? "Podaruj bliskiej osobie wyjątkowy prezent".toUpperCase()
+              : "Give your loved one a truly special gift".toUpperCase()}
           </Typography>
         </Grid>
         <Grid container size={12} spacing={downMd ? 3 : 1} paddingY={1}>

@@ -76,13 +76,24 @@ export default function ContactView() {
           >
             <Grid size={12} paddingBottom={5} py={downMd ? 1 : 4} px={2}>
               <Typography
-                variant={downMd ? "h4" : "h3"}
+                variant={downMd ? "h5" : "h4"}
                 textAlign="left"
                 sx={{ fontWeight: "100" }}
+                gutterBottom
               >
                 {language.webLanguage === "PL"
-                  ? "Skontaktuj się z nami, aby umówić wizytę lub uzyskać informacje."
-                  : "Contact us to book a visit or get info."}
+                  ? "KONTAKT".toUpperCase()
+                  : "CONTACT".toUpperCase()}
+              </Typography>
+              <Typography
+                variant={downMd ? "h6" : "h5"}
+                textAlign="left"
+                sx={{ fontWeight: "100" }}
+                fontStyle="italic"
+              >
+                {language.webLanguage === "PL"
+                  ? "Skontaktuj się z nami, aby umówić wizytę lub uzyskać informacje.".toUpperCase()
+                  : "Contact us to book a visit or get info.".toUpperCase()}
               </Typography>
             </Grid>
             <Grid size={12}>
@@ -98,9 +109,9 @@ export default function ContactView() {
                     variant="outlined"
                     textAlign="center"
                     alignItems="center"
-                    rowGap={1}
+                    rowGap={0.5}
                   >
-                    <PlaceOutlinedIcon fontSize="large" />
+                    <PlaceOutlinedIcon fontSize="medium" />
                     <Typography variant="h6">
                       {" "}
                       {language.webLanguage === "PL"
@@ -108,7 +119,7 @@ export default function ContactView() {
                         : "Address"}
                     </Typography>
                     <Typography variant="body1">
-                      Świętego Sebastiana 22/2C, 31-049 Kraków
+                      ul. Świętego Sebastiana 22/2C, 31-049 Kraków
                     </Typography>
                   </Box>
                 </Grid>
@@ -123,9 +134,9 @@ export default function ContactView() {
                     variant="outlined"
                     textAlign="center"
                     alignItems="center"
-                    rowGap={1}
+                    rowGap={0.5}
                   >
-                    <LocalPhoneOutlinedIcon fontSize="large" />
+                    <LocalPhoneOutlinedIcon fontSize="medium" />
                     <Typography variant="h6">
                       {language.webLanguage === "PL"
                         ? "Numer telefonu"
@@ -145,9 +156,9 @@ export default function ContactView() {
                     variant="outlined"
                     textAlign="center"
                     alignItems="center"
-                    rowGap={1}
+                    rowGap={0.5}
                   >
-                    <AccessTimeOutlinedIcon fontSize="large" />
+                    <AccessTimeOutlinedIcon fontSize="medium" />
                     <Typography variant="h6">
                       {language.webLanguage === "PL"
                         ? "Godziny otwarcia"

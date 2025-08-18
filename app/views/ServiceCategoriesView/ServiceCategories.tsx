@@ -20,13 +20,13 @@ export default function ServiceCategories() {
       <Grid container rowSpacing={downMd ? 5 : 10} py={downMd ? 2 : 5} px={2}>
         <Grid size={12}>
           <Typography
-            variant={downMd ? "h4" : "h3"}
+            variant={downMd ? "h5" : "h4"}
             textAlign="left"
             sx={{ fontWeight: "100" }}
           >
             {language.webLanguage === "PL"
-              ? "Wybierz zabieg dla siebie"
-              : "Choose a treatment for yourself"}
+              ? "Wybierz zabieg dla siebie".toUpperCase()
+              : "Choose a treatment for yourself".toUpperCase()}
           </Typography>
         </Grid>
         <Grid

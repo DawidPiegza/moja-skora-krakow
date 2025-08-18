@@ -53,13 +53,13 @@ export default function OurBrandsView() {
       <Grid container rowSpacing={downMd ? 5 : 10} py={downMd ? 2 : 5} px={2}>
         <Grid size={12}>
           <Typography
-            variant={downMd ? "h4" : "h3"}
+            variant={downMd ? "h5" : "h4"}
             textAlign="left"
             sx={{ fontWeight: "100" }}
           >
             {language.webLanguage === "PL"
-              ? "Korzystamy wyłącznie z renomowanych produktów"
-              : "We exclusively use reputable, high-quality products."}
+              ? "Korzystamy wyłącznie z renomowanych produktów".toUpperCase()
+              : "We exclusively use reputable, high-quality products.".toUpperCase()}
           </Typography>
         </Grid>
 

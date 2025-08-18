@@ -39,13 +39,13 @@ export default function OpinionsView() {
       <Grid container rowSpacing={downMd ? 5 : 10} py={downMd ? 2 : 5} px={2}>
         <Grid size={12}>
           <Typography
-            variant={downMd ? "h4" : "h3"}
+            variant={downMd ? "h5" : "h4"}
             textAlign="left"
             sx={{ fontWeight: "100" }}
           >
             {language.webLanguage === "PL"
-              ? "Opinie naszych klientów są dla nas najważniejsze"
-              : "Our clients feedback is the most important to us."}
+              ? "Opinie naszych klientów są dla nas najważniejsze".toUpperCase()
+              : "Our clients feedback is the most important to us.".toUpperCase()}
           </Typography>
         </Grid>
         <Grid size={12} container justifyContent="center" alignItems="center">

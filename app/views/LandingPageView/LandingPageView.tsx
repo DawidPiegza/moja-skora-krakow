@@ -1,6 +1,6 @@
 import { Box, useMediaQuery } from "@mui/material";
 import logo_moja_skora from "../../../public/images/logo_moja_skora.png";
-import zdjecie_strona_glowna from "../../../public/images/zdjecie_strona_glowna.jpg";
+import nowe_tytulowe from "../../../public/images/nowe_tytulowe.jpg";
 import zdjecie_strona_glowna_xs from "../../../public/images/zdjecie_strona_glowna_xs.jpg";
 
 import { theme } from "../../shared/styles/MUIGlobalStyle";
@@ -25,7 +25,7 @@ export default function LandingPageView() {
           position: "absolute",
           width: "100%",
           height: "100%",
-          backgroundImage: `url(${zdjecie_strona_glowna_xs})`,
+          backgroundImage: `url(${nowe_tytulowe})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
@@ -37,7 +37,7 @@ export default function LandingPageView() {
           position: "absolute",
           width: "100%",
           height: "100%",
-          backgroundColor: "rgba(255, 255, 255, 0.3)",
+          backgroundColor: "rgba(255, 255, 255, 0.25)",
           zIndex: 1,
         }}
       />

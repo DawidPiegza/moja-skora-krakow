@@ -18,7 +18,7 @@ interface IEmployeeSectionProps {
   name: string;
   photoURL: string;
   academicTittle: {
-    PL: "mgr kosmetologi";
+    PL: "mgr kosmetologii";
     ENG: "M.Sc. in Cosmetology";
   };
   aboutMeText: IAboutMeText[];
@@ -55,9 +55,9 @@ export default function EmployeeSection({
             <Typography
               sx={(theme) => ({
                 color: "text.primary",
-                ...theme.typography.body1,
+                ...theme.typography.h6,
                 [theme.breakpoints.up("xl")]: {
-                  ...theme.typography.h6,
+                  ...theme.typography.h5,
                 },
               })}
             >
@@ -66,9 +66,9 @@ export default function EmployeeSection({
             <Typography
               sx={(theme) => ({
                 color: "text.primary",
-                ...theme.typography.body2,
+                ...theme.typography.body1,
                 [theme.breakpoints.up("xl")]: {
-                  ...theme.typography.body1,
+                  ...theme.typography.h6,
                 },
               })}
               gutterBottom

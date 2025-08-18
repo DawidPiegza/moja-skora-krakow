@@ -20,7 +20,6 @@ export default function AppContainer() {
         <Stack width="100vw" height="max-content" rowGap={3}>
           <LandingPageView />
           <ServiceCategories />
-
           <Divider />
           <OurBrandsView />
           <Divider />

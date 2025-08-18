@@ -6,6 +6,7 @@
 *::after {
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
+  letter-spacing: 1px;
 }
 
 /* 2. Remove default margin */

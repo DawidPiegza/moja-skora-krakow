@@ -134,13 +134,13 @@ export default function AboutUsView() {
                 px={2}
               >
                 <Typography
-                  variant={downMd ? "h4" : "h3"}
+                  variant={downMd ? "h5" : "h4"}
                   textAlign="left"
                   sx={{ fontWeight: "100" }}
                 >
                   {language.webLanguage === "PL"
-                    ? "Poznaj Moja Skóra"
-                    : "Meet Moja Skóra"}
+                    ? "Poznaj Moja Skóra".toUpperCase()
+                    : "Meet Moja Skóra".toUpperCase()}
                 </Typography>
               </Grid>
               <Grid size={12} container alignItems={"flex-start"}>
@@ -323,13 +323,13 @@ export default function AboutUsView() {
                 px={2}
               >
                 <Typography
-                  variant={downMd ? "h4" : "h3"}
+                  variant={downMd ? "h5" : "h4"}
                   textAlign="left"
                   sx={{ fontWeight: "100" }}
                 >
                   {language.webLanguage === "PL"
-                    ? "Poznaj naszych specjalistów"
-                    : "Meet our specialists"}
+                    ? "Poznaj naszych specjalistów".toUpperCase()
+                    : "Meet our specialists".toUpperCase()}
                 </Typography>
               </Grid>
 
@@ -337,7 +337,7 @@ export default function AboutUsView() {
                 photoURL={karolina_profilowe}
                 name={"Karolina Sałdan"}
                 academicTittle={{
-                  PL: "mgr kosmetologi",
+                  PL: "mgr kosmetologii",
                   ENG: "M.Sc. in Cosmetology",
                 }}
                 aboutMeText={AboutKarolinaText}
@@ -354,7 +354,7 @@ export default function AboutUsView() {
                 photoURL={basia_profilowe}
                 name={"Barbara Żelazo"}
                 academicTittle={{
-                  PL: "mgr kosmetologi",
+                  PL: "mgr kosmetologii",
                   ENG: "M.Sc. in Cosmetology",
                 }}
                 aboutMeText={AboutBasiaText}
