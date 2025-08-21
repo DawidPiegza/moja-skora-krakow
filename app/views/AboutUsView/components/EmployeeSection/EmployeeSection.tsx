@@ -55,7 +55,7 @@ export default function EmployeeSection({
             <Typography variant="h6" fontWeight={350}>
               {name.toUpperCase()}
             </Typography>
-            <Typography variant="h6" fontWeight={200}>
+            <Typography variant="body1" fontWeight={200}>
               {language.webLanguage === "PL"
                 ? academicTittle.PL.toUpperCase()
                 : academicTittle.ENG.toUpperCase()}
