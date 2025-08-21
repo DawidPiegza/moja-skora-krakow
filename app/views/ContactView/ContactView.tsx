@@ -94,8 +94,8 @@ export default function ContactView() {
                 fontStyle="italic"
               >
                 {language.webLanguage === "PL"
-                  ? "Skontaktuj się z nami, aby umówić wizytę lub uzyskać informacje.".toUpperCase()
-                  : "Contact us to book a visit or get info.".toUpperCase()}
+                  ? "Skontaktuj się z nami, aby umówić wizytę lub uzyskać informacje."
+                  : "Contact us to book a visit or get info."}
               </Typography>
             </Grid>
             <Grid size={12}>
@@ -113,13 +113,13 @@ export default function ContactView() {
                     alignItems="center"
                     rowGap={0.5}
                   >
-                    <PlaceOutlinedIcon fontSize="medium" />
-                    <Typography variant="body1" fontWeight={500}>
+                    <PlaceOutlinedIcon fontSize="medium" color="disabled" />
+                    <Typography variant="body1" fontWeight={400}>
                       {language.webLanguage === "PL"
                         ? "Adres salonu"
                         : "Address"}
                     </Typography>
-                    <Typography variant="body2" fontWeight={400}>
+                    <Typography variant="body2" fontWeight={300}>
                       ul. Świętego Sebastiana 22/2C, 31-049 Kraków
                     </Typography>
                   </Box>
@@ -137,13 +137,16 @@ export default function ContactView() {
                     alignItems="center"
                     rowGap={0.5}
                   >
-                    <LocalPhoneOutlinedIcon fontSize="medium" />
-                    <Typography variant="body1" fontWeight={500}>
+                    <LocalPhoneOutlinedIcon
+                      fontSize="medium"
+                      color="disabled"
+                    />
+                    <Typography variant="body1" fontWeight={400}>
                       {language.webLanguage === "PL"
                         ? "Numer telefonu"
                         : "Phone Number"}
                     </Typography>
-                    <Typography variant="body2" fontWeight={400}>
+                    <Typography variant="body2" fontWeight={300}>
                       518 456 332
                     </Typography>
                   </Box>
@@ -161,13 +164,16 @@ export default function ContactView() {
                     alignItems="center"
                     rowGap={0.5}
                   >
-                    <AccessTimeOutlinedIcon fontSize="medium" />
-                    <Typography variant="body1" fontWeight={500}>
+                    <AccessTimeOutlinedIcon
+                      fontSize="medium"
+                      color="disabled"
+                    />
+                    <Typography variant="body1" fontWeight={400}>
                       {language.webLanguage === "PL"
                         ? "Godziny otwarcia"
                         : "Opening Hours"}
                     </Typography>
-                    <Typography variant="body2" fontWeight={400}>
+                    <Typography variant="body2" fontWeight={300}>
                       Pon - Pt: 8:00 – 21:00 oraz Sb: 8:00 – 16:00
                     </Typography>
                   </Box>
