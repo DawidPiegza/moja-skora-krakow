@@ -325,7 +325,7 @@ export default function AboutUsView() {
                 <Typography
                   variant={downMd ? "h5" : "h4"}
                   textAlign="left"
-                  sx={{ fontWeight: "100" }}
+                  sx={{ fontWeight: "350" }}
                 >
                   {language.webLanguage === "PL"
                     ? "Poznaj naszych specjalistów".toUpperCase()

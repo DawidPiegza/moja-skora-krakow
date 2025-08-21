@@ -52,30 +52,13 @@ export default function EmployeeSection({
       <Grid size={12} p={2}>
         <Grid container direction="column" spacing={1}>
           <Grid size={12}>
-            <Typography
-              sx={(theme) => ({
-                color: "text.primary",
-                ...theme.typography.h6,
-                [theme.breakpoints.up("xl")]: {
-                  ...theme.typography.h5,
-                },
-              })}
-            >
-              {name}
+            <Typography variant="h6" fontWeight={350}>
+              {name.toUpperCase()}
             </Typography>
-            <Typography
-              sx={(theme) => ({
-                color: "text.primary",
-                ...theme.typography.body1,
-                [theme.breakpoints.up("xl")]: {
-                  ...theme.typography.h6,
-                },
-              })}
-              gutterBottom
-            >
+            <Typography variant="h6" fontWeight={200}>
               {language.webLanguage === "PL"
-                ? academicTittle.PL
-                : academicTittle.ENG}
+                ? academicTittle.PL.toUpperCase()
+                : academicTittle.ENG.toUpperCase()}
             </Typography>
           </Grid>
           <Grid
