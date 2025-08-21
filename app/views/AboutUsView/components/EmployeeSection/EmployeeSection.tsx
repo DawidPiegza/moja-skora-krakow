@@ -52,10 +52,10 @@ export default function EmployeeSection({
       <Grid size={12} p={2}>
         <Grid container direction="column" spacing={1}>
           <Grid size={12}>
-            <Typography variant="h6" fontWeight={350}>
+            <Typography variant="h6" fontWeight={350} lineHeight={1}>
               {name.toUpperCase()}
             </Typography>
-            <Typography variant="body1" fontWeight={200}>
+            <Typography variant="body2" fontWeight={200}>
               {language.webLanguage === "PL"
                 ? academicTittle.PL.toUpperCase()
                 : academicTittle.ENG.toUpperCase()}
