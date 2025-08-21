@@ -85,7 +85,7 @@ export default function ClinicVoucherView() {
           <Typography
             gutterBottom
             width={"100%"}
-            variant={downMd ? "h5" : "h4"}
+            variant={downMd ? "h4" : "h4"}
             textAlign="left"
             sx={{ fontWeight: "350" }}
           >

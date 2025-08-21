@@ -12,6 +12,9 @@ export const theme = createTheme({
     h6: {
       fontSize: "19px",
     },
+    h6: {
+      fontSize: "19px",
+    },
   },
   palette: {
     mode: "light",
