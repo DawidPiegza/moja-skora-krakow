@@ -14,7 +14,6 @@ import {
   useMediaQuery,
   useTheme,
 } from "@mui/material";
-
 import PlaceOutlinedIcon from "@mui/icons-material/PlaceOutlined";
 import LocalPhoneOutlinedIcon from "@mui/icons-material/LocalPhoneOutlined";
 import AccessTimeOutlinedIcon from "@mui/icons-material/AccessTimeOutlined";
@@ -76,19 +75,22 @@ export default function ContactView() {
           >
             <Grid size={12} paddingBottom={5} py={downMd ? 1 : 4} px={2}>
               <Typography
-                variant={downMd ? "h5" : "h4"}
-                textAlign="left"
-                sx={{ fontWeight: "100" }}
                 gutterBottom
+                width={"100%"}
+                variant={"h4"}
+                textAlign="left"
+                fontSize={"30px"}
+                sx={{ fontWeight: "350" }}
               >
                 {language.webLanguage === "PL"
                   ? "KONTAKT".toUpperCase()
                   : "CONTACT".toUpperCase()}
               </Typography>
               <Typography
-                variant={downMd ? "h6" : "h5"}
+                variant={downMd ? "body1" : "h6"}
                 textAlign="left"
-                sx={{ fontWeight: "100" }}
+                sx={{ fontWeight: "200" }}
+                width={"100%"}
                 fontStyle="italic"
               >
                 {language.webLanguage === "PL"
@@ -112,13 +114,12 @@ export default function ContactView() {
                     rowGap={0.5}
                   >
                     <PlaceOutlinedIcon fontSize="medium" />
-                    <Typography variant="h6">
-                      {" "}
+                    <Typography variant="body1" fontWeight={500}>
                       {language.webLanguage === "PL"
                         ? "Adres salonu"
                         : "Address"}
                     </Typography>
-                    <Typography variant="body1">
+                    <Typography variant="body2" fontWeight={400}>
                       ul. Świętego Sebastiana 22/2C, 31-049 Kraków
                     </Typography>
                   </Box>
@@ -137,12 +138,14 @@ export default function ContactView() {
                     rowGap={0.5}
                   >
                     <LocalPhoneOutlinedIcon fontSize="medium" />
-                    <Typography variant="h6">
+                    <Typography variant="body1" fontWeight={500}>
                       {language.webLanguage === "PL"
                         ? "Numer telefonu"
                         : "Phone Number"}
                     </Typography>
-                    <Typography variant="body1">518 456 332</Typography>
+                    <Typography variant="body2" fontWeight={400}>
+                      518 456 332
+                    </Typography>
                   </Box>
                 </Grid>
                 <Grid size={downMd ? 12 : 4}>
@@ -159,12 +162,12 @@ export default function ContactView() {
                     rowGap={0.5}
                   >
                     <AccessTimeOutlinedIcon fontSize="medium" />
-                    <Typography variant="h6">
+                    <Typography variant="body1" fontWeight={500}>
                       {language.webLanguage === "PL"
                         ? "Godziny otwarcia"
                         : "Opening Hours"}
                     </Typography>
-                    <Typography variant="body1">
+                    <Typography variant="body2" fontWeight={400}>
                       Pon - Pt: 8:00 – 21:00 oraz Sb: 8:00 – 16:00
                     </Typography>
                   </Box>
@@ -185,7 +188,8 @@ export default function ContactView() {
                     rowGap={2}
                   >
                     <Typography
-                      variant={downMd ? "h6" : "h5"}
+                      variant="body1"
+                      fontWeight={500}
                       width="100%"
                       align="center"
                     >
