@@ -4,10 +4,10 @@ export const theme = createTheme({
   typography: {
     fontFamily: "Montserrat, sans-serif",
     body1: {
-      fontSize: "17px",
+      fontSize: "16px",
     },
     body2: {
-      fontSize: "15px",
+      fontSize: "14px",
     },
   },
   palette: {
