@@ -48,7 +48,7 @@ export default function ClinicVoucherView() {
 
   return (
     <Container maxWidth="xl">
-      <Grid container spacing={2} paddingTop={2} paddingBottom={"60px"}>
+      <Grid container spacing={1} paddingTop={2} paddingBottom={"60px"}>
         <Grid size={12}>
           <Breadcrumbs aria-label="breadcrumb">
             <Link
@@ -81,7 +81,7 @@ export default function ClinicVoucherView() {
         <Grid size={12}>
           <Divider />
         </Grid>
-        <Grid size={12} py={downMd ? 1 : 4} px={2}>
+        <Grid size={12} paddingTop={downMd ? 3 : 4} px={2}>
           <Typography
             gutterBottom
             width={"100%"}
@@ -94,7 +94,7 @@ export default function ClinicVoucherView() {
               : "VOUCHER".toUpperCase()}
           </Typography>
           <Typography
-            variant={downMd ? "h6" : "h5"}
+            variant={downMd ? "body1" : "h6"}
             textAlign="left"
             sx={{ fontWeight: "200" }}
             width={"100%"}
