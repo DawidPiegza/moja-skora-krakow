@@ -113,7 +113,10 @@ export default function ContactView() {
                     alignItems="center"
                     rowGap={0.5}
                   >
-                    <PlaceOutlinedIcon fontSize="medium" color="disabled" />
+                    <PlaceOutlinedIcon
+                      fontSize="medium"
+                      sx={{ color: "#616161" }}
+                    />
                     <Typography variant="body1" fontWeight={400}>
                       {language.webLanguage === "PL"
                         ? "Adres salonu"
@@ -139,7 +142,7 @@ export default function ContactView() {
                   >
                     <LocalPhoneOutlinedIcon
                       fontSize="medium"
-                      color="disabled"
+                      sx={{ color: "#616161" }}
                     />
                     <Typography variant="body1" fontWeight={400}>
                       {language.webLanguage === "PL"
@@ -166,7 +169,7 @@ export default function ContactView() {
                   >
                     <AccessTimeOutlinedIcon
                       fontSize="medium"
-                      color="disabled"
+                      sx={{ color: "#616161" }}
                     />
                     <Typography variant="body1" fontWeight={400}>
                       {language.webLanguage === "PL"
@@ -195,7 +198,7 @@ export default function ContactView() {
                   >
                     <Typography
                       variant="body1"
-                      fontWeight={500}
+                      fontWeight={400}
                       width="100%"
                       align="center"
                     >
@@ -210,6 +213,16 @@ export default function ContactView() {
                       variant="standard"
                       fullWidth
                       size={downMd ? "small" : "medium"}
+                      slotProps={{
+                        input: {
+                          sx: (theme) => ({
+                            ...theme.typography.body2,
+                            "&::placeholder": {
+                              ...theme.typography.body2,
+                            },
+                          }),
+                        },
+                      }}
                     />
                     <TextField
                       placeholder={
@@ -218,12 +231,32 @@ export default function ContactView() {
                       variant="standard"
                       fullWidth
                       size={downMd ? "small" : "medium"}
+                      slotProps={{
+                        input: {
+                          sx: (theme) => ({
+                            ...theme.typography.body2,
+                            "&::placeholder": {
+                              ...theme.typography.body2,
+                            },
+                          }),
+                        },
+                      }}
                     />
                     <TextField
                       placeholder="E-mail"
                       variant="standard"
                       fullWidth
                       size={downMd ? "small" : "medium"}
+                      slotProps={{
+                        input: {
+                          sx: (theme) => ({
+                            ...theme.typography.body2,
+                            "&::placeholder": {
+                              ...theme.typography.body2,
+                            },
+                          }),
+                        },
+                      }}
                     />
                     <TextField
                       placeholder={
@@ -234,6 +267,16 @@ export default function ContactView() {
                       variant="standard"
                       fullWidth
                       size={downMd ? "small" : "medium"}
+                      slotProps={{
+                        input: {
+                          sx: (theme) => ({
+                            ...theme.typography.body2,
+                            "&::placeholder": {
+                              ...theme.typography.body2,
+                            },
+                          }),
+                        },
+                      }}
                     />
                     <TextField
                       placeholder={
@@ -243,6 +286,16 @@ export default function ContactView() {
                       }
                       multiline
                       rows={10}
+                      slotProps={{
+                        input: {
+                          sx: (theme) => ({
+                            ...theme.typography.body2,
+                            "&::placeholder": {
+                              ...theme.typography.body2,
+                            },
+                          }),
+                        },
+                      }}
                     />
                     <Button
                       variant="outlined"
