@@ -36,6 +36,8 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import GoogleIcon from "@mui/icons-material/Google";
+import IMG_2578 from "../../../public/images/IMG_2578.jpg";
+import IMG_3098 from "../../../public/images/IMG_3098.jpg";
 
 export default function AboutUsView() {
   const { language } = React.useContext(WebsiteLanguageContext);
@@ -134,8 +136,11 @@ export default function AboutUsView() {
                 px={2}
               >
                 <Typography
-                  variant={downMd ? "h5" : "h4"}
+                  gutterBottom
+                  width={"100%"}
+                  variant={"h4"}
                   textAlign="left"
+                  fontSize={"30px"}
                   sx={{ fontWeight: "350" }}
                 >
                   {language.webLanguage === "PL"
@@ -323,8 +328,11 @@ export default function AboutUsView() {
                 px={2}
               >
                 <Typography
-                  variant={downMd ? "h5" : "h4"}
+                  gutterBottom
+                  width={"100%"}
+                  variant={"h4"}
                   textAlign="left"
+                  fontSize={"30px"}
                   sx={{ fontWeight: "350" }}
                 >
                   {language.webLanguage === "PL"
@@ -334,7 +342,7 @@ export default function AboutUsView() {
               </Grid>
 
               <EmployeeSection
-                photoURL={karolina_profilowe}
+                photoURL={IMG_2578}
                 name={"Karolina Sałdan"}
                 academicTittle={{
                   PL: "mgr kosmetologii",
@@ -351,7 +359,7 @@ export default function AboutUsView() {
                 <Divider orientation={downMd ? "horizontal" : "vertical"} />
               </Grid>
               <EmployeeSection
-                photoURL={basia_profilowe}
+                photoURL={IMG_3098}
                 name={"Barbara Żelazo"}
                 academicTittle={{
                   PL: "mgr kosmetologii",

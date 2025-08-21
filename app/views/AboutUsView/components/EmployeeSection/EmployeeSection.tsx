@@ -68,7 +68,7 @@ export default function EmployeeSection({
             justifyContent={betweenMdAndLg ? "flex-start" : "flex-end"}
             py={1}
           >
-            <Card sx={{ padding: 2 }}>
+            <Card sx={{ padding: 1 }}>
               <CardMedia
                 component="img"
                 sx={{
