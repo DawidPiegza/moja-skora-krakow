@@ -52,7 +52,7 @@ export default function EmployeeSection({
       <Grid size={12} p={2}>
         <Grid container direction="column" spacing={1}>
           <Grid size={12}>
-            <Typography variant="h6" fontWeight={350} lineHeight={1}>
+            <Typography variant="h6" fontWeight={275} lineHeight={1}>
               {name.toUpperCase()}
             </Typography>
             <Typography variant="body2" fontWeight={200}>
