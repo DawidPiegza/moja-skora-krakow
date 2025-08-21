@@ -136,7 +136,7 @@ export default function AboutUsView() {
                 <Typography
                   variant={downMd ? "h5" : "h4"}
                   textAlign="left"
-                  sx={{ fontWeight: "100" }}
+                  sx={{ fontWeight: "400" }}
                 >
                   {language.webLanguage === "PL"
                     ? "Poznaj Moja Skóra".toUpperCase()
