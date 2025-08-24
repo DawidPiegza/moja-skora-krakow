@@ -1,14 +1,11 @@
 import { Box, useMediaQuery } from "@mui/material";
 import logo_moja_skora from "../../../public/images/logo_moja_skora.png";
-import nowe_tytulowe from "../../../public/images/nowe_tytulowe.jpg";
-import zdjecie_strona_glowna_xs from "../../../public/images/zdjecie_strona_glowna_xs.jpg";
-
+import glowne_zdjecie from "../../../public/images/glowne_zdjecie.jpg";
 import { theme } from "../../shared/styles/MUIGlobalStyle";
 import { motion, useTime } from "framer-motion";
 
 export default function LandingPageView() {
   const downMd = useMediaQuery(theme.breakpoints.down("md"));
-  const time = useTime();
 
   return (
     <Box
@@ -25,7 +22,7 @@ export default function LandingPageView() {
           position: "absolute",
           width: "100%",
           height: "100%",
-          backgroundImage: `url(${nowe_tytulowe})`,
+          backgroundImage: `url(${glowne_zdjecie})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",

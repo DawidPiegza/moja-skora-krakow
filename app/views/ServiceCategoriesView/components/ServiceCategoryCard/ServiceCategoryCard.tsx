@@ -38,7 +38,7 @@ export default function ServiceCategoryCard({
         <CardActionArea onClick={() => navTo(serviceCategory.categoryURL)}>
           <CardMedia
             component="img"
-            height={domwMd ? "250px" : "400px"}
+            height={domwMd ? "250px" : "300px"}
             image={serviceCategory.pictureURL}
             alt={serviceCategory.title}
           />
@@ -49,6 +49,14 @@ export default function ServiceCategoryCard({
                 : serviceCategory.titleENG
             }
             sx={{ textAlign: "center" }}
+            slotProps={{
+              subheader: {
+                sx: {
+                  fontSize: "14px", // <- Zmień rozmiar czcionki tutaj
+                  color: "text.primary", // <- Opcjonalnie
+                },
+              },
+            }}
           />
         </CardActionArea>
       </Card>

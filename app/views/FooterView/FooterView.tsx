@@ -28,19 +28,19 @@ export default function FooterView() {
       <Grid
         container
         width={"100%"}
-        rowSpacing={domwMd ? 2 : 4}
-        paddingBottom={4}
+        rowSpacing={domwMd ? 1 : 2}
+        paddingBottom={2}
         sx={{
           justifyContent: "space-around",
-          alignItems: "flex-start",
+          alignItems: "center",
         }}
       >
-        <Grid display="flex" flexDirection={"column"} rowGap={2}>
+        <Grid>
           <Box
             component="img"
             src={sygnet_wektorowy}
             alt="Moja Skóra"
-            sx={{ width: "auto", height: domwMd ? "40px" : "100px" }}
+            sx={{ width: "auto", height: domwMd ? "40px" : "70px" }}
           />
         </Grid>
         <Grid
@@ -51,8 +51,9 @@ export default function FooterView() {
           alignItems={domwMd ? "center" : "auto"}
         >
           <Typography
-            variant={domwMd ? "body2" : "body1"}
-            fontWeight="bold"
+            sx={{
+              fontSize: domwMd ? "12px" : "13px",
+            }}
             component={Button}
             color="text.primary"
             width="max-content"
@@ -61,8 +62,9 @@ export default function FooterView() {
             {language.webLanguage === "PL" ? "Regulamin" : "Terms & Conditions"}
           </Typography>
           <Typography
-            variant={domwMd ? "body2" : "body1"}
-            fontWeight="bold"
+            sx={{
+              fontSize: domwMd ? "12px" : "13px",
+            }}
             component={Button}
             color="text.primary"
             width="max-content"
@@ -73,8 +75,9 @@ export default function FooterView() {
               : "Voucher Policy"}
           </Typography>
           <Typography
-            variant={domwMd ? "body2" : "body1"}
-            fontWeight="bold"
+            sx={{
+              fontSize: domwMd ? "12px" : "13px",
+            }}
             component={Button}
             color="text.primary"
             width="max-content"
@@ -83,8 +86,9 @@ export default function FooterView() {
             {language.webLanguage === "PL" ? "Cennik" : "Pricing"}
           </Typography>
           <Typography
-            variant={domwMd ? "body2" : "body1"}
-            fontWeight="bold"
+            sx={{
+              fontSize: domwMd ? "12px" : "13px",
+            }}
             component={Button}
             color="text.primary"
             width="max-content"
@@ -95,13 +99,13 @@ export default function FooterView() {
         </Grid>
         {!domwMd && (
           <Grid>
-            <Typography variant="body1" fontWeight="bold">
+            <Typography variant="body2" fontWeight={700}>
               {language.webLanguage === "PL" ? "Adres salonu" : "Address"}
             </Typography>
             <Typography variant="body2">
               Świętego Sebastiana 22/2C, 31-049 Kraków
             </Typography>
-            <Typography variant="body1" fontWeight="bold">
+            <Typography variant="body2" fontWeight={700}>
               {language.webLanguage === "PL"
                 ? "Godziny otwarcia"
                 : "Opening Hours"}
@@ -109,7 +113,7 @@ export default function FooterView() {
             <Typography variant="body2">
               Pon - Pt: 8:00 – 21:00 oraz Sb: 8:00 – 16:00
             </Typography>
-            <Typography variant="body1" fontWeight="bold">
+            <Typography variant="body2" fontWeight={700}>
               {language.webLanguage === "PL"
                 ? "Numer telefonu"
                 : "Phone Number"}
@@ -117,7 +121,6 @@ export default function FooterView() {
             <Typography variant="body1">518 456 332</Typography>
           </Grid>
         )}
-
         <Grid display={"flex"} flexDirection={domwMd ? "row" : "column"}>
           <IconButton
             size="large"
@@ -147,7 +150,7 @@ export default function FooterView() {
         <Grid size={12} display={"flex"} justifyContent={"center"}>
           <Typography
             textAlign={"center"}
-            variant="body1"
+            variant="caption"
             fontWeight="bold"
             color="text.primary"
             width="max-content"

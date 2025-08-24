@@ -36,18 +36,27 @@ export default function OpinionsView() {
 
   return (
     <Container maxWidth="xl">
-      <Grid container rowSpacing={downMd ? 5 : 10} py={downMd ? 2 : 5} px={2}>
+      <Grid container rowSpacing={5} py={2} px={2}>
         <Grid size={12}>
           <Typography
             variant={downMd ? "h5" : "h4"}
             textAlign="left"
             sx={{ fontWeight: "100" }}
+          ></Typography>
+          <Typography
+            gutterBottom
+            width={"100%"}
+            variant={"h4"}
+            textAlign="left"
+            fontSize={"30px"}
+            sx={{ fontWeight: "350" }}
           >
             {language.webLanguage === "PL"
               ? "Opinie naszych klientów są dla nas najważniejsze".toUpperCase()
               : "Our clients feedback is the most important to us.".toUpperCase()}
           </Typography>
         </Grid>
+
         <Grid size={12} container justifyContent="center" alignItems="center">
           <Grid size={downMd ? 12 : 8}>
             <Box
@@ -65,7 +74,7 @@ export default function OpinionsView() {
               }}
               rowGap={downMd ? 0.5 : 1}
             >
-              <Typography variant={downMd ? "body2" : "body1"} gutterBottom>
+              <Typography variant={"body2"} gutterBottom>
                 {googleOpinions[currentIndex].opinionContent}
               </Typography>
               <Typography variant="caption" gutterBottom>

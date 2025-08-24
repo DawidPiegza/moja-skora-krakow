@@ -16,8 +16,8 @@ import {
   useMediaQuery,
   useTheme,
 } from "@mui/material";
-import basia_profilowe from "../../../public/images/basia_profilowe.jpg";
-import karolina_profilowe from "../../../public/images/karolina_profilowe.jpg";
+import b_profilowe from "../../../public/images/b_profilowe.jpeg";
+import k_profilowe from "../../../public/images/k_profilowe.jpeg";
 import { useEffect, useState } from "react";
 import React from "react";
 import { WebsiteLanguageContext } from "../../shared/contexts/LanguageContext";
@@ -36,9 +36,6 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import GoogleIcon from "@mui/icons-material/Google";
-import IMG_2578 from "../../../public/images/IMG_2578.jpg";
-import IMG_3098 from "../../../public/images/IMG_3098.jpg";
-
 export default function AboutUsView() {
   const { language } = React.useContext(WebsiteLanguageContext);
   const theme = useTheme();
@@ -342,7 +339,7 @@ export default function AboutUsView() {
               </Grid>
 
               <EmployeeSection
-                photoURL={IMG_2578}
+                photoURL={k_profilowe}
                 name={"Karolina Sałdan"}
                 academicTittle={{
                   PL: "mgr kosmetologii",
@@ -359,7 +356,7 @@ export default function AboutUsView() {
                 <Divider orientation={downMd ? "horizontal" : "vertical"} />
               </Grid>
               <EmployeeSection
-                photoURL={IMG_3098}
+                photoURL={b_profilowe}
                 name={"Barbara Żelazo"}
                 academicTittle={{
                   PL: "mgr kosmetologii",

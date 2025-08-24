@@ -17,12 +17,20 @@ export default function ServiceCategories() {
 
   return (
     <Container maxWidth="xl">
-      <Grid container rowSpacing={downMd ? 5 : 10} py={downMd ? 2 : 5} px={2}>
+      <Grid container rowSpacing={5} py={2} px={2}>
         <Grid size={12}>
           <Typography
             variant={downMd ? "h5" : "h4"}
             textAlign="left"
             sx={{ fontWeight: "100" }}
+          ></Typography>
+          <Typography
+            gutterBottom
+            width={"100%"}
+            variant={"h4"}
+            textAlign="left"
+            fontSize={"30px"}
+            sx={{ fontWeight: "350" }}
           >
             {language.webLanguage === "PL"
               ? "Wybierz zabieg dla siebie".toUpperCase()
