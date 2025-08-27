@@ -1,9 +1,7 @@
 import { Box, useMediaQuery } from "@mui/material";
 import logo_moja_skora from "../../../public/images/logo_moja_skora.png";
-import glowne_zdjecie from "../../../public/images/glowne_zdjecie.jpg";
 import { theme } from "../../shared/styles/MUIGlobalStyle";
-import { motion, useTime } from "framer-motion";
-
+import { motion } from "framer-motion";
 export default function LandingPageView() {
   const downMd = useMediaQuery(theme.breakpoints.down("md"));
 
@@ -15,6 +13,9 @@ export default function LandingPageView() {
         height: "calc(100vh - 56px)",
         overflow: "hidden",
         filter: "grayscale(100%)",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
       }}
     >
       <Box
@@ -22,7 +23,6 @@ export default function LandingPageView() {
           position: "absolute",
           width: "100%",
           height: "100%",
-          backgroundImage: `url(${glowne_zdjecie})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
@@ -42,12 +42,12 @@ export default function LandingPageView() {
       <Box
         sx={{
           position: "absolute",
-          width: "100%",
+          width: "max-content",
           height: "100%",
           display: "flex",
           justifyContent: "center",
-          alignItems: downMd ? "flex-end" : "center",
           zIndex: 2,
+          alignItems: "center",
         }}
       >
         <Box
@@ -68,7 +68,10 @@ export default function LandingPageView() {
             component="img"
             src={logo_moja_skora}
             alt="Moja Skóra"
-            sx={{ width: downMd ? "350px" : "1100px", height: "auto" }}
+            sx={{
+              height: downMd ? "600px" : "90vh", // 40% wysokości ekranu na telefonie
+              width: "auto",
+            }}
           />
         </Box>
       </Box>

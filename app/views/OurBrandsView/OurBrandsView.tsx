@@ -28,14 +28,14 @@ const logos = [
 
 export default function OurBrandsView() {
   const theme = useTheme();
-  const downMd = useMediaQuery(theme.breakpoints.down("md"));
+  const downLG = useMediaQuery(theme.breakpoints.down("lg"));
   const { language } = React.useContext(WebsiteLanguageContext);
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [fade, setFade] = useState(true);
 
   useEffect(() => {
-    if (!downMd) return;
+    if (!downLG) return;
 
     const interval = setInterval(() => {
       setFade(false);
@@ -46,23 +46,17 @@ export default function OurBrandsView() {
     }, 3000);
 
     return () => clearInterval(interval);
-  }, [downMd]);
+  }, [downLG]);
 
   return (
     <Container maxWidth="xl">
       <Grid container rowSpacing={5} py={2} px={2}>
         <Grid size={12}>
           <Typography
-            variant={downMd ? "h5" : "h4"}
-            textAlign="left"
-            sx={{ fontWeight: "100" }}
-          ></Typography>
-          <Typography
             gutterBottom
             width={"100%"}
             variant={"h4"}
             textAlign="left"
-            fontSize={"30px"}
             sx={{ fontWeight: "350" }}
           >
             {language.webLanguage === "PL"
@@ -70,7 +64,7 @@ export default function OurBrandsView() {
               : "We exclusively use reputable, high-quality products.".toUpperCase()}
           </Typography>
         </Grid>
-        {downMd ? (
+        {downLG ? (
           <Grid size={12} display="flex" justifyContent="center">
             <Box>
               <BrandCard imageURL={logos[currentIndex]} fade={fade} />

@@ -41,6 +41,12 @@ export default function ServiceCategoryCard({
             height={domwMd ? "250px" : "300px"}
             image={serviceCategory.pictureURL}
             alt={serviceCategory.title}
+            sx={{
+              transition: "filter 0.3s ease",
+              "&:hover": {
+                filter: "grayscale(100%)",
+              },
+            }}
           />
           <CardHeader
             subheader={
@@ -52,8 +58,8 @@ export default function ServiceCategoryCard({
             slotProps={{
               subheader: {
                 sx: {
-                  fontSize: "14px", // <- Zmień rozmiar czcionki tutaj
-                  color: "text.primary", // <- Opcjonalnie
+                  fontSize: "15px",
+                  color: "text.primary",
                 },
               },
             }}

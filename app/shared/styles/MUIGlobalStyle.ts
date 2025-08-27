@@ -12,6 +12,12 @@ export const theme = createTheme({
     h6: {
       fontSize: "19px",
     },
+    h5: {
+      fontSize: "23px",
+    },
+    h4: {
+      fontSize: "30px",
+    },
   },
   palette: {
     mode: "light",

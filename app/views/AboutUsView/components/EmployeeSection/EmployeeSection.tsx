@@ -32,8 +32,7 @@ export default function EmployeeSection({
 }: IEmployeeSectionProps) {
   const { language } = React.useContext(WebsiteLanguageContext);
   const theme = useTheme();
-  const downMd = useMediaQuery(theme.breakpoints.down("md"));
-  const betweenMdAndLg = useMediaQuery(theme.breakpoints.between("sm", "lg"));
+  const downLG = useMediaQuery(theme.breakpoints.down("lg"));
 
   const [expanded, setExpanded] = useState(false);
 
@@ -48,7 +47,7 @@ export default function EmployeeSection({
     text.length > 100 ? text.slice(0, 100) + "..." : text;
 
   return (
-    <Grid size={downMd ? 12 : 5.5} container>
+    <Grid size={downLG ? 12 : 5.5} container>
       <Grid size={12} p={2}>
         <Grid container direction="column" spacing={1}>
           <Grid size={12}>
@@ -62,10 +61,10 @@ export default function EmployeeSection({
             </Typography>
           </Grid>
           <Grid
-            size={downMd ? 12 : 12}
+            size={downLG ? 12 : 12}
             display={"flex"}
             alignItems="center"
-            justifyContent={betweenMdAndLg ? "flex-start" : "flex-end"}
+            justifyContent={"flex-start"}
             py={1}
           >
             <Card sx={{ padding: 1 }}>
@@ -123,7 +122,7 @@ export default function EmployeeSection({
                 id="panel1-header"
               >
                 <Typography
-                  variant={downMd ? "body2" : "body1"}
+                  variant={downLG ? "body2" : "body1"}
                   sx={{ flex: 1 }}
                 >
                   {expanded ? summaryText : getShortText(summaryText)}
@@ -138,7 +137,7 @@ export default function EmployeeSection({
                   index !== 0 ? (
                     <Typography
                       key={index}
-                      variant={downMd ? "body2" : "body1"}
+                      variant={downLG ? "body2" : "body1"}
                       gutterBottom
                     >
                       {language.webLanguage === "PL" ? text.PL : text.EN}

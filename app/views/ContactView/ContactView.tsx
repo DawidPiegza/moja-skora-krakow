@@ -79,7 +79,6 @@ export default function ContactView() {
                 width={"100%"}
                 variant={"h4"}
                 textAlign="left"
-                fontSize={"30px"}
                 sx={{ fontWeight: "350" }}
               >
                 {language.webLanguage === "PL"
@@ -99,7 +98,14 @@ export default function ContactView() {
               </Typography>
             </Grid>
             <Grid size={12}>
-              <Grid container width="100%" spacing={1}>
+              <Grid
+                container
+                width="100%"
+                spacing={1}
+                sx={{
+                  alignItems: "stretch",
+                }}
+              >
                 <Grid size={downMd ? 12 : 4}>
                   <Box
                     p={1}
@@ -112,6 +118,7 @@ export default function ContactView() {
                     textAlign="center"
                     alignItems="center"
                     rowGap={0.5}
+                    height={"100%"}
                   >
                     <PlaceOutlinedIcon
                       fontSize="medium"
@@ -139,6 +146,7 @@ export default function ContactView() {
                     textAlign="center"
                     alignItems="center"
                     rowGap={0.5}
+                    height={"100%"}
                   >
                     <LocalPhoneOutlinedIcon
                       fontSize="medium"
@@ -166,6 +174,7 @@ export default function ContactView() {
                     textAlign="center"
                     alignItems="center"
                     rowGap={0.5}
+                    height={"100%"}
                   >
                     <AccessTimeOutlinedIcon
                       fontSize="medium"

@@ -137,7 +137,6 @@ export default function AboutUsView() {
                   width={"100%"}
                   variant={"h4"}
                   textAlign="left"
-                  fontSize={"30px"}
                   sx={{ fontWeight: "350" }}
                 >
                   {language.webLanguage === "PL"
@@ -329,7 +328,6 @@ export default function AboutUsView() {
                   width={"100%"}
                   variant={"h4"}
                   textAlign="left"
-                  fontSize={"30px"}
                   sx={{ fontWeight: "350" }}
                 >
                   {language.webLanguage === "PL"
