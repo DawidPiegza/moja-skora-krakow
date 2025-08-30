@@ -33,7 +33,8 @@ export default function BrandCard({ imageURL, fade }: IBrandCardProps) {
       }}
     >
       <Box
-        p={1}
+        py={3}
+        px={1}
         component="img"
         sx={{
           height: domwMd ? "165px" : "auto",

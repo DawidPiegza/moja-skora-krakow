@@ -72,6 +72,7 @@ export default function OpinionsView() {
                 opacity: fade ? 1 : 0,
               }}
               rowGap={downMd ? 0.5 : 1}
+              px={2}
             >
               <Typography variant={"body2"} gutterBottom>
                 {googleOpinions[currentIndex].opinionContent}

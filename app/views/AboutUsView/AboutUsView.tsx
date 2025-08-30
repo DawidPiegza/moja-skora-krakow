@@ -45,26 +45,23 @@ export default function AboutUsView() {
   const [currentPhotoIndex, setCurrentPhotoIndex] = useState<number>(0);
 
   const companyScreens = [
-    gabinet_5,
     gabinet_4,
+    gabinet_5,
     gabinet_3,
     gabinet_2,
     gabinet_1,
   ];
 
   const changePhoto = (direction: "forward" | "backward") => {
-    if (direction === "forward") {
-      if (currentPhotoIndex === companyScreens.length - 1) {
-        setCurrentPhotoIndex(() => 0);
+    setCurrentPhotoIndex((prev) => {
+      if (direction === "forward") {
+        return prev === companyScreens.length - 1 ? 0 : prev + 1;
       }
-      setCurrentPhotoIndex((prevState) => prevState + 1);
-    }
-    if (direction === "backward") {
-      if (currentPhotoIndex === 0) {
-        setCurrentPhotoIndex(() => companyScreens.length - 1);
+      if (direction === "backward") {
+        return prev === 0 ? companyScreens.length - 1 : prev - 1;
       }
-      setCurrentPhotoIndex((prevState) => prevState - 1);
-    }
+      return prev;
+    });
   };
 
   const [expanded, setExpanded] = useState(false);

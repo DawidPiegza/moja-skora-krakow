@@ -2,6 +2,7 @@ import {
   AppBar,
   Box,
   Button,
+  ButtonBase,
   Container,
   IconButton,
   Toolbar,
@@ -38,12 +39,24 @@ export default function Navbar({ setSideDrawerOpen }: INavbarProps) {
         <AppBar position="sticky" color="inherit" elevation={1}>
           <Container maxWidth="xl">
             <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
-              <Box
-                component="img"
-                src={sygnet_wektorowy}
-                alt="logo booksy"
-                height={downMd ? "30px" : "40px"}
-              />
+              <ButtonBase
+                onClick={() => navTo("/")}
+                sx={{
+                  padding: 1,
+                  borderRadius: "10px",
+                  transition: "background-color 0.2s ease",
+                  "&:hover": {
+                    backgroundColor: "rgba(0,0,0,0.05)",
+                  },
+                }}
+              >
+                <Box
+                  component="img"
+                  src={sygnet_wektorowy}
+                  alt="logo booksy"
+                  height={downMd ? "30px" : "40px"}
+                />
+              </ButtonBase>
               {!downMd && (
                 <Box>
                   <Button color="inherit" onClick={() => navTo("/")}>

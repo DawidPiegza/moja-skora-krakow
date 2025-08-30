@@ -2,6 +2,7 @@ import { Box, useMediaQuery } from "@mui/material";
 import logo_moja_skora from "../../../public/images/logo_moja_skora.png";
 import { theme } from "../../shared/styles/MUIGlobalStyle";
 import { motion } from "framer-motion";
+import landing_page_image_1 from "../../../public/images/landing_page_image_1.jpg";
 export default function LandingPageView() {
   const downMd = useMediaQuery(theme.breakpoints.down("md"));
 
@@ -23,12 +24,14 @@ export default function LandingPageView() {
           position: "absolute",
           width: "100%",
           height: "100%",
+          backgroundImage: `url(${landing_page_image_1})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
           zIndex: 0,
         }}
       />
+
       <Box
         sx={{
           position: "absolute",
@@ -45,9 +48,9 @@ export default function LandingPageView() {
           width: "max-content",
           height: "100%",
           display: "flex",
-          justifyContent: "center",
+          justifyContent: "flex-end",
           zIndex: 2,
-          alignItems: "center",
+          alignItems: "flex-end",
         }}
       >
         <Box
@@ -69,7 +72,7 @@ export default function LandingPageView() {
             src={logo_moja_skora}
             alt="Moja Skóra"
             sx={{
-              height: downMd ? "600px" : "90vh", // 40% wysokości ekranu na telefonie
+              height: "60vh",
               width: "auto",
             }}
           />

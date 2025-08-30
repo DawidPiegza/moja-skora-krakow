@@ -9,12 +9,9 @@ import {
   useMediaQuery,
 } from "@mui/material";
 import { theme } from "../../../../shared/styles/MUIGlobalStyle";
-import * as motion from "motion/react-client";
-import { useInView } from "react-intersection-observer";
-import { useEffect, useState } from "react";
+
 import { WebsiteLanguageContext } from "../../../../shared/contexts/LanguageContext";
 import { useNavigate } from "react-router";
-
 interface IServiceCategoryCardProps {
   serviceCategory: IServiceCategory;
 }

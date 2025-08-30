@@ -37,4 +37,13 @@ export const theme = createTheme({
       main: "#45de66",
     },
   },
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 600,
+      md: 950,
+      lg: 1200,
+      xl: 1536,
+    },
+  },
 });

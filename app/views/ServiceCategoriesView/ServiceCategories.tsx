@@ -9,6 +9,7 @@ import { serviceCategoriesList } from "./data/serviceCategoriesList";
 import ServiceCategoryCard from "./components/ServiceCategoryCard/ServiceCategoryCard";
 import { WebsiteLanguageContext } from "../../shared/contexts/LanguageContext";
 import React from "react";
+import ServiceCategoryCardSmallScreen from "./components/ServiceCategoryCardSmallScreen/ServiceCategoryCardSmallScreen";
 
 export default function ServiceCategories() {
   const { language } = React.useContext(WebsiteLanguageContext);
@@ -40,9 +41,18 @@ export default function ServiceCategories() {
           }}
           spacing={2}
         >
-          {serviceCategoriesList.map((category, index) => (
-            <ServiceCategoryCard serviceCategory={category} key={index} />
-          ))}
+          {downMd ? (
+            <ServiceCategoryCardSmallScreen
+              serviceCategoriesList={serviceCategoriesList}
+            />
+          ) : (
+            <>
+              {" "}
+              {serviceCategoriesList.map((category, index) => (
+                <ServiceCategoryCard serviceCategory={category} key={index} />
+              ))}
+            </>
+          )}
         </Grid>
       </Grid>
     </Container>

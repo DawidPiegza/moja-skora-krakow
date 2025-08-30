@@ -16,6 +16,7 @@ import React from "react";
 import { WebsiteLanguageContext } from "../../contexts/LanguageContext";
 import { useNavigate } from "react-router";
 import TranslateIcon from "@mui/icons-material/Translate";
+import CardGiftcardIcon from "@mui/icons-material/CardGiftcard";
 
 interface ISideDrawerProps {
   open: boolean;
@@ -47,6 +48,11 @@ export default function SideDrawer({
       name: language.webLanguage === "PL" ? "O Nas" : "About Us",
       link: "/our_team",
       icon: <ContactPageIcon />,
+    },
+    {
+      name: language.webLanguage === "PL" ? "Voucher" : "Voucher",
+      link: "/voucher",
+      icon: <CardGiftcardIcon />,
     },
 
     {
