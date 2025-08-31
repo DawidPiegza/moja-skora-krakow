@@ -39,12 +39,14 @@ export default function ServiceCategoryCard({
             image={serviceCategory.pictureURL}
             alt={serviceCategory.title}
             sx={{
+              filter: "grayscale(100%)",
               transition: "filter 0.3s ease",
               "&:hover": {
-                filter: "grayscale(100%)",
+                filter: "grayscale(0%)",
               },
             }}
           />
+
           <CardHeader
             subheader={
               language.webLanguage === "PL"

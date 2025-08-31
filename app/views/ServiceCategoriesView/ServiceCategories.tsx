@@ -1,4 +1,6 @@
 import {
+  Box,
+  ButtonBase,
   Container,
   Grid,
   Typography,
@@ -10,6 +12,7 @@ import ServiceCategoryCard from "./components/ServiceCategoryCard/ServiceCategor
 import { WebsiteLanguageContext } from "../../shared/contexts/LanguageContext";
 import React from "react";
 import ServiceCategoryCardSmallScreen from "./components/ServiceCategoryCardSmallScreen/ServiceCategoryCardSmallScreen";
+import booksy_logo from "../../../public/images/booksy_logo.png";
 
 export default function ServiceCategories() {
   const { language } = React.useContext(WebsiteLanguageContext);
@@ -47,12 +50,50 @@ export default function ServiceCategories() {
             />
           ) : (
             <>
-              {" "}
               {serviceCategoriesList.map((category, index) => (
                 <ServiceCategoryCard serviceCategory={category} key={index} />
               ))}
             </>
           )}
+        </Grid>
+        <Grid
+          size={12}
+          display={"flex"}
+          alignItems={"center"}
+          justifyContent={"center"}
+        >
+          <ButtonBase
+            component="a"
+            href="https://booksy.com/pl-pl/249371_moja-skora_salon-kosmetyczny_8820_krakow#ba_s=seo"
+            target="_blank" // opcjonalnie, aby otwierało się w nowej karcie
+            rel="noopener noreferrer"
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              rowGap: 1,
+              padding: 1,
+              borderRadius: "10px",
+              transition: "background-color 0.2s ease",
+              "&:hover": {
+                backgroundColor: "rgba(0,0,0,0.05)",
+              },
+            }}
+          >
+            <Typography
+              variant={downMd ? "body2" : "body1"}
+              textAlign={"center"}
+              fontWeight={600}
+            >
+              Zarezerwuj wizytę przez
+            </Typography>
+
+            <Box
+              component="img"
+              src={booksy_logo}
+              alt="logo booksy"
+              height={downMd ? "30px" : "40px"}
+            />
+          </ButtonBase>
         </Grid>
       </Grid>
     </Container>
