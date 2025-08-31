@@ -80,9 +80,16 @@ export default function PriceListView() {
               <Table sx={{ width: "100%" }} size={downMd ? "small" : "medium"}>
                 <TableHead>
                   <TableRow>
-                    <TableCell>Nazwa zabiegu</TableCell>
-                    <TableCell align="right">Cena (PLN)</TableCell>
-                    <TableCell align="right">Cena promocyjna (PLN)</TableCell>
+                    <TableCell>
+                      <Typography variant="body1" fontWeight={500}>
+                        Nazwa zabiegu
+                      </Typography>
+                    </TableCell>
+                    <TableCell align="right">
+                      <Typography variant="body1" fontWeight={500}>
+                        Cena (PLN)
+                      </Typography>
+                    </TableCell>
                   </TableRow>
                 </TableHead>
                 <TableBody>
@@ -91,11 +98,14 @@ export default function PriceListView() {
                       <TableRow
                         sx={{
                           "&:last-child td, &:last-child th": { border: 0 },
-                          bgcolor: "primary.light",
+                          bgcolor: "#bdbdbd",
                         }}
                       >
-                        <TableCell>{category.category}</TableCell>
-                        <TableCell></TableCell>
+                        <TableCell>
+                          <Typography variant="body1" fontWeight={300}>
+                            {category.category}
+                          </Typography>
+                        </TableCell>
                         <TableCell></TableCell>
                       </TableRow>
                       {category.priceListItems.map((item, index2) => (
@@ -105,7 +115,20 @@ export default function PriceListView() {
                             "&:last-child td, &:last-child th": { border: 0 },
                           }}
                         >
-                          <TableCell>{item.itemName}</TableCell>
+                          <TableCell>
+                            <Typography variant="body2" gutterBottom>
+                              {item.itemName}
+                            </Typography>
+                            {item?.itemDescription && (
+                              <Typography
+                                variant="caption"
+                                fontWeight={300}
+                                fontStyle={"italic"}
+                              >
+                                {item.itemDescription}
+                              </Typography>
+                            )}
+                          </TableCell>
                           <TableCell
                             align="right"
                             sx={{
@@ -113,19 +136,9 @@ export default function PriceListView() {
                                 item?.discountPrice && "line-through",
                             }}
                           >
-                            {item.price}
-                          </TableCell>
-                          <TableCell align="right">
-                            {item.discountPrice ? (
-                              <Chip
-                                label={item.discountPrice}
-                                size="small"
-                                variant="filled"
-                                color="success"
-                              />
-                            ) : (
-                              "-"
-                            )}
+                            <Typography variant="body1">
+                              {item.price}
+                            </Typography>
                           </TableCell>
                         </TableRow>
                       ))}

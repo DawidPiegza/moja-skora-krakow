@@ -3,6 +3,7 @@ export interface IPriceList {
     category: string;
     priceListItems: {
       itemName: string;
+      itemDescription?: string;
       price: number;
       discountPrice?: number;
     }[];
