@@ -17,6 +17,7 @@ import { WebsiteLanguageContext } from "../../contexts/LanguageContext";
 import { useNavigate } from "react-router";
 import TranslateIcon from "@mui/icons-material/Translate";
 import CardGiftcardIcon from "@mui/icons-material/CardGiftcard";
+import LocalOfferIcon from "@mui/icons-material/LocalOffer";
 
 interface ISideDrawerProps {
   open: boolean;
@@ -54,7 +55,11 @@ export default function SideDrawer({
       link: "/voucher",
       icon: <CardGiftcardIcon />,
     },
-
+    {
+      name: language.webLanguage === "PL" ? "Cennik" : "Price list",
+      link: "/price_list",
+      icon: <LocalOfferIcon />,
+    },
     {
       name: language.webLanguage === "PL" ? "Kontakt" : "Contact",
       link: "/contact",

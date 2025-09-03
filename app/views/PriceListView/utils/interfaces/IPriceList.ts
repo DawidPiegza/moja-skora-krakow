@@ -3,9 +3,10 @@ export interface IPriceList {
     category: string;
     priceListItems: {
       itemName: string;
-      itemDescription?: string;
       price: number;
+      itemDescription?: string;
       discountPrice?: number;
+      isBundle?: boolean;
     }[];
   }[];
 }

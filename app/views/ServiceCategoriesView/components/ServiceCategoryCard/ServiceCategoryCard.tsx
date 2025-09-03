@@ -39,7 +39,7 @@ export default function ServiceCategoryCard({
             image={serviceCategory.pictureURL}
             alt={serviceCategory.title}
             sx={{
-              filter: "grayscale(100%)",
+              filter: "grayscale(95%)",
               transition: "filter 0.3s ease",
               "&:hover": {
                 filter: "grayscale(0%)",

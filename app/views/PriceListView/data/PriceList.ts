@@ -16,6 +16,7 @@ export const PriceList: IPriceList = {
           itemName:
             "Pakiet laminacja brwi + lifting rzęs + koloryzacja + botox",
           price: 260,
+          isBundle: true,
         },
       ],
     },
@@ -34,6 +35,7 @@ export const PriceList: IPriceList = {
           itemName:
             "Pakiet laminacja brwi + lifting rzęs + koloryzacja + botox",
           price: 260,
+          isBundle: true,
         },
       ],
     },
@@ -118,12 +120,14 @@ export const PriceList: IPriceList = {
           itemDescription:
             "1 zabieg odbudowujący na twarz + 2 zabiegi kwasowe oczyszczająco- detoksykujące",
           price: 1000,
+          isBundle: true,
         },
         {
           itemName: "Pakiet GLASS SKIN ",
           itemDescription:
             "1 zabieg odbudowujący na twarz + 2 zabiegi PCA Skin Oxygenating Trio z peelingiem kawitacyjnym",
           price: 1000,
+          isBundle: true,
         },
       ],
     },
@@ -131,15 +135,16 @@ export const PriceList: IPriceList = {
       category: "Zabiegi na twarz",
       priceListItems: [
         { itemName: "Autorski zabieg GLASS SKIN", price: 380 },
+        { itemName: "Peeling kawitacyjny + kwasy + serum + maska", price: 200 },
+        { itemName: "Peeling węglowy", price: 300 },
+        { itemName: "Peeling węglowy + kwasy + maska", price: 350 },
         {
           itemName: "Pakiet GLASS SKIN ",
           itemDescription:
             "1 zabieg odbudowujący na twarz + 2 zabiegi PCA Skin Oxygenating Trio z peelingiem kawitacyjnym",
           price: 1150,
+          isBundle: true,
         },
-        { itemName: "Peeling kawitacyjny + kwasy + serum + maska", price: 200 },
-        { itemName: "Peeling węglowy", price: 300 },
-        { itemName: "Peeling węglowy + kwasy + maska", price: 350 },
       ],
     },
     {
@@ -165,31 +170,36 @@ export const PriceList: IPriceList = {
         { itemName: "twarz - dobór preparatu", price: 550 },
         { itemName: "twarz + szyja - dobór preparatu", price: 900 },
         { itemName: "Cytocare 532 5ml", price: 550 },
+        { itemName: "Jalupro 3ml", price: 600 },
+        { itemName: "Filorga NCTF 3ml", price: 600 },
         {
           itemName: "Pakiet 3 zabiegów Cytocare 532 5ml",
           price: 1410,
+          isBundle: true,
         },
-        { itemName: "Filorga NCTF 3ml", price: 600 },
         {
           itemName: "Pakiet 3 zabiegów NCTF 3ml",
           price: 1560,
+          isBundle: true,
         },
-        { itemName: "Jalupro 3ml", price: 600 },
         {
           itemName: "Pakiet 3 zabiegów Jalupro 3ml",
           price: 1560,
+          isBundle: true,
         },
         {
           itemName: "Pakiet GLOW FACE THERAPY",
           itemDescription:
             "1 mezoterapia igłowa twarzy + 3x stymulator tkankowy Nucleofill Medium/Strong",
           price: 2950,
+          isBundle: true,
         },
         {
           itemName: "Pakiet REVITAL FACE",
           itemDescription:
             "2x mezoterapia igłowa twarzy + 4x stymulator tkankowy Nucleofill Medium/Strong",
           price: 2950,
+          isBundle: true,
         },
       ],
     },
@@ -197,34 +207,39 @@ export const PriceList: IPriceList = {
       category: "Mezoterapia igłowa skóry głowy",
       priceListItems: [
         {
-          itemName: "Pakiet ZDROWE WŁOSY",
-          itemDescription:
-            "1x mezoterapia igłowa- nawilżenie skóry głowy + 4x DR CYJ Hair Filler",
-          price: 2740,
-        },
-        {
           itemName: "DR CYJ Hair Filler - erapia peptydowa na wypadanie włosów",
           price: 700,
-        },
-        {
-          itemName: "Pakiet 4 zabiegów DR CYJ Hair Filler ",
-          price: 2400,
         },
         {
           itemName: "Filorga M- HA nawilżenie skóry głowy",
           price: 400,
         },
         {
-          itemName: "Pakiet 3 zabiegów Filorga M- HA nawilżenie skóry głowy",
-          price: 990,
-        },
-        {
           itemName: "RRS XL Hair biostymulacja wzrostu włosów",
           price: 350,
         },
         {
+          itemName: "Pakiet ZDROWE WŁOSY",
+          itemDescription:
+            "1x mezoterapia igłowa- nawilżenie skóry głowy + 4x DR CYJ Hair Filler",
+          price: 2740,
+          isBundle: true,
+        },
+        {
+          itemName: "Pakiet 4 zabiegów DR CYJ Hair Filler ",
+          price: 2400,
+          isBundle: true,
+        },
+        {
+          itemName: "Pakiet 3 zabiegów Filorga M- HA nawilżenie skóry głowy",
+          price: 990,
+          isBundle: true,
+        },
+
+        {
           itemName: "Pakiet 3 zabiegów RRS XL Hair",
           price: 870,
+          isBundle: true,
         },
       ],
     },
@@ -237,47 +252,63 @@ export const PriceList: IPriceList = {
         {
           itemName: "Pakiet 3 zabiegów mezoterapia mikroigłowa Twarz",
           price: 1140,
+          isBundle: true,
         },
         {
           itemName: "Pakiet 3 zabiegów mezoterapia mikroigłowa Twarz + szyja",
           price: 1440,
+          isBundle: true,
         },
         {
           itemName:
             "Pakiet 3 zabiegów mezoterapia mikroigłowa Twarz + szyja + dekolt",
           price: 1740,
+          isBundle: true,
         },
       ],
     },
     {
       category: "Stymulatory tkankowe",
       priceListItems: [
-        { itemName: "Stymulatory tkankowy pod oczy Electri", price: 600 },
-        { itemName: "Pakiet 3x stymulator tkankowy Electri", price: 1530 },
-
         { itemName: "Stymulator tkankowy Nucleofill Soft eyes", price: 700 },
-        {
-          itemName:
-            "Pakiet 3x stymulator tkankowy Nucleofill Soft Eyes okolica oka",
-          price: 1530,
-        },
         { itemName: "Stymulator tkankowy Vitaran", price: 700 },
-        { itemName: "Pakiet 3x stymulator tkankowy Vitaran", price: 1530 },
         {
           itemName: "Stymulator tkankowy Nucleofill Medium/Strong",
           price: 900,
         },
-        {
-          itemName: "Pakiet 3x stymulator tkankowy Nucleofill Medium/Strong",
-          price: 2400,
-        },
+        { itemName: "Stymulatory tkankowy pod oczy Electri", price: 600 },
         {
           itemName: "Stymulator kolagenowy Karisma ",
           price: 1100,
         },
         {
+          itemName: "Pakiet 3x stymulator tkankowy Electri",
+          price: 1530,
+          isBundle: true,
+        },
+
+        {
+          itemName:
+            "Pakiet 3x stymulator tkankowy Nucleofill Soft Eyes okolica oka",
+          price: 1530,
+          isBundle: true,
+        },
+        {
+          itemName: "Pakiet 3x stymulator tkankowy Vitaran",
+          price: 1530,
+          isBundle: true,
+        },
+
+        {
+          itemName: "Pakiet 3x stymulator tkankowy Nucleofill Medium/Strong",
+          price: 2400,
+          isBundle: true,
+        },
+
+        {
           itemName: "Pakiet 3x stymulator tkankowy Karisma",
           price: 2950,
+          isBundle: true,
         },
         {
           itemName: "Pakiet GLOW FACE THERAPY",
@@ -285,6 +316,7 @@ export const PriceList: IPriceList = {
             "1 mezoterapia igłowa twarzy + 3x stymulator tkankowy Nucleofill Medium/Strong",
 
           price: 2950,
+          isBundle: true,
         },
         {
           itemName: "Pakiet REVITAL FACE",
@@ -292,6 +324,7 @@ export const PriceList: IPriceList = {
             "2x mezoterapia igłowa twarzy + 4x stymulator tkankowy Nucleofill Medium/Strong",
 
           price: 4350,
+          isBundle: true,
         },
         {
           itemName: "Pakiet GLOW EYE THERAPY",
@@ -299,6 +332,7 @@ export const PriceList: IPriceList = {
             "1 mezoterapia igłowa + 3x stymulator tkankowy Electri",
 
           price: 1800,
+          isBundle: true,
         },
       ],
     },

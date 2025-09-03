@@ -122,6 +122,9 @@ export default function PriceListView() {
                         key={index2}
                         sx={{
                           "&:last-child td, &:last-child th": { border: 0 },
+                          backgroundColor: item.isBundle
+                            ? "rgba(0,0,0,0.04)"
+                            : "inherit",
                         }}
                       >
                         <TableCell>
