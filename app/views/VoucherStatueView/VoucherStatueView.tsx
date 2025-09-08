@@ -1,16 +1,23 @@
 import {
+  BottomNavigation,
+  BottomNavigationAction,
+  Box,
   Breadcrumbs,
   Container,
+  Divider,
   Grid,
   Link,
+  Paper,
   Typography,
   useMediaQuery,
   useTheme,
 } from "@mui/material";
-import SectionTitle from "../../shared/components/SectionTitle/SectionTitle";
 import React from "react";
 import { voucherTermsPL, voucherTermsEN } from "./data/voucherTerms";
 import { WebsiteLanguageContext } from "../../shared/contexts/LanguageContext";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import GoogleIcon from "@mui/icons-material/Google";
 
 export default function VoucherStatueView() {
   const theme = useTheme();
@@ -19,27 +26,31 @@ export default function VoucherStatueView() {
 
   return (
     <Container maxWidth="xl">
-      <Grid container spacing={3} paddingY={2}>
+      <Grid container spacing={2} paddingTop={2} paddingBottom={"60px"}>
         <Grid size={12}>
           <Breadcrumbs aria-label="breadcrumb">
             <Link
               underline="hover"
               color="inherit"
               href="/"
-              sx={{
+              sx={(theme) => ({
                 color: "text.secondary",
                 ...theme.typography.body2,
-                [theme.breakpoints.up("md")]: theme.typography.body1,
-              }}
+                [theme.breakpoints.up("md")]: {
+                  ...theme.typography.body1,
+                },
+              })}
             >
               {language.webLanguage === "PL" ? "Strona Główna" : "Main Page"}
             </Link>
             <Typography
-              sx={{
+              sx={(theme) => ({
                 color: "text.primary",
                 ...theme.typography.body2,
-                [theme.breakpoints.up("md")]: theme.typography.body1,
-              }}
+                [theme.breakpoints.up("md")]: {
+                  ...theme.typography.body1,
+                },
+              })}
             >
               {language.webLanguage === "PL"
                 ? "Regulamin vouchera"
@@ -47,37 +58,54 @@ export default function VoucherStatueView() {
             </Typography>
           </Breadcrumbs>
         </Grid>
+        <Grid size={12}>
+          <Divider />
+        </Grid>
         <Grid
           size={12}
           display="flex"
           flexDirection="column"
           justifyContent="center"
           alignItems="center"
-          rowGap={2}
+          rowGap={1}
+          py={downMd ? 1 : 4}
         >
-          <SectionTitle
-            title={
-              language.webLanguage === "PL"
-                ? "Regulamin vouchera podarunkowego"
-                : "TERMS AND CONDITIONS OF THE “MOJA SKÓRA” COSMETOLOGY CLINIC"
-            }
-            alignTextTo="center"
-          />
+          <Typography
+            gutterBottom
+            width={"100%"}
+            variant={"h4"}
+            textAlign="left"
+            sx={{ fontWeight: "350" }}
+            paddingBottom={downMd ? 1 : 4}
+          >
+            {language.webLanguage === "PL"
+              ? "Regulamin vouchera podarunkowego".toUpperCase()
+              : "TERMS AND CONDITIONS OF THE “MOJA SKÓRA” COSMETOLOGY CLINIC".toUpperCase()}
+          </Typography>
+
           {(language.webLanguage === "PL"
             ? voucherTermsPL
             : voucherTermsEN
           ).sections.map((section) => (
             <React.Fragment key={section.id}>
               <Typography
-                variant={!downMd ? "h6" : "body1"}
-                fontWeight="bold"
+                gutterBottom
+                width={"100%"}
+                variant={downMd ? "body1" : "h6"}
                 textAlign="center"
+                sx={{ fontWeight: "600" }}
+                py={downMd ? 1 : 2}
               >{`§ ${section.id}. ${section.title}`}</Typography>
 
               {section.entries.map((entry, index) => {
                 if (typeof entry === "string") {
                   return (
-                    <Typography key={index} textAlign="center" variant="body1">
+                    <Typography
+                      key={index}
+                      textAlign="center"
+                      variant={downMd ? "body2" : "body1"}
+                      gutterBottom
+                    >
                       {`${index + 1}. ${entry}`}
                     </Typography>
                   );
@@ -89,6 +117,19 @@ export default function VoucherStatueView() {
           ))}
         </Grid>
       </Grid>
+      <Box
+        width="100%"
+        sx={{ position: "fixed", bottom: 0, left: 0, right: 0 }}
+        component={Paper}
+        zIndex={11}
+        elevation={1}
+      >
+        <BottomNavigation sx={{ width: "100%" }} showLabels>
+          <BottomNavigationAction label="Facebook" icon={<FacebookIcon />} />
+          <BottomNavigationAction label="Google" icon={<GoogleIcon />} />
+          <BottomNavigationAction label="Instagram" icon={<InstagramIcon />} />
+        </BottomNavigation>
+      </Box>
     </Container>
   );
 }

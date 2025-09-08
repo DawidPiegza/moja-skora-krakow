@@ -34,7 +34,6 @@ import gabinet_3_small from "../../../public/images/gabinet_3_small.jpeg";
 import gabinet_4_small from "../../../public/images/gabinet_4_small.jpeg";
 import gabinet_5_small from "../../../public/images/gabinet_5_small.jpeg";
 import gabinet_6_small from "../../../public/images/gabinet_6_small.jpeg";
-
 import { AboutCompanyText } from "./data/AboutCompanyText";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
@@ -43,6 +42,7 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import GoogleIcon from "@mui/icons-material/Google";
+
 export default function AboutUsView() {
   const { language } = React.useContext(WebsiteLanguageContext);
   const theme = useTheme();

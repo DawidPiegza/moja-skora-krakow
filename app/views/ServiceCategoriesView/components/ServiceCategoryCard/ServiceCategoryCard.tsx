@@ -20,6 +20,8 @@ export default function ServiceCategoryCard({
   serviceCategory,
 }: IServiceCategoryCardProps) {
   const domwMd = useMediaQuery(theme.breakpoints.down("md"));
+  const betweenMD_and_LG = useMediaQuery(theme.breakpoints.between("sm", 1400));
+
   const { language } = React.useContext(WebsiteLanguageContext);
   const navTo = useNavigate();
 
@@ -27,7 +29,6 @@ export default function ServiceCategoryCard({
     <Grid
       size={{
         xs: 12,
-        sm: 6,
         lg: 2.33,
       }}
     >
@@ -53,11 +54,11 @@ export default function ServiceCategoryCard({
                 ? serviceCategory.title
                 : serviceCategory.titleENG
             }
-            sx={{ textAlign: "center" }}
+            sx={{ textAlign: "center", px: ".1em" }}
             slotProps={{
               subheader: {
                 sx: {
-                  fontSize: "15px",
+                  fontSize: betweenMD_and_LG ? "12px" : "14px",
                   color: "text.primary",
                 },
               },

@@ -48,7 +48,7 @@ export default function PriceListView() {
                 },
               })}
             >
-              Strona Główna
+              {language.webLanguage === "PL" ? "Strona Główna" : "Main Page"}
             </Link>
             <Typography
               sx={(theme) => ({
@@ -59,7 +59,7 @@ export default function PriceListView() {
                 },
               })}
             >
-              Cennik
+              {language.webLanguage === "PL" ? "Cennik" : "Price List"}
             </Typography>
           </Breadcrumbs>
         </Grid>
@@ -82,7 +82,7 @@ export default function PriceListView() {
             >
               {language.webLanguage === "PL"
                 ? "CENNIK".toUpperCase()
-                : "Meet Moja Skóra".toUpperCase()}
+                : "Price List".toUpperCase()}
             </Typography>
           </Grid>
           <TableContainer component={Paper} variant="outlined">
