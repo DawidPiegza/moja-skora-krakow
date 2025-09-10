@@ -41,11 +41,6 @@ export default function SideDrawer({
       icon: <HomeIcon />,
     },
     {
-      name: language.webLanguage === "PL" ? "Zabiegi" : "Treatments",
-      link: "/",
-      icon: <ListAltIcon />,
-    },
-    {
       name: language.webLanguage === "PL" ? "O Nas" : "About Us",
       link: "/our_team",
       icon: <ContactPageIcon />,

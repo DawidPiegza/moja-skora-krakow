@@ -1,4 +1,4 @@
-export interface IVoucherTerms {
+export interface ITerms {
   language: "pl" | "en";
   sections: {
     id: string;

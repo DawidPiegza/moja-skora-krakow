@@ -31,7 +31,7 @@ export default function ServiceCategoryCardSmallScreen({
   const navTo = useNavigate();
   const [currentCardIndex, setCurrentCardIndex] = useState<number>(0);
 
-  const changeCard = (direction: "forward" | "backward") => {
+  const changePhoto = (direction: "forward" | "backward") => {
     setCurrentCardIndex((prev) => {
       if (direction === "forward") {
         return prev === serviceCategoriesList.length - 1 ? 0 : prev + 1;
@@ -55,13 +55,13 @@ export default function ServiceCategoryCardSmallScreen({
     >
       <IconButton
         sx={{
-          height: "100%",
+          height: "calc(100% - 50.5px)",
           borderRadius: "0px",
           p: upSM ? "1em" : "0.5em",
           zIndex: "10",
           bgcolor: "rgba(0, 0, 0, 0.1)",
         }}
-        onClick={() => changeCard("backward")}
+        onClick={() => changePhoto("backward")}
       >
         <ArrowBackIosIcon sx={{ color: "white" }} />
       </IconButton>
@@ -128,13 +128,13 @@ export default function ServiceCategoryCardSmallScreen({
       </AnimatePresence>
       <IconButton
         sx={{
-          height: "100%",
+          height: "calc(100% - 50.5px)",
           borderRadius: "0px",
           p: upSM ? "1em" : "0.5em",
           zIndex: "10",
           bgcolor: "rgba(0, 0, 0, 0.1)",
         }}
-        onClick={() => changeCard("forward")}
+        onClick={() => changePhoto("forward")}
       >
         <ArrowForwardIosIcon sx={{ color: "white" }} />
       </IconButton>

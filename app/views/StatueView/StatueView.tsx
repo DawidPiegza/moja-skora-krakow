@@ -53,7 +53,9 @@ export default function StatueView() {
                 },
               })}
             >
-              {language.webLanguage === "PL" ? "O nas" : "About us"}
+              {language.webLanguage === "PL"
+                ? "Regulamin"
+                : "Terms and conditions"}
             </Typography>
           </Breadcrumbs>
         </Grid>

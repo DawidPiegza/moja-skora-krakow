@@ -65,7 +65,7 @@ export default function ServiceCategories() {
           <ButtonBase
             component="a"
             href="https://booksy.com/pl-pl/249371_moja-skora_salon-kosmetyczny_8820_krakow#ba_s=seo"
-            target="_blank" // opcjonalnie, aby otwierało się w nowej karcie
+            target="_blank"
             rel="noopener noreferrer"
             sx={{
               display: "flex",

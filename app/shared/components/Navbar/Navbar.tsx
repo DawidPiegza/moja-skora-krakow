@@ -64,9 +64,6 @@ export default function Navbar({ setSideDrawerOpen }: INavbarProps) {
                       ? "Strona Główna"
                       : "Main Page"}
                   </Button>
-                  <Button color="inherit" onClick={() => navTo("/")}>
-                    {language.webLanguage === "PL" ? "Zabiegi" : "Treatments"}
-                  </Button>
                   <Button color="inherit" onClick={() => navTo("our_team")}>
                     {language.webLanguage === "PL" ? "O Nas" : "About Us"}
                   </Button>

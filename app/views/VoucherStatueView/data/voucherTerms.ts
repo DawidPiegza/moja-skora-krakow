@@ -1,6 +1,6 @@
-import type { IVoucherTerms } from "../utils/interfaces/IVoucherTerms";
+import type { ITerms } from "../../../shared/utils/interfaces/ITerms";
 
-export const voucherTermsPL: IVoucherTerms = {
+export const voucherTermsPL: ITerms = {
   language: "pl",
   sections: [
     {
@@ -78,7 +78,7 @@ export const voucherTermsPL: IVoucherTerms = {
   ],
 };
 
-export const voucherTermsEN: IVoucherTerms = {
+export const voucherTermsEN: ITerms = {
   language: "en",
   sections: [
     {
