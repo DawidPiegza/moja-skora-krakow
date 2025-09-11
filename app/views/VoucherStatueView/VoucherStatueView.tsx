@@ -91,9 +91,9 @@ export default function VoucherStatueView() {
               <Typography
                 gutterBottom
                 width={"100%"}
-                variant={downMd ? "body1" : "h6"}
+                variant={"body1"}
                 textAlign="center"
-                sx={{ fontWeight: "600" }}
+                sx={{ fontWeight: "400" }}
                 py={downMd ? 1 : 2}
               >{`§ ${section.id}. ${section.title}`}</Typography>
 
@@ -103,7 +103,8 @@ export default function VoucherStatueView() {
                     <Typography
                       key={index}
                       textAlign="center"
-                      variant={downMd ? "body2" : "body1"}
+                      variant={"body2"}
+                      fontWeight={300}
                       gutterBottom
                     >
                       {`${index + 1}. ${entry}`}
