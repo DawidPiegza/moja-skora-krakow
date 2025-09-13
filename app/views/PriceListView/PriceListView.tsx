@@ -7,6 +7,7 @@ import {
   Container,
   Divider,
   Grid,
+  InputAdornment,
   Link,
   Paper,
   Table,
@@ -15,21 +16,57 @@ import {
   TableContainer,
   TableHead,
   TableRow,
+  TextField,
   Typography,
   useMediaQuery,
   useTheme,
 } from "@mui/material";
 import { PriceList } from "./data/PriceList";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { WebsiteLanguageContext } from "../../shared/contexts/LanguageContext";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import GoogleIcon from "@mui/icons-material/Google";
+import SearchIcon from "@mui/icons-material/Search";
+import type { IPriceList } from "./utils/interfaces/IPriceList";
 
 export default function PriceListView() {
   const theme = useTheme();
   const { language } = React.useContext(WebsiteLanguageContext);
   const downMd = useMediaQuery(theme.breakpoints.down("md"));
+
+  const [filteredPriceList, setFilteredPriceList] =
+    useState<IPriceList>(PriceList);
+
+  const [inputWord, setInputWord] = useState<string>("");
+
+  useEffect(() => {
+    if (inputWord !== "") {
+      const filteredCategories = PriceList.categories
+        .map((category) => {
+          if (
+            category.category.toLowerCase().includes(inputWord.toLowerCase())
+          ) {
+            return category;
+          } else {
+            return {
+              ...category,
+              priceListItems: category.priceListItems.filter((el) =>
+                el.itemName.toLowerCase().includes(inputWord.toLowerCase())
+              ),
+            };
+          }
+        })
+        .filter((cat) => cat !== undefined && cat.priceListItems.length > 0);
+
+      setFilteredPriceList({
+        ...PriceList,
+        categories: filteredCategories,
+      });
+    } else {
+      setFilteredPriceList({ ...PriceList });
+    }
+  }, [inputWord]);
 
   return (
     <Container maxWidth="xl">
@@ -85,6 +122,25 @@ export default function PriceListView() {
                 : "Price List".toUpperCase()}
             </Typography>
           </Grid>
+          <Grid size={12} display="flex" justifyContent={"flex-end"}>
+            <TextField
+              placeholder="Szukaj"
+              fullWidth={downMd ? true : false}
+              size="small"
+              slotProps={{
+                input: {
+                  startAdornment: (
+                    <InputAdornment position="start">
+                      <SearchIcon />
+                    </InputAdornment>
+                  ),
+                },
+              }}
+              onChange={(e) => setInputWord(e.target.value)}
+              variant="outlined"
+            />
+          </Grid>
+
           <TableContainer component={Paper} variant="outlined">
             <Table sx={{ width: "100%" }} size={downMd ? "small" : "medium"}>
               <TableHead>
@@ -102,7 +158,7 @@ export default function PriceListView() {
                 </TableRow>
               </TableHead>
               <TableBody>
-                {PriceList.categories.map((category, index) => (
+                {filteredPriceList.categories.map((category, index) => (
                   <React.Fragment key={index}>
                     <TableRow
                       sx={{
