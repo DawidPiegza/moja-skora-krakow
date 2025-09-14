@@ -23,19 +23,17 @@ import React from "react";
 import { WebsiteLanguageContext } from "../../shared/contexts/LanguageContext";
 import EmployeeSection from "./components/EmployeeSection/EmployeeSection";
 import { AboutBasiaText, AboutKarolinaText } from "./data/AboutMeText";
-import gabinet_1 from "../../../public/images/gabinet_1.jpeg";
-import gabinet_2 from "../../../public/images/gabinet_2.jpeg";
-import gabinet_3 from "../../../public/images/gabinet_3.jpeg";
-import gabinet_4 from "../../../public/images/gabinet_4.jpeg";
-import gabinet_5 from "../../../public/images/gabinet_5.jpeg";
-import gabinet_6 from "../../../public/images/gabinet_6.jpeg";
-import gabinet_7 from "../../../public/images/gabinet_7.jpeg";
-import gabinet_1_small from "../../../public/images/gabinet_1_small.jpeg";
-import gabinet_2_small from "../../../public/images/gabinet_2_small.jpeg";
-import gabinet_3_small from "../../../public/images/gabinet_3_small.jpeg";
-import gabinet_4_small from "../../../public/images/gabinet_4_small.jpeg";
-import gabinet_5_small from "../../../public/images/gabinet_5_small.jpeg";
-import gabinet_6_small from "../../../public/images/gabinet_6_small.jpeg";
+import gabinet_1 from "../../../public/images/beauty_salon_1.jpeg";
+import gabinet_2 from "../../../public/images/beauty_salon_2.jpeg";
+import gabinet_3 from "../../../public/images/beauty_salon_3.jpeg";
+import gabinet_3_large from "../../../public/images/beauty_salon_3_large.jpeg";
+import gabinet_4 from "../../../public/images/beauty_salon_4.jpeg";
+import gabinet_4_large from "../../../public/images/beauty_salon_4_large.jpeg";
+import gabinet_5 from "../../../public/images/beauty_salon_5.jpeg";
+import gabinet_6 from "../../../public/images/beauty_salon_6.jpeg";
+import gabinet_6_large from "../../../public/images/beauty_salon_6_large.jpeg";
+import gabinet_7 from "../../../public/images/beauty_salon_7.jpeg";
+import gabinet_7_large from "../../../public/images/beauty_salon_7_large.jpeg";
 import { AboutCompanyText } from "./data/AboutCompanyText";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
@@ -54,22 +52,23 @@ export default function AboutUsView() {
   const [currentPhotoIndex, setCurrentPhotoIndex] = useState<number>(0);
 
   const companyScreens = [
-    gabinet_2,
     gabinet_1,
+    gabinet_2,
+    gabinet_3_large,
+    gabinet_4_large,
+    gabinet_5,
+    gabinet_6_large,
+    gabinet_7_large,
+  ];
+
+  const companyScreensSmallScreens = [
+    gabinet_1,
+    gabinet_2,
     gabinet_3,
     gabinet_4,
     gabinet_5,
     gabinet_6,
-  ];
-
-  const companyScreensSmallScreens = [
-    gabinet_2_small,
-    gabinet_1_small,
-    gabinet_3_small,
-    gabinet_4_small,
     gabinet_7,
-    gabinet_5_small,
-    gabinet_6_small,
   ];
 
   const changePhoto = (direction: "forward" | "backward") => {

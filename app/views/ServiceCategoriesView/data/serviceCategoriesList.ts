@@ -3,7 +3,7 @@ import makijaz_pernamentny from "../../../../public/images/makijaz_pernamentny.j
 import kosmetologia from "../../../../public/images/kosmetologia.jpg";
 import modelowanie_ust from "../../../../public/images/modelowanie_ust.jpg";
 import stylizacja_brwi_i_rzes from "../../../../public/images/stylizacja_brwi_i_rzes.jpg";
-import konsultacja from "../../../../public/images/konsultacja.png";
+import konsultacja from "../../../../public/images/konsultacja.jpeg";
 
 export const serviceCategoriesList: IServiceCategory[] = [
   {
