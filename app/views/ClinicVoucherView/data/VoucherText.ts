@@ -21,4 +21,8 @@ export const VoucherText: IVoucherText[] = [
     PL: "Szczegółowe zasady zakupu, wysyłki oraz wykorzystania Vouchera znajdują się w regulaminie.",
     ENG: "Details regarding purchase, delivery, and redemption of the voucher can be found in the terms and conditions.",
   },
+  {
+    PL: "Vouchery można nabyć w gabinecie stacjonarnie lub na życzenie drogą elektroniczną.",
+    ENG: "Vouchers are available for purchase at the clinic or, upon request, electronically.",
+  },
 ];

@@ -172,7 +172,44 @@ export default function ClinicVoucherView() {
                           variant={downMd ? "body2" : "body1"}
                           gutterBottom
                         >
-                          {language.webLanguage === "PL" ? text.PL : text.ENG}
+                          {language.webLanguage === "PL"
+                            ? text.PL.split(/(regulaminie)/g).map((part, i) =>
+                                part === "regulaminie" ? (
+                                  <Button
+                                    onClick={() => navigate("/voucher_statute")}
+                                    variant="text"
+                                    key={i}
+                                    sx={{
+                                      padding: 0,
+                                      color: "primary.dark",
+                                    }}
+                                  >
+                                    {part}
+                                  </Button>
+                                ) : (
+                                  part
+                                )
+                              )
+                            : text.ENG.split(/(terms and conditions)/g).map(
+                                (part, i) =>
+                                  part === "terms and conditions" ? (
+                                    <Button
+                                      onClick={() =>
+                                        navigate("/voucher_statute")
+                                      }
+                                      variant="text"
+                                      key={i}
+                                      sx={{
+                                        padding: 0,
+                                        color: "primary.dark",
+                                      }}
+                                    >
+                                      {part}
+                                    </Button>
+                                  ) : (
+                                    part
+                                  )
+                              )}
                         </Typography>
                       ) : null
                     )}
@@ -188,17 +225,56 @@ export default function ClinicVoucherView() {
                 rowGap={3}
               >
                 {language.webLanguage === "PL" &&
-                  VoucherText.map((text, index) => (
-                    <Typography variant="body1" key={index}>
-                      {text.PL}
-                    </Typography>
-                  ))}
+                  VoucherText.map((text, index) => {
+                    const parts = text.PL.split(/(regulaminie)/g);
+                    return (
+                      <Typography variant="body1" key={index}>
+                        {parts.map((part, i) =>
+                          part === "regulaminie" ? (
+                            <Button
+                              onClick={() => navigate("/voucher_statute")}
+                              variant="text"
+                              key={i}
+                              sx={{
+                                padding: 0,
+                                color: "primary.dark",
+                              }}
+                            >
+                              {part}
+                            </Button>
+                          ) : (
+                            part
+                          )
+                        )}
+                      </Typography>
+                    );
+                  })}
+
                 {language.webLanguage === "ENG" &&
-                  VoucherText.map((text, index) => (
-                    <Typography variant="body1" key={index}>
-                      {text.ENG}
-                    </Typography>
-                  ))}
+                  VoucherText.map((text, index) => {
+                    const parts = text.ENG.split(/(terms and conditions)/g);
+                    return (
+                      <Typography variant="body1" key={index}>
+                        {parts.map((part, i) =>
+                          part === "terms and conditions" ? (
+                            <Button
+                              onClick={() => navigate("/voucher_statute")}
+                              variant="text"
+                              key={i}
+                              sx={{
+                                padding: 0,
+                                color: "primary.dark",
+                              }}
+                            >
+                              {part}
+                            </Button>
+                          ) : (
+                            part
+                          )
+                        )}
+                      </Typography>
+                    );
+                  })}
               </Grid>
             )}
           </Grid>
