@@ -124,7 +124,7 @@ export default function PriceListView() {
           </Grid>
           <Grid size={12} display="flex" justifyContent={"flex-end"}>
             <TextField
-              placeholder="Szukaj"
+              placeholder={language.webLanguage === "ENG" ? "Search" : "Szukaj"}
               fullWidth={downMd ? true : false}
               size="small"
               slotProps={{

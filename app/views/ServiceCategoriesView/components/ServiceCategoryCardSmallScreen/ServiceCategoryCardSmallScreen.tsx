@@ -94,19 +94,42 @@ export default function ServiceCategoryCardSmallScreen({
               navTo(serviceCategoriesList[currentCardIndex].categoryURL)
             }
           >
-            <CardMedia
-              component="img"
-              height={betweenSM_MD ? "550px" : "350px"}
-              image={serviceCategoriesList[currentCardIndex].pictureURL}
-              alt={serviceCategoriesList[currentCardIndex].title}
+            <Box
               sx={{
-                filter: "grayscale(95%)",
-                transition: "filter 0.3s ease",
-                "&:hover": {
-                  filter: "grayscale(0%)",
+                position: "relative",
+                "&:hover img": {
+                  filter: "none",
+                },
+                "&:hover .overlay": {
+                  backgroundColor: "rgba(255, 255, 255, 0)",
                 },
               }}
-            />
+            >
+              <CardMedia
+                component="img"
+                height={betweenSM_MD ? "550px" : "350px"}
+                image={serviceCategoriesList[currentCardIndex].pictureURL}
+                alt={serviceCategoriesList[currentCardIndex].title}
+                sx={{
+                  filter: "grayscale(100%)",
+                  transition: "filter 0.3s ease",
+                  width: "100%",
+                }}
+              />{" "}
+              <Box
+                className="overlay"
+                sx={{
+                  position: "absolute",
+                  top: 0,
+                  left: 0,
+                  width: "100%",
+                  height: "100%",
+                  backgroundColor: "rgba(255, 255, 255, 0.2)",
+                  pointerEvents: "none",
+                  transition: "background-color 0.3s ease",
+                }}
+              />
+            </Box>
             <CardHeader
               subheader={
                 language.webLanguage === "PL"

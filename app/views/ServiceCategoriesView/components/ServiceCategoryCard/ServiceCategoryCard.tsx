@@ -1,6 +1,7 @@
 import React from "react";
 import type { IServiceCategory } from "../../utils/interfaces/IServiceCategory";
 import {
+  Box,
   Card,
   CardActionArea,
   CardHeader,
@@ -34,19 +35,42 @@ export default function ServiceCategoryCard({
     >
       <Card sx={{ width: "100%" }} elevation={1}>
         <CardActionArea onClick={() => navTo(serviceCategory.categoryURL)}>
-          <CardMedia
-            component="img"
-            height={domwMd ? "250px" : "300px"}
-            image={serviceCategory.pictureURL}
-            alt={serviceCategory.title}
+          <Box
             sx={{
-              filter: "grayscale(95%)",
-              transition: "filter 0.3s ease",
-              "&:hover": {
-                filter: "grayscale(0%)",
+              position: "relative",
+              "&:hover img": {
+                filter: "none", // usuwa grayscale przy hover
+              },
+              "&:hover .overlay": {
+                backgroundColor: "rgba(255, 255, 255, 0)", // usuwa mgiełkę przy hover
               },
             }}
-          />
+          >
+            <CardMedia
+              component="img"
+              height={domwMd ? "250px" : "300px"}
+              image={serviceCategory.pictureURL}
+              alt={serviceCategory.title}
+              sx={{
+                filter: "grayscale(100%)",
+                transition: "filter 0.3s ease",
+                width: "100%",
+              }}
+            />
+            <Box
+              className="overlay"
+              sx={{
+                position: "absolute",
+                top: 0,
+                left: 0,
+                width: "100%",
+                height: "100%",
+                backgroundColor: "rgba(255, 255, 255, 0.2)",
+                pointerEvents: "none",
+                transition: "background-color 0.3s ease",
+              }}
+            />
+          </Box>
 
           <CardHeader
             subheader={
