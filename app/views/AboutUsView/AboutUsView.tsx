@@ -34,6 +34,9 @@ import gabinet_6 from "../../../public/images/beauty_salon_6.jpeg";
 import gabinet_6_large from "../../../public/images/beauty_salon_6_large.jpeg";
 import gabinet_7 from "../../../public/images/beauty_salon_7.jpeg";
 import gabinet_7_large from "../../../public/images/beauty_salon_7_large.jpeg";
+import gabinet_8 from "../../../public/images/beauty_salon_8.jpeg";
+import gabinet_8_large from "../../../public/images/beauty_salon_8_large.jpeg";
+
 import { AboutCompanyText } from "./data/AboutCompanyText";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
@@ -59,6 +62,7 @@ export default function AboutUsView() {
     gabinet_5,
     gabinet_6_large,
     gabinet_7_large,
+    gabinet_8_large,
   ];
 
   const companyScreensSmallScreens = [
@@ -69,6 +73,7 @@ export default function AboutUsView() {
     gabinet_5,
     gabinet_6,
     gabinet_7,
+    gabinet_8,
   ];
 
   const changePhoto = (direction: "forward" | "backward") => {

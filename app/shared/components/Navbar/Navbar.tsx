@@ -6,6 +6,7 @@ import {
   Container,
   IconButton,
   Toolbar,
+  Typography,
 } from "@mui/material";
 import sygnet_wektorowy from "../../../../public/images/sygnet_wektorowy.svg";
 import { useTheme } from "@mui/material/styles";
@@ -15,6 +16,7 @@ import { useNavigate } from "react-router";
 import React, { useEffect, useState } from "react";
 import { WebsiteLanguageContext } from "../../contexts/LanguageContext";
 import LanguageMenu from "./components/LanguageMenu/LanguageMenu";
+import booksy_logo from "../../../../public/images/booksy_logo.png";
 
 interface INavbarProps {
   setSideDrawerOpen: React.Dispatch<React.SetStateAction<boolean>>;
@@ -76,6 +78,27 @@ export default function Navbar({ setSideDrawerOpen }: INavbarProps) {
                   <Button color="inherit" onClick={() => navTo("contact")}>
                     {language.webLanguage === "PL" ? "Kontakt" : "Contact"}
                   </Button>
+                  <ButtonBase
+                    component="a"
+                    href="https://booksy.com/pl-pl/249371_moja-skora_salon-kosmetyczny_8820_krakow#ba_s=seo"
+                    target="_blank"
+                    sx={{
+                      paddingY: "10px",
+                      paddingX: "10px",
+                      borderRadius: 1,
+                      transition: "background-color 0.2s ease",
+                      "&:hover": {
+                        backgroundColor: "rgba(0,0,0,0.05)",
+                      },
+                    }}
+                  >
+                    <Box
+                      component="img"
+                      src={booksy_logo}
+                      alt="logo booksy"
+                      height={"16px"}
+                    />
+                  </ButtonBase>
                   <LanguageMenu />
                 </Box>
               )}

@@ -1,5 +1,6 @@
 import {
   Box,
+  ButtonBase,
   Divider,
   Drawer,
   List,
@@ -10,7 +11,6 @@ import {
 } from "@mui/material";
 import HomeIcon from "@mui/icons-material/Home";
 import ContactPageIcon from "@mui/icons-material/ContactPage";
-import ListAltIcon from "@mui/icons-material/ListAlt";
 import CallIcon from "@mui/icons-material/Call";
 import React from "react";
 import { WebsiteLanguageContext } from "../../contexts/LanguageContext";
@@ -18,6 +18,8 @@ import { useNavigate } from "react-router";
 import TranslateIcon from "@mui/icons-material/Translate";
 import CardGiftcardIcon from "@mui/icons-material/CardGiftcard";
 import LocalOfferIcon from "@mui/icons-material/LocalOffer";
+import booksy_logo from "../../../../public/images/booksy_logo.png";
+import ShopIcon from "@mui/icons-material/Shop";
 
 interface ISideDrawerProps {
   open: boolean;
@@ -79,9 +81,28 @@ export default function SideDrawer({
               </ListItemButton>
             </ListItem>
           ))}
-
+          <ListItem disablePadding>
+            <ListItemButton
+              component="a"
+              href="https://booksy.com/pl-pl/249371_moja-skora_salon-kosmetyczny_8820_krakow#ba_s=seo"
+              target="_blank"
+            >
+              <ListItemIcon>
+                <ShopIcon />
+              </ListItemIcon>
+              <ListItemText
+                primary={
+                  <Box
+                    component="img"
+                    src={booksy_logo}
+                    alt="logo booksy"
+                    sx={{ height: 16 }}
+                  />
+                }
+              />
+            </ListItemButton>
+          </ListItem>
           <Divider />
-
           <ListItem disablePadding>
             <ListItemButton
               onClick={(e) => {
