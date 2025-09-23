@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from "react";
-import { WebsiteLanguageContext } from "../../../shared/contexts/LanguageContext";
 import {
+  BottomNavigation,
+  BottomNavigationAction,
+  Box,
   Breadcrumbs,
   Card,
   CardMedia,
@@ -13,405 +14,210 @@ import {
   useMediaQuery,
   useTheme,
 } from "@mui/material";
-import SectionTitle from "../../../shared/components/SectionTitle/SectionTitle";
-import { drCyjFillerDataPL, drCyjFillerDataENG } from "./data/drCyjFillerData";
-import AssignmentIcon from "@mui/icons-material/Assignment";
+import React from "react";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import GoogleIcon from "@mui/icons-material/Google";
+import { WebsiteLanguageContext } from "../../../shared/contexts/LanguageContext";
+import mezoterapia_iglowa_dr_cyj_1 from "../../../../public/images/mezoterapia_iglowa_dr_cyj_1.jpeg";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
-import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
-import { useInView } from "react-intersection-observer";
-import { motion } from "framer-motion";
+import { drCyjFillerDataPL, drCyjFillerDataENG } from "./data/drCyjFillerData";
+import RepeatIcon from "@mui/icons-material/Repeat";
+import EventRepeatIcon from "@mui/icons-material/EventRepeat";
 
 export default function DrCyjFillerView() {
   const { language } = React.useContext(WebsiteLanguageContext);
   const theme = useTheme();
   const downMd = useMediaQuery(theme.breakpoints.down("md"));
-  const [isLoading, setLoading] = useState<boolean>(true);
-
-  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1 });
-  const [show, setShow] = useState(false);
-
-  useEffect(() => {
-    if (inView) setShow(true);
-    if (!inView) setShow(false);
-  }, [inView]);
-
-  useEffect(() => {
-    setLoading(false);
-  }, []);
-
   return (
-    !isLoading && (
-      <Container maxWidth="xl">
-        <Grid container spacing={3} paddingY={2}>
-          <Grid size={12}>
-            <Breadcrumbs aria-label="breadcrumb">
-              <Link
-                underline="hover"
-                color="inherit"
-                href="/"
-                sx={(theme) => ({
-                  color: "text.secondary",
-                  ...theme.typography.body2,
-                  [theme.breakpoints.up("md")]: {
-                    ...theme.typography.body1,
-                  },
-                })}
-              >
-                {language.webLanguage === "PL" ? "Strona Główna" : "Main Page"}
-              </Link>
-              <Link
-                underline="hover"
-                color="inherit"
-                href="/"
-                sx={(theme) => ({
-                  color: "text.secondary",
-                  ...theme.typography.body2,
-                  [theme.breakpoints.up("md")]: {
-                    ...theme.typography.body1,
-                  },
-                })}
-              >
-                {language.webLanguage === "PL" ? "Kosmetologia" : "Cosmetology"}
-              </Link>
-              <Typography
-                sx={(theme) => ({
-                  color: "text.primary",
-                  ...theme.typography.body2,
-                  [theme.breakpoints.up("md")]: {
-                    ...theme.typography.body1,
-                  },
-                })}
-              >
-                {language.webLanguage === "PL"
-                  ? "Mezoterapia igłowa skóry głowy Dr. Cyj"
-                  : "Cyj Filler - Scalp mesotherapy treatment"}
-              </Typography>
-            </Breadcrumbs>
-          </Grid>
-          <Grid size={12} container>
-            <Grid
-              container
-              direction={downMd ? "column" : "row"}
-              sx={{
-                justifyContent: "center",
-                alignItems: "stretch",
-              }}
-              spacing={5}
+    <Container maxWidth="xl">
+      <Grid container spacing={2} paddingTop={2} paddingBottom={"60px"}>
+        <Grid size={12}>
+          <Breadcrumbs aria-label="breadcrumb">
+            <Link
+              underline="hover"
+              color="inherit"
+              href="/"
+              sx={(theme) => ({
+                color: "text.secondary",
+                ...theme.typography.body2,
+                [theme.breakpoints.up("md")]: {
+                  ...theme.typography.body1,
+                },
+              })}
             >
-              <Grid size={12} container marginTop={2} alignItems="center">
-                <Grid size={downMd ? 12 : 6}>
-                  <Card
-                    component={motion.div}
-                    initial={{ opacity: 0, x: -500 }}
-                    animate={{
-                      opacity: 1,
-                      x: 0,
-                      transition: {
-                        delay: 0.5,
-                        type: "spring",
-                        visualDuration: 1,
-                        bounce: 0.4,
-                      },
-                    }}
-                  >
-                    <CardMedia
-                      sx={{ width: "100%", height: downMd ? "400px" : "700px" }}
-                      component="img"
-                      image={drCyjFillerDataPL.treatmentPhotoURL}
-                      alt={"Mezoterapia igłowa skóry głowy Dr. Cyj"}
-                    />
-                  </Card>
-                </Grid>
-                <Grid
-                  size={downMd ? 12 : 6}
-                  textAlign="center"
-                  p={1}
-                  rowGap={2}
-                  container
-                  direction="column"
-                  component={motion.div}
-                  initial={{ opacity: 0, x: 500 }}
-                  animate={{
-                    opacity: 1,
-                    x: 0,
-                    transition: {
-                      delay: 0.5,
-                      type: "spring",
-                      visualDuration: 1,
-                      bounce: 0.4,
-                    },
-                  }}
-                >
-                  <Grid size={12}>
-                    <Typography
-                      gutterBottom
-                      fontWeight="bold"
-                      variant={downMd ? "h5" : "h4"}
-                      marginBottom={2}
-                    >
-                      {language.webLanguage === "PL"
-                        ? "Mezoterapia igłowa skóry głowy Dr. Cyj"
-                        : "Cyj Filler - Scalp mesotherapy treatment"}
-                    </Typography>
-
-                    <Typography
-                      variant={downMd ? "body2" : "body1"}
-                      gutterBottom
-                    >
-                      {language.webLanguage === "PL"
-                        ? drCyjFillerDataPL.description
-                        : drCyjFillerDataENG.description}
-                    </Typography>
-                  </Grid>
-                  <Grid size={12}>
-                    <Typography variant={downMd ? "h6" : "h5"} gutterBottom>
-                      {language.webLanguage === "PL"
-                        ? "Dr Cyj – Terapia peptydowa na wypadanie włosów"
-                        : "DR. CYJ – Peptide therapy for hair loss"}
-                    </Typography>
-                    <Typography
-                      variant={downMd ? "body2" : "body1"}
-                      gutterBottom
-                    >
-                      {language.webLanguage === "PL"
-                        ? drCyjFillerDataPL.descriptionOfPreparation
-                        : drCyjFillerDataENG.descriptionOfPreparation}
-                    </Typography>
-                  </Grid>
-                  <Grid size={12}>
-                    <Typography variant={downMd ? "h6" : "h5"} gutterBottom>
-                      {language.webLanguage === "PL"
-                        ? "Skład preparatu"
-                        : "Composition of the preparation"}
-                    </Typography>
-                    <Typography
-                      variant={downMd ? "body2" : "body1"}
-                      gutterBottom
-                    >
-                      {language.webLanguage === "PL"
-                        ? drCyjFillerDataPL.compositionOfPreparation
-                        : drCyjFillerDataENG.compositionOfPreparation}
-                    </Typography>
-                  </Grid>
-                </Grid>
-              </Grid>
-              <Grid size={12} container spacing={3}>
-                <Grid size={12} container>
-                  <Grid
-                    size={downMd ? 12 : 4}
-                    component={Paper}
-                    variant="outlined"
-                    p={2}
-                    display="flex"
-                    flexDirection="column"
-                    textAlign="center"
-                    rowGap={2}
-                  >
-                    <AssignmentIcon
-                      fontSize={downMd ? "medium" : "large"}
-                      sx={{ width: "100%" }}
-                    />
-                    <Typography variant={downMd ? "body2" : "body1"}>
-                      {language.webLanguage === "ENG"
-                        ? drCyjFillerDataENG.infoTable.recommendedNumber
-                        : drCyjFillerDataPL.infoTable.recommendedNumber}
-                    </Typography>
-                    <Typography variant={downMd ? "body1" : "h6"} width="100%">
-                      {language.webLanguage === "PL"
-                        ? "Zalecana ilość zabiegów"
-                        : "Recommended number of treatments"}
-                    </Typography>
-                  </Grid>
-                  <Grid
-                    size={downMd ? 12 : 4}
-                    component={Paper}
-                    variant="outlined"
-                    p={2}
-                    display="flex"
-                    flexDirection="column"
-                    textAlign="center"
-                    rowGap={2}
-                  >
-                    <AccessTimeIcon
-                      fontSize={downMd ? "medium" : "large"}
-                      sx={{ width: "100%" }}
-                    />
-                    <Typography variant={downMd ? "body2" : "body1"}>
-                      {language.webLanguage === "ENG"
-                        ? drCyjFillerDataENG.infoTable.timeOfTreatment
-                        : drCyjFillerDataPL.infoTable.timeOfTreatment}
-                    </Typography>
-                    <Typography variant={downMd ? "body1" : "h6"} width="100%">
-                      {language.webLanguage === "PL"
-                        ? "Czas zabiegu"
-                        : "Treatment duration"}
-                    </Typography>
-                  </Grid>
-                  <Grid
-                    size={downMd ? 12 : 4}
-                    component={Paper}
-                    variant="outlined"
-                    p={2}
-                    display="flex"
-                    flexDirection="column"
-                    textAlign="center"
-                    rowGap={2}
-                  >
-                    <CalendarMonthIcon
-                      fontSize={downMd ? "medium" : "large"}
-                      sx={{ width: "100%" }}
-                    />
-                    <Typography variant={downMd ? "body2" : "body1"}>
-                      {language.webLanguage === "ENG"
-                        ? drCyjFillerDataENG.infoTable.intervals
-                        : drCyjFillerDataPL.infoTable.intervals}
-                    </Typography>
-                    <Typography variant={downMd ? "body1" : "h6"} width="100%">
-                      {language.webLanguage === "PL"
-                        ? "Częstotliwość zabiegów"
-                        : "Treatment frequency"}
-                    </Typography>
-                  </Grid>
-                </Grid>
-              </Grid>
-              <Grid size={12}>
-                <Divider />
-              </Grid>
-              <Grid size={12} container justifyContent="space-between">
-                <Grid size={downMd ? 12 : 3} textAlign="center">
-                  <Typography
-                    variant={downMd ? "h6" : "h5"}
-                    width="100%"
-                    gutterBottom
-                  >
-                    {language.webLanguage === "PL"
-                      ? "Efekty zabiegu"
-                      : "Treatment results"}
-                  </Typography>
-                  {(language.webLanguage === "PL"
-                    ? drCyjFillerDataPL
-                    : drCyjFillerDataENG
-                  ).effectsOfTratment.map((effect, index) => (
-                    <React.Fragment key={index}>
-                      <Typography
-                        variant={downMd ? "body2" : "body1"}
-                        gutterBottom
-                      >
-                        - {effect}
-                      </Typography>
-                    </React.Fragment>
-                  ))}
-                </Grid>
-                {!downMd && <Divider orientation="vertical" />}
-                {downMd && (
-                  <Grid size={12}>
-                    <Divider orientation="horizontal" />
-                  </Grid>
-                )}
-                <Grid size={downMd ? 12 : 3} textAlign="center">
-                  <Typography
-                    variant={downMd ? "h6" : "h5"}
-                    width="100%"
-                    gutterBottom
-                  >
-                    {language.webLanguage === "PL"
-                      ? "Wskazania do zabiegu"
-                      : "Treatment indications"}
-                  </Typography>
-                  {(language.webLanguage === "PL"
-                    ? drCyjFillerDataPL
-                    : drCyjFillerDataENG
-                  ).indicationsToTreatment.map((effect, index) => (
-                    <React.Fragment key={index}>
-                      <Typography
-                        variant={downMd ? "body2" : "body1"}
-                        gutterBottom
-                      >
-                        - {effect}
-                      </Typography>
-                    </React.Fragment>
-                  ))}
-                </Grid>
-                {!downMd && <Divider orientation="vertical" />}
-                {downMd && (
-                  <Grid size={12}>
-                    <Divider orientation="horizontal" />
-                  </Grid>
-                )}
-                <Grid size={downMd ? 12 : 3} textAlign="center">
-                  <Typography
-                    variant={downMd ? "h6" : "h5"}
-                    width="100%"
-                    gutterBottom
-                  >
-                    {language.webLanguage === "PL"
-                      ? "Przeciwwskazania do zabiegu"
-                      : "Treatment contraindications"}
-                  </Typography>
-                  {(language.webLanguage === "PL"
-                    ? drCyjFillerDataPL
-                    : drCyjFillerDataENG
-                  ).contraindications.map((effect, index) => (
-                    <React.Fragment key={index}>
-                      <Typography
-                        variant={downMd ? "body2" : "body1"}
-                        gutterBottom
-                      >
-                        - {effect}
-                      </Typography>
-                    </React.Fragment>
-                  ))}
-                </Grid>
-              </Grid>
-              <Grid size={12}>
-                <Divider />
-              </Grid>
-              <Grid size={12} textAlign="center">
-                <Typography variant={downMd ? "h6" : "h5"} gutterBottom>
+              {language.webLanguage === "PL" ? "Strona Główna" : "Main Page"}
+            </Link>
+            <Link
+              underline="hover"
+              color="inherit"
+              href="/"
+              sx={(theme) => ({
+                color: "text.secondary",
+                ...theme.typography.body2,
+                [theme.breakpoints.up("md")]: {
+                  ...theme.typography.body1,
+                },
+              })}
+            >
+              {language.webLanguage === "PL" ? "Kosmetologia" : "Cosmetology"}
+            </Link>
+            <Typography
+              sx={(theme) => ({
+                color: "text.primary",
+                ...theme.typography.body2,
+                [theme.breakpoints.up("md")]: {
+                  ...theme.typography.body1,
+                },
+              })}
+            >
+              {language.webLanguage === "PL"
+                ? "Mezoterapia igłowa skóry głowy Dr. cyj"
+                : "Cyj Filler - Scalp mesotherapy treatment"}
+            </Typography>
+          </Breadcrumbs>
+        </Grid>
+        <Grid size={12}>
+          <Divider />
+        </Grid>
+        <Grid size={12} container>
+          <Grid
+            size={12}
+            display="flex"
+            justifyContent={"flex-start"}
+            py={downMd ? 1 : 2}
+          >
+            <Typography
+              gutterBottom
+              width={"100%"}
+              variant={"h4"}
+              textAlign="left"
+              sx={{ fontWeight: "350" }}
+            >
+              {language.webLanguage === "PL"
+                ? "Mezoterapia igłowa skóry głowy Dr. cyj".toUpperCase()
+                : "Cyj Filler - Scalp mesotherapy treatment".toUpperCase()}
+            </Typography>
+          </Grid>
+        </Grid>
+        <Grid size={12} container>
+          <Grid size={3}>
+            <Box
+              component="img"
+              sx={{
+                height: "auto",
+                width: "100%",
+              }}
+              alt="The house from the offer."
+              src={mezoterapia_iglowa_dr_cyj_1}
+            />
+          </Grid>
+          <Grid
+            size={9}
+            container
+            direction="row"
+            sx={{
+              justifyContent: "flex-start",
+              alignItems: "flex-start",
+            }}
+          >
+            <Grid size={downMd ? 12 : 4}>
+              <Box
+                p={1}
+                width="100%"
+                display="flex"
+                flexDirection="column"
+                justifyContent="center"
+                component={Paper}
+                variant="outlined"
+                textAlign="center"
+                alignItems="center"
+                rowGap={0.5}
+                height={"100%"}
+              >
+                <AccessTimeIcon fontSize="medium" sx={{ color: "#616161" }} />
+                <Typography variant="body1" fontWeight={400}>
                   {language.webLanguage === "PL"
-                    ? "Jak przebiega zabieg?"
-                    : "What does the procedure involve?"}
+                    ? drCyjFillerDataPL.infoTable.timeOfTreatment
+                    : drCyjFillerDataENG.infoTable.timeOfTreatment}
                 </Typography>
-                <Typography variant={downMd ? "body2" : "body1"}>
+                <Typography variant="body2" fontWeight={300}>
                   {language.webLanguage === "PL"
-                    ? drCyjFillerDataPL.courseOfTreatment
-                    : drCyjFillerDataENG.courseOfTreatment}
+                    ? "CZAS TRWANIA ZABIEGU"
+                    : "DURATION OF THE TREATMENT"}
                 </Typography>
-              </Grid>
-              <Grid size={12}>
-                <Divider />
-              </Grid>
-              <Grid size={12} textAlign="center">
-                <Typography variant={downMd ? "h6" : "h5"} gutterBottom>
+              </Box>
+            </Grid>
+            <Grid size={downMd ? 12 : 4}>
+              <Box
+                p={1}
+                width="100%"
+                display="flex"
+                flexDirection="column"
+                justifyContent="center"
+                component={Paper}
+                variant="outlined"
+                textAlign="center"
+                alignItems="center"
+                rowGap={0.5}
+                height={"100%"}
+              >
+                <RepeatIcon fontSize="medium" sx={{ color: "#616161" }} />
+                <Typography variant="body1" fontWeight={400}>
                   {language.webLanguage === "PL"
-                    ? "Jak często powtarzać zabieg?"
-                    : "How often should the procedure be repeated?"}
+                    ? drCyjFillerDataPL.infoTable.recommendedNumber
+                    : drCyjFillerDataENG.infoTable.recommendedNumber}
                 </Typography>
-                <Typography variant={downMd ? "body2" : "body1"}>
+                <Typography variant="body2" fontWeight={300}>
                   {language.webLanguage === "PL"
-                    ? drCyjFillerDataPL.interfalsInTreatment
-                    : drCyjFillerDataENG.interfalsInTreatment}
+                    ? "REKOMENDOWANA LICZBA ZABIEGÓW"
+                    : "RECOMMENDED NUMBER OF TREATMENTS"}
                 </Typography>
-              </Grid>
-              <Grid size={12}>
-                <Divider />
-              </Grid>
-              <Grid size={12} textAlign="center">
-                <Typography variant={downMd ? "h6" : "h5"} gutterBottom>
+              </Box>
+            </Grid>
+            <Grid size={downMd ? 12 : 4}>
+              <Box
+                p={1}
+                width="100%"
+                display="flex"
+                flexDirection="column"
+                justifyContent="center"
+                component={Paper}
+                variant="outlined"
+                textAlign="center"
+                alignItems="center"
+                rowGap={0.5}
+                height={"100%"}
+              >
+                <EventRepeatIcon fontSize="medium" sx={{ color: "#616161" }} />
+                <Typography variant="body1" fontWeight={400}>
                   {language.webLanguage === "PL"
-                    ? "Zalecenia pozabiegowe"
-                    : "Post-treatment care"}
+                    ? drCyjFillerDataPL.infoTable.intervals
+                    : drCyjFillerDataENG.infoTable.intervals}
                 </Typography>
-                <Typography variant={downMd ? "body2" : "body1"}>
+                <Typography variant="body2" fontWeight={300}>
                   {language.webLanguage === "PL"
-                    ? drCyjFillerDataPL.postTreatmentRecommendations
-                    : drCyjFillerDataENG.postTreatmentRecommendations}
+                    ? "ODSTĘPY POMIĘDZY ZABIEGAMI"
+                    : "INTERVALS BETWEEN TREATMENTS"}
                 </Typography>
-              </Grid>
+              </Box>
             </Grid>
           </Grid>
         </Grid>
-      </Container>
-    )
+      </Grid>
+      <Box
+        width="100%"
+        sx={{ position: "fixed", bottom: 0, left: 0, right: 0 }}
+        component={Paper}
+        zIndex={11}
+        elevation={1}
+      >
+        <BottomNavigation sx={{ width: "100%" }} showLabels>
+          <BottomNavigationAction label="Facebook" icon={<FacebookIcon />} />
+          <BottomNavigationAction label="Google" icon={<GoogleIcon />} />
+          <BottomNavigationAction label="Instagram" icon={<InstagramIcon />} />
+        </BottomNavigation>
+      </Box>
+    </Container>
   );
 }
