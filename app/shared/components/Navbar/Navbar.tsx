@@ -6,7 +6,6 @@ import {
   Container,
   IconButton,
   Toolbar,
-  Typography,
 } from "@mui/material";
 import sygnet_wektorowy from "../../../../public/images/sygnet_wektorowy.svg";
 import { useTheme } from "@mui/material/styles";
@@ -79,10 +78,10 @@ export default function Navbar({ setSideDrawerOpen }: INavbarProps) {
                     {language.webLanguage === "PL" ? "Kontakt" : "Contact"}
                   </Button>
                   <ButtonBase
-                    component="a"
                     href="https://booksy.com/pl-pl/249371_moja-skora_salon-kosmetyczny_8820_krakow#ba_s=seo"
                     target="_blank"
                     sx={{
+                      marginLeft: 1,
                       paddingY: "10px",
                       paddingX: "10px",
                       borderRadius: 1,
@@ -90,6 +89,7 @@ export default function Navbar({ setSideDrawerOpen }: INavbarProps) {
                       "&:hover": {
                         backgroundColor: "rgba(0,0,0,0.05)",
                       },
+                      outline: "1px solid rgba(0,0,0,0.3)", // standardowy outlin
                     }}
                   >
                     <Box

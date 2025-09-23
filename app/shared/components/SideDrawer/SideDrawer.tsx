@@ -19,6 +19,8 @@ import TranslateIcon from "@mui/icons-material/Translate";
 import CardGiftcardIcon from "@mui/icons-material/CardGiftcard";
 import LocalOfferIcon from "@mui/icons-material/LocalOffer";
 import booksy_logo from "../../../../public/images/booksy_logo.png";
+import booksy_icon from "../../../../public/images/booksy_icon.svg";
+
 import ShopIcon from "@mui/icons-material/Shop";
 
 interface ISideDrawerProps {
@@ -81,6 +83,8 @@ export default function SideDrawer({
               </ListItemButton>
             </ListItem>
           ))}
+          <Divider />
+
           <ListItem disablePadding>
             <ListItemButton
               component="a"
@@ -88,7 +92,13 @@ export default function SideDrawer({
               target="_blank"
             >
               <ListItemIcon>
-                <ShopIcon />
+                <Box
+                  component="img"
+                  src={booksy_icon}
+                  alt="logo booksy"
+                  height={"28px"}
+                  width={"27px"}
+                />
               </ListItemIcon>
               <ListItemText
                 primary={
@@ -118,6 +128,7 @@ export default function SideDrawer({
               />
             </ListItemButton>
           </ListItem>
+          {languageMenuOpen && <Divider variant="middle" />}
 
           {languageMenuOpen && (
             <>
@@ -131,6 +142,8 @@ export default function SideDrawer({
                   <ListItemText primary="Polski" sx={{ pl: 4 }} />
                 </ListItemButton>
               </ListItem>
+              {languageMenuOpen && <Divider variant="middle" />}
+
               <ListItem disablePadding>
                 <ListItemButton
                   onClick={() => {
@@ -143,6 +156,8 @@ export default function SideDrawer({
               </ListItem>
             </>
           )}
+          {languageMenuOpen && <Divider variant="middle" />}
+          {!languageMenuOpen && <Divider variant="fullWidth" />}
         </List>
       </Box>
     </Drawer>
