@@ -1,8 +1,12 @@
-import { Box } from "@mui/material";
+import { Box, useMediaQuery, useTheme } from "@mui/material";
 import logo_moja_skora from "../../../public/images/logo_moja_skora.png";
 import { motion } from "framer-motion";
 import landing_page_image_1 from "../../../public/images/landing_page_image_1.jpg";
+import landing_page_image_1_small_screen from "../../../public/images/landing_page_image_1_small_screen.jpg";
+
 export default function LandingPageView() {
+  const theme = useTheme();
+  const downMd = useMediaQuery(theme.breakpoints.down("md"));
   return (
     <Box
       sx={{
@@ -21,7 +25,9 @@ export default function LandingPageView() {
           position: "absolute",
           width: "100%",
           height: "100%",
-          backgroundImage: `url(${landing_page_image_1})`,
+          backgroundImage: `url(${
+            !downMd ? landing_page_image_1 : landing_page_image_1_small_screen
+          })`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",

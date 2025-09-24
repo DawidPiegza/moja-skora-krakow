@@ -121,7 +121,7 @@ export default function CosmetologyCategoryView() {
                     </Typography>
                   )}
                 </Grid>
-                <Grid size={12}>
+                <Grid size={12} display={"flex"} alignItems={"flex-end"}>
                   <Button
                     variant="outlined"
                     onClick={() => navTo(el.pl.navigateURL)}

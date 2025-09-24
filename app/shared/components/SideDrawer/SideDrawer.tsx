@@ -68,7 +68,13 @@ export default function SideDrawer({
 
   return (
     <Drawer open={open} onClose={() => setSideDrawerOpen(false)}>
-      <Box sx={{ width: 250 }} role="presentation">
+      <Box
+        sx={{ width: 250, height: "100%" }}
+        role="presentation"
+        display="flex"
+        flexDirection="column"
+        justifyContent={"space-between"}
+      >
         <List>
           {menuItems.map((item, index) => (
             <ListItem disablePadding key={index}>
@@ -83,36 +89,6 @@ export default function SideDrawer({
               </ListItemButton>
             </ListItem>
           ))}
-          <Divider />
-
-          <ListItem disablePadding>
-            <ListItemButton
-              component="a"
-              href="https://booksy.com/pl-pl/249371_moja-skora_salon-kosmetyczny_8820_krakow#ba_s=seo"
-              target="_blank"
-            >
-              <ListItemIcon>
-                <Box
-                  component="img"
-                  src={booksy_icon}
-                  alt="logo booksy"
-                  height={"28px"}
-                  width={"27px"}
-                />
-              </ListItemIcon>
-              <ListItemText
-                primary={
-                  <Box
-                    component="img"
-                    src={booksy_logo}
-                    alt="logo booksy"
-                    sx={{ height: 16 }}
-                  />
-                }
-              />
-            </ListItemButton>
-          </ListItem>
-          <Divider />
           <ListItem disablePadding>
             <ListItemButton
               onClick={(e) => {
@@ -128,7 +104,6 @@ export default function SideDrawer({
               />
             </ListItemButton>
           </ListItem>
-          {languageMenuOpen && <Divider variant="middle" />}
 
           {languageMenuOpen && (
             <>
@@ -156,9 +131,30 @@ export default function SideDrawer({
               </ListItem>
             </>
           )}
-          {languageMenuOpen && <Divider variant="middle" />}
-          {!languageMenuOpen && <Divider variant="fullWidth" />}
         </List>
+        <ButtonBase
+          href="https://booksy.com/pl-pl/249371_moja-skora_salon-kosmetyczny_8820_krakow#ba_s=seo"
+          target="_blank"
+          sx={{
+            paddingY: 2,
+            paddingX: 1,
+            marginX: 3,
+            marginBottom: 15,
+            borderRadius: 1,
+            transition: "background-color 0.2s ease",
+            "&:hover": {
+              backgroundColor: "rgba(0,0,0,0.05)",
+            },
+            outline: "1px solid rgba(0,0,0,0.3)",
+          }}
+        >
+          <Box
+            component="img"
+            src={booksy_logo}
+            alt="logo booksy"
+            height={"16px"}
+          />
+        </ButtonBase>
       </Box>
     </Drawer>
   );

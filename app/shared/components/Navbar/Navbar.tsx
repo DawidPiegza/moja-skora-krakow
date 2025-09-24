@@ -58,6 +58,7 @@ export default function Navbar({ setSideDrawerOpen }: INavbarProps) {
                   height={downMd ? "30px" : "40px"}
                 />
               </ButtonBase>
+
               {!downMd && (
                 <Box>
                   <Button color="inherit" onClick={() => navTo("/")}>
@@ -77,6 +78,8 @@ export default function Navbar({ setSideDrawerOpen }: INavbarProps) {
                   <Button color="inherit" onClick={() => navTo("contact")}>
                     {language.webLanguage === "PL" ? "Kontakt" : "Contact"}
                   </Button>
+
+                  <LanguageMenu />
                   <ButtonBase
                     href="https://booksy.com/pl-pl/249371_moja-skora_salon-kosmetyczny_8820_krakow#ba_s=seo"
                     target="_blank"
@@ -89,7 +92,7 @@ export default function Navbar({ setSideDrawerOpen }: INavbarProps) {
                       "&:hover": {
                         backgroundColor: "rgba(0,0,0,0.05)",
                       },
-                      outline: "1px solid rgba(0,0,0,0.3)", // standardowy outlin
+                      outline: "1px solid rgba(0,0,0,0.3)",
                     }}
                   >
                     <Box
@@ -99,7 +102,6 @@ export default function Navbar({ setSideDrawerOpen }: INavbarProps) {
                       height={"16px"}
                     />
                   </ButtonBase>
-                  <LanguageMenu />
                 </Box>
               )}
               {downMd && (
