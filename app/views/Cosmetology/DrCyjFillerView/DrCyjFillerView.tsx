@@ -100,90 +100,90 @@ export default function DrCyjFillerView() {
             </Typography>
           </Grid>
         </Grid>
-        <Grid size={12} container p={1}>
-          <Grid size={12} container>
-            <Grid size={downMd ? 12 : 4}>
-              <Box
-                p={1}
-                width="100%"
-                display="flex"
-                flexDirection="column"
-                justifyContent="center"
-                component={Paper}
-                variant="outlined"
-                textAlign="center"
-                alignItems="center"
-                rowGap={0.5}
-                height={"100%"}
-              >
-                <AccessTimeIcon fontSize="medium" sx={{ color: "#616161" }} />
-                <Typography variant="body1" fontWeight={400}>
-                  {language.webLanguage === "PL"
-                    ? drCyjFillerDataPL.infoTable.timeOfTreatment
-                    : drCyjFillerDataENG.infoTable.timeOfTreatment}
-                </Typography>
-                <Typography variant="body2" fontWeight={300}>
-                  {language.webLanguage === "PL"
-                    ? "CZAS TRWANIA ZABIEGU"
-                    : "DURATION OF THE TREATMENT"}
-                </Typography>
-              </Box>
-            </Grid>
-            <Grid size={downMd ? 12 : 4}>
-              <Box
-                p={1}
-                width="100%"
-                display="flex"
-                flexDirection="column"
-                justifyContent="center"
-                component={Paper}
-                variant="outlined"
-                textAlign="center"
-                alignItems="center"
-                rowGap={0.5}
-                height={"100%"}
-              >
-                <RepeatIcon fontSize="medium" sx={{ color: "#616161" }} />
-                <Typography variant="body1" fontWeight={400}>
-                  {language.webLanguage === "PL"
-                    ? drCyjFillerDataPL.infoTable.recommendedNumber
-                    : drCyjFillerDataENG.infoTable.recommendedNumber}
-                </Typography>
-                <Typography variant="body2" fontWeight={300}>
-                  {language.webLanguage === "PL"
-                    ? "REKOMENDOWANA LICZBA ZABIEGÓW"
-                    : "RECOMMENDED NUMBER OF TREATMENTS"}
-                </Typography>
-              </Box>
-            </Grid>
-            <Grid size={downMd ? 12 : 4}>
-              <Box
-                p={1}
-                width="100%"
-                display="flex"
-                flexDirection="column"
-                justifyContent="center"
-                component={Paper}
-                variant="outlined"
-                textAlign="center"
-                alignItems="center"
-                rowGap={0.5}
-                height={"100%"}
-              >
-                <EventRepeatIcon fontSize="medium" sx={{ color: "#616161" }} />
-                <Typography variant="body1" fontWeight={400}>
-                  {language.webLanguage === "PL"
-                    ? drCyjFillerDataPL.infoTable.intervals
-                    : drCyjFillerDataENG.infoTable.intervals}
-                </Typography>
-                <Typography variant="body2" fontWeight={300}>
-                  {language.webLanguage === "PL"
-                    ? "ODSTĘPY POMIĘDZY ZABIEGAMI"
-                    : "INTERVALS BETWEEN TREATMENTS"}
-                </Typography>
-              </Box>
-            </Grid>
+        <Grid size={12} container>
+          <Grid size={downMd ? 12 : 4}>
+            <Box
+              p={1}
+              width="100%"
+              display="flex"
+              flexDirection="column"
+              justifyContent="center"
+              component={Paper}
+              variant="outlined"
+              textAlign="center"
+              alignItems="center"
+              rowGap={0.5}
+              height={"100%"}
+            >
+              <AccessTimeIcon fontSize="medium" sx={{ color: "#616161" }} />
+              <Typography variant="body1" fontWeight={400}>
+                {language.webLanguage === "PL"
+                  ? drCyjFillerDataPL.infoTable.timeOfTreatment
+                  : drCyjFillerDataENG.infoTable.timeOfTreatment}
+              </Typography>
+              <Typography variant="body2" fontWeight={300}>
+                {language.webLanguage === "PL"
+                  ? "CZAS TRWANIA ZABIEGU"
+                  : "DURATION OF THE TREATMENT"}
+              </Typography>
+            </Box>
           </Grid>
+          <Grid size={downMd ? 12 : 4}>
+            <Box
+              p={1}
+              width="100%"
+              display="flex"
+              flexDirection="column"
+              justifyContent="center"
+              component={Paper}
+              variant="outlined"
+              textAlign="center"
+              alignItems="center"
+              rowGap={0.5}
+              height={"100%"}
+            >
+              <RepeatIcon fontSize="medium" sx={{ color: "#616161" }} />
+              <Typography variant="body1" fontWeight={400}>
+                {language.webLanguage === "PL"
+                  ? drCyjFillerDataPL.infoTable.recommendedNumber
+                  : drCyjFillerDataENG.infoTable.recommendedNumber}
+              </Typography>
+              <Typography variant="body2" fontWeight={300}>
+                {language.webLanguage === "PL"
+                  ? "REKOMENDOWANA LICZBA ZABIEGÓW"
+                  : "RECOMMENDED NUMBER OF TREATMENTS"}
+              </Typography>
+            </Box>
+          </Grid>
+          <Grid size={downMd ? 12 : 4}>
+            <Box
+              p={1}
+              width="100%"
+              display="flex"
+              flexDirection="column"
+              justifyContent="center"
+              component={Paper}
+              variant="outlined"
+              textAlign="center"
+              alignItems="center"
+              rowGap={0.5}
+              height={"100%"}
+            >
+              <EventRepeatIcon fontSize="medium" sx={{ color: "#616161" }} />
+              <Typography variant="body1" fontWeight={400}>
+                {language.webLanguage === "PL"
+                  ? drCyjFillerDataPL.infoTable.intervals
+                  : drCyjFillerDataENG.infoTable.intervals}
+              </Typography>
+              <Typography variant="body2" fontWeight={300}>
+                {language.webLanguage === "PL"
+                  ? "ODSTĘPY POMIĘDZY ZABIEGAMI"
+                  : "INTERVALS BETWEEN TREATMENTS"}
+              </Typography>
+            </Box>
+          </Grid>
+        </Grid>
+        <Grid size={12} container p={1}>
           <Grid size={downMd ? 12 : 4}>
             <Box
               component="img"
@@ -195,122 +195,115 @@ export default function DrCyjFillerView() {
               src={mezoterapia_iglowa_dr_cyj_1}
             />
           </Grid>
-          <Grid
-            size={downMd ? 12 : 8}
-            container
-            direction="column"
-            sx={{
-              justifyContent: "flex-start",
-              alignItems: "flex-start",
-            }}
-            rowGap={4}
-          >
-            <Grid size={12} p={1} container>
-              <Grid
-                size={12}
-                display="flex"
-                flexDirection={"column"}
-                rowGap={2}
+          <Grid size={downMd ? 12 : 8} p={1} container spacing={3}>
+            <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
+              <Typography
+                variant={downMd ? "body2" : "body1"}
+                textAlign="left"
+                width={"100%"}
+                gutterBottom
               >
-                <Typography
-                  variant={downMd ? "body2" : "body1"}
-                  textAlign="left"
-                  width={"100%"}
-                  gutterBottom
-                >
-                  {language.webLanguage === "PL"
-                    ? drCyjFillerDataPL.description
-                    : drCyjFillerDataENG.description}
-                </Typography>
-                <Typography
-                  variant={downMd ? "body1" : "h6"}
-                  textAlign="left"
-                  sx={{ fontWeight: "200" }}
-                  width={"100%"}
-                  fontStyle="italic"
-                >
-                  {language.webLanguage === "PL"
-                    ? "WSKAZANIA DO ZABIEGU"
-                    : "INDICATIONS FOR THE TREATMENT"}
-                </Typography>
-                <Typography
-                  variant={downMd ? "body2" : "body1"}
-                  textAlign="left"
-                  width="100%"
-                  gutterBottom
-                >
-                  {language.webLanguage === "PL" &&
-                    drCyjFillerDataPL.indicationsToTreatment.map(
-                      (indication, index) => (
-                        <div key={index}>- {indication}</div>
-                      )
-                    )}
-                  {language.webLanguage !== "PL" &&
-                    drCyjFillerDataENG.indicationsToTreatment.map(
-                      (indication, index) => (
-                        <div key={index}>- {indication}</div>
-                      )
-                    )}
-                </Typography>
-                <Typography
-                  variant={downMd ? "body1" : "h6"}
-                  textAlign="left"
-                  sx={{ fontWeight: "200" }}
-                  width={"100%"}
-                  fontStyle="italic"
-                >
-                  {language.webLanguage === "PL"
-                    ? "DR. CYJ – TERAPIA PEPTYDOWA NA WYPADANIE WŁOSÓW"
-                    : "DR. CYJ – PEPTIDE THERAPY FOR HAIR LOSS"}
-                </Typography>
-                <Typography
-                  variant={downMd ? "body2" : "body1"}
-                  textAlign="left"
-                  width="100%"
-                  gutterBottom
-                >
-                  {language.webLanguage === "PL" &&
-                    drCyjFillerDataPL.descriptionOfPreparation}
-                  {language.webLanguage !== "PL" &&
-                    drCyjFillerDataENG.descriptionOfPreparation}
-                </Typography>
-                <Typography
-                  variant={downMd ? "body1" : "h6"}
-                  textAlign="left"
-                  sx={{ fontWeight: "200" }}
-                  width={"100%"}
-                  fontStyle="italic"
-                >
-                  {language.webLanguage === "PL"
-                    ? "SKŁAD PREPARATU"
-                    : "FORMULATION"}
-                </Typography>
-                <Typography
-                  variant={downMd ? "body2" : "body1"}
-                  textAlign="left"
-                  width="100%"
-                  gutterBottom
-                >
-                  {language.webLanguage === "PL" &&
-                    drCyjFillerDataPL.compositionOfPreparation}
-                  {language.webLanguage !== "PL" &&
-                    drCyjFillerDataENG.compositionOfPreparation}
-                </Typography>
-              </Grid>
+                {language.webLanguage === "PL"
+                  ? drCyjFillerDataPL.description
+                  : drCyjFillerDataENG.description}
+              </Typography>
+            </Grid>
+            <Grid size={12}>
+              <Divider />
+            </Grid>
+            <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
+              <Typography
+                variant={downMd ? "body1" : "h6"}
+                textAlign="left"
+                sx={{ fontWeight: "200" }}
+                width={"100%"}
+                fontStyle="italic"
+              >
+                {language.webLanguage === "PL"
+                  ? "WSKAZANIA DO ZABIEGU"
+                  : "INDICATIONS FOR THE TREATMENT"}
+              </Typography>
+              <Typography
+                variant={downMd ? "body2" : "body1"}
+                textAlign="left"
+                width="100%"
+                gutterBottom
+              >
+                {language.webLanguage === "PL" &&
+                  drCyjFillerDataPL.indicationsToTreatment.map(
+                    (indication, index) => <div key={index}>- {indication}</div>
+                  )}
+                {language.webLanguage !== "PL" &&
+                  drCyjFillerDataENG.indicationsToTreatment.map(
+                    (indication, index) => <div key={index}>- {indication}</div>
+                  )}
+              </Typography>
+            </Grid>
+            <Grid size={12}>
+              <Divider />
+            </Grid>
+            <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
+              <Typography
+                variant={downMd ? "body1" : "h6"}
+                textAlign="left"
+                sx={{ fontWeight: "200" }}
+                width={"100%"}
+                fontStyle="italic"
+              >
+                {language.webLanguage === "PL"
+                  ? "DR. CYJ – TERAPIA PEPTYDOWA NA WYPADANIE WŁOSÓW"
+                  : "DR. CYJ – PEPTIDE THERAPY FOR HAIR LOSS"}
+              </Typography>
+              <Typography
+                variant={downMd ? "body2" : "body1"}
+                textAlign="left"
+                width="100%"
+                gutterBottom
+              >
+                {language.webLanguage === "PL" &&
+                  drCyjFillerDataPL.descriptionOfPreparation}
+                {language.webLanguage !== "PL" &&
+                  drCyjFillerDataENG.descriptionOfPreparation}
+              </Typography>
+            </Grid>
+            <Grid size={12}>
+              <Divider />
+            </Grid>
+            <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
+              <Typography
+                variant={downMd ? "body1" : "h6"}
+                textAlign="left"
+                sx={{ fontWeight: "200" }}
+                width={"100%"}
+                fontStyle="italic"
+              >
+                {language.webLanguage === "PL"
+                  ? "SKŁAD PREPARATU"
+                  : "FORMULATION"}
+              </Typography>
+              <Typography
+                variant={downMd ? "body2" : "body1"}
+                textAlign="left"
+                width="100%"
+                gutterBottom
+              >
+                {language.webLanguage === "PL" &&
+                  drCyjFillerDataPL.compositionOfPreparation}
+                {language.webLanguage !== "PL" &&
+                  drCyjFillerDataENG.compositionOfPreparation}
+              </Typography>
             </Grid>
           </Grid>
         </Grid>
-
-        <Grid size={12} container>
+        <Grid size={12}>
+          <Divider />
+        </Grid>
+        <Grid size={12} p={1} container spacing={3}>
           <Grid
-            size={downMd ? 12 : 6}
-            container
-            direction="column"
-            sx={{
-              justifyContent: "flex-start",
-              alignItems: "flex-start",
-            }}
-            rowGap={4}
+            size={downMd ? 12 : 5}
+            display="flex"
+            flexDirection={"column"}
+            rowGap={2}
           >
             <Typography
               variant={downMd ? "body1" : "h6"}
@@ -339,15 +332,21 @@ export default function DrCyjFillerView() {
                 )}
             </Typography>
           </Grid>
+          {downMd && (
+            <Grid size={12}>
+              <Divider />
+            </Grid>
+          )}
+          {!downMd && (
+            <Grid size={2} display={"flex"} justifyContent={"center"}>
+              <Divider orientation="vertical" />
+            </Grid>
+          )}
           <Grid
-            size={downMd ? 12 : 6}
-            container
-            direction="column"
-            sx={{
-              justifyContent: "flex-start",
-              alignItems: "flex-start",
-            }}
-            rowGap={4}
+            size={downMd ? 12 : 5}
+            display="flex"
+            flexDirection={"column"}
+            rowGap={2}
           >
             <Typography
               variant={downMd ? "body1" : "h6"}
@@ -376,73 +375,87 @@ export default function DrCyjFillerView() {
                 )}
             </Typography>
           </Grid>
-
-          <Typography
-            variant={downMd ? "body1" : "h6"}
-            textAlign="left"
-            sx={{ fontWeight: "200" }}
-            width={"100%"}
-            fontStyle="italic"
-          >
-            {language.webLanguage === "PL"
-              ? "JAK PRZEBIEGA ZABIEG?"
-              : "HOW DOES THE TREATMENT WORK?"}
-          </Typography>
-          <Typography
-            variant={downMd ? "body2" : "body1"}
-            textAlign="left"
-            width="100%"
-            gutterBottom
-          >
-            {language.webLanguage === "PL" &&
-              drCyjFillerDataPL.courseOfTreatment}
-            {language.webLanguage !== "PL" &&
-              drCyjFillerDataENG.courseOfTreatment}
-          </Typography>
-          <Typography
-            variant={downMd ? "body1" : "h6"}
-            textAlign="left"
-            sx={{ fontWeight: "200" }}
-            width={"100%"}
-            fontStyle="italic"
-          >
-            {language.webLanguage === "PL"
-              ? "ZALECENIA POZABIEGOWE"
-              : "POST-TREATMENT RECOMMENDATIONS"}
-          </Typography>
-          <Typography
-            variant={downMd ? "body2" : "body1"}
-            textAlign="left"
-            width="100%"
-            gutterBottom
-          >
-            {language.webLanguage === "PL" &&
-              drCyjFillerDataPL.postTreatmentRecommendations}
-            {language.webLanguage !== "PL" &&
-              drCyjFillerDataENG.postTreatmentRecommendations}
-          </Typography>
-          <Typography
-            variant={downMd ? "body1" : "h6"}
-            textAlign="left"
-            sx={{ fontWeight: "200" }}
-            width={"100%"}
-            fontStyle="italic"
-          >
-            {language.webLanguage === "PL"
-              ? "JAK CZĘSTO POWTARZAĆ ZABIEG?"
-              : "HOW OFTEN SHOULD THE TREATMENT BE REPEATED?"}
-          </Typography>
-          <Typography
-            variant={downMd ? "body2" : "body1"}
-            textAlign="left"
-            width="100%"
-            gutterBottom
-          >
-            {language.webLanguage === "PL" &&
-              drCyjFillerDataPL.interfalsInTreatment}
-            {language.webLanguage !== "PL" &&
-              drCyjFillerDataENG.interfalsInTreatment}
-          </Typography>
+          <Grid size={12}>
+            <Divider />
+          </Grid>
+          <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
+            <Typography
+              variant={downMd ? "body1" : "h6"}
+              textAlign="left"
+              sx={{ fontWeight: "200" }}
+              width={"100%"}
+              fontStyle="italic"
+            >
+              {language.webLanguage === "PL"
+                ? "JAK PRZEBIEGA ZABIEG?"
+                : "HOW DOES THE TREATMENT WORK?"}
+            </Typography>
+            <Typography
+              variant={downMd ? "body2" : "body1"}
+              textAlign="left"
+              width="100%"
+              gutterBottom
+            >
+              {language.webLanguage === "PL" &&
+                drCyjFillerDataPL.courseOfTreatment}
+              {language.webLanguage !== "PL" &&
+                drCyjFillerDataENG.courseOfTreatment}
+            </Typography>
+          </Grid>
+          <Grid size={12}>
+            <Divider />
+          </Grid>
+          <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
+            <Typography
+              variant={downMd ? "body1" : "h6"}
+              textAlign="left"
+              sx={{ fontWeight: "200" }}
+              width={"100%"}
+              fontStyle="italic"
+            >
+              {language.webLanguage === "PL"
+                ? "ZALECENIA POZABIEGOWE"
+                : "POST-TREATMENT RECOMMENDATIONS"}
+            </Typography>
+            <Typography
+              variant={downMd ? "body2" : "body1"}
+              textAlign="left"
+              width="100%"
+              gutterBottom
+            >
+              {language.webLanguage === "PL" &&
+                drCyjFillerDataPL.postTreatmentRecommendations}
+              {language.webLanguage !== "PL" &&
+                drCyjFillerDataENG.postTreatmentRecommendations}
+            </Typography>
+          </Grid>
+          <Grid size={12}>
+            <Divider />
+          </Grid>
+          <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
+            <Typography
+              variant={downMd ? "body1" : "h6"}
+              textAlign="left"
+              sx={{ fontWeight: "200" }}
+              width={"100%"}
+              fontStyle="italic"
+            >
+              {language.webLanguage === "PL"
+                ? "JAK CZĘSTO POWTARZAĆ ZABIEG?"
+                : "HOW OFTEN SHOULD THE TREATMENT BE REPEATED?"}
+            </Typography>
+            <Typography
+              variant={downMd ? "body2" : "body1"}
+              textAlign="left"
+              width="100%"
+              gutterBottom
+            >
+              {language.webLanguage === "PL" &&
+                drCyjFillerDataPL.interfalsInTreatment}
+              {language.webLanguage !== "PL" &&
+                drCyjFillerDataENG.interfalsInTreatment}
+            </Typography>
+          </Grid>
         </Grid>
       </Grid>
       <Box
