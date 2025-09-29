@@ -84,7 +84,9 @@ export default function ServiceCategories() {
               textAlign={"center"}
               fontWeight={600}
             >
-              Zarezerwuj wizytę przez
+              {language.webLanguage === "PL"
+                ? "Zarezerwuj wizytę przez"
+                : "Book your appointment via"}
             </Typography>
 
             <Box

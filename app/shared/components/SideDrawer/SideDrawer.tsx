@@ -18,10 +18,6 @@ import { useNavigate } from "react-router";
 import TranslateIcon from "@mui/icons-material/Translate";
 import CardGiftcardIcon from "@mui/icons-material/CardGiftcard";
 import LocalOfferIcon from "@mui/icons-material/LocalOffer";
-import booksy_logo from "../../../../public/images/booksy_logo.png";
-import booksy_icon from "../../../../public/images/booksy_icon.svg";
-
-import ShopIcon from "@mui/icons-material/Shop";
 
 interface ISideDrawerProps {
   open: boolean;
@@ -132,29 +128,6 @@ export default function SideDrawer({
             </>
           )}
         </List>
-        <ButtonBase
-          href="https://booksy.com/pl-pl/249371_moja-skora_salon-kosmetyczny_8820_krakow#ba_s=seo"
-          target="_blank"
-          sx={{
-            paddingY: 2,
-            paddingX: 1,
-            marginX: 3,
-            marginBottom: 15,
-            borderRadius: 1,
-            transition: "background-color 0.2s ease",
-            "&:hover": {
-              backgroundColor: "rgba(0,0,0,0.05)",
-            },
-            outline: "1px solid rgba(0,0,0,0.3)",
-          }}
-        >
-          <Box
-            component="img"
-            src={booksy_logo}
-            alt="logo booksy"
-            height={"16px"}
-          />
-        </ButtonBase>
       </Box>
     </Drawer>
   );

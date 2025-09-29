@@ -3,6 +3,7 @@ import {
   BottomNavigationAction,
   Box,
   Breadcrumbs,
+  Button,
   Chip,
   Container,
   Divider,
@@ -29,11 +30,13 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import GoogleIcon from "@mui/icons-material/Google";
 import SearchIcon from "@mui/icons-material/Search";
 import type { IPriceList } from "./utils/interfaces/IPriceList";
+import { useNavigate } from "react-router";
 
 export default function PriceListView() {
   const theme = useTheme();
   const { language } = React.useContext(WebsiteLanguageContext);
   const downMd = useMediaQuery(theme.breakpoints.down("md"));
+  const navTo = useNavigate();
 
   const [filteredPriceList, setFilteredPriceList] =
     useState<IPriceList>(PriceList);
@@ -107,6 +110,7 @@ export default function PriceListView() {
           <Grid
             size={12}
             display="flex"
+            flexDirection={"column"}
             justifyContent={"flex-start"}
             py={downMd ? 1 : 2}
           >
@@ -118,10 +122,44 @@ export default function PriceListView() {
               sx={{ fontWeight: "350" }}
             >
               {language.webLanguage === "PL"
-                ? "CENNIK".toUpperCase()
+                ? "Cennik".toUpperCase()
                 : "Price List".toUpperCase()}
             </Typography>
+            <Typography
+              variant={downMd ? "h6" : "h5"}
+              textAlign="center"
+              sx={{ fontWeight: "300" }}
+              width={"100%"}
+              fontStyle="italic"
+              gutterBottom
+              paddingTop={2}
+            >
+              {language.webLanguage === "PL"
+                ? "Zastanawiasz się, który zabieg będzie dla Ciebie najlepszy?"
+                : "Wondering which treatment will suit you best?"}
+            </Typography>
+            <Typography
+              textAlign="center"
+              sx={{ fontWeight: "200" }}
+              width={"100%"}
+              fontStyle="italic"
+              variant={downMd ? "body1" : "h6"}
+              gutterBottom
+            >
+              {language.webLanguage === "PL"
+                ? "Skontaktuj się z naszą recepcją i umów na konsultację – omówimy Twoje oczekiwania i dobierzemy indywidualny plan zabiegowy dopasowany do Twoich potrzeb."
+                : "Contact our reception to schedule a consultation – we’ll discuss your expectations and design a personalized treatment plan tailored to your needs."}
+            </Typography>
+            <Button
+              color="inherit"
+              fullWidth
+              onClick={() => navTo("/contact")}
+              sx={{ marginBottom: 2 }}
+            >
+              {language.webLanguage === "PL" ? "Kontakt" : "Contact"}
+            </Button>
           </Grid>
+
           <Grid size={12} display="flex" justifyContent={"flex-end"}>
             <TextField
               placeholder={language.webLanguage === "ENG" ? "Search" : "Szukaj"}

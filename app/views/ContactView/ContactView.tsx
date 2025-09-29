@@ -4,6 +4,7 @@ import {
   Box,
   Breadcrumbs,
   Button,
+  ButtonBase,
   Container,
   Divider,
   Grid,
@@ -22,6 +23,7 @@ import React from "react";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import GoogleIcon from "@mui/icons-material/Google";
+import booksy_logo from "../../../public/images/booksy_logo.png";
 
 export default function ContactView() {
   const theme = useTheme();
@@ -190,6 +192,52 @@ export default function ContactView() {
                     </Typography>
                   </Box>
                 </Grid>
+              </Grid>
+            </Grid>
+            <Grid
+              size={12}
+              container
+              direction="row"
+              sx={{
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <Grid size={downMd ? 12 : 4}>
+                <ButtonBase
+                  component="a"
+                  href="https://booksy.com/pl-pl/249371_moja-skora_salon-kosmetyczny_8820_krakow#ba_s=seo"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  sx={{
+                    display: "flex",
+                    flexDirection: "column",
+                    rowGap: 1,
+                    padding: 1,
+                    borderRadius: "10px",
+                    transition: "background-color 0.2s ease",
+                    "&:hover": {
+                      backgroundColor: "rgba(0,0,0,0.05)",
+                    },
+                  }}
+                >
+                  <Typography
+                    variant={downMd ? "body2" : "body1"}
+                    textAlign={"center"}
+                    fontWeight={600}
+                  >
+                    {language.webLanguage === "PL"
+                      ? "Zarezerwuj wizytę przez"
+                      : "Book your appointment via"}
+                  </Typography>
+
+                  <Box
+                    component="img"
+                    src={booksy_logo}
+                    alt="logo booksy"
+                    height={downMd ? "30px" : "40px"}
+                  />
+                </ButtonBase>
               </Grid>
             </Grid>
             <Grid size={12}>

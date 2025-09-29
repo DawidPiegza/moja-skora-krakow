@@ -16,6 +16,7 @@ import React, { useEffect, useState } from "react";
 import { WebsiteLanguageContext } from "../../contexts/LanguageContext";
 import LanguageMenu from "./components/LanguageMenu/LanguageMenu";
 import booksy_logo from "../../../../public/images/booksy_logo.png";
+import booksy_icon from "../../../../public/images/booksy_icon.svg";
 
 interface INavbarProps {
   setSideDrawerOpen: React.Dispatch<React.SetStateAction<boolean>>;
@@ -105,13 +106,39 @@ export default function Navbar({ setSideDrawerOpen }: INavbarProps) {
                 </Box>
               )}
               {downMd && (
-                <IconButton
-                  size="large"
-                  color="inherit"
-                  onClick={() => setSideDrawerOpen(true)}
+                <Box
+                  sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "0.5rem",
+                  }}
                 >
-                  <MenuIcon />
-                </IconButton>
+                  <ButtonBase
+                    onClick={() => navTo("/")}
+                    sx={{
+                      padding: 1,
+                      borderRadius: "10px",
+                      transition: "background-color 0.2s ease",
+                      "&:hover": {
+                        backgroundColor: "rgba(0,0,0,0.05)",
+                      },
+                    }}
+                  >
+                    <Box
+                      component="img"
+                      src={booksy_icon}
+                      alt="logo booksy"
+                      height={"25px"}
+                    />
+                  </ButtonBase>
+                  <IconButton
+                    size="large"
+                    color="inherit"
+                    onClick={() => setSideDrawerOpen(true)}
+                  >
+                    <MenuIcon />
+                  </IconButton>
+                </Box>
               )}
             </Toolbar>
           </Container>
