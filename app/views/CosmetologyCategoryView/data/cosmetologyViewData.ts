@@ -1,5 +1,4 @@
-import type { ICategoryViewData } from "../utils/interfaces/ICategoryViewData";
-import mezoterapia_iglowa_dr_cyj from "../../../../public/images/mezoterapia_iglowa_dr_cyj.jpeg";
+import type { ICategoryViewData } from "../../../shared/utils/interfaces/ICategoryViewData";
 
 export const cosmetologyViewData: ICategoryViewData[] = [
   {
@@ -20,7 +19,7 @@ export const cosmetologyViewData: ICategoryViewData[] = [
     pl: {
       title: "Mezoterapia skóry głowy",
       description: `Mezoterapia igłowa skóry głowy to zaawansowany zabieg z zakresu kosmetologii estetycznej, polegający na punktowym wprowadzaniu specjalnie opracowanego koktajlu substancji aktywnych bezpośrednio w warstwę skóry właściwej, tuż przy cebulkach włosów. Mikronakłucia wykonywane bardzo cienką igłą zwiększają mikrokrążenie, poprawiają natlenienie tkanek i umożliwiają maksymalne wykorzystanie potencjału aplikowanych składników odżywczych.`,
-      navigateURL: "mezoterapia_skory_glowy",
+      navigateURL: "hair_growth_mesotherapy",
     },
     eng: {
       title: "Hair growth mesotherapy",

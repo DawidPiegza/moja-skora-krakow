@@ -20,4 +20,8 @@ export default [
     "/cosmetology/mezoterapia_iglowa_dr_cyj",
     "./views/Cosmetology/DrCyjFillerView/DrCyjFillerView.tsx"
   ),
+  route(
+    "/cosmetology/hair_growth_mesotherapy",
+    "./views/Cosmetology/HairGrowthMesotherapy/HairGrowthMesotherapy.tsx"
+  ),
 ] satisfies RouteConfig;
