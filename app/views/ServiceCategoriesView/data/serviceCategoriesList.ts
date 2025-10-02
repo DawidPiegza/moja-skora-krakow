@@ -45,6 +45,6 @@ export const serviceCategoriesList: IServiceCategory[] = [
     content:
       "W naszym gabinecie stylizujemy brwi i rzęsy w sposób spójny z urodą klientki. Oferujemy laminację, lifting, koloryzację i precyzyjną regulację, wszystko po to, by subtelnie podkreślić oprawę oka i nadać jej wyrazistość w naturalnym stylu. Pracujemy z dbałością o detal i trwałość efektu, kierując się estetyką oraz komfortem skóry i włosków.",
     pictureURL: konsultacja,
-    categoryURL: "/Eyebrow_eylash_shaping",
+    categoryURL: "/consultation",
   },
 ];

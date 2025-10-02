@@ -1,7 +1,6 @@
-/* eslint-disable max-len */
 import type { IConsultationData } from "../utils/interfaces/IConsultationData";
 
-export const consultationData: {
+export const consultationServiceData: {
   pl: IConsultationData;
   en: IConsultationData;
 } = {
@@ -64,4 +63,4 @@ export const consultationData: {
   },
 };
 
-export default consultationData;
+export default consultationServiceData;

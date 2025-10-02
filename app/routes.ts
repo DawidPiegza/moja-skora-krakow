@@ -24,4 +24,8 @@ export default [
     "/cosmetology/hair_growth_mesotherapy",
     "./views/Cosmetology/HairGrowthMesotherapy/HairGrowthMesotherapy.tsx"
   ),
+  route(
+    "/consultation",
+    "./views/Consultation/ConsultationServiceView/ConsultationServiceView.tsx"
+  ),
 ] satisfies RouteConfig;

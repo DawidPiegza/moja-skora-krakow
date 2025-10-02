@@ -1,7 +1,7 @@
 import React from "react";
 import { WebsiteLanguageContext } from "../../../shared/contexts/LanguageContext";
 import konsultacja_kosmetologiczna from "../../../../public/images/konsultacja_kosmetologiczna.png";
-import { consultationData } from "./data/consultationData";
+import { consultationServiceData } from "./data/consultationServiceData";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import GoogleIcon from "@mui/icons-material/Google";
@@ -43,20 +43,7 @@ export default function ConsultationServiceView() {
             >
               {language.webLanguage === "PL" ? "Strona Główna" : "Main Page"}
             </Link>
-            <Link
-              underline="hover"
-              color="inherit"
-              href="/"
-              sx={(theme) => ({
-                color: "text.secondary",
-                ...theme.typography.body2,
-                [theme.breakpoints.up("md")]: {
-                  ...theme.typography.body1,
-                },
-              })}
-            >
-              {language.webLanguage === "PL" ? "Kosmetologia" : "Cosmetology"}
-            </Link>
+
             <Typography
               sx={(theme) => ({
                 color: "text.primary",
@@ -67,8 +54,8 @@ export default function ConsultationServiceView() {
               })}
             >
               {language.webLanguage === "PL"
-                ? "Mezoterapia skóry głowy"
-                : "Hair Growth Mesotherapy"}
+                ? "Konsultacja Kosmetologiczna"
+                : "Consultation"}
             </Typography>
           </Breadcrumbs>
         </Grid>
@@ -96,7 +83,7 @@ export default function ConsultationServiceView() {
           </Grid>
         </Grid>
         <Grid size={12} container p={1}>
-          <Grid size={downMd ? 12 : 4}>
+          <Grid size={downMd ? 12 : 6}>
             <Box
               component="img"
               sx={{
@@ -107,7 +94,7 @@ export default function ConsultationServiceView() {
               src={konsultacja_kosmetologiczna}
             />
           </Grid>
-          <Grid size={downMd ? 12 : 8} p={1} container spacing={3}>
+          <Grid size={downMd ? 12 : 6} p={1} container spacing={3}>
             <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
               <Typography
                 variant={downMd ? "body2" : "body1"}
@@ -116,8 +103,8 @@ export default function ConsultationServiceView() {
                 gutterBottom
               >
                 {language.webLanguage === "PL"
-                  ? consultationData.pl.overview
-                  : consultationData.en.overview}
+                  ? consultationServiceData.pl.overview
+                  : consultationServiceData.en.overview}
               </Typography>
             </Grid>
             <Grid size={12}>
@@ -135,12 +122,50 @@ export default function ConsultationServiceView() {
                   ? "CO OBEJMUJE KONSULTACJA?"
                   : "WHAT DOES THE CONSULTATION INCLUDE?"}
               </Typography>
-              <Typography
-                variant={downMd ? "body2" : "body1"}
-                textAlign="left"
-                width="100%"
-                gutterBottom
-              ></Typography>
+              {language.webLanguage === "PL" &&
+                consultationServiceData.pl.whatIncludes.map(
+                  (element, index) => (
+                    <React.Fragment key={index}>
+                      <Typography
+                        variant={downMd ? "body2" : "body1"}
+                        textAlign="left"
+                        width="100%"
+                      >
+                        {`${index + 1}.`} {element.elementName.toUpperCase()}
+                      </Typography>
+                      <Typography
+                        variant={downMd ? "body2" : "body1"}
+                        textAlign="left"
+                        width="100%"
+                      >
+                        {element.elementDescription}
+                      </Typography>
+                    </React.Fragment>
+                  )
+                )}
+              {language.webLanguage === "ENG" &&
+                consultationServiceData.en.whatIncludes.map(
+                  (element, index) => (
+                    <React.Fragment key={index}>
+                      <Typography
+                        variant={downMd ? "body2" : "body1"}
+                        textAlign="left"
+                        width="100%"
+                        gutterBottom
+                      >
+                        {`${index + 1}.`} {element.elementName.toUpperCase()}
+                      </Typography>
+                      <Typography
+                        variant={downMd ? "body2" : "body1"}
+                        textAlign="left"
+                        width="100%"
+                        gutterBottom
+                      >
+                        {element.elementDescription}
+                      </Typography>
+                    </React.Fragment>
+                  )
+                )}
             </Grid>
             <Grid size={12}>
               <Divider />
@@ -153,29 +178,13 @@ export default function ConsultationServiceView() {
                 width={"100%"}
                 fontStyle="italic"
               >
-                {language.webLanguage === "PL"
-                  ? "PRZECIWWSKAZANIA DO ZABIEGU MEZOTERAPII IGŁOWEJ"
-                  : "CONTRAINDICATIONS FOR HAIR GROWTH MESOTHERAPY"}
-              </Typography>
-              <Typography
-                variant={downMd ? "body2" : "body1"}
-                textAlign="left"
-                width="100%"
-                gutterBottom
-              >
                 {language.webLanguage === "PL" &&
-                  consultationData.pl.consultationSummary}
-                {language.webLanguage === "PL" &&
-                  consultationData.en.consultationSummary}
+                  consultationServiceData.pl.consultationSummary}
+                {language.webLanguage === "ENG" &&
+                  consultationServiceData.en.consultationSummary}
               </Typography>
-            </Grid>
-            <Grid size={12}>
-              <Divider />
             </Grid>
           </Grid>
-        </Grid>
-        <Grid size={12}>
-          <Divider />
         </Grid>
       </Grid>
       <Box
