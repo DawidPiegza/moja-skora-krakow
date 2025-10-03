@@ -24,19 +24,19 @@ export const cosmetologyViewData: ICategoryViewData[] = [
     eng: {
       title: "Hair growth mesotherapy",
       description: `Scalp mesotherapy is an advanced aesthetic procedure that involves injecting a specially formulated cocktail of active ingredients directly into the dermis, close to the hair follicles. Using a fine needle, the substances are delivered point by point, which stimulates microcirculation, improves oxygenation of the tissues, and maximizes the effectiveness of the nutrients.`,
-      navigateURL: "mezoterapia_skory_glowy",
+      navigateURL: "hair_growth_mesotherapy",
     },
   },
   {
     pl: {
       title: "Mezoterapia igłowa",
       description: `Mezoterapia igłowa to zaawansowany zabieg, który polega na precyzyjnym wprowadzaniu substancji aktywnych bezpośrednio w głąb skóry przy użyciu cienkiej igły. To skuteczna metoda rewitalizacji i odmłodzenia skóry, uznawana za jedną z najlepszych w walce z oznakami starzenia, poprawiająca kondycję skóry zarówno na twarzy, jak i innych partiach ciała. Jeśli pragniesz zdrowszej i młodszej skóry, a jednocześnie zależy Ci na szybkim powrocie do codziennych aktywności, mezoterapia igłowa może być idealnym rozwiązaniem. Do zabiegu mezoterapii stosuje się preparaty na bazie kwasu hialuronowego, wzbogacone o dodatkowe składniki takie jak; witaminy, aminokwasy, mikroelementy czy peptydy biomimetyczne. Mezoterapia igłowa skutecznie zapobiega powstawaniu głębokich zmarszczek, przedwczesnemu wiotczeniu oraz utracie elastyczności skóry, dlatego jest doskonałą metodą w profilaktyce anti-aging. Co istotne, zabieg zapewnia naturalny wygląd skóry, bez ryzyka sztucznego efektu.`,
-      navigateURL: "mezoterapia_iglowa",
+      navigateURL: "needle_mesotherapy",
     },
     eng: {
       title: "Hair growth mesotherapy",
       description: `Needle mesotherapy is an advanced aesthetic treatment that involves the precise injection of active ingredients directly into the deeper layers of the skin using a fine needle. It is considered one of the most effective methods for revitalizing and rejuvenating the skin, helping to combat signs of aging and improve skin condition — not only on the face, but also on other areas of the body. If you’re looking for healthier, more youthful-looking skin and want minimal downtime, needle mesotherapy may be the perfect solution. The treatment uses hyaluronic acid–based formulas enriched with additional ingredients such as vitamins, amino acids, trace elements, and biomimetic peptides. Needle mesotherapy effectively helps prevent the formation of deep wrinkles, premature skin laxity, and loss of elasticity, making it an excellent method for anti-aging prevention. Importantly, the treatment delivers natural-looking results — without the risk of an artificial or overdone appearance.`,
-      navigateURL: "mezoterapia_iglowa",
+      navigateURL: "needle_mesotherapy",
     },
   },
   {

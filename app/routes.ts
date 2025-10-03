@@ -25,6 +25,10 @@ export default [
     "./views/Cosmetology/HairGrowthMesotherapy/HairGrowthMesotherapy.tsx"
   ),
   route(
+    "/cosmetology/needle_mesotherapy",
+    "./views/Cosmetology/NeedleMesotherapyView/NeedleMesotherapyView.tsx"
+  ),
+  route(
     "/consultation",
     "./views/Consultation/ConsultationServiceView/ConsultationServiceView.tsx"
   ),
