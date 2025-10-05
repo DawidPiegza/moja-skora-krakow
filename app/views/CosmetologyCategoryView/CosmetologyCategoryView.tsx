@@ -92,8 +92,9 @@ export default function CosmetologyCategoryView() {
             </Grid>
           </Grid>
           <Grid size={12} container spacing={2}>
-            {cosmetologyViewData.map((el) => (
+            {cosmetologyViewData.map((el, index) => (
               <Grid
+                key={index}
                 size={downMD ? 12 : 6}
                 container
                 component={Paper}

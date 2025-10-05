@@ -6,13 +6,13 @@ export const cosmetologyViewData: ICategoryViewData[] = [
       title: "Mezoterapia igłowa skóry głowy Dr. cyj",
       description:
         "Mezoterapia skóry głowy z wykorzystaniem preparatów Dr Cyj to nowoczesna, peptydowa terapia, która skutecznie przeciwdziała wypadaniu włosów oraz stymuluje ich wzrost. Dzięki specjalnie opracowanemu składowi, zabieg poprawia mikrokrążenie i wspomaga regenerację mieszków włosowych.",
-      navigateURL: "mezoterapia_iglowa_dr_cyj",
+      navigateURL: "dr_cyj_filler_mesotherapy",
     },
     eng: {
       title: "Cyj Filler - Scalp mesotherapy treatment",
       description:
         "Dr. CYJ scalp mesotherapy is a modern peptide-based therapy that effectively prevents hair loss and stimulates hair growth. Its advanced formula helps to improve microcirculation and supports the regeneration of hair follicles.",
-      navigateURL: "mezoterapia_iglowa_dr_cyj",
+      navigateURL: "dr_cyj_filler_mesotherapy",
     },
   },
   {
@@ -34,7 +34,7 @@ export const cosmetologyViewData: ICategoryViewData[] = [
       navigateURL: "needle_mesotherapy",
     },
     eng: {
-      title: "Hair growth mesotherapy",
+      title: "Needle Mesotherapy",
       description: `Needle mesotherapy is an advanced aesthetic treatment that involves the precise injection of active ingredients directly into the deeper layers of the skin using a fine needle. It is considered one of the most effective methods for revitalizing and rejuvenating the skin, helping to combat signs of aging and improve skin condition — not only on the face, but also on other areas of the body. If you’re looking for healthier, more youthful-looking skin and want minimal downtime, needle mesotherapy may be the perfect solution. The treatment uses hyaluronic acid–based formulas enriched with additional ingredients such as vitamins, amino acids, trace elements, and biomimetic peptides. Needle mesotherapy effectively helps prevent the formation of deep wrinkles, premature skin laxity, and loss of elasticity, making it an excellent method for anti-aging prevention. Importantly, the treatment delivers natural-looking results — without the risk of an artificial or overdone appearance.`,
       navigateURL: "needle_mesotherapy",
     },
@@ -49,18 +49,6 @@ export const cosmetologyViewData: ICategoryViewData[] = [
       title: "Nanofrax microneedling mesotherapy",
       description: `Microneedling mesotherapy is one of the most effective treatments for skin remodeling and density improvement. Through controlled micro-injuries, active ingredients are delivered into the epidermis and dermis, intensely stimulating fibroblasts. In addition, the microdamage created during the procedure triggers natural regenerative processes, leading to the formation of new collagen and elastin fibers. Depending on the skin’s needs, we may also incorporate the One Needle technique — a precise single-needle cartridge that allows for targeted stimulation of delicate or problem-prone areas. This enhances the treatment’s effectiveness in reducing fine lines, discoloration, and stubborn scars.`,
       navigateURL: "nanofrax_mesotherapy",
-    },
-  },
-  {
-    pl: {
-      title: "Peeling kawitacyjny",
-      description: `Peeling kawitacyjny to bezpieczna i bezinwazyjna forma oczyszczania skóry, która wykorzystuje fale ultradźwiękowe do usunięcia martwych komórek naskórka, zanieczyszczeń, nadmiaru sebum oraz resztek kosmetyków i bakterii. Dzięki zjawisku kawitacji, na zwilżonej skórze tworzą się mikroskopijne pęcherzyki, które pod wpływem drgań ultradźwiękowych pękają, delikatnie rozbijając zrogowaciały naskórek. To sprawia, że zabieg jest wyjątkowo delikatny, a jednocześnie skuteczny nawet w głębszych warstwach skóry, w przeciwieństwie do klasycznych peelingów mechanicznych czy enzymatycznych. Efektem zabiegu jest natychmiastowe oczyszczenie i odświeżenie skóry, poprawa jej dotlenienia, rozjaśnienie kolorytu oraz przygotowanie do dalszych etapów pielęgnacyjnych. Skóra po zabiegu znacznie lepiej wchłania substancje aktywne zawarte w preparatach – dzięki czemu ich działanie jest bardziej intensywne.`,
-      navigateURL: "peeling_kawitacyjny",
-    },
-    eng: {
-      title: "Cavitation peeling",
-      description: `Cavitation peeling is a safe and non-invasive method of skin cleansing that uses ultrasonic waves to remove dead skin cells, impurities, excess sebum, cosmetic residues, and bacteria. Thanks to the phenomenon of cavitation, microscopic bubbles form on the moistened skin, which burst under the influence of ultrasonic vibrations, gently breaking down the keratinized epidermis. This makes the treatment exceptionally gentle yet effective even in the deeper layers of the skin—unlike traditional mechanical or enzymatic exfoliation. The result of the treatment is immediate skin cleansing and refreshment, improved oxygenation, brighter skin tone, and better absorption of active ingredients applied afterward—enhancing their effectiveness.`,
-      navigateURL: "peeling_kawitacyjny",
     },
   },
 ];

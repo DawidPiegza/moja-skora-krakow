@@ -17,7 +17,7 @@ export default [
     "./views/PernamentMakeupCategoryView/PernamentMakeupCategoryView.tsx"
   ),
   route(
-    "/cosmetology/mezoterapia_iglowa_dr_cyj",
+    "/cosmetology/dr_cyj_filler_mesotherapy",
     "./views/Cosmetology/DrCyjFillerView/DrCyjFillerView.tsx"
   ),
   route(
