@@ -51,4 +51,18 @@ export const cosmetologyViewData: ICategoryViewData[] = [
       navigateURL: "nanofrax_mesotherapy",
     },
   },
+  {
+    pl: {
+      title: "Mezoterapia nanoigłowa NANOFRAX",
+      description:
+        "Nanofrax to nowoczesna, nieinwazyjna metoda biostymulacji skóry, wykorzystująca ultracienkie igły, które bezboleśnie wprowadzają substancje aktywne w głąb naskórka. Zabieg nie powoduje krwawienia, nie wywołuje stanu zapalnego i nie narusza głębszych warstw skóry – dlatego może być bezpiecznie stosowany u kobiet w ciąży, mam karmiących, osób z cerą naczyniową, bardzo wrażliwą czy u diabetyków.",
+      navigateURL: "nanofrax_nano_needle_mesotherapy",
+    },
+    eng: {
+      title: "Nanofrax nano-needle mesotherapy",
+      description:
+        "Nanofrax is a modern, non-invasive method of skin biostimulation that uses ultra-thin needles to painlessly deliver active ingredients into the epidermis. The procedure causes no bleeding, inflammation, or damage to deeper layers of the skin — making it safe for pregnant and breastfeeding women, individuals with vascular or very sensitive skin, and people with diabetes.",
+      navigateURL: "nanofrax_nano_needle_mesotherapy",
+    },
+  },
 ];

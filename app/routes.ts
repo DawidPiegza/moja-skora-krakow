@@ -33,6 +33,10 @@ export default [
     "./views/Cosmetology/NanofraxMesotherapyView/NanofraxMesotherapyView.tsx"
   ),
   route(
+    "/cosmetology/nanofrax_nano_needle_mesotherapy",
+    "./views/Cosmetology/NanofraxNanoNeedleMesotherapy/NanofraxNanoNeedleMesotherapy.tsx"
+  ),
+  route(
     "/consultation",
     "./views/Consultation/ConsultationServiceView/ConsultationServiceView.tsx"
   ),
