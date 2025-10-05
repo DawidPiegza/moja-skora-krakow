@@ -43,12 +43,12 @@ export const cosmetologyViewData: ICategoryViewData[] = [
     pl: {
       title: "Mezoterapia mikroigłowa NANOFRAX",
       description: `Mezoterapia mikroigłowa jest jednym z najskuteczniejszych zabiegów wpływających na zagęszczenie i przebudowę skóry. Poprzez mikronakłuwanie dostarczamy substancje aktywne na poziomie naskórka i skóry właściwej, co intensywnie stymuluje fibroblasty. Dodatkowo mikrouszkodzenia wywołane podczas zabiegu aktywują naturalne procesy regeneracyjne, prowadząc do powstania nowych włókien kolagenowych i elastynowych. W zależności od potrzeb skóry, poza klasycznym mikronakłuwaniem wykorzystujemy także precyzyjną technikę One Needle – czyli kartridż z jedną igłą, który umożliwia punktową stymulację najbardziej wymagających obszarów. Dzięki temu zabieg może być jeszcze skuteczniejszy w niwelowaniu drobnych zmarszczek, przebarwień czy trudnych blizn.`,
-      navigateURL: "mezoterapia_mikroiglowa_nanofrax",
+      navigateURL: "nanofrax_mesotherapy",
     },
     eng: {
       title: "Nanofrax microneedling mesotherapy",
       description: `Microneedling mesotherapy is one of the most effective treatments for skin remodeling and density improvement. Through controlled micro-injuries, active ingredients are delivered into the epidermis and dermis, intensely stimulating fibroblasts. In addition, the microdamage created during the procedure triggers natural regenerative processes, leading to the formation of new collagen and elastin fibers. Depending on the skin’s needs, we may also incorporate the One Needle technique — a precise single-needle cartridge that allows for targeted stimulation of delicate or problem-prone areas. This enhances the treatment’s effectiveness in reducing fine lines, discoloration, and stubborn scars.`,
-      navigateURL: "mezoterapia_mikroiglowa_nanofrax",
+      navigateURL: "nanofrax_mesotherapy",
     },
   },
   {

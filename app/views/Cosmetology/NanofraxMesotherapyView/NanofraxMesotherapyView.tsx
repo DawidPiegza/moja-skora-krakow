@@ -1,3 +1,5 @@
+import React from "react";
+import { WebsiteLanguageContext } from "../../../shared/contexts/LanguageContext";
 import {
   BottomNavigation,
   BottomNavigationAction,
@@ -12,18 +14,19 @@ import {
   useMediaQuery,
   useTheme,
 } from "@mui/material";
-import React from "react";
-import { WebsiteLanguageContext } from "../../../shared/contexts/LanguageContext";
-import mezoterapia_iglowa_dr_cyj_1 from "../../../../public/images/mezoterapia_iglowa_dr_cyj_1.jpeg";
-import { drCyjFillerDataPL, drCyjFillerDataENG } from "./data/drCyjFillerData";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import GoogleIcon from "@mui/icons-material/Google";
 import RepeatIcon from "@mui/icons-material/Repeat";
 import EventRepeatIcon from "@mui/icons-material/EventRepeat";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
+import nanofrax_mesotherapy from "../../../../public/images/nanofrax_mesotherapy.jpeg";
+import {
+  nanofraxMesotherapyDataPL,
+  nanofraxMesotherapyDataENG,
+} from "./data/nanofraxMesotherapyData";
 
-export default function DrCyjFillerView() {
+export default function NanofraxMesotherapyView() {
   const { language } = React.useContext(WebsiteLanguageContext);
   const theme = useTheme();
   const downMd = useMediaQuery(theme.breakpoints.down("md"));
@@ -116,8 +119,8 @@ export default function DrCyjFillerView() {
               <AccessTimeIcon fontSize="medium" sx={{ color: "#616161" }} />
               <Typography variant="body1" fontWeight={400}>
                 {language.webLanguage === "PL"
-                  ? drCyjFillerDataPL.infoTable.timeOfTreatment
-                  : drCyjFillerDataENG.infoTable.timeOfTreatment}
+                  ? nanofraxMesotherapyDataPL.infoTable.timeOfTreatment
+                  : nanofraxMesotherapyDataENG.infoTable.timeOfTreatment}
               </Typography>
               <Typography variant="body2" fontWeight={300}>
                 {language.webLanguage === "PL"
@@ -143,8 +146,8 @@ export default function DrCyjFillerView() {
               <RepeatIcon fontSize="medium" sx={{ color: "#616161" }} />
               <Typography variant="body1" fontWeight={400}>
                 {language.webLanguage === "PL"
-                  ? drCyjFillerDataPL.infoTable.recommendedNumber
-                  : drCyjFillerDataENG.infoTable.recommendedNumber}
+                  ? nanofraxMesotherapyDataPL.infoTable.recommendedNumber
+                  : nanofraxMesotherapyDataENG.infoTable.recommendedNumber}
               </Typography>
               <Typography variant="body2" fontWeight={300}>
                 {language.webLanguage === "PL"
@@ -170,8 +173,8 @@ export default function DrCyjFillerView() {
               <EventRepeatIcon fontSize="medium" sx={{ color: "#616161" }} />
               <Typography variant="body1" fontWeight={400}>
                 {language.webLanguage === "PL"
-                  ? drCyjFillerDataPL.infoTable.intervals
-                  : drCyjFillerDataENG.infoTable.intervals}
+                  ? nanofraxMesotherapyDataPL.infoTable.intervals
+                  : nanofraxMesotherapyDataENG.infoTable.intervals}
               </Typography>
               <Typography variant="body2" fontWeight={300}>
                 {language.webLanguage === "PL"
@@ -182,7 +185,7 @@ export default function DrCyjFillerView() {
           </Grid>
         </Grid>
         <Grid size={12} container p={1}>
-          <Grid size={downMd ? 12 : 4}>
+          <Grid size={downMd ? 12 : 5}>
             <Box
               component="img"
               sx={{
@@ -190,10 +193,10 @@ export default function DrCyjFillerView() {
                 width: "100%",
               }}
               alt="The house from the offer."
-              src={mezoterapia_iglowa_dr_cyj_1}
+              src={nanofrax_mesotherapy}
             />
           </Grid>
-          <Grid size={downMd ? 12 : 8} p={1} container spacing={3}>
+          <Grid size={downMd ? 12 : 7} p={1} container spacing={3}>
             <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
               <Typography
                 variant={downMd ? "body2" : "body1"}
@@ -202,13 +205,47 @@ export default function DrCyjFillerView() {
                 gutterBottom
               >
                 {language.webLanguage === "PL"
-                  ? drCyjFillerDataPL.description
-                  : drCyjFillerDataENG.description}
+                  ? nanofraxMesotherapyDataPL.overview
+                  : nanofraxMesotherapyDataENG.overview}
               </Typography>
             </Grid>
             <Grid size={12}>
               <Divider />
             </Grid>
+            <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
+              <Typography
+                variant={downMd ? "body1" : "h6"}
+                textAlign="left"
+                sx={{ fontWeight: "200" }}
+                width={"100%"}
+                fontStyle="italic"
+              >
+                {language.webLanguage === "PL"
+                  ? "Czym jest technika One Needle i dla kogo jest przeznaczona?".toUpperCase()
+                  : "What is the One Needle Technique and Who Is It For?".toUpperCase()}
+              </Typography>
+              <Typography
+                variant={downMd ? "body2" : "body1"}
+                textAlign="left"
+                width="100%"
+                gutterBottom
+              >
+                <Typography
+                  variant={downMd ? "body2" : "body1"}
+                  textAlign="left"
+                  width={"100%"}
+                  gutterBottom
+                >
+                  {language.webLanguage === "PL"
+                    ? nanofraxMesotherapyDataPL.oneNeedleOverview
+                    : nanofraxMesotherapyDataENG.oneNeedleOverview}
+                </Typography>
+              </Typography>
+            </Grid>
+            <Grid size={12}>
+              <Divider />
+            </Grid>
+
             <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
               <Typography
                 variant={downMd ? "body1" : "h6"}
@@ -228,67 +265,31 @@ export default function DrCyjFillerView() {
                 gutterBottom
               >
                 {language.webLanguage === "PL" &&
-                  drCyjFillerDataPL.indicationsToTreatment.map(
-                    (indication, index) => <div key={index}>- {indication}</div>
+                  nanofraxMesotherapyDataPL.indicationsToTreatment.map(
+                    (indication, index) => (
+                      <Typography
+                        variant={downMd ? "body2" : "body1"}
+                        textAlign="left"
+                        width="100%"
+                        key={index}
+                      >
+                        - {indication}
+                      </Typography>
+                    )
                   )}
                 {language.webLanguage !== "PL" &&
-                  drCyjFillerDataENG.indicationsToTreatment.map(
-                    (indication, index) => <div key={index}>- {indication}</div>
+                  nanofraxMesotherapyDataENG.indicationsToTreatment.map(
+                    (indication, index) => (
+                      <Typography
+                        variant={downMd ? "body2" : "body1"}
+                        textAlign="left"
+                        width="100%"
+                        key={index}
+                      >
+                        - {indication}
+                      </Typography>
+                    )
                   )}
-              </Typography>
-            </Grid>
-            <Grid size={12}>
-              <Divider />
-            </Grid>
-            <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
-              <Typography
-                variant={downMd ? "body1" : "h6"}
-                textAlign="left"
-                sx={{ fontWeight: "200" }}
-                width={"100%"}
-                fontStyle="italic"
-              >
-                {language.webLanguage === "PL"
-                  ? "DR. CYJ – TERAPIA PEPTYDOWA NA WYPADANIE WŁOSÓW"
-                  : "DR. CYJ – PEPTIDE THERAPY FOR HAIR LOSS"}
-              </Typography>
-              <Typography
-                variant={downMd ? "body2" : "body1"}
-                textAlign="left"
-                width="100%"
-                gutterBottom
-              >
-                {language.webLanguage === "PL" &&
-                  drCyjFillerDataPL.descriptionOfPreparation}
-                {language.webLanguage !== "PL" &&
-                  drCyjFillerDataENG.descriptionOfPreparation}
-              </Typography>
-            </Grid>
-            <Grid size={12}>
-              <Divider />
-            </Grid>
-            <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
-              <Typography
-                variant={downMd ? "body1" : "h6"}
-                textAlign="left"
-                sx={{ fontWeight: "200" }}
-                width={"100%"}
-                fontStyle="italic"
-              >
-                {language.webLanguage === "PL"
-                  ? "SKŁAD PREPARATU"
-                  : "FORMULATION"}
-              </Typography>
-              <Typography
-                variant={downMd ? "body2" : "body1"}
-                textAlign="left"
-                width="100%"
-                gutterBottom
-              >
-                {language.webLanguage === "PL" &&
-                  drCyjFillerDataPL.compositionOfPreparation}
-                {language.webLanguage !== "PL" &&
-                  drCyjFillerDataENG.compositionOfPreparation}
               </Typography>
             </Grid>
           </Grid>
@@ -321,12 +322,30 @@ export default function DrCyjFillerView() {
               gutterBottom
             >
               {language.webLanguage === "PL" &&
-                drCyjFillerDataPL.contraindications.map((indication, index) => (
-                  <div key={index}>- {indication}</div>
-                ))}
+                nanofraxMesotherapyDataPL.contraindications.map(
+                  (indication, index) => (
+                    <Typography
+                      variant={downMd ? "body2" : "body1"}
+                      textAlign="left"
+                      width="100%"
+                      key={index}
+                    >
+                      - {indication}
+                    </Typography>
+                  )
+                )}
               {language.webLanguage !== "PL" &&
-                drCyjFillerDataENG.contraindications.map(
-                  (indication, index) => <div key={index}>- {indication}</div>
+                nanofraxMesotherapyDataENG.contraindications.map(
+                  (indication, index) => (
+                    <Typography
+                      variant={downMd ? "body2" : "body1"}
+                      textAlign="left"
+                      width="100%"
+                      key={index}
+                    >
+                      - {indication}
+                    </Typography>
+                  )
                 )}
             </Typography>
           </Grid>
@@ -364,13 +383,64 @@ export default function DrCyjFillerView() {
               gutterBottom
             >
               {language.webLanguage === "PL" &&
-                drCyjFillerDataPL.effectsOfTratment.map((indication, index) => (
-                  <div key={index}>- {indication}</div>
-                ))}
-              {language.webLanguage !== "PL" &&
-                drCyjFillerDataENG.effectsOfTratment.map(
-                  (indication, index) => <div key={index}>- {indication}</div>
+                nanofraxMesotherapyDataPL.effectsOfTratment.map(
+                  (indication, index) => (
+                    <Typography
+                      variant={downMd ? "body2" : "body1"}
+                      textAlign="left"
+                      width="100%"
+                      key={index}
+                    >
+                      - {indication}
+                    </Typography>
+                  )
                 )}
+              {language.webLanguage !== "PL" &&
+                nanofraxMesotherapyDataENG.effectsOfTratment.map(
+                  (indication, index) => (
+                    <Typography
+                      variant={downMd ? "body2" : "body1"}
+                      textAlign="left"
+                      width="100%"
+                      key={index}
+                    >
+                      - {indication}
+                    </Typography>
+                  )
+                )}
+            </Typography>
+          </Grid>
+          <Grid size={12}>
+            <Divider />
+          </Grid>
+          <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
+            <Typography
+              variant={downMd ? "body1" : "h6"}
+              textAlign="left"
+              sx={{ fontWeight: "200" }}
+              width={"100%"}
+              fontStyle="italic"
+            >
+              {language.webLanguage === "PL"
+                ? "DLACZEGO NANOFRAX DZIAŁA TAK SKUTECZNIE?".toUpperCase()
+                : "WHY IS NANOFRAX SO EFFECTIVE?".toUpperCase()}
+            </Typography>
+            <Typography
+              variant={downMd ? "body2" : "body1"}
+              textAlign="left"
+              width="100%"
+              gutterBottom
+            >
+              <Typography
+                variant={downMd ? "body2" : "body1"}
+                textAlign="left"
+                width={"100%"}
+                gutterBottom
+              >
+                {language.webLanguage === "PL"
+                  ? nanofraxMesotherapyDataPL.causesOfEfficiency
+                  : nanofraxMesotherapyDataENG.causesOfEfficiency}
+              </Typography>
             </Typography>
           </Grid>
           <Grid size={12}>
@@ -388,17 +458,50 @@ export default function DrCyjFillerView() {
                 ? "JAK PRZEBIEGA ZABIEG?"
                 : "HOW DOES THE TREATMENT WORK?"}
             </Typography>
-            <Typography
-              variant={downMd ? "body2" : "body1"}
-              textAlign="left"
-              width="100%"
-              gutterBottom
-            >
-              {language.webLanguage === "PL" &&
-                drCyjFillerDataPL.courseOfTreatment}
-              {language.webLanguage !== "PL" &&
-                drCyjFillerDataENG.courseOfTreatment}
-            </Typography>
+            {language.webLanguage === "PL" &&
+              nanofraxMesotherapyDataPL.courseOfTreatment.map(
+                (indication, index) => (
+                  <React.Fragment key={index}>
+                    <Typography
+                      variant={downMd ? "body2" : "body1"}
+                      textAlign="left"
+                      width="100%"
+                    >
+                      {index + 1}. {indication.title}
+                    </Typography>
+                    <Typography
+                      variant={downMd ? "body2" : "body1"}
+                      textAlign="left"
+                      width="100%"
+                      fontWeight={300}
+                    >
+                      {indication.description}
+                    </Typography>
+                  </React.Fragment>
+                )
+              )}
+            {language.webLanguage === "ENG" &&
+              nanofraxMesotherapyDataENG.courseOfTreatment.map(
+                (indication, index) => (
+                  <React.Fragment key={index}>
+                    <Typography
+                      variant={downMd ? "body2" : "body1"}
+                      textAlign="left"
+                      width="100%"
+                    >
+                      {index + 1}. {indication.title}
+                    </Typography>
+                    <Typography
+                      variant={downMd ? "body2" : "body1"}
+                      textAlign="left"
+                      width="100%"
+                      fontWeight={300}
+                    >
+                      {indication.description}
+                    </Typography>
+                  </React.Fragment>
+                )
+              )}
           </Grid>
           <Grid size={12}>
             <Divider />
@@ -422,9 +525,31 @@ export default function DrCyjFillerView() {
               gutterBottom
             >
               {language.webLanguage === "PL" &&
-                drCyjFillerDataPL.postTreatmentRecommendations}
-              {language.webLanguage !== "PL" &&
-                drCyjFillerDataENG.postTreatmentRecommendations}
+                (
+                  nanofraxMesotherapyDataPL.postTreatmentRecommendations as string[]
+                ).map((recomendation, index) => (
+                  <Typography
+                    variant={downMd ? "body2" : "body1"}
+                    textAlign="left"
+                    width="100%"
+                    key={index}
+                  >
+                    - {recomendation}
+                  </Typography>
+                ))}
+              {language.webLanguage === "ENG" &&
+                (
+                  nanofraxMesotherapyDataENG.postTreatmentRecommendations as string[]
+                ).map((recomendation, index) => (
+                  <Typography
+                    variant={downMd ? "body2" : "body1"}
+                    textAlign="left"
+                    width="100%"
+                    key={index}
+                  >
+                    - {recomendation}
+                  </Typography>
+                ))}
             </Typography>
           </Grid>
           <Grid size={12}>
@@ -439,8 +564,8 @@ export default function DrCyjFillerView() {
               fontStyle="italic"
             >
               {language.webLanguage === "PL"
-                ? "JAK CZĘSTO POWTARZAĆ ZABIEG?"
-                : "HOW OFTEN SHOULD THE TREATMENT BE REPEATED?"}
+                ? "PIELĘGNACJA POZABIEGOWA"
+                : "POST-TREATMENT CARE"}
             </Typography>
             <Typography
               variant={downMd ? "body2" : "body1"}
@@ -448,10 +573,49 @@ export default function DrCyjFillerView() {
               width="100%"
               gutterBottom
             >
-              {language.webLanguage === "PL" &&
-                drCyjFillerDataPL.interfalsInTreatment}
-              {language.webLanguage !== "PL" &&
-                drCyjFillerDataENG.interfalsInTreatment}
+              <Typography
+                variant={downMd ? "body2" : "body1"}
+                textAlign="left"
+                width={"100%"}
+                gutterBottom
+              >
+                {language.webLanguage === "PL"
+                  ? nanofraxMesotherapyDataPL.postTreatmentCare
+                  : nanofraxMesotherapyDataENG.postTreatmentCare}
+              </Typography>
+            </Typography>
+          </Grid>
+          <Grid size={12}>
+            <Divider />
+          </Grid>
+          <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
+            <Typography
+              variant={downMd ? "body1" : "h6"}
+              textAlign="left"
+              sx={{ fontWeight: "200" }}
+              width={"100%"}
+              fontStyle="italic"
+            >
+              {language.webLanguage === "PL"
+                ? "Technologia Tytan-TEC® – komfort i bezpieczeństwo".toUpperCase()
+                : "Tytan-TEC® Technology – Comfort and Safety".toUpperCase()}
+            </Typography>
+            <Typography
+              variant={downMd ? "body2" : "body1"}
+              textAlign="left"
+              width="100%"
+              gutterBottom
+            >
+              <Typography
+                variant={downMd ? "body2" : "body1"}
+                textAlign="left"
+                width={"100%"}
+                gutterBottom
+              >
+                {language.webLanguage === "PL"
+                  ? nanofraxMesotherapyDataPL.tytanTechnologyOverview
+                  : nanofraxMesotherapyDataENG.tytanTechnologyOverview}
+              </Typography>
             </Typography>
           </Grid>
         </Grid>
