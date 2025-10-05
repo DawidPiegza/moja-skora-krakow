@@ -20,7 +20,7 @@ import GoogleIcon from "@mui/icons-material/Google";
 import RepeatIcon from "@mui/icons-material/Repeat";
 import EventRepeatIcon from "@mui/icons-material/EventRepeat";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
-import nanofrax_mesotherapy from "../../../../public/images/nanofrax_mesotherapy.jpeg";
+import nanofrax_nano_needle from "../../../../public/images/nanofrax_nano_needle.jpeg";
 import {
   nanofraxNanoNeedleMesotherapyData,
   nanofraxNanoNeedleMesotherapyDataEN,
@@ -188,7 +188,7 @@ export default function NanofraxNanoNeedleMesotherapy() {
           </Grid>
         </Grid>
         <Grid size={12} container p={1}>
-          <Grid size={downMd ? 12 : 4}>
+          <Grid size={downMd ? 12 : 5}>
             <Box
               component="img"
               sx={{
@@ -196,10 +196,10 @@ export default function NanofraxNanoNeedleMesotherapy() {
                 width: "100%",
               }}
               alt="The house from the offer."
-              src={nanofrax_mesotherapy}
+              src={nanofrax_nano_needle}
             />
           </Grid>
-          <Grid size={downMd ? 12 : 8} p={1} container spacing={3}>
+          <Grid size={downMd ? 12 : 7} p={1} container spacing={3}>
             <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
               <Typography
                 variant={downMd ? "body2" : "body1"}
