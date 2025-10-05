@@ -1,4 +1,4 @@
-export interface INanofraxMesotherapyData {
+export interface INanofraxNanoNeedleMesotherapy {
   overview: string;
   infoTable: {
     recommendedNumber: string;

@@ -65,4 +65,18 @@ export const cosmetologyViewData: ICategoryViewData[] = [
       navigateURL: "nanofrax_nano_needle_mesotherapy",
     },
   },
+  {
+    pl: {
+      title: "Peeling kawitacyjny",
+      description:
+        "Peeling kawitacyjny to bezpieczna i bezinwazyjna forma oczyszczania skóry, która wykorzystuje fale ultradźwiękowe do usunięcia martwych komórek naskórka, zanieczyszczeń, nadmiaru sebum oraz resztek kosmetyków i bakterii. Dzięki zjawisku kawitacji, na zwilżonej skórze tworzą się mikroskopijne pęcherzyki, które pod wpływem drgań ultradźwiękowych pękają, delikatnie rozbijając zrogowaciały naskórek. To sprawia, że zabieg jest wyjątkowo delikatny, a jednocześnie skuteczny nawet w głębszych warstwach skóry, w przeciwieństwie do klasycznych peelingów mechanicznych czy enzymatycznych. Efektem zabiegu jest natychmiastowe oczyszczenie i odświeżenie skóry, poprawa jej dotlenienia, rozjaśnienie kolorytu oraz przygotowanie do dalszych etapów pielęgnacyjnych. Skóra po zabiegu znacznie lepiej wchłania substancje aktywne zawarte w preparatach – dzięki czemu ich działanie jest bardziej intensywne.",
+      navigateURL: "cavitation_peeling",
+    },
+    eng: {
+      title: "Cavitation peeling",
+      description:
+        "Cavitation peeling is a safe and non-invasive method of skin cleansing that uses ultrasonic waves to remove dead skin cells, impurities, excess sebum, cosmetic residues, and bacteria. Thanks to the phenomenon of cavitation, microscopic bubbles form on the moistened skin, which burst under the influence of ultrasonic vibrations, gently breaking down the keratinized epidermis. This makes the treatment exceptionally gentle yet effective even in the deeper layers of the skin—unlike traditional mechanical or enzymatic exfoliation. The result of the treatment is immediate skin cleansing and refreshment, improved oxygenation, brighter skin tone, and better absorption of active ingredients applied afterward—enhancing their effectiveness.",
+      navigateURL: "cavitation_peeling",
+    },
+  },
 ];

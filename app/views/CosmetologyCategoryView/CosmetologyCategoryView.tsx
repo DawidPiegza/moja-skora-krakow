@@ -110,15 +110,15 @@ export default function CosmetologyCategoryView() {
                   {downMD && (
                     <Typography variant="body2" fontWeight={300}>
                       {language.webLanguage === "PL"
-                        ? el.pl.description.slice(0, 400) + "..."
-                        : el.eng.description.slice(0, 400) + "..."}
+                        ? el.pl.description.slice(0, 300) + "..."
+                        : el.eng.description.slice(0, 300) + "..."}
                     </Typography>
                   )}
                   {!downMD && (
                     <Typography variant="body2" fontWeight={300}>
                       {language.webLanguage === "PL"
-                        ? el.pl.description
-                        : el.eng.description}
+                        ? el.pl.description.slice(0, 300) + "..."
+                        : el.eng.description.slice(0, 300) + "..."}
                     </Typography>
                   )}
                 </Grid>

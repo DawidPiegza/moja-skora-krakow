@@ -37,6 +37,10 @@ export default [
     "./views/Cosmetology/NanofraxNanoNeedleMesotherapy/NanofraxNanoNeedleMesotherapy.tsx"
   ),
   route(
+    "/cosmetology/cavitation_peeling",
+    "./views/Cosmetology/CavitationPeelingView/CavitationPeelingView.tsx"
+  ),
+  route(
     "/consultation",
     "./views/Consultation/ConsultationServiceView/ConsultationServiceView.tsx"
   ),
