@@ -73,8 +73,8 @@ export default function NanofraxMesotherapyView() {
               })}
             >
               {language.webLanguage === "PL"
-                ? "Mezoterapia igłowa skóry głowy Dr. cyj"
-                : "Cyj Filler - Scalp mesotherapy treatment"}
+                ? "Mezoterapia mikroigłowa NANOFRAX"
+                : "Nanofrax Microneedling Mesotherapy"}
             </Typography>
           </Breadcrumbs>
         </Grid>
@@ -96,8 +96,8 @@ export default function NanofraxMesotherapyView() {
               sx={{ fontWeight: "350" }}
             >
               {language.webLanguage === "PL"
-                ? "Mezoterapia igłowa skóry głowy Dr. cyj".toUpperCase()
-                : "Cyj Filler - Scalp mesotherapy treatment".toUpperCase()}
+                ? "Mezoterapia mikroigłowa NANOFRAX".toUpperCase()
+                : "Nanofrax Microneedling Mesotherapy".toUpperCase()}
             </Typography>
           </Grid>
         </Grid>
