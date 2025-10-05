@@ -226,21 +226,33 @@ export default function HairGrowthMesotherapy() {
                   ? "WSKAZANIA DO ZABIEGU"
                   : "INDICATIONS FOR THE TREATMENT"}
               </Typography>
-              <Typography
-                variant={downMd ? "body2" : "body1"}
-                textAlign="left"
-                width="100%"
-                gutterBottom
-              >
-                {language.webLanguage === "PL" &&
-                  hairGrowthMesotherapyDataPL.indicationsToTreatment.map(
-                    (indication, index) => <div key={index}>- {indication}</div>
-                  )}
-                {language.webLanguage !== "PL" &&
-                  hairGrowthMesotherapyDataENG.indicationsToTreatment.map(
-                    (indication, index) => <div key={index}>- {indication}</div>
-                  )}
-              </Typography>
+
+              {language.webLanguage === "PL" &&
+                hairGrowthMesotherapyDataPL.indicationsToTreatment.map(
+                  (indication, index) => (
+                    <Typography
+                      variant={downMd ? "body2" : "body1"}
+                      textAlign="left"
+                      width="100%"
+                      key={index}
+                    >
+                      - {indication}
+                    </Typography>
+                  )
+                )}
+              {language.webLanguage !== "PL" &&
+                hairGrowthMesotherapyDataENG.indicationsToTreatment.map(
+                  (indication, index) => (
+                    <Typography
+                      variant={downMd ? "body2" : "body1"}
+                      textAlign="left"
+                      width="100%"
+                      key={index}
+                    >
+                      - {indication}
+                    </Typography>
+                  )
+                )}
             </Grid>
             <Grid size={12}>
               <Divider />
@@ -254,55 +266,36 @@ export default function HairGrowthMesotherapy() {
                 fontStyle="italic"
               >
                 {language.webLanguage === "PL"
-                  ? "PRZECIWWSKAZANIA DO ZABIEGU MEZOTERAPII IGŁOWEJ"
-                  : "CONTRAINDICATIONS FOR HAIR GROWTH MESOTHERAPY"}
+                  ? "PRZECIWWSKAZANIA DO ZABIEGU "
+                  : "CONTRAINDICATIONS FOR THE TREATMENT"}
               </Typography>
-              <Typography
-                variant={downMd ? "body2" : "body1"}
-                textAlign="left"
-                width="100%"
-                gutterBottom
-              >
-                {language.webLanguage === "PL" &&
-                  hairGrowthMesotherapyDataPL.indicationsToTreatment.map(
-                    (indication, index) => <div key={index}>- {indication}</div>
-                  )}
-                {language.webLanguage !== "PL" &&
-                  hairGrowthMesotherapyDataENG.indicationsToTreatment.map(
-                    (indication, index) => <div key={index}>- {indication}</div>
-                  )}
-              </Typography>
-            </Grid>
-            <Grid size={12}>
-              <Divider />
-            </Grid>
-            <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
-              <Typography
-                variant={downMd ? "body1" : "h6"}
-                textAlign="left"
-                sx={{ fontWeight: "200" }}
-                width={"100%"}
-                fontStyle="italic"
-              >
-                {language.webLanguage === "PL"
-                  ? "EFEKTY ZABIEGU"
-                  : "TREATMENT RESULTS"}
-              </Typography>
-              <Typography
-                variant={downMd ? "body2" : "body1"}
-                textAlign="left"
-                width="100%"
-                gutterBottom
-              >
-                {language.webLanguage === "PL" &&
-                  hairGrowthMesotherapyDataPL.effectsOfTratment.map(
-                    (indication, index) => <div key={index}>- {indication}</div>
-                  )}
-                {language.webLanguage !== "PL" &&
-                  hairGrowthMesotherapyDataENG.effectsOfTratment.map(
-                    (indication, index) => <div key={index}>- {indication}</div>
-                  )}
-              </Typography>
+
+              {language.webLanguage === "PL" &&
+                hairGrowthMesotherapyDataPL.contraindications.map(
+                  (indication, index) => (
+                    <Typography
+                      variant={downMd ? "body2" : "body1"}
+                      textAlign="left"
+                      width="100%"
+                      key={index}
+                    >
+                      - {indication}
+                    </Typography>
+                  )
+                )}
+              {language.webLanguage !== "PL" &&
+                hairGrowthMesotherapyDataENG.contraindications.map(
+                  (indication, index) => (
+                    <Typography
+                      variant={downMd ? "body2" : "body1"}
+                      textAlign="left"
+                      width="100%"
+                      key={index}
+                    >
+                      - {indication}
+                    </Typography>
+                  )
+                )}
             </Grid>
           </Grid>
         </Grid>
@@ -310,6 +303,48 @@ export default function HairGrowthMesotherapy() {
           <Divider />
         </Grid>
         <Grid size={12} p={1} container spacing={3}>
+          <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
+            <Typography
+              variant={downMd ? "body1" : "h6"}
+              textAlign="left"
+              sx={{ fontWeight: "200" }}
+              width={"100%"}
+              fontStyle="italic"
+            >
+              {language.webLanguage === "PL"
+                ? "EFEKTY ZABIEGU"
+                : "TREATMENT RESULTS"}
+            </Typography>
+            {language.webLanguage === "PL" &&
+              hairGrowthMesotherapyDataPL.effectsOfTratment.map(
+                (effect, index) => (
+                  <Typography
+                    variant={downMd ? "body2" : "body1"}
+                    textAlign="left"
+                    width="100%"
+                    key={index}
+                  >
+                    - {effect}
+                  </Typography>
+                )
+              )}
+            {language.webLanguage !== "PL" &&
+              hairGrowthMesotherapyDataENG.effectsOfTratment.map(
+                (effect, index) => (
+                  <Typography
+                    variant={downMd ? "body2" : "body1"}
+                    textAlign="left"
+                    width="100%"
+                    key={index}
+                  >
+                    - {effect}
+                  </Typography>
+                )
+              )}
+          </Grid>
+          <Grid size={12}>
+            <Divider />
+          </Grid>
           <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
             <Typography
               variant={downMd ? "body1" : "h6"}

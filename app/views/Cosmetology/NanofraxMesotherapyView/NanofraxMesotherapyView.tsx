@@ -221,33 +221,6 @@ export default function NanofraxMesotherapyView() {
                 fontStyle="italic"
               >
                 {language.webLanguage === "PL"
-                  ? "Czym jest technika One Needle i dla kogo jest przeznaczona?".toUpperCase()
-                  : "What is the One Needle Technique and Who Is It For?".toUpperCase()}
-              </Typography>
-              <Typography
-                variant={downMd ? "body2" : "body1"}
-                textAlign="left"
-                width="100%"
-                gutterBottom
-              >
-                {language.webLanguage === "PL"
-                  ? nanofraxMesotherapyDataPL.oneNeedleOverview
-                  : nanofraxMesotherapyDataENG.oneNeedleOverview}
-              </Typography>
-            </Grid>
-            <Grid size={12}>
-              <Divider />
-            </Grid>
-
-            <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
-              <Typography
-                variant={downMd ? "body1" : "h6"}
-                textAlign="left"
-                sx={{ fontWeight: "200" }}
-                width={"100%"}
-                fontStyle="italic"
-              >
-                {language.webLanguage === "PL"
                   ? "WSKAZANIA DO ZABIEGU"
                   : "INDICATIONS FOR THE TREATMENT"}
               </Typography>
@@ -357,7 +330,6 @@ export default function NanofraxMesotherapyView() {
                 ? "EFEKTY ZABIEGU"
                 : "TREATMENT RESULTS"}
             </Typography>
-
             {language.webLanguage === "PL" &&
               nanofraxMesotherapyDataPL.effectsOfTratment.map(
                 (indication, index) => (
@@ -384,6 +356,32 @@ export default function NanofraxMesotherapyView() {
                   </Typography>
                 )
               )}
+          </Grid>
+          <Grid size={12}>
+            <Divider />
+          </Grid>
+          <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
+            <Typography
+              variant={downMd ? "body1" : "h6"}
+              textAlign="left"
+              sx={{ fontWeight: "200" }}
+              width={"100%"}
+              fontStyle="italic"
+            >
+              {language.webLanguage === "PL"
+                ? "Czym jest technika One Needle i dla kogo jest przeznaczona?".toUpperCase()
+                : "What is the One Needle Technique and Who Is It For?".toUpperCase()}
+            </Typography>
+            <Typography
+              variant={downMd ? "body2" : "body1"}
+              textAlign="left"
+              width="100%"
+              gutterBottom
+            >
+              {language.webLanguage === "PL"
+                ? nanofraxMesotherapyDataPL.oneNeedleOverview
+                : nanofraxMesotherapyDataENG.oneNeedleOverview}
+            </Typography>
           </Grid>
           <Grid size={12}>
             <Divider />
