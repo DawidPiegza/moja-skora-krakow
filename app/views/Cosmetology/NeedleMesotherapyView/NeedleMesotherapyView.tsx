@@ -224,26 +224,37 @@ export default function NeedleMesotherapyView() {
                   ? "WSKAZANIA DO ZABIEGU"
                   : "INDICATIONS FOR THE TREATMENT"}
               </Typography>
-              <Typography
-                variant={downMd ? "body2" : "body1"}
-                textAlign="left"
-                width="100%"
-                gutterBottom
-              >
-                {language.webLanguage === "PL" &&
-                  needleMesotherapyDataPL.indicationsToTreatment.map(
-                    (indication, index) => <div key={index}>- {indication}</div>
-                  )}
-                {language.webLanguage !== "PL" &&
-                  needleMesotherapyDataEN.indicationsToTreatment.map(
-                    (indication, index) => <div key={index}>- {indication}</div>
-                  )}
-              </Typography>
-            </Grid>
-            <Grid size={12}>
-              <Divider />
+              {language.webLanguage === "PL" &&
+                needleMesotherapyDataPL.indicationsToTreatment.map(
+                  (indication, index) => (
+                    <Typography
+                      variant={downMd ? "body2" : "body1"}
+                      textAlign="left"
+                      width="100%"
+                      key={index}
+                    >
+                      - {indication}
+                    </Typography>
+                  )
+                )}
+              {language.webLanguage !== "PL" &&
+                needleMesotherapyDataEN.indicationsToTreatment.map(
+                  (indication, index) => (
+                    <Typography
+                      variant={downMd ? "body2" : "body1"}
+                      textAlign="left"
+                      width="100%"
+                      key={index}
+                    >
+                      - {indication}
+                    </Typography>
+                  )
+                )}
             </Grid>
           </Grid>
+        </Grid>
+        <Grid size={12}>
+          <Divider />
         </Grid>
         <Grid size={12} p={1} container spacing={3}>
           <Grid
@@ -260,24 +271,36 @@ export default function NeedleMesotherapyView() {
               fontStyle="italic"
             >
               {language.webLanguage === "PL"
-                ? "PRZECIWWSKAZANIA DO ZABIEGU MEZOTERAPII IGŁOWEJ"
-                : "CONTRAINDICATIONS FOR DR. CYJ SCALP MESOTHERAPY"}
+                ? "WSKAZANIA DO ZABIEGU"
+                : "INDICATIONS FOR THE TREATMENT"}
             </Typography>
-            <Typography
-              variant={downMd ? "body2" : "body1"}
-              textAlign="left"
-              width="100%"
-              gutterBottom
-            >
-              {language.webLanguage === "PL" &&
-                needleMesotherapyDataPL.contraindications.map(
-                  (indication, index) => <div key={index}>- {indication}</div>
-                )}
-              {language.webLanguage !== "PL" &&
-                needleMesotherapyDataEN.contraindications.map(
-                  (indication, index) => <div key={index}>- {indication}</div>
-                )}
-            </Typography>
+
+            {language.webLanguage === "PL" &&
+              needleMesotherapyDataPL.contraindications.map(
+                (contrindication, index) => (
+                  <Typography
+                    variant={downMd ? "body2" : "body1"}
+                    textAlign="left"
+                    width="100%"
+                    key={index}
+                  >
+                    - {contrindication}
+                  </Typography>
+                )
+              )}
+            {language.webLanguage !== "PL" &&
+              needleMesotherapyDataEN.contraindications.map(
+                (indication, index) => (
+                  <Typography
+                    variant={downMd ? "body2" : "body1"}
+                    textAlign="left"
+                    width="100%"
+                    key={index}
+                  >
+                    - {indication}
+                  </Typography>
+                )
+              )}
           </Grid>
           {downMd && (
             <Grid size={12}>
@@ -306,29 +329,28 @@ export default function NeedleMesotherapyView() {
                 ? "EFEKTY ZABIEGU"
                 : "TREATMENT RESULTS"}
             </Typography>
-            <Typography
-              variant={downMd ? "body2" : "body1"}
-              textAlign="left"
-              width={"100%"}
-              gutterBottom
-            >
-              {language.webLanguage === "PL" &&
-                needleMesotherapyDataPL.effectsOfTratment.map(
-                  (indication, index) => (
-                    <div key={index} style={{ paddingBottom: "5x" }}>
-                      - {indication}
-                    </div>
-                  )
-                )}
-              {language.webLanguage !== "PL" &&
-                needleMesotherapyDataEN.effectsOfTratment.map(
-                  (indication, index) => (
-                    <div key={index} style={{ paddingBottom: "5x" }}>
-                      - {indication}
-                    </div>
-                  )
-                )}
-            </Typography>
+            {language.webLanguage === "PL" &&
+              needleMesotherapyDataPL.effectsOfTratment.map((effect, index) => (
+                <Typography
+                  variant={downMd ? "body2" : "body1"}
+                  textAlign="left"
+                  width="100%"
+                  key={index}
+                >
+                  - {effect}
+                </Typography>
+              ))}
+            {language.webLanguage !== "PL" &&
+              needleMesotherapyDataEN.effectsOfTratment.map((effect, index) => (
+                <Typography
+                  variant={downMd ? "body2" : "body1"}
+                  textAlign="left"
+                  width="100%"
+                  key={index}
+                >
+                  - {effect}
+                </Typography>
+              ))}
           </Grid>
           <Grid size={12}>
             <Divider />
@@ -345,29 +367,46 @@ export default function NeedleMesotherapyView() {
                 ? "JAK PRZEBIEGA ZABIEG?"
                 : "HOW DOES THE TREATMENT WORK?"}
             </Typography>
-            <Typography
-              variant={downMd ? "body2" : "body1"}
-              textAlign="left"
-              width="100%"
-              gutterBottom
-            >
-              {language.webLanguage === "PL" &&
-                (needleMesotherapyDataPL.courseOfTreatment as string[]).map(
-                  (indication: string, index: number) => (
-                    <div key={index} style={{ paddingBottom: "5x" }}>
-                      {index + 1}. {indication}
-                    </div>
-                  )
-                )}
-              {language.webLanguage !== "PL" &&
-                (needleMesotherapyDataEN.courseOfTreatment as string[]).map(
-                  (indication: string, index: number) => (
-                    <div key={index} style={{ paddingBottom: "5x" }}>
-                      {index + 1}. {indication}
-                    </div>
-                  )
-                )}
-            </Typography>
+            {language.webLanguage === "PL" &&
+              needleMesotherapyDataPL.courseOfTreatment.map((item, index) => (
+                <React.Fragment key={index}>
+                  <Typography
+                    variant={downMd ? "body2" : "body1"}
+                    textAlign="left"
+                    width="100%"
+                  >
+                    {index + 1}. {item.title}
+                  </Typography>
+                  <Typography
+                    variant={downMd ? "body2" : "body1"}
+                    textAlign="left"
+                    width="100%"
+                    fontWeight={300}
+                  >
+                    {item.description}
+                  </Typography>
+                </React.Fragment>
+              ))}
+            {language.webLanguage === "ENG" &&
+              needleMesotherapyDataEN.courseOfTreatment.map((item, index) => (
+                <React.Fragment key={index}>
+                  <Typography
+                    variant={downMd ? "body2" : "body1"}
+                    textAlign="left"
+                    width="100%"
+                  >
+                    {index + 1}. {item.title}
+                  </Typography>
+                  <Typography
+                    variant={downMd ? "body2" : "body1"}
+                    textAlign="left"
+                    width="100%"
+                    fontWeight={300}
+                  >
+                    {item.description}
+                  </Typography>
+                </React.Fragment>
+              ))}
           </Grid>
           <Grid size={12}>
             <Divider />
@@ -384,25 +423,32 @@ export default function NeedleMesotherapyView() {
                 ? "ZALECENIA POZABIEGOWE"
                 : "POST-TREATMENT RECOMMENDATIONS"}
             </Typography>
-            <Typography
-              variant={downMd ? "body2" : "body1"}
-              textAlign="left"
-              width="100%"
-              gutterBottom
-            >
-              {language.webLanguage === "PL" &&
-                (
-                  needleMesotherapyDataPL.postTreatmentRecommendations as string[]
-                ).map((indication: string, index: number) => (
-                  <div key={index}>- {indication}</div>
-                ))}
-              {language.webLanguage !== "PL" &&
-                (
-                  needleMesotherapyDataEN.postTreatmentRecommendations as string[]
-                ).map((indication: string, index: number) => (
-                  <div key={index}>- {indication}</div>
-                ))}
-            </Typography>
+            {language.webLanguage === "PL" &&
+              needleMesotherapyDataPL.postTreatmentRecommendations.map(
+                (recomendation, index) => (
+                  <Typography
+                    variant={downMd ? "body2" : "body1"}
+                    textAlign="left"
+                    width="100%"
+                    key={index}
+                  >
+                    - {recomendation}
+                  </Typography>
+                )
+              )}
+            {language.webLanguage !== "PL" &&
+              needleMesotherapyDataEN.postTreatmentRecommendations.map(
+                (recomendation, index) => (
+                  <Typography
+                    variant={downMd ? "body2" : "body1"}
+                    textAlign="left"
+                    width="100%"
+                    key={index}
+                  >
+                    - {recomendation}
+                  </Typography>
+                )
+              )}
           </Grid>
         </Grid>
       </Grid>

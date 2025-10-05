@@ -8,7 +8,10 @@ export interface INeedleMesotherapyData {
   indicationsToTreatment: string[];
   effectsOfTratment: string[];
   contraindications: string[];
-  courseOfTreatment: string[] | string;
-  postTreatmentRecommendations: string[] | string;
+  courseOfTreatment: {
+    title: string;
+    description: string;
+  }[];
+  postTreatmentRecommendations: string[];
   preparationForTreatment: string;
 }

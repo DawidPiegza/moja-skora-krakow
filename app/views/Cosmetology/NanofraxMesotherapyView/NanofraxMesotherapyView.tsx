@@ -230,16 +230,9 @@ export default function NanofraxMesotherapyView() {
                 width="100%"
                 gutterBottom
               >
-                <Typography
-                  variant={downMd ? "body2" : "body1"}
-                  textAlign="left"
-                  width={"100%"}
-                  gutterBottom
-                >
-                  {language.webLanguage === "PL"
-                    ? nanofraxMesotherapyDataPL.oneNeedleOverview
-                    : nanofraxMesotherapyDataENG.oneNeedleOverview}
-                </Typography>
+                {language.webLanguage === "PL"
+                  ? nanofraxMesotherapyDataPL.oneNeedleOverview
+                  : nanofraxMesotherapyDataENG.oneNeedleOverview}
               </Typography>
             </Grid>
             <Grid size={12}>
@@ -258,39 +251,33 @@ export default function NanofraxMesotherapyView() {
                   ? "WSKAZANIA DO ZABIEGU"
                   : "INDICATIONS FOR THE TREATMENT"}
               </Typography>
-              <Typography
-                variant={downMd ? "body2" : "body1"}
-                textAlign="left"
-                width="100%"
-                gutterBottom
-              >
-                {language.webLanguage === "PL" &&
-                  nanofraxMesotherapyDataPL.indicationsToTreatment.map(
-                    (indication, index) => (
-                      <Typography
-                        variant={downMd ? "body2" : "body1"}
-                        textAlign="left"
-                        width="100%"
-                        key={index}
-                      >
-                        - {indication}
-                      </Typography>
-                    )
-                  )}
-                {language.webLanguage !== "PL" &&
-                  nanofraxMesotherapyDataENG.indicationsToTreatment.map(
-                    (indication, index) => (
-                      <Typography
-                        variant={downMd ? "body2" : "body1"}
-                        textAlign="left"
-                        width="100%"
-                        key={index}
-                      >
-                        - {indication}
-                      </Typography>
-                    )
-                  )}
-              </Typography>
+
+              {language.webLanguage === "PL" &&
+                nanofraxMesotherapyDataPL.indicationsToTreatment.map(
+                  (indication, index) => (
+                    <Typography
+                      variant={downMd ? "body2" : "body1"}
+                      textAlign="left"
+                      width="100%"
+                      key={index}
+                    >
+                      - {indication}
+                    </Typography>
+                  )
+                )}
+              {language.webLanguage !== "PL" &&
+                nanofraxMesotherapyDataENG.indicationsToTreatment.map(
+                  (indication, index) => (
+                    <Typography
+                      variant={downMd ? "body2" : "body1"}
+                      textAlign="left"
+                      width="100%"
+                      key={index}
+                    >
+                      - {indication}
+                    </Typography>
+                  )
+                )}
             </Grid>
           </Grid>
         </Grid>
@@ -312,42 +299,36 @@ export default function NanofraxMesotherapyView() {
               fontStyle="italic"
             >
               {language.webLanguage === "PL"
-                ? "PRZECIWWSKAZANIA DO ZABIEGU MEZOTERAPII IGŁOWEJ"
-                : "CONTRAINDICATIONS FOR DR. CYJ SCALP MESOTHERAPY"}
+                ? "PRZECIWWSKAZANIA DO ZABIEGU"
+                : "CONTRAINDICATIONS FOR THE TREATMENT"}
             </Typography>
-            <Typography
-              variant={downMd ? "body2" : "body1"}
-              textAlign="left"
-              width="100%"
-              gutterBottom
-            >
-              {language.webLanguage === "PL" &&
-                nanofraxMesotherapyDataPL.contraindications.map(
-                  (indication, index) => (
-                    <Typography
-                      variant={downMd ? "body2" : "body1"}
-                      textAlign="left"
-                      width="100%"
-                      key={index}
-                    >
-                      - {indication}
-                    </Typography>
-                  )
-                )}
-              {language.webLanguage !== "PL" &&
-                nanofraxMesotherapyDataENG.contraindications.map(
-                  (indication, index) => (
-                    <Typography
-                      variant={downMd ? "body2" : "body1"}
-                      textAlign="left"
-                      width="100%"
-                      key={index}
-                    >
-                      - {indication}
-                    </Typography>
-                  )
-                )}
-            </Typography>
+
+            {language.webLanguage === "PL" &&
+              nanofraxMesotherapyDataPL.contraindications.map(
+                (indication, index) => (
+                  <Typography
+                    variant={downMd ? "body2" : "body1"}
+                    textAlign="left"
+                    width="100%"
+                    key={index}
+                  >
+                    - {indication}
+                  </Typography>
+                )
+              )}
+            {language.webLanguage !== "PL" &&
+              nanofraxMesotherapyDataENG.contraindications.map(
+                (indication, index) => (
+                  <Typography
+                    variant={downMd ? "body2" : "body1"}
+                    textAlign="left"
+                    width="100%"
+                    key={index}
+                  >
+                    - {indication}
+                  </Typography>
+                )
+              )}
           </Grid>
           {downMd && (
             <Grid size={12}>
@@ -376,39 +357,33 @@ export default function NanofraxMesotherapyView() {
                 ? "EFEKTY ZABIEGU"
                 : "TREATMENT RESULTS"}
             </Typography>
-            <Typography
-              variant={downMd ? "body2" : "body1"}
-              textAlign="left"
-              width={"100%"}
-              gutterBottom
-            >
-              {language.webLanguage === "PL" &&
-                nanofraxMesotherapyDataPL.effectsOfTratment.map(
-                  (indication, index) => (
-                    <Typography
-                      variant={downMd ? "body2" : "body1"}
-                      textAlign="left"
-                      width="100%"
-                      key={index}
-                    >
-                      - {indication}
-                    </Typography>
-                  )
-                )}
-              {language.webLanguage !== "PL" &&
-                nanofraxMesotherapyDataENG.effectsOfTratment.map(
-                  (indication, index) => (
-                    <Typography
-                      variant={downMd ? "body2" : "body1"}
-                      textAlign="left"
-                      width="100%"
-                      key={index}
-                    >
-                      - {indication}
-                    </Typography>
-                  )
-                )}
-            </Typography>
+
+            {language.webLanguage === "PL" &&
+              nanofraxMesotherapyDataPL.effectsOfTratment.map(
+                (indication, index) => (
+                  <Typography
+                    variant={downMd ? "body2" : "body1"}
+                    textAlign="left"
+                    width="100%"
+                    key={index}
+                  >
+                    - {indication}
+                  </Typography>
+                )
+              )}
+            {language.webLanguage !== "PL" &&
+              nanofraxMesotherapyDataENG.effectsOfTratment.map(
+                (indication, index) => (
+                  <Typography
+                    variant={downMd ? "body2" : "body1"}
+                    textAlign="left"
+                    width="100%"
+                    key={index}
+                  >
+                    - {indication}
+                  </Typography>
+                )
+              )}
           </Grid>
           <Grid size={12}>
             <Divider />
@@ -431,16 +406,9 @@ export default function NanofraxMesotherapyView() {
               width="100%"
               gutterBottom
             >
-              <Typography
-                variant={downMd ? "body2" : "body1"}
-                textAlign="left"
-                width={"100%"}
-                gutterBottom
-              >
-                {language.webLanguage === "PL"
-                  ? nanofraxMesotherapyDataPL.causesOfEfficiency
-                  : nanofraxMesotherapyDataENG.causesOfEfficiency}
-              </Typography>
+              {language.webLanguage === "PL"
+                ? nanofraxMesotherapyDataPL.causesOfEfficiency
+                : nanofraxMesotherapyDataENG.causesOfEfficiency}
             </Typography>
           </Grid>
           <Grid size={12}>
@@ -518,39 +486,32 @@ export default function NanofraxMesotherapyView() {
                 ? "ZALECENIA POZABIEGOWE"
                 : "POST-TREATMENT RECOMMENDATIONS"}
             </Typography>
-            <Typography
-              variant={downMd ? "body2" : "body1"}
-              textAlign="left"
-              width="100%"
-              gutterBottom
-            >
-              {language.webLanguage === "PL" &&
-                (
-                  nanofraxMesotherapyDataPL.postTreatmentRecommendations as string[]
-                ).map((recomendation, index) => (
-                  <Typography
-                    variant={downMd ? "body2" : "body1"}
-                    textAlign="left"
-                    width="100%"
-                    key={index}
-                  >
-                    - {recomendation}
-                  </Typography>
-                ))}
-              {language.webLanguage === "ENG" &&
-                (
-                  nanofraxMesotherapyDataENG.postTreatmentRecommendations as string[]
-                ).map((recomendation, index) => (
-                  <Typography
-                    variant={downMd ? "body2" : "body1"}
-                    textAlign="left"
-                    width="100%"
-                    key={index}
-                  >
-                    - {recomendation}
-                  </Typography>
-                ))}
-            </Typography>
+            {language.webLanguage === "PL" &&
+              (
+                nanofraxMesotherapyDataPL.postTreatmentRecommendations as string[]
+              ).map((recomendation, index) => (
+                <Typography
+                  variant={downMd ? "body2" : "body1"}
+                  textAlign="left"
+                  width="100%"
+                  key={index}
+                >
+                  - {recomendation}
+                </Typography>
+              ))}
+            {language.webLanguage === "ENG" &&
+              (
+                nanofraxMesotherapyDataENG.postTreatmentRecommendations as string[]
+              ).map((recomendation, index) => (
+                <Typography
+                  variant={downMd ? "body2" : "body1"}
+                  textAlign="left"
+                  width="100%"
+                  key={index}
+                >
+                  - {recomendation}
+                </Typography>
+              ))}
           </Grid>
           <Grid size={12}>
             <Divider />
@@ -573,16 +534,9 @@ export default function NanofraxMesotherapyView() {
               width="100%"
               gutterBottom
             >
-              <Typography
-                variant={downMd ? "body2" : "body1"}
-                textAlign="left"
-                width={"100%"}
-                gutterBottom
-              >
-                {language.webLanguage === "PL"
-                  ? nanofraxMesotherapyDataPL.postTreatmentCare
-                  : nanofraxMesotherapyDataENG.postTreatmentCare}
-              </Typography>
+              {language.webLanguage === "PL"
+                ? nanofraxMesotherapyDataPL.postTreatmentCare
+                : nanofraxMesotherapyDataENG.postTreatmentCare}
             </Typography>
           </Grid>
           <Grid size={12}>
@@ -606,16 +560,9 @@ export default function NanofraxMesotherapyView() {
               width="100%"
               gutterBottom
             >
-              <Typography
-                variant={downMd ? "body2" : "body1"}
-                textAlign="left"
-                width={"100%"}
-                gutterBottom
-              >
-                {language.webLanguage === "PL"
-                  ? nanofraxMesotherapyDataPL.tytanTechnologyOverview
-                  : nanofraxMesotherapyDataENG.tytanTechnologyOverview}
-              </Typography>
+              {language.webLanguage === "PL"
+                ? nanofraxMesotherapyDataPL.tytanTechnologyOverview
+                : nanofraxMesotherapyDataENG.tytanTechnologyOverview}
             </Typography>
           </Grid>
         </Grid>

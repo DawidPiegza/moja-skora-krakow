@@ -35,12 +35,31 @@ export const needleMesotherapyDataPL: INeedleMesotherapyData = {
     "Choroby nowotworowe",
   ],
   courseOfTreatment: [
-    "Konsultacja z kosmetologiem i wywiad",
-    "Ocena stanu skóry i dobór preparatu",
-    "Oczyszczenie skóry z makijażu i zanieczyszczeń",
-    "Aplikacja maści znieczulającej na ok. 30 minut",
-    "Wykonanie mikronakłuć i podanie substancji aktywnych",
-    "Aplikacja preparatu łagodzącego po zabiegu",
+    {
+      title: "KONSULTACJA",
+      description:
+        "Zabieg rozpoczyna się od konsultacji z kosmetologiem, który przeprowadza szczegółowy wywiad, pytając o możliwe przeciwwskazania, obawy oraz oczekiwania. Na podstawie uzyskanych informacji oraz dokładnej oceny stanu skóry, kosmetolog dobiera odpowiedni preparat, dopasowany do indywidualnych potrzeb i problemów skóry.",
+    },
+    {
+      title: "OCZYSZCZENIE SKÓRY",
+      description:
+        "Kosmetolog dokładnie oczyszcza skórę z makijażu oraz zanieczyszczeń, stosując łagodny preparat do mycia twarzy.",
+    },
+    {
+      title: "ZNIECZULENIE",
+      description:
+        "Na obszar poddawany zabiegowi aplikowana jest maść znieczulająca na około 30 minut, zapewniając komfort podczas zabiegu.",
+    },
+    {
+      title: "ZABIEG",
+      description:
+        "Kosmetolog za pomocą cienkiej igły w odpowiednich odstępach wykonuje precyzyjne mikronakłucia, wprowadzając substancje aktywne w głąb skóry.",
+    },
+    {
+      title: "APLIKACJA PREPARATU ŁAGODZĄCEGO",
+      description:
+        "Po zakończeniu zabiegu, na skórę kosmetolog aplikuje preparat łagodzący, który pomaga zminimalizować ewentualne zaczerwienienie i uczucie napięcia skóry.",
+    },
   ],
   postTreatmentRecommendations: [
     "Stosowanie kremów regenerujących i nawilżających",
@@ -90,13 +109,33 @@ export const needleMesotherapyDataEN: INeedleMesotherapyData = {
     "Cancer or history of cancer",
   ],
   courseOfTreatment: [
-    "Consultation with a cosmetologist and medical interview",
-    "Skin assessment and product selection",
-    "Skin cleansing of makeup and impurities",
-    "Application of topical anesthetic cream for approx. 30 minutes",
-    "Series of precise injections introducing active ingredients into deeper skin layers",
-    "Application of a soothing product after the treatment",
+    {
+      title: "CONSULTATION",
+      description:
+        "The treatment begins with a consultation with a cosmetologist, who conducts a detailed interview, asking about possible contraindications, concerns, and expectations. Based on the obtained information and a thorough assessment of the skin’s condition, the cosmetologist selects the appropriate preparation tailored to the individual needs and skin concerns.",
+    },
+    {
+      title: "SKIN CLEANSING",
+      description:
+        "The cosmetologist thoroughly cleanses the skin of makeup and impurities using a gentle facial cleanser.",
+    },
+    {
+      title: "ANESTHESIA",
+      description:
+        "A numbing cream is applied to the treatment area for about 30 minutes to ensure comfort during the procedure.",
+    },
+    {
+      title: "TREATMENT",
+      description:
+        "Using a fine needle at appropriate intervals, the cosmetologist performs precise microneedling, delivering active ingredients deep into the skin.",
+    },
+    {
+      title: "APPLICATION OF SOOTHING PREPARATION",
+      description:
+        "After the procedure, the cosmetologist applies a soothing preparation to the skin to help minimize any redness and tightness.",
+    },
   ],
+
   postTreatmentRecommendations: [
     "Use regenerating and moisturizing creams",
     "Avoid prolonged sun exposure (use sunscreen with SPF 50)",
