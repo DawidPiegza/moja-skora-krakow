@@ -45,6 +45,8 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import GoogleIcon from "@mui/icons-material/Google";
+import SwipeLeftIcon from "@mui/icons-material/SwipeLeft";
+import SwipeRightIcon from "@mui/icons-material/SwipeRight";
 
 export default function AboutUsView() {
   const { language } = React.useContext(WebsiteLanguageContext);
@@ -53,6 +55,52 @@ export default function AboutUsView() {
 
   const [isLoading, setLoading] = useState<boolean>(true);
   const [currentPhotoIndex, setCurrentPhotoIndex] = useState<number>(0);
+  const [lastDirection, setLastDirection] = useState<
+    "forward" | "backward" | null
+  >(null);
+  const touchStartX = React.useRef<number | null>(null);
+  const touchStartY = React.useRef<number | null>(null);
+  const touchEndX = React.useRef<number | null>(null);
+
+  const onTouchStart = (e: React.TouchEvent) => {
+    if (!downMd) return;
+    const t = e.touches[0];
+    touchStartX.current = t.clientX;
+    touchStartY.current = t.clientY;
+    touchEndX.current = null;
+  };
+
+  const onTouchMove = (e: React.TouchEvent) => {
+    if (!downMd) return;
+    const t = e.touches[0];
+    touchEndX.current = t.clientX;
+  };
+
+  const onTouchEnd = (e: React.TouchEvent) => {
+    if (!downMd) return;
+    if (touchStartX.current == null || touchEndX.current == null) {
+      touchStartX.current = null;
+      touchStartY.current = null;
+      touchEndX.current = null;
+      return;
+    }
+
+    const dx = touchEndX.current - touchStartX.current;
+    const dy = e.changedTouches[0].clientY - (touchStartY.current ?? 0);
+    const absDX = Math.abs(dx);
+    const absDY = Math.abs(dy);
+    const SWIPE_THRESHOLD = 50;
+
+    if (absDX > SWIPE_THRESHOLD && absDX > absDY) {
+      const direction = dx > 0 ? "backward" : "forward";
+      setLastDirection(direction);
+      changePhoto(direction);
+    }
+
+    touchStartX.current = null;
+    touchStartY.current = null;
+    touchEndX.current = null;
+  };
 
   const companyScreens = [
     gabinet_1,
@@ -77,6 +125,7 @@ export default function AboutUsView() {
   ];
 
   const changePhoto = (direction: "forward" | "backward") => {
+    setLastDirection(direction);
     setCurrentPhotoIndex((prev) => {
       if (direction === "forward") {
         return prev ===
@@ -277,15 +326,22 @@ export default function AboutUsView() {
                         borderRadius: "0px",
                         p: "1em",
                         zIndex: "10",
-                        bgcolor: "rgba(0, 0, 0, 0.1)",
                       }}
                       onClick={() => changePhoto("backward")}
+                      disabled={downMd ? true : false}
                     >
-                      <ArrowBackIosIcon sx={{ color: "white" }} />
+                      {downMd ? (
+                        <SwipeLeftIcon sx={{ color: "white" }} />
+                      ) : (
+                        <ArrowBackIosIcon sx={{ color: "white" }} />
+                      )}
                     </IconButton>
                     <AnimatePresence>
                       <Box
                         component={motion.div}
+                        onTouchStart={onTouchStart}
+                        onTouchMove={onTouchMove}
+                        onTouchEnd={onTouchEnd}
                         key={currentPhotoIndex}
                         sx={{
                           position: "absolute",
@@ -301,17 +357,70 @@ export default function AboutUsView() {
                           backgroundRepeat: "no-repeat",
                           zIndex: 0,
                         }}
-                        initial={{ opacity: 0, scale: 1.02 }}
-                        animate={{
-                          opacity: 1,
-                          scale: 1,
-                          transition: { duration: 0.8, ease: "easeOut" },
-                        }}
-                        exit={{
-                          opacity: 0,
-                          scale: 0.98,
-                          transition: { duration: 0.6, ease: "easeInOut" },
-                        }}
+                        initial={
+                          downMd
+                            ? {
+                                x:
+                                  lastDirection === "forward"
+                                    ? 80
+                                    : lastDirection === "backward"
+                                    ? -80
+                                    : 0,
+                                opacity: 0,
+                                scale: 0.98,
+                              }
+                            : { opacity: 0, scale: 1.02 }
+                        }
+                        animate={
+                          downMd
+                            ? {
+                                x: 0,
+                                opacity: 1,
+                                scale: 1,
+                                transition: {
+                                  x: {
+                                    type: "spring",
+                                    stiffness: 300,
+                                    damping: 30,
+                                  },
+                                  opacity: { duration: 0.25 },
+                                },
+                              }
+                            : {
+                                opacity: 1,
+                                scale: 1,
+                                transition: { duration: 0.8, ease: "easeOut" },
+                              }
+                        }
+                        exit={
+                          downMd
+                            ? {
+                                x:
+                                  lastDirection === "forward"
+                                    ? -80
+                                    : lastDirection === "backward"
+                                    ? 80
+                                    : 0,
+                                opacity: 0,
+                                scale: 0.96,
+                                transition: {
+                                  x: {
+                                    type: "spring",
+                                    stiffness: 300,
+                                    damping: 35,
+                                  },
+                                  opacity: { duration: 0.2 },
+                                },
+                              }
+                            : {
+                                opacity: 0,
+                                scale: 0.98,
+                                transition: {
+                                  duration: 0.6,
+                                  ease: "easeInOut",
+                                },
+                              }
+                        }
                       />
                     </AnimatePresence>
 
@@ -321,11 +430,15 @@ export default function AboutUsView() {
                         borderRadius: "0px",
                         p: "1em",
                         zIndex: "10",
-                        bgcolor: "rgba(0, 0, 0, 0.1)",
                       }}
                       onClick={() => changePhoto("forward")}
+                      disabled={downMd ? true : false}
                     >
-                      <ArrowForwardIosIcon sx={{ color: "white" }} />
+                      {downMd ? (
+                        <SwipeRightIcon sx={{ color: "white" }} />
+                      ) : (
+                        <ArrowForwardIosIcon sx={{ color: "white" }} />
+                      )}
                     </IconButton>
                   </Grid>
                 </Grid>

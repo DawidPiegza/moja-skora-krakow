@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { WebsiteLanguageContext } from "../../../../shared/contexts/LanguageContext";
 import {
   Box,
@@ -15,9 +15,8 @@ import { useNavigate } from "react-router";
 import { theme } from "../../../../shared/styles/MUIGlobalStyle";
 import { AnimatePresence, motion } from "framer-motion";
 import type { IServiceCategory } from "../../utils/interfaces/IServiceCategory";
-import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
-import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
-
+import SwipeLeftIcon from "@mui/icons-material/SwipeLeft";
+import SwipeRightIcon from "@mui/icons-material/SwipeRight";
 interface IServiceCategoryCardSmallScreenProps {
   serviceCategoriesList: IServiceCategory[];
 }
@@ -30,8 +29,58 @@ export default function ServiceCategoryCardSmallScreen({
   const { language } = React.useContext(WebsiteLanguageContext);
   const navTo = useNavigate();
   const [currentCardIndex, setCurrentCardIndex] = useState<number>(0);
+  const [lastDirection, setLastDirection] = useState<
+    "forward" | "backward" | null
+  >(null);
+  const touchStartX = useRef<number | null>(null);
+  const touchStartY = useRef<number | null>(null);
+  const touchEndX = useRef<number | null>(null);
+  const swipeHandled = useRef(false);
+
+  const onTouchStart = (e: React.TouchEvent) => {
+    const t = e.touches[0];
+    touchStartX.current = t.clientX;
+    touchStartY.current = t.clientY;
+    touchEndX.current = null;
+    swipeHandled.current = false;
+  };
+
+  const onTouchMove = (e: React.TouchEvent) => {
+    const t = e.touches[0];
+    touchEndX.current = t.clientX;
+  };
+
+  const onTouchEnd = (e: React.TouchEvent) => {
+    if (touchStartX.current == null || touchEndX.current == null) {
+      touchStartX.current = null;
+      touchStartY.current = null;
+      touchEndX.current = null;
+      swipeHandled.current = false;
+      return;
+    }
+
+    const dx = touchEndX.current - touchStartX.current;
+    const dy = e.changedTouches[0].clientY - (touchStartY.current ?? 0);
+    const absDX = Math.abs(dx);
+    const absDY = Math.abs(dy);
+    const SWIPE_THRESHOLD = 50;
+
+    if (absDX > SWIPE_THRESHOLD && absDX > absDY) {
+      swipeHandled.current = true;
+      if (dx > 0) {
+        changePhoto("backward");
+      } else {
+        changePhoto("forward");
+      }
+    }
+
+    touchStartX.current = null;
+    touchStartY.current = null;
+    touchEndX.current = null;
+  };
 
   const changePhoto = (direction: "forward" | "backward") => {
+    setLastDirection(direction);
     setCurrentCardIndex((prev) => {
       if (direction === "forward") {
         return prev === serviceCategoriesList.length - 1 ? 0 : prev + 1;
@@ -55,18 +104,18 @@ export default function ServiceCategoryCardSmallScreen({
     >
       <IconButton
         sx={{
-          height: "calc(100% - 50.5px)",
           borderRadius: "0px",
           p: upSM ? "1em" : "0.5em",
           zIndex: "10",
-          bgcolor: "rgba(0, 0, 0, 0.1)",
         }}
-        onClick={() => changePhoto("backward")}
+        disabled
+        onClick={(e) => e.preventDefault()}
       >
-        <ArrowBackIosIcon sx={{ color: "white" }} />
+        <SwipeLeftIcon sx={{ color: "white" }} />
       </IconButton>
       <AnimatePresence>
         <Card
+          key={currentCardIndex}
           elevation={1}
           component={motion.div}
           sx={{
@@ -77,22 +126,52 @@ export default function ServiceCategoryCardSmallScreen({
             height: "100%",
             zIndex: 0,
           }}
-          initial={{ opacity: 0, scale: 1.02 }}
-          animate={{
-            opacity: 1,
-            scale: 1,
-            transition: { duration: 0.8, ease: "easeOut" },
-          }}
-          exit={{
+          initial={{
+            x:
+              lastDirection === "forward"
+                ? 80
+                : lastDirection === "backward"
+                ? -80
+                : 0,
             opacity: 0,
             scale: 0.98,
-            transition: { duration: 0.6, ease: "easeInOut" },
+          }}
+          animate={{
+            x: 0,
+            opacity: 1,
+            scale: 1,
+            transition: {
+              x: { type: "spring", stiffness: 300, damping: 30 },
+              opacity: { duration: 0.25 },
+              scale: { duration: 0.35 },
+            },
+          }}
+          exit={{
+            x:
+              lastDirection === "forward"
+                ? -80
+                : lastDirection === "backward"
+                ? 80
+                : 0,
+            opacity: 0,
+            scale: 0.96,
+            transition: {
+              x: { type: "spring", stiffness: 300, damping: 35 },
+              opacity: { duration: 0.2 },
+            },
           }}
         >
           <CardActionArea
-            onClick={() =>
-              navTo(serviceCategoriesList[currentCardIndex].categoryURL)
-            }
+            onClick={() => {
+              if (swipeHandled.current) {
+                swipeHandled.current = false;
+                return;
+              }
+              navTo(serviceCategoriesList[currentCardIndex].categoryURL);
+            }}
+            onTouchStart={onTouchStart}
+            onTouchMove={onTouchMove}
+            onTouchEnd={onTouchEnd}
           >
             <Box
               sx={{
@@ -151,15 +230,14 @@ export default function ServiceCategoryCardSmallScreen({
       </AnimatePresence>
       <IconButton
         sx={{
-          height: "calc(100% - 50.5px)",
           borderRadius: "0px",
           p: upSM ? "1em" : "0.5em",
           zIndex: "10",
-          bgcolor: "rgba(0, 0, 0, 0.1)",
         }}
-        onClick={() => changePhoto("forward")}
+        onClick={(e) => e.preventDefault()}
+        disabled
       >
-        <ArrowForwardIosIcon sx={{ color: "white" }} />
+        <SwipeRightIcon sx={{ color: "white" }} />
       </IconButton>
     </Grid>
   );
