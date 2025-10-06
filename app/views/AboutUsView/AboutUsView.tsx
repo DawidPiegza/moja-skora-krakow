@@ -164,7 +164,7 @@ export default function AboutUsView() {
     <React.Fragment>
       {!isLoading && (
         <Container maxWidth="xl">
-          <Grid container spacing={2} paddingTop={2} paddingBottom={"60px"}>
+          <Grid container spacing={2} paddingTop={2}>
             <Grid size={12}>
               <Breadcrumbs aria-label="breadcrumb">
                 <Link
@@ -505,25 +505,6 @@ export default function AboutUsView() {
               />
             </Grid>
           </Grid>
-          <Box
-            width="100%"
-            sx={{ position: "fixed", bottom: 0, left: 0, right: 0 }}
-            component={Paper}
-            zIndex={11}
-            elevation={1}
-          >
-            <BottomNavigation sx={{ width: "100%" }} showLabels>
-              <BottomNavigationAction
-                label="Facebook"
-                icon={<FacebookIcon />}
-              />
-              <BottomNavigationAction label="Google" icon={<GoogleIcon />} />
-              <BottomNavigationAction
-                label="Instagram"
-                icon={<InstagramIcon />}
-              />
-            </BottomNavigation>
-          </Box>
         </Container>
       )}
     </React.Fragment>
