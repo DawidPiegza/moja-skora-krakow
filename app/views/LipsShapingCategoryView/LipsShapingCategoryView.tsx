@@ -12,10 +12,10 @@ import {
 } from "@mui/material";
 import React from "react";
 import { WebsiteLanguageContext } from "../../shared/contexts/LanguageContext";
-import { cosmetologyViewData } from "./data/cosmetologyViewData";
 import { useNavigate } from "react-router";
+import { lipsShapingCategoryData } from "./data/lipsShapingCategoryData";
 
-export default function CosmetologyCategoryView() {
+export default function LipsShapingCategoryView() {
   const { language } = React.useContext(WebsiteLanguageContext);
   const theme = useTheme();
   const downMD = useMediaQuery(theme.breakpoints.down("md"));
@@ -49,7 +49,9 @@ export default function CosmetologyCategoryView() {
                 },
               })}
             >
-              {language.webLanguage === "PL" ? "Kosmetologia" : "Cosmetology"}
+              {language.webLanguage === "PL"
+                ? "Powiększanie i modelowanie ust"
+                : "Lip augmentation and contouring"}
             </Typography>
           </Breadcrumbs>
         </Grid>
@@ -75,13 +77,13 @@ export default function CosmetologyCategoryView() {
                 sx={{ fontWeight: "350" }}
               >
                 {language.webLanguage === "PL"
-                  ? "Kosmetologia".toUpperCase()
-                  : "Cosmetology".toUpperCase()}
+                  ? "Powiększanie i modelowanie ust".toUpperCase()
+                  : "Lip augmentation and contouring".toUpperCase()}
               </Typography>
             </Grid>
           </Grid>
           <Grid size={12} container spacing={2}>
-            {cosmetologyViewData.map((el, index) => (
+            {lipsShapingCategoryData.map((el, index) => (
               <Grid
                 key={index}
                 size={downMD ? 12 : 6}

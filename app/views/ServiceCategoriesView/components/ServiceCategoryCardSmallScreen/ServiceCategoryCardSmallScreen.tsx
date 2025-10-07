@@ -15,8 +15,8 @@ import { useNavigate } from "react-router";
 import { theme } from "../../../../shared/styles/MUIGlobalStyle";
 import { AnimatePresence, motion } from "framer-motion";
 import type { IServiceCategory } from "../../utils/interfaces/IServiceCategory";
-import SwipeLeftIcon from "@mui/icons-material/SwipeLeft";
-import SwipeRightIcon from "@mui/icons-material/SwipeRight";
+import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 interface IServiceCategoryCardSmallScreenProps {
   serviceCategoriesList: IServiceCategory[];
 }
@@ -108,10 +108,11 @@ export default function ServiceCategoryCardSmallScreen({
           p: upSM ? "1em" : "0.5em",
           zIndex: "10",
         }}
-        disabled
-        onClick={(e) => e.preventDefault()}
+        onClick={(e) => {
+          changePhoto("backward");
+        }}
       >
-        <SwipeLeftIcon sx={{ color: "white" }} />
+        <ArrowBackIosIcon sx={{ color: "white" }} />
       </IconButton>
       <AnimatePresence>
         <Card
@@ -234,10 +235,11 @@ export default function ServiceCategoryCardSmallScreen({
           p: upSM ? "1em" : "0.5em",
           zIndex: "10",
         }}
-        onClick={(e) => e.preventDefault()}
-        disabled
+        onClick={(e) => {
+          changePhoto("forward");
+        }}
       >
-        <SwipeRightIcon sx={{ color: "white" }} />
+        <ArrowForwardIosIcon sx={{ color: "white" }} />
       </IconButton>
     </Grid>
   );

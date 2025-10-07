@@ -13,8 +13,16 @@ export default [
     "./views/CosmetologyCategoryView/CosmetologyCategoryView.tsx"
   ),
   route(
-    "/pernament_makeup",
-    "./views/PernamentMakeupCategoryView/PernamentMakeupCategoryView.tsx"
+    "/permanent_makeup",
+    "./views/PermanentMakeupCategoryView/PermanentMakeupCategoryView.tsx"
+  ),
+  route(
+    "/lip_shaping",
+    "./views/LipsShapingCategoryView/LipsShapingCategoryView.tsx"
+  ),
+  route(
+    "/lip_shaping/lip_augmentation_and_contouring",
+    "./views/LipShaping/LipAugmentationAndContouringView/LipAugmentationAndContouringView.tsx"
   ),
   route(
     "/cosmetology/dr_cyj_filler_mesotherapy",

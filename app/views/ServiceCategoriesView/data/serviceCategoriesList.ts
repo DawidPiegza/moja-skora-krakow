@@ -12,7 +12,7 @@ export const serviceCategoriesList: IServiceCategory[] = [
     content:
       "W gabinecie Moja Skóra wykonujemy makijaż permanentny przy użyciu certyfikowanych pigmentów najwyższej jakości, które gwarantują bezpieczeństwo. Specjalizujemy się w delikatnych pigmentacjach z naturalnym wygojeniem. Każdy kształt dobieramy indywidualnie do urody klientki, z subtelnym podkreśleniem rysów twarzy. Stawiamy na estetykę, naturalność i trwały efekt.",
     pictureURL: makijaz_pernamentny,
-    categoryURL: "/pernament_makeup",
+    categoryURL: "/permanent_makeup",
   },
   {
     title: "Kosmetologia",

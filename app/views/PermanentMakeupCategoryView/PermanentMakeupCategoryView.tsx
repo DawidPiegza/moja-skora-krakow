@@ -1,21 +1,18 @@
 import {
   Breadcrumbs,
-  Button,
   Container,
   Divider,
   Grid,
   Link,
-  Paper,
   Typography,
   useMediaQuery,
   useTheme,
 } from "@mui/material";
 import React from "react";
 import { WebsiteLanguageContext } from "../../shared/contexts/LanguageContext";
-import { cosmetologyViewData } from "./data/cosmetologyViewData";
 import { useNavigate } from "react-router";
 
-export default function CosmetologyCategoryView() {
+export default function PermanentMakeupCategoryView() {
   const { language } = React.useContext(WebsiteLanguageContext);
   const theme = useTheme();
   const downMD = useMediaQuery(theme.breakpoints.down("md"));
@@ -49,7 +46,9 @@ export default function CosmetologyCategoryView() {
                 },
               })}
             >
-              {language.webLanguage === "PL" ? "Kosmetologia" : "Cosmetology"}
+              {language.webLanguage === "PL"
+                ? "Makijaż permanentny"
+                : "Permanent makeup"}
             </Typography>
           </Breadcrumbs>
         </Grid>
@@ -75,13 +74,13 @@ export default function CosmetologyCategoryView() {
                 sx={{ fontWeight: "350" }}
               >
                 {language.webLanguage === "PL"
-                  ? "Kosmetologia".toUpperCase()
-                  : "Cosmetology".toUpperCase()}
+                  ? "Makijaż permanentny".toUpperCase()
+                  : "Permanent Makeup".toUpperCase()}
               </Typography>
             </Grid>
           </Grid>
           <Grid size={12} container spacing={2}>
-            {cosmetologyViewData.map((el, index) => (
+            {/* {cosmetologyViewData.map((el, index) => (
               <Grid
                 key={index}
                 size={downMD ? 12 : 6}
@@ -128,7 +127,7 @@ export default function CosmetologyCategoryView() {
                   </Button>
                 </Grid>
               </Grid>
-            ))}
+            ))} */}
           </Grid>
         </Grid>
       </Grid>

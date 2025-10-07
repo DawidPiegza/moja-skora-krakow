@@ -2,8 +2,6 @@ import {
   Accordion,
   AccordionDetails,
   AccordionSummary,
-  BottomNavigation,
-  BottomNavigationAction,
   Box,
   Breadcrumbs,
   Container,
@@ -36,17 +34,11 @@ import gabinet_7 from "../../../public/images/beauty_salon_7.jpeg";
 import gabinet_7_large from "../../../public/images/beauty_salon_7_large.jpeg";
 import gabinet_8 from "../../../public/images/beauty_salon_8.jpeg";
 import gabinet_8_large from "../../../public/images/beauty_salon_8_large.jpeg";
-
 import { AboutCompanyText } from "./data/AboutCompanyText";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import { AnimatePresence, motion } from "framer-motion";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import FacebookIcon from "@mui/icons-material/Facebook";
-import InstagramIcon from "@mui/icons-material/Instagram";
-import GoogleIcon from "@mui/icons-material/Google";
-import SwipeLeftIcon from "@mui/icons-material/SwipeLeft";
-import SwipeRightIcon from "@mui/icons-material/SwipeRight";
 
 export default function AboutUsView() {
   const { language } = React.useContext(WebsiteLanguageContext);
@@ -328,13 +320,8 @@ export default function AboutUsView() {
                         zIndex: "10",
                       }}
                       onClick={() => changePhoto("backward")}
-                      disabled={downMd ? true : false}
                     >
-                      {downMd ? (
-                        <SwipeLeftIcon sx={{ color: "white" }} />
-                      ) : (
-                        <ArrowBackIosIcon sx={{ color: "white" }} />
-                      )}
+                      <ArrowBackIosIcon sx={{ color: "white" }} />
                     </IconButton>
                     <AnimatePresence>
                       <Box
@@ -432,13 +419,8 @@ export default function AboutUsView() {
                         zIndex: "10",
                       }}
                       onClick={() => changePhoto("forward")}
-                      disabled={downMd ? true : false}
                     >
-                      {downMd ? (
-                        <SwipeRightIcon sx={{ color: "white" }} />
-                      ) : (
-                        <ArrowForwardIosIcon sx={{ color: "white" }} />
-                      )}
+                      <ArrowForwardIosIcon sx={{ color: "white" }} />
                     </IconButton>
                   </Grid>
                 </Grid>
