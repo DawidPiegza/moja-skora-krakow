@@ -21,6 +21,10 @@ import RepeatIcon from "@mui/icons-material/Repeat";
 import EventRepeatIcon from "@mui/icons-material/EventRepeat";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import lip_augmentation_and_contouring from "../../../../public/images/lip_augmentation_and_contouring.jpeg";
+import lip_augmentation_and_contouring_effect_1 from "../../../../public/images/lip_augmentation_and_contouring_effect_1.jpeg";
+import lip_augmentation_and_contouring_effect_2 from "../../../../public/images/lip_augmentation_and_contouring_effect_2.jpeg";
+import lip_augmentation_and_contouring_effect_3 from "../../../../public/images/lip_augmentation_and_contouring_effect_3.jpeg";
+import lip_augmentation_and_contouring_effect_4 from "../../../../public/images/lip_augmentation_and_contouring_effect_4.jpeg";
 import {
   lipAugmentationAndContouringDataPL,
   lipAugmentationAndContouringDataEN,
@@ -631,27 +635,55 @@ export default function LipAugmentationAndContouringView() {
                   : "BEFORE AND AFTER TREATMENT"}
               </Typography>
             </Grid>
-            <Grid size={downMd ? 12 : 6}>
-              <Box
-                component="img"
-                sx={{
-                  height: "100%",
-                  width: "100%",
-                }}
-                alt="The house from the offer."
-                src={lip_augmentation_and_contouring}
-              />
-            </Grid>
-            <Grid size={downMd ? 12 : 6}>
-              <Box
-                component="img"
-                sx={{
-                  height: "100%",
-                  width: "100%",
-                }}
-                alt="The house from the offer."
-                src={lip_augmentation_and_contouring}
-              />
+            <Grid size={12} container spacing={3}>
+              <Grid size={downMd ? 12 : 6}>
+                <Box
+                  p={2}
+                  component="img"
+                  sx={{
+                    height: "100%",
+                    width: "100%",
+                  }}
+                  alt="The house from the offer."
+                  src={lip_augmentation_and_contouring_effect_4}
+                />
+              </Grid>
+              <Grid size={downMd ? 12 : 6}>
+                <Box
+                  p={2}
+                  component="img"
+                  sx={{
+                    height: "100%",
+                    width: "100%",
+                  }}
+                  alt="The house from the offer."
+                  src={lip_augmentation_and_contouring_effect_3}
+                />
+              </Grid>
+              <Grid size={downMd ? 12 : 6}>
+                <Box
+                  p={2}
+                  component="img"
+                  sx={{
+                    height: "100%",
+                    width: "100%",
+                  }}
+                  alt="The house from the offer."
+                  src={lip_augmentation_and_contouring_effect_1}
+                />
+              </Grid>
+              <Grid size={downMd ? 12 : 6}>
+                <Box
+                  p={2}
+                  component="img"
+                  sx={{
+                    height: "100%",
+                    width: "100%",
+                  }}
+                  alt="The house from the offer."
+                  src={lip_augmentation_and_contouring_effect_2}
+                />
+              </Grid>
             </Grid>
           </Grid>
         </Grid>
