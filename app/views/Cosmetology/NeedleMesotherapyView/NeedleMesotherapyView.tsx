@@ -271,8 +271,8 @@ export default function NeedleMesotherapyView() {
               fontStyle="italic"
             >
               {language.webLanguage === "PL"
-                ? "WSKAZANIA DO ZABIEGU"
-                : "INDICATIONS FOR THE TREATMENT"}
+                ? "PRZECIWWSKAZANIA DO ZABIEGU"
+                : "CONTRAINDICATIONS FOR THE TREATMENT"}
             </Typography>
 
             {language.webLanguage === "PL" &&
@@ -351,6 +351,32 @@ export default function NeedleMesotherapyView() {
                   - {effect}
                 </Typography>
               ))}
+          </Grid>
+          <Grid size={12}>
+            <Divider />
+          </Grid>
+          <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
+            <Typography
+              variant={downMd ? "body1" : "h6"}
+              textAlign="left"
+              sx={{ fontWeight: "200" }}
+              width={"100%"}
+              fontStyle="italic"
+            >
+              {language.webLanguage === "PL"
+                ? "JAK SIĘ PRZYGOTOWAĆ DO ZABIEGU?"
+                : "HOW TO PREPARE FOR THE TREATMENT?"}
+            </Typography>
+            <Typography
+              variant={downMd ? "body2" : "body1"}
+              textAlign="left"
+              width={"100%"}
+              gutterBottom
+            >
+              {language.webLanguage === "PL"
+                ? needleMesotherapyDataPL.preparationForTreatment
+                : needleMesotherapyDataEN.preparationForTreatment}
+            </Typography>
           </Grid>
           <Grid size={12}>
             <Divider />

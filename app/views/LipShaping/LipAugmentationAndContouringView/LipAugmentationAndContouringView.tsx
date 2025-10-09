@@ -25,6 +25,9 @@ import lip_augmentation_and_contouring_effect_1 from "../../../../public/images/
 import lip_augmentation_and_contouring_effect_2 from "../../../../public/images/lip_augmentation_and_contouring_effect_2.jpeg";
 import lip_augmentation_and_contouring_effect_3 from "../../../../public/images/lip_augmentation_and_contouring_effect_3.jpeg";
 import lip_augmentation_and_contouring_effect_4 from "../../../../public/images/lip_augmentation_and_contouring_effect_4.jpeg";
+import lip_augmentation_and_contouring_effect_5 from "../../../../public/images/lip_augmentation_and_contouring_effect_5.jpeg";
+import lip_augmentation_and_contouring_effect_6 from "../../../../public/images/lip_augmentation_and_contouring_effect_6.jpeg";
+
 import {
   lipAugmentationAndContouringDataPL,
   lipAugmentationAndContouringDataEN,
@@ -322,7 +325,7 @@ export default function LipAugmentationAndContouringView() {
               fontStyle="italic"
             >
               {language.webLanguage === "PL"
-                ? "PRZECIWWSKAZANIA ABSOLUTNE:"
+                ? "PRZECIWWSKAZANIA BEZWZGLĘDNE:"
                 : "ABSOLUTE CONTRAINDICATIONS:"}
             </Typography>
             {language.webLanguage === "PL" &&
@@ -376,7 +379,7 @@ export default function LipAugmentationAndContouringView() {
               fontStyle="italic"
             >
               {language.webLanguage === "PL"
-                ? "PRZECIWWSKAZANIA RELATYWNE:"
+                ? "PRZECIWWSKAZANIA WZGLĘDNE:"
                 : "RELATIVE CONTRAINDICATIONS:"}
             </Typography>
             {language.webLanguage === "PL" &&
@@ -682,6 +685,30 @@ export default function LipAugmentationAndContouringView() {
                   }}
                   alt="The house from the offer."
                   src={lip_augmentation_and_contouring_effect_2}
+                />
+              </Grid>
+              <Grid size={downMd ? 12 : 6}>
+                <Box
+                  p={2}
+                  component="img"
+                  sx={{
+                    height: "100%",
+                    width: "100%",
+                  }}
+                  alt="The house from the offer."
+                  src={lip_augmentation_and_contouring_effect_5}
+                />
+              </Grid>
+              <Grid size={downMd ? 12 : 6}>
+                <Box
+                  p={2}
+                  component="img"
+                  sx={{
+                    height: "100%",
+                    width: "100%",
+                  }}
+                  alt="The house from the offer."
+                  src={lip_augmentation_and_contouring_effect_6}
                 />
               </Grid>
             </Grid>
