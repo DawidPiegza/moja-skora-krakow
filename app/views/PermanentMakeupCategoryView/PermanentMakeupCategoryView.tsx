@@ -1,9 +1,11 @@
 import {
   Breadcrumbs,
+  Button,
   Container,
   Divider,
   Grid,
   Link,
+  Paper,
   Typography,
   useMediaQuery,
   useTheme,
@@ -11,6 +13,7 @@ import {
 import React from "react";
 import { WebsiteLanguageContext } from "../../shared/contexts/LanguageContext";
 import { useNavigate } from "react-router";
+import { pernamentMakeUpCategoryData } from "./data/pernamentMakeUpCategoryData";
 
 export default function PermanentMakeupCategoryView() {
   const { language } = React.useContext(WebsiteLanguageContext);
@@ -80,7 +83,7 @@ export default function PermanentMakeupCategoryView() {
             </Grid>
           </Grid>
           <Grid size={12} container spacing={2}>
-            {/* {cosmetologyViewData.map((el, index) => (
+            {pernamentMakeUpCategoryData.map((el, index) => (
               <Grid
                 key={index}
                 size={downMD ? 12 : 6}
@@ -127,7 +130,7 @@ export default function PermanentMakeupCategoryView() {
                   </Button>
                 </Grid>
               </Grid>
-            ))} */}
+            ))}
           </Grid>
         </Grid>
       </Grid>

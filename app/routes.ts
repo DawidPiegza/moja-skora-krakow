@@ -17,6 +17,10 @@ export default [
     "./views/PermanentMakeupCategoryView/PermanentMakeupCategoryView.tsx"
   ),
   route(
+    "/permanent_makeup/permanent_eyebrow_makeup",
+    "./views/PernamentMakeup/PermanentEyebrowMakeupView/PermanentEyebrowMakeupView.tsx"
+  ),
+  route(
     "/lip_shaping",
     "./views/LipsShapingCategoryView/LipsShapingCategoryView.tsx"
   ),
@@ -52,6 +56,7 @@ export default [
     "/cosmetology/tissue_stimulators",
     "./views/Cosmetology/TissueStimulatorsView/TissueStimulatorsView.tsx"
   ),
+
   route(
     "/consultation",
     "./views/Consultation/ConsultationServiceView/ConsultationServiceView.tsx"
