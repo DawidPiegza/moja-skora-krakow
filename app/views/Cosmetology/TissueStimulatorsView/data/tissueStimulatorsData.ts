@@ -1,7 +1,8 @@
 import type { ITissueStimulator } from "../utils/interfaces/ITissueStimulator";
 
 export const tissueStimulatorsDataPL: ITissueStimulator = {
-  overview: `Zalecana ilość: 2- 4 zabiegiMEZO\nCzas trwania zabiegu: 45- 60 min\nOdstępy między zabiegami: 3- 4 tygodnie\n\nCZYM SĄ STYMULATORY TKANKOWE?\nStymulatory tkankowe to preparaty do iniekcji, które mają na celu odmłodzenie struktury skóry poprzez jej silną regenerację, odnowę i przebudowę. Działają one poprzez intensywną stymulację fibroblastów do produkcji kolagenu i elastyny – białek odpowiedzialnych za jędrność, gęstość oraz elastyczność skóry. W naszym gabinecie wykorzystujemy stymulatory tkankowe oparte na najwyższej jakości składnikach, takich jak kwas hialuronowy, aminokwasy, polinukleotydy oraz kolagen. Dobór odpowiedniego preparatu zależy od jakości skóry Klienta, jego potrzeb oraz oczekiwań.\nZabieg z użyciem stymulatorów tkankowych jest odpowiedni zarówno dla osób młodszych, jako profilaktyka przeciwzmarszczkowa, jak i dla osób dojrzałych, które borykają się z już widocznymi oznakami starzenia skóry.`,
+  overview:
+    "Stymulatory tkankowe to preparaty do iniekcji, które mają na celu odmłodzenie struktury skóry poprzez jej silną regenerację, odnowę i przebudowę. Działają one poprzez intensywną stymulację fibroblastów do produkcji kolagenu i elastyny – białek odpowiedzialnych za jędrność, gęstość oraz elastyczność skóry. W naszym gabinecie wykorzystujemy stymulatory tkankowe oparte na najwyższej jakości składnikach, takich jak kwas hialuronowy, aminokwasy, polinukleotydy oraz kolagen. Dobór odpowiedniego preparatu zależy od jakości skóry Klienta, jego potrzeb oraz oczekiwań. Zabieg z użyciem stymulatorów tkankowych jest odpowiedni zarówno dla osób młodszych, jako profilaktyka przeciwzmarszczkowa, jak i dla osób dojrzałych, które borykają się z już widocznymi oznakami starzenia skóry.",
   infoTable: {
     recommendedNumber: "2-4 zabiegi",
     timeOfTreatment: "45-60 min",
@@ -63,8 +64,8 @@ export const tissueStimulatorsDataPL: ITissueStimulator = {
   preparationForTreatment: [
     "24h przed zabiegiem nie należy pić kawy, napojów energetycznych oraz alkoholu",
     "48h przed zabiegiem nie zażywaj leków przeciwbólowych i przeciwzapalnych, przeciwzakrzepowych",
-    "w dniu zabiegu ogranicz palenie tytoniu",
-    "w dniu zabiegu nie należy korzystać z sauny, basenu i gorących kąpieli",
+    "W dniu zabiegu ogranicz palenie tytoniu",
+    "W dniu zabiegu nie należy korzystać z sauny, basenu i gorących kąpieli",
     "2-3 dni przed zabiegiem zadbaj o odpowiednie nawodnienie (wypij 2- 3 litry wody dziennie)",
   ],
   postTreatmentRecommendations: [
@@ -99,7 +100,8 @@ export const tissueStimulatorsDataPL: ITissueStimulator = {
 };
 
 export const tissueStimulatorsDataEN: ITissueStimulator = {
-  overview: `Recommended number of treatments: 2–4 sessions\nDuration: 45–60 minutes\nIntervals between sessions: every 3–4 weeks\n\nWHAT ARE TISSUE STIMULATORS?\nTissue stimulators are injectable products designed to rejuvenate the skin’s structure through intensive regeneration, renewal, and remodeling. They work by strongly stimulating fibroblasts to produce collagen and elastin—proteins responsible for skin firmness, density, and elasticity.\nAt our clinic, we use top-quality stimulators based on ingredients such as hyaluronic acid, amino acids, polynucleotides, and collagen. The appropriate product is selected individually, depending on the client’s skin condition, needs, and expectations.\nThis treatment is suitable both for younger individuals as a preventive anti-aging measure and for more mature clients who are already experiencing visible signs of skin aging.`,
+  overview:
+    "Tissue stimulators are injectable products designed to rejuvenate the skin’s structure through intensive regeneration, renewal, and remodeling. They work by strongly stimulating fibroblasts to produce collagen and elastin—proteins responsible for skin firmness, density, and elasticity. At our clinic, we use top-quality stimulators based on ingredients such as hyaluronic acid, amino acids, polynucleotides, and collagen. The appropriate product is selected individually, depending on the client’s skin condition, needs, and expectations. This treatment is suitable both for younger individuals as a preventive anti-aging measure and for more mature clients who are already experiencing visible signs of skin aging.",
   infoTable: {
     recommendedNumber: "2–4 sessions",
     timeOfTreatment: "45–60 minutes",

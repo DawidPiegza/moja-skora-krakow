@@ -75,8 +75,22 @@ export const cosmetologyViewData: ICategoryViewData[] = [
     eng: {
       title: "Cavitation peeling",
       description:
-        "Cavitation peeling is a safe and non-invasive method of skin cleansing that uses ultrasonic waves to remove dead skin cells, impurities, excess sebum, cosmetic residues, and bacteria. Thanks to the phenomenon of cavitation, microscopic bubbles form on the moistened skin, which burst under the influence of ultrasonic vibrations, gently breaking down the keratinized epidermis. This makes the treatment exceptionally gentle yet effective even in the deeper layers of the skin—unlike traditional mechanical or enzymatic exfoliation. The result of the treatment is immediate skin cleansing and refreshment, improved oxygenation, brighter skin tone, and better absorption of active ingredients applied afterward—enhancing their effectiveness.",
+        "Stymulatory tkankowe to preparaty do iniekcji, które mają na celu odmłodzenie struktury skóry poprzez jej silną regenerację, odnowę i przebudowę. Działają one poprzez intensywną stymulację fibroblastów do produkcji kolagenu i elastyny – białek odpowiedzialnych za jędrność, gęstość oraz elastyczność skóry. W naszym gabinecie wykorzystujemy stymulatory tkankowe oparte na najwyższej jakości składnikach, takich jak kwas hialuronowy, aminokwasy, polinukleotydy oraz kolagen. Dobór odpowiedniego preparatu zależy od jakości skóry Klienta, jego potrzeb oraz oczekiwań. Zabieg z użyciem stymulatorów tkankowych jest odpowiedni zarówno dla osób młodszych, jako profilaktyka przeciwzmarszczkowa, jak i dla osób dojrzałych, które borykają się z już widocznymi oznakami starzenia skóry.",
       navigateURL: "cavitation_peeling",
+    },
+  },
+  {
+    pl: {
+      title: "Stymulatory tkankowe",
+      description:
+        "Stymulatory tkankowe to preparaty do iniekcji, które mają na celu odmłodzenie struktury skóry poprzez jej silną regenerację, odnowę i przebudowę. Działają one poprzez intensywną stymulację fibroblastów do produkcji kolagenu i elastyny – białek odpowiedzialnych za jędrność, gęstość oraz elastyczność skóry. W naszym gabinecie wykorzystujemy stymulatory tkankowe oparte na najwyższej jakości składnikach, takich jak kwas hialuronowy, aminokwasy, polinukleotydy oraz kolagen. Dobór odpowiedniego preparatu zależy od jakości skóry Klienta, jego potrzeb oraz oczekiwań. Zabieg z użyciem stymulatorów tkankowych jest odpowiedni zarówno dla osób młodszych, jako profilaktyka przeciwzmarszczkowa, jak i dla osób dojrzałych, które borykają się z już widocznymi oznakami starzenia skóry.",
+      navigateURL: "tissue_stimulators",
+    },
+    eng: {
+      title: "Tissue stimulators",
+      description:
+        "Tissue stimulators are injectable products designed to rejuvenate the skin’s structure through intensive regeneration, renewal, and remodeling. They work by strongly stimulating fibroblasts to produce collagen and elastin—proteins responsible for skin firmness, density, and elasticity. At our clinic, we use top-quality stimulators based on ingredients such as hyaluronic acid, amino acids, polynucleotides, and collagen. The appropriate product is selected individually, depending on the client’s skin condition, needs, and expectations. This treatment is suitable both for younger individuals as a preventive anti-aging measure and for more mature clients who are already experiencing visible signs of skin aging.",
+      navigateURL: "tissue_stimulators ",
     },
   },
 ];

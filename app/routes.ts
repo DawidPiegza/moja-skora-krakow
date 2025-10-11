@@ -49,6 +49,10 @@ export default [
     "./views/Cosmetology/CavitationPeelingView/CavitationPeelingView.tsx"
   ),
   route(
+    "/cosmetology/tissue_stimulators",
+    "./views/Cosmetology/TissueStimulatorsView/TissueStimulatorsView.tsx"
+  ),
+  route(
     "/consultation",
     "./views/Consultation/ConsultationServiceView/ConsultationServiceView.tsx"
   ),
