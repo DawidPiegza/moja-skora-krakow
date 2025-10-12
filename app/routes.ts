@@ -9,8 +9,8 @@ export default [
   route("/voucher_statute", "./views/VoucherStatueView/VoucherStatueView.tsx"),
   route("/voucher", "./views/ClinicVoucherView/ClinicVoucherView.tsx"),
   route(
-    "/cosmetology",
-    "./views/CosmetologyCategoryView/CosmetologyCategoryView.tsx"
+    "/consultation",
+    "./views/Consultation/ConsultationServiceView/ConsultationServiceView.tsx"
   ),
   route(
     "/permanent_makeup",
@@ -31,6 +31,10 @@ export default [
   route(
     "/lip_shaping/lip_augmentation_and_contouring",
     "./views/LipShaping/LipAugmentationAndContouringView/LipAugmentationAndContouringView.tsx"
+  ),
+  route(
+    "/cosmetology",
+    "./views/CosmetologyCategoryView/CosmetologyCategoryView.tsx"
   ),
   route(
     "/cosmetology/dr_cyj_filler_mesotherapy",
@@ -60,9 +64,8 @@ export default [
     "/cosmetology/tissue_stimulators",
     "./views/Cosmetology/TissueStimulatorsView/TissueStimulatorsView.tsx"
   ),
-
   route(
-    "/consultation",
-    "./views/Consultation/ConsultationServiceView/ConsultationServiceView.tsx"
+    "/cosmetology/laser_removal_of_permanent_makeup_and_tattoos",
+    "./views/Cosmetology/LaserRemovalOfPermanentMakeupAndTattoosView/LaserRemovalOfPermanentMakeupAndTattoosView.tsx"
   ),
 ] satisfies RouteConfig;

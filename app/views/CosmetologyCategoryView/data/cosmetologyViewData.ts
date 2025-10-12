@@ -93,4 +93,18 @@ export const cosmetologyViewData: ICategoryViewData[] = [
       navigateURL: "tissue_stimulators ",
     },
   },
+  {
+    pl: {
+      title: "Laserowe usuwanie makijażu permanentnego i tatuażu",
+      description:
+        "Podczas usuwania makijażu permanentnego lub tatuażu laser emituje światło o długości fali 532 nm albo 1064 nm – w zależności od rodzaju pigmentu. Technologia Q-switch nie narusza naskórka lub powoduje jedynie minimalne jego uszkodzenie. W miejscu zabiegu pojawia się łagodny stan zapalny, który aktywuje układ immunologiczny – makrofagi usuwają wówczas rozbite na mniejsze fragmenty cząsteczki barwnika.",
+      navigateURL: "laser_removal_of_permanent_makeup_and_tattoos",
+    },
+    eng: {
+      title: "Laser Removal of permanent makeup and tattoos",
+      description:
+        "Laser tattoo and permanent makeup removal is a safe and effective method for gradually lightening or completely removing unwanted pigmentation from the skin. Using a specialized Q-switched laser, short and high-intensity pulses of light precisely break down pigment particles embedded in the dermis. These fragmented particles are then naturally eliminated by the body's immune system over the following weeks. This method allows for the reduction or full removal of tattoos and permanent makeup with minimal risk of scarring or damage to the surrounding skin, provided all safety protocols are followed.",
+      navigateURL: "laser_removal_of_permanent_makeup_and_tattoos",
+    },
+  },
 ];
