@@ -20,24 +20,22 @@ import GoogleIcon from "@mui/icons-material/Google";
 import RepeatIcon from "@mui/icons-material/Repeat";
 import EventRepeatIcon from "@mui/icons-material/EventRepeat";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
-import permanent_eyebrow_makeup_effect_0 from "../../../../public/images/permanent_eyebrow_makeup_effect_0.png";
-import permanent_eyebrow_makeup_effect_1 from "../../../../public/images/permanent_eyebrow_makeup_effect_1.png";
-import permanent_eyebrow_makeup_effect_2 from "../../../../public/images/permanent_eyebrow_makeup_effect_2.png";
-import permanent_eyebrow_makeup_effect_3 from "../../../../public/images/permanent_eyebrow_makeup_effect_3.png";
-import permanent_eyebrow_makeup_effect_4 from "../../../../public/images/permanent_eyebrow_makeup_effect_4.png";
-import permanent_eyebrow_makeup_effect_5 from "../../../../public/images/permanent_eyebrow_makeup_effect_5.png";
-import permanent_eyebrow_makeup_effect_6 from "../../../../public/images/permanent_eyebrow_makeup_effect_6.png";
-import permanent_eyebrow_makeup_effect_7 from "../../../../public/images/permanent_eyebrow_makeup_effect_7.png";
-import permanent_eyebrow_makeup_effect_8 from "../../../../public/images/permanent_eyebrow_makeup_effect_8.png";
-import permanent_eyebrow_makeup_effect_9 from "../../../../public/images/permanent_eyebrow_makeup_effect_9.png";
+import permanent_lip_makeup_effect_0 from "../../../../public/images/permanent_lip_makeup_effect_0.png";
+import permanent_lip_makeup_effect_1 from "../../../../public/images/permanent_lip_makeup_effect_1.png";
+import permanent_lip_makeup_effect_2 from "../../../../public/images/permanent_lip_makeup_effect_2.png";
+import permanent_lip_makeup_effect_5 from "../../../../public/images/permanent_lip_makeup_effect_5.png";
+import permanent_lip_makeup_effect_6 from "../../../../public/images/permanent_lip_makeup_effect_6.png";
+import permanent_lip_makeup_effect_7 from "../../../../public/images/permanent_lip_makeup_effect_7.png";
+import permanent_lip_makeup_effect_8 from "../../../../public/images/permanent_lip_makeup_effect_8.png";
+import permanent_lip_makeup_effect_9 from "../../../../public/images/permanent_lip_makeup_effect_9.png";
+import permanent_lip_makeup from "../../../../public/images/permanent_lip_makeup.png";
 
 import {
-  pernamentEyebrowMakeupDataPL,
-  pernamentEyebrowMakeupDataEN,
-} from "./data/pernamentEyebrowMakeupData";
-import permanent_eyebrow_makeup from "../../../../public/images/permanent_eyebrow_makeup.png";
+  permanentLipMakeupDataPL,
+  permanentLipMakeupDataEN,
+} from "./data/permanentLipMakeupData";
 
-export default function PermanentEyebrowMakeupView() {
+export default function PermanentLipMakeupView() {
   const { language } = React.useContext(WebsiteLanguageContext);
   const theme = useTheme();
   const downMd = useMediaQuery(theme.breakpoints.down("md"));
@@ -86,8 +84,8 @@ export default function PermanentEyebrowMakeupView() {
               })}
             >
               {language.webLanguage === "PL"
-                ? "Makijaż pernamentny brwi"
-                : "Permanent eyebrow makeup"}
+                ? "Makijaż pernamentny ust"
+                : "Permanent lip makeup"}
             </Typography>
           </Breadcrumbs>
         </Grid>
@@ -109,8 +107,8 @@ export default function PermanentEyebrowMakeupView() {
               sx={{ fontWeight: "350" }}
             >
               {language.webLanguage === "PL"
-                ? "Makijaż pernamentny brwi".toUpperCase()
-                : "Permanent eyebrow makeup".toUpperCase()}
+                ? "Makijaż permanentny ust".toUpperCase()
+                : "Permanent lip makeup".toUpperCase()}
             </Typography>
           </Grid>
         </Grid>
@@ -132,8 +130,8 @@ export default function PermanentEyebrowMakeupView() {
               <AccessTimeIcon fontSize="medium" sx={{ color: "#616161" }} />
               <Typography variant="body1" fontWeight={400}>
                 {language.webLanguage === "PL"
-                  ? pernamentEyebrowMakeupDataPL.infoTable.timeOfTreatment
-                  : pernamentEyebrowMakeupDataEN.infoTable.timeOfTreatment}
+                  ? permanentLipMakeupDataPL.infoTable.timeOfTreatment
+                  : permanentLipMakeupDataEN.infoTable.timeOfTreatment}
               </Typography>
               <Typography variant="body2" fontWeight={300}>
                 {language.webLanguage === "PL"
@@ -159,8 +157,8 @@ export default function PermanentEyebrowMakeupView() {
               <RepeatIcon fontSize="medium" sx={{ color: "#616161" }} />
               <Typography variant="body1" fontWeight={400}>
                 {language.webLanguage === "PL"
-                  ? pernamentEyebrowMakeupDataPL.infoTable.recommendedNumber
-                  : pernamentEyebrowMakeupDataEN.infoTable.recommendedNumber}
+                  ? permanentLipMakeupDataPL.infoTable.recommendedNumber
+                  : permanentLipMakeupDataEN.infoTable.recommendedNumber}
               </Typography>
               <Typography variant="body2" fontWeight={300}>
                 {language.webLanguage === "PL"
@@ -186,8 +184,8 @@ export default function PermanentEyebrowMakeupView() {
               <EventRepeatIcon fontSize="medium" sx={{ color: "#616161" }} />
               <Typography variant="body1" fontWeight={400}>
                 {language.webLanguage === "PL"
-                  ? pernamentEyebrowMakeupDataPL.infoTable.intervals
-                  : pernamentEyebrowMakeupDataEN.infoTable.intervals}
+                  ? permanentLipMakeupDataPL.infoTable.intervals
+                  : permanentLipMakeupDataEN.infoTable.intervals}
               </Typography>
               <Typography variant="body2" fontWeight={300}>
                 {language.webLanguage === "PL"
@@ -206,7 +204,7 @@ export default function PermanentEyebrowMakeupView() {
                 width: "100%",
               }}
               alt="The house from the offer."
-              src={permanent_eyebrow_makeup}
+              src={permanent_lip_makeup}
             />
           </Grid>
           <Grid size={downMd ? 12 : 8} p={1} container spacing={3}>
@@ -217,8 +215,8 @@ export default function PermanentEyebrowMakeupView() {
                 width={"100%"}
               >
                 {language.webLanguage === "PL"
-                  ? pernamentEyebrowMakeupDataPL.overview
-                  : pernamentEyebrowMakeupDataEN.overview}
+                  ? permanentLipMakeupDataPL.overview
+                  : permanentLipMakeupDataEN.overview}
               </Typography>
             </Grid>
             <Grid size={12}>
@@ -233,11 +231,11 @@ export default function PermanentEyebrowMakeupView() {
                 fontStyle="italic"
               >
                 {language.webLanguage === "PL"
-                  ? "Dla kogo przeznaczony jest zabieg makijażu permanentnego brwi?".toUpperCase()
-                  : "WHO IS THE PERMANENT EYEBROW MAKEUP PROCEDURE FOR?".toUpperCase()}
+                  ? "Dla kogo przeznaczony jest zabieg makijażu permanentnego ust?".toUpperCase()
+                  : "WHO IS THE PERMANENT LIP MAKEUP PROCEDURE FOR?".toUpperCase()}
               </Typography>
               {language.webLanguage === "PL" &&
-                pernamentEyebrowMakeupDataPL.treatementRecommendation.map(
+                permanentLipMakeupDataPL.treatementRecommendation.map(
                   (recomendation, index) => (
                     <Typography
                       variant={downMd ? "body2" : "body1"}
@@ -250,7 +248,7 @@ export default function PermanentEyebrowMakeupView() {
                   )
                 )}
               {language.webLanguage === "ENG" &&
-                pernamentEyebrowMakeupDataEN.treatementRecommendation.map(
+                permanentLipMakeupDataEN.treatementRecommendation.map(
                   (recomendation, index) => (
                     <Typography
                       variant={downMd ? "body2" : "body1"}
@@ -279,7 +277,7 @@ export default function PermanentEyebrowMakeupView() {
                   : "HOW TO PREPARE FOR THE PROCEDURE?"}
               </Typography>
               {language.webLanguage === "PL" &&
-                pernamentEyebrowMakeupDataPL.preparationForTreatment.map(
+                permanentLipMakeupDataPL.preparationForTreatment.map(
                   (preparation, index) => (
                     <Typography
                       variant={downMd ? "body2" : "body1"}
@@ -292,7 +290,7 @@ export default function PermanentEyebrowMakeupView() {
                   )
                 )}
               {language.webLanguage === "ENG" &&
-                pernamentEyebrowMakeupDataEN.preparationForTreatment.map(
+                permanentLipMakeupDataEN.preparationForTreatment.map(
                   (preparation, index) => (
                     <Typography
                       variant={downMd ? "body2" : "body1"}
@@ -329,7 +327,7 @@ export default function PermanentEyebrowMakeupView() {
                 : "ABSOLUTE CONTRAINDICATIONS:"}
             </Typography>
             {language.webLanguage === "PL" &&
-              pernamentEyebrowMakeupDataPL.contraindications.absolute.map(
+              permanentLipMakeupDataPL.contraindications.absolute.map(
                 (contrindication, index) => (
                   <Typography
                     variant={downMd ? "body2" : "body1"}
@@ -342,7 +340,7 @@ export default function PermanentEyebrowMakeupView() {
                 )
               )}
             {language.webLanguage === "ENG" &&
-              pernamentEyebrowMakeupDataEN.contraindications.absolute.map(
+              permanentLipMakeupDataEN.contraindications.absolute.map(
                 (contrindication, index) => (
                   <Typography
                     variant={downMd ? "body2" : "body1"}
@@ -383,7 +381,7 @@ export default function PermanentEyebrowMakeupView() {
                 : "RELATIVE CONTRAINDICATIONS:"}
             </Typography>
             {language.webLanguage === "PL" &&
-              pernamentEyebrowMakeupDataPL.contraindications.relative.map(
+              permanentLipMakeupDataPL.contraindications.relative.map(
                 (contrindication, index) => (
                   <Typography
                     variant={downMd ? "body2" : "body1"}
@@ -396,7 +394,7 @@ export default function PermanentEyebrowMakeupView() {
                 )
               )}
             {language.webLanguage === "ENG" &&
-              pernamentEyebrowMakeupDataEN.contraindications.relative.map(
+              permanentLipMakeupDataEN.contraindications.relative.map(
                 (contrindication, index) => (
                   <Typography
                     variant={downMd ? "body2" : "body1"}
@@ -425,49 +423,45 @@ export default function PermanentEyebrowMakeupView() {
                 : "HOW DOES THE TREATMENT WORK?"}
             </Typography>
             {language.webLanguage === "PL" &&
-              pernamentEyebrowMakeupDataPL.courseOfTreatment.map(
-                (item, index) => (
-                  <React.Fragment key={index}>
-                    <Typography
-                      variant={downMd ? "body2" : "body1"}
-                      textAlign="left"
-                      width="100%"
-                    >
-                      {index + 1}. {item.title}
-                    </Typography>
-                    <Typography
-                      variant={downMd ? "body2" : "body1"}
-                      textAlign="left"
-                      width="100%"
-                      fontWeight={300}
-                    >
-                      {item.description}
-                    </Typography>
-                  </React.Fragment>
-                )
-              )}
+              permanentLipMakeupDataPL.courseOfTreatment.map((item, index) => (
+                <React.Fragment key={index}>
+                  <Typography
+                    variant={downMd ? "body2" : "body1"}
+                    textAlign="left"
+                    width="100%"
+                  >
+                    {index + 1}. {item.title}
+                  </Typography>
+                  <Typography
+                    variant={downMd ? "body2" : "body1"}
+                    textAlign="left"
+                    width="100%"
+                    fontWeight={300}
+                  >
+                    {item.description}
+                  </Typography>
+                </React.Fragment>
+              ))}
             {language.webLanguage === "ENG" &&
-              pernamentEyebrowMakeupDataEN.courseOfTreatment.map(
-                (item, index) => (
-                  <React.Fragment key={index}>
-                    <Typography
-                      variant={downMd ? "body2" : "body1"}
-                      textAlign="left"
-                      width="100%"
-                    >
-                      {index + 1}. {item.title}
-                    </Typography>
-                    <Typography
-                      variant={downMd ? "body2" : "body1"}
-                      textAlign="left"
-                      width="100%"
-                      fontWeight={300}
-                    >
-                      {item.description}
-                    </Typography>
-                  </React.Fragment>
-                )
-              )}
+              permanentLipMakeupDataEN.courseOfTreatment.map((item, index) => (
+                <React.Fragment key={index}>
+                  <Typography
+                    variant={downMd ? "body2" : "body1"}
+                    textAlign="left"
+                    width="100%"
+                  >
+                    {index + 1}. {item.title}
+                  </Typography>
+                  <Typography
+                    variant={downMd ? "body2" : "body1"}
+                    textAlign="left"
+                    width="100%"
+                    fontWeight={300}
+                  >
+                    {item.description}
+                  </Typography>
+                </React.Fragment>
+              ))}
           </Grid>
           <Grid size={12}>
             <Divider />
@@ -485,7 +479,7 @@ export default function PermanentEyebrowMakeupView() {
                 : "POST-TREATMENT RECOMMENDATIONS"}
             </Typography>
             {language.webLanguage === "PL" &&
-              pernamentEyebrowMakeupDataPL.postTreatmentRecommendations.map(
+              permanentLipMakeupDataPL.postTreatmentRecommendations.map(
                 (recomendation, index) => (
                   <Typography
                     variant={downMd ? "body2" : "body1"}
@@ -498,7 +492,7 @@ export default function PermanentEyebrowMakeupView() {
                 )
               )}
             {language.webLanguage !== "PL" &&
-              pernamentEyebrowMakeupDataEN.postTreatmentRecommendations.map(
+              permanentLipMakeupDataEN.postTreatmentRecommendations.map(
                 (recomendation, index) => (
                   <Typography
                     variant={downMd ? "body2" : "body1"}
@@ -522,20 +516,52 @@ export default function PermanentEyebrowMakeupView() {
               width={"100%"}
               fontStyle="italic"
             >
-              {language.webLanguage === "PL"
-                ? "JAK CZĘSTO POWTARZAĆ ZABIEG?"
-                : "HOW OFTEN TO REPEAT THE TREATMENT?"}
+              {language.webLanguage === "PL" ? "DOPIGMENTOWANIE" : "TOUCH-UP"}
             </Typography>
-
             <Typography
               variant={downMd ? "body2" : "body1"}
               textAlign="left"
               width="100%"
             >
               {language.webLanguage === "PL"
-                ? pernamentEyebrowMakeupDataPL.treatmentCycles
-                : pernamentEyebrowMakeupDataEN.treatmentCycles}
+                ? permanentLipMakeupDataPL.pigmentationInfo.overview
+                : permanentLipMakeupDataEN.pigmentationInfo.overview}
             </Typography>
+            <Typography
+              variant={downMd ? "body2" : "body1"}
+              textAlign="left"
+              width="100%"
+            >
+              {language.webLanguage === "PL"
+                ? "Jak się przygotować do dopigmentowania?"
+                : "How to prepare for touch-up?"}
+            </Typography>
+            {language.webLanguage === "PL" &&
+              permanentLipMakeupDataPL.pigmentationInfo.treatmentPreparation.map(
+                (pigmentationInfo, index) => (
+                  <Typography
+                    variant={downMd ? "body2" : "body1"}
+                    textAlign="left"
+                    width="100%"
+                    key={index}
+                  >
+                    - {pigmentationInfo}
+                  </Typography>
+                )
+              )}
+            {language.webLanguage === "ENG" &&
+              permanentLipMakeupDataEN.pigmentationInfo.treatmentPreparation.map(
+                (pigmentationInfo, index) => (
+                  <Typography
+                    variant={downMd ? "body2" : "body1"}
+                    textAlign="left"
+                    width="100%"
+                    key={index}
+                  >
+                    - {pigmentationInfo}
+                  </Typography>
+                )
+              )}
           </Grid>
           <Grid size={12}>
             <Divider />
@@ -564,7 +590,7 @@ export default function PermanentEyebrowMakeupView() {
                     width: "100%",
                   }}
                   alt="The house from the offer."
-                  src={permanent_eyebrow_makeup_effect_0}
+                  src={permanent_lip_makeup_effect_0}
                 />
               </Grid>
               <Grid size={downMd ? 12 : 6}>
@@ -576,7 +602,7 @@ export default function PermanentEyebrowMakeupView() {
                     width: "100%",
                   }}
                   alt="The house from the offer."
-                  src={permanent_eyebrow_makeup_effect_1}
+                  src={permanent_lip_makeup_effect_1}
                 />
               </Grid>
               <Grid size={downMd ? 12 : 6}>
@@ -588,7 +614,7 @@ export default function PermanentEyebrowMakeupView() {
                     width: "100%",
                   }}
                   alt="The house from the offer."
-                  src={permanent_eyebrow_makeup_effect_2}
+                  src={permanent_lip_makeup_effect_2}
                 />
               </Grid>
               <Grid size={downMd ? 12 : 6}>
@@ -600,7 +626,7 @@ export default function PermanentEyebrowMakeupView() {
                     width: "100%",
                   }}
                   alt="The house from the offer."
-                  src={permanent_eyebrow_makeup_effect_3}
+                  src={permanent_lip_makeup_effect_5}
                 />
               </Grid>
               <Grid size={downMd ? 12 : 6}>
@@ -612,7 +638,7 @@ export default function PermanentEyebrowMakeupView() {
                     width: "100%",
                   }}
                   alt="The house from the offer."
-                  src={permanent_eyebrow_makeup_effect_4}
+                  src={permanent_lip_makeup_effect_6}
                 />
               </Grid>
               <Grid size={downMd ? 12 : 6}>
@@ -624,7 +650,7 @@ export default function PermanentEyebrowMakeupView() {
                     width: "100%",
                   }}
                   alt="The house from the offer."
-                  src={permanent_eyebrow_makeup_effect_5}
+                  src={permanent_lip_makeup_effect_7}
                 />
               </Grid>
               <Grid size={downMd ? 12 : 6}>
@@ -636,7 +662,7 @@ export default function PermanentEyebrowMakeupView() {
                     width: "100%",
                   }}
                   alt="The house from the offer."
-                  src={permanent_eyebrow_makeup_effect_6}
+                  src={permanent_lip_makeup_effect_8}
                 />
               </Grid>
               <Grid size={downMd ? 12 : 6}>
@@ -648,31 +674,7 @@ export default function PermanentEyebrowMakeupView() {
                     width: "100%",
                   }}
                   alt="The house from the offer."
-                  src={permanent_eyebrow_makeup_effect_7}
-                />
-              </Grid>
-              <Grid size={downMd ? 12 : 6}>
-                <Box
-                  p={2}
-                  component="img"
-                  sx={{
-                    height: "100%",
-                    width: "100%",
-                  }}
-                  alt="The house from the offer."
-                  src={permanent_eyebrow_makeup_effect_8}
-                />
-              </Grid>
-              <Grid size={downMd ? 12 : 6}>
-                <Box
-                  p={2}
-                  component="img"
-                  sx={{
-                    height: "100%",
-                    width: "100%",
-                  }}
-                  alt="The house from the offer."
-                  src={permanent_eyebrow_makeup_effect_9}
+                  src={permanent_lip_makeup_effect_9}
                 />
               </Grid>
             </Grid>

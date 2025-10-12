@@ -21,6 +21,10 @@ export default [
     "./views/PernamentMakeup/PermanentEyebrowMakeupView/PermanentEyebrowMakeupView.tsx"
   ),
   route(
+    "/permanent_makeup/permanent_lip_makeup",
+    "./views/PernamentMakeup/PermanentLipMakeupView/PermanentLipMakeupView.tsx"
+  ),
+  route(
     "/lip_shaping",
     "./views/LipsShapingCategoryView/LipsShapingCategoryView.tsx"
   ),
