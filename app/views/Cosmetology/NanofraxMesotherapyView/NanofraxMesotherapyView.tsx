@@ -221,6 +221,32 @@ export default function NanofraxMesotherapyView() {
                 fontStyle="italic"
               >
                 {language.webLanguage === "PL"
+                  ? "DLACZEGO NANOFRAX DZIAŁA TAK SKUTECZNIE?".toUpperCase()
+                  : "WHY IS NANOFRAX SO EFFECTIVE?".toUpperCase()}
+              </Typography>
+              <Typography
+                variant={downMd ? "body2" : "body1"}
+                textAlign="left"
+                width="100%"
+                gutterBottom
+              >
+                {language.webLanguage === "PL"
+                  ? nanofraxMesotherapyDataPL.causesOfEfficiency
+                  : nanofraxMesotherapyDataENG.causesOfEfficiency}
+              </Typography>
+            </Grid>
+            <Grid size={12}>
+              <Divider />
+            </Grid>
+            <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
+              <Typography
+                variant={downMd ? "body1" : "h6"}
+                textAlign="left"
+                sx={{ fontWeight: "200" }}
+                width={"100%"}
+                fontStyle="italic"
+              >
+                {language.webLanguage === "PL"
                   ? "WSKAZANIA DO ZABIEGU"
                   : "INDICATIONS FOR THE TREATMENT"}
               </Typography>
@@ -386,32 +412,7 @@ export default function NanofraxMesotherapyView() {
           <Grid size={12}>
             <Divider />
           </Grid>
-          <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
-            <Typography
-              variant={downMd ? "body1" : "h6"}
-              textAlign="left"
-              sx={{ fontWeight: "200" }}
-              width={"100%"}
-              fontStyle="italic"
-            >
-              {language.webLanguage === "PL"
-                ? "DLACZEGO NANOFRAX DZIAŁA TAK SKUTECZNIE?".toUpperCase()
-                : "WHY IS NANOFRAX SO EFFECTIVE?".toUpperCase()}
-            </Typography>
-            <Typography
-              variant={downMd ? "body2" : "body1"}
-              textAlign="left"
-              width="100%"
-              gutterBottom
-            >
-              {language.webLanguage === "PL"
-                ? nanofraxMesotherapyDataPL.causesOfEfficiency
-                : nanofraxMesotherapyDataENG.causesOfEfficiency}
-            </Typography>
-          </Grid>
-          <Grid size={12}>
-            <Divider />
-          </Grid>
+
           <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
             <Typography
               variant={downMd ? "body1" : "h6"}

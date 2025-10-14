@@ -185,7 +185,7 @@ export default function NeedleMesotherapyView() {
           </Grid>
         </Grid>
         <Grid size={12} container p={1}>
-          <Grid size={downMd ? 12 : 4}>
+          <Grid size={downMd ? 12 : 5}>
             <Box
               component="img"
               sx={{
@@ -196,7 +196,7 @@ export default function NeedleMesotherapyView() {
               src={needle_mesotherapy}
             />
           </Grid>
-          <Grid size={downMd ? 12 : 8} p={1} container spacing={3}>
+          <Grid size={downMd ? 12 : 7} p={1} container spacing={3}>
             <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
               <Typography
                 variant={downMd ? "body2" : "body1"}
@@ -207,6 +207,32 @@ export default function NeedleMesotherapyView() {
                 {language.webLanguage === "PL"
                   ? needleMesotherapyDataPL.overview
                   : needleMesotherapyDataEN.overview}
+              </Typography>
+            </Grid>
+            <Grid size={12}>
+              <Divider />
+            </Grid>
+            <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
+              <Typography
+                variant={downMd ? "body1" : "h6"}
+                textAlign="left"
+                sx={{ fontWeight: "200" }}
+                width={"100%"}
+                fontStyle="italic"
+              >
+                {language.webLanguage === "PL"
+                  ? "JAK SIĘ PRZYGOTOWAĆ DO ZABIEGU?"
+                  : "HOW TO PREPARE FOR THE TREATMENT?"}
+              </Typography>
+              <Typography
+                variant={downMd ? "body2" : "body1"}
+                textAlign="left"
+                width={"100%"}
+                gutterBottom
+              >
+                {language.webLanguage === "PL"
+                  ? needleMesotherapyDataPL.preparationForTreatment
+                  : needleMesotherapyDataEN.preparationForTreatment}
               </Typography>
             </Grid>
             <Grid size={12}>
@@ -351,32 +377,6 @@ export default function NeedleMesotherapyView() {
                   - {effect}
                 </Typography>
               ))}
-          </Grid>
-          <Grid size={12}>
-            <Divider />
-          </Grid>
-          <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
-            <Typography
-              variant={downMd ? "body1" : "h6"}
-              textAlign="left"
-              sx={{ fontWeight: "200" }}
-              width={"100%"}
-              fontStyle="italic"
-            >
-              {language.webLanguage === "PL"
-                ? "JAK SIĘ PRZYGOTOWAĆ DO ZABIEGU?"
-                : "HOW TO PREPARE FOR THE TREATMENT?"}
-            </Typography>
-            <Typography
-              variant={downMd ? "body2" : "body1"}
-              textAlign="left"
-              width={"100%"}
-              gutterBottom
-            >
-              {language.webLanguage === "PL"
-                ? needleMesotherapyDataPL.preparationForTreatment
-                : needleMesotherapyDataEN.preparationForTreatment}
-            </Typography>
           </Grid>
           <Grid size={12}>
             <Divider />

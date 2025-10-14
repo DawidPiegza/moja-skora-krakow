@@ -200,7 +200,7 @@ export default function LipAugmentationAndContouringView() {
           </Grid>
         </Grid>
         <Grid size={12} container p={1}>
-          <Grid size={downMd ? 12 : 4}>
+          <Grid size={downMd ? 12 : 5}>
             <Box
               component="img"
               sx={{
@@ -211,7 +211,7 @@ export default function LipAugmentationAndContouringView() {
               src={laser_removal}
             />
           </Grid>
-          <Grid size={downMd ? 12 : 8} p={1} container spacing={3}>
+          <Grid size={downMd ? 12 : 7} p={1} container spacing={3}>
             <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
               <Typography
                 variant={downMd ? "body2" : "body1"}
