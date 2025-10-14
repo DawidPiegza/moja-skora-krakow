@@ -81,6 +81,20 @@ export const cosmetologyViewData: ICategoryViewData[] = [
   },
   {
     pl: {
+      title: "Peeling węglowy BLACK DOLL",
+      description:
+        "Peeling węglowy, znany również jako Black Doll lub Carbon Peel, to nowoczesny, nieinwazyjny zabieg oczyszczająco-regenerujący, łączący działanie lasera ze specjalną maską węglową. Wykorzystuje technologię lasera oraz właściwości oczyszczające i absorbujące aktywnego węgla. Jest szczególnie polecany osobom z cerą problematyczną, przetłuszczającą się, z rozszerzonymi porami, przebarwieniami lub oznakami starzenia. Dzięki niemu skóra staje się gładka, rozświetlona i zyskuje zdrowy wygląd, a peeling pomaga usunąć zanieczyszczenia, martwy naskórek oraz nadmiar sebum.",
+      navigateURL: "carbon_peel",
+    },
+    eng: {
+      title: "Carbon peeling BLACK DOLL",
+      description:
+        "Carbon peeling, also known as Black Doll or Carbon Peel, is a modern, non-invasive cleansing and regenerating treatment that combines the effects of a laser with a special carbon mask. It uses laser technology along with the purifying and absorbing properties of activated carbon. It is especially recommended for people with problematic, oily skin, enlarged pores, discoloration, or signs of aging. Thanks to this treatment, the skin becomes smooth, radiant, and gains a healthy appearance, while the peel helps remove impurities, dead skin cells, and excess sebum.",
+      navigateURL: "carbon_peel",
+    },
+  },
+  {
+    pl: {
       title: "Stymulatory tkankowe",
       description:
         "Stymulatory tkankowe to preparaty do iniekcji, które mają na celu odmłodzenie struktury skóry poprzez jej silną regenerację, odnowę i przebudowę. Działają one poprzez intensywną stymulację fibroblastów do produkcji kolagenu i elastyny – białek odpowiedzialnych za jędrność, gęstość oraz elastyczność skóry. W naszym gabinecie wykorzystujemy stymulatory tkankowe oparte na najwyższej jakości składnikach, takich jak kwas hialuronowy, aminokwasy, polinukleotydy oraz kolagen. Dobór odpowiedniego preparatu zależy od jakości skóry Klienta, jego potrzeb oraz oczekiwań. Zabieg z użyciem stymulatorów tkankowych jest odpowiedni zarówno dla osób młodszych, jako profilaktyka przeciwzmarszczkowa, jak i dla osób dojrzałych, które borykają się z już widocznymi oznakami starzenia skóry.",
