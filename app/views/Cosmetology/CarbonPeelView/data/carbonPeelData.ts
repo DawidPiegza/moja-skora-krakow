@@ -94,10 +94,13 @@ export const carbonPeelDataPL: ICarbonPeelData = {
         "Wysoka temperatura niszczy bakterie (m.in. Propionibacterium acnes), wspierając leczenie trądziku i ograniczając powstawanie nowych zmian.",
     },
   ],
-  feelingDuringTreatment:
-    "Zabieg jest komfortowy i nie wymaga znieczulenia. Odczuwalne są delikatne impulsy ciepła i subtelne ukłucia; procedura dobrze tolerowana także przez osoby o niskim progu bólu.",
-  preparationBeforeTreatment:
-    "Unikać opalania (min. 3 tyg. przed i 2 tyg. po); nie wykonywać peelingów chemicznych i mechanicznych przez 2 tyg.; w dniu zabiegu nie spożywać alkoholu; tydzień przed zadbać o nawodnienie (1,5–2 l wody dziennie); 2 tyg. przed odstawić leki, suplementy i zioła światłouczulające (np. dziurawiec, nagietek, rumianek).",
+  preparationBeforeTreatment: [
+    "Unikać opalania (min. 3 tyg. przed i 2 tyg. po)",
+    "Nie wykonywać peelingów chemicznych i mechanicznych przez 2 tyg.",
+    "W dniu zabiegu nie spożywać alkoholu",
+    "Tydzień przed zadbać o nawodnienie (1,5–2 l wody dziennie)",
+    "2 tyg. przed odstawić leki, suplementy i zioła światłouczulające (np. dziurawiec, nagietek, rumianek)",
+  ],
   postTreatmentRecommendations: [
     "Unikać słońca i stosować SPF 50 przez co najmniej tydzień",
     "Nie stosować makijażu przez 24 godziny",
@@ -201,10 +204,13 @@ export const carbonPeelDataEN: ICarbonPeelData = {
         "High temperature destroys bacteria (incl. Propionibacterium acnes), supporting acne management and preventing new breakouts.",
     },
   ],
-  feelingDuringTreatment:
-    "The treatment is comfortable and does not require anesthesia. Gentle warmth pulses and subtle pricking sensations may be felt; well tolerated even by clients with a low pain threshold.",
-  preparationBeforeTreatment:
-    "Avoid tanning (min. 3 weeks before and 2 weeks after); avoid chemical or mechanical exfoliation for 2 weeks; no alcohol on treatment day; stay hydrated the week before (1.5–2 L water daily); discontinue photosensitizing meds, supplements and herbs (e.g. St. John's wort, calendula, chamomile) 2 weeks prior.",
+  preparationBeforeTreatment: [
+    "Avoid tanning (min. 3 weeks before and 2 weeks after)",
+    "Avoid chemical or mechanical exfoliation for 2 weeks",
+    "No alcohol on treatment day",
+    "Stay hydrated the week before (1.5–2 L water daily)",
+    "Discontinue photosensitizing meds, supplements and herbs (e.g. St. John's wort, calendula, chamomile) 2 weeks prior",
+  ],
   postTreatmentRecommendations: [
     "Avoid sun exposure and use SPF 50+ for at least 7 days",
     "Do not apply makeup for 24 hours",

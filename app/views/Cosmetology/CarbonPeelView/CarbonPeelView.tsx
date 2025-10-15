@@ -20,7 +20,7 @@ import GoogleIcon from "@mui/icons-material/Google";
 import RepeatIcon from "@mui/icons-material/Repeat";
 import EventRepeatIcon from "@mui/icons-material/EventRepeat";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
-import cavitation_peeling from "../../../../public/images/cavitation_peeling.png";
+import carbon_peeling from "../../../../public/images/carbon_peeling.png";
 import { carbonPeelDataPL, carbonPeelDataEN } from "./data/carbonPeelData";
 export default function CarbonPeelView() {
   const { language } = React.useContext(WebsiteLanguageContext);
@@ -181,18 +181,18 @@ export default function CarbonPeelView() {
           </Grid>
         </Grid>
         <Grid size={12} container p={1}>
-          <Grid size={downMd ? 12 : 4}>
+          <Grid size={downMd ? 12 : 5}>
             <Box
               component="img"
               sx={{
                 height: "100%",
                 width: "100%",
               }}
-              alt="The house from the offer."
-              src={cavitation_peeling}
+              src={carbon_peeling}
             />
           </Grid>
-          <Grid size={downMd ? 12 : 8} p={1} container spacing={3}>
+
+          <Grid size={downMd ? 12 : 7} p={1} container spacing={3}>
             <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
               <Typography
                 variant={downMd ? "body2" : "body1"}
@@ -204,6 +204,103 @@ export default function CarbonPeelView() {
                   ? carbonPeelDataPL.overview
                   : carbonPeelDataEN.overview}
               </Typography>
+            </Grid>
+            <Grid size={12}>
+              <Divider />
+            </Grid>
+            <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
+              <Typography
+                variant={downMd ? "body1" : "h6"}
+                textAlign="left"
+                sx={{ fontWeight: "200" }}
+                width={"100%"}
+                fontStyle="italic"
+              >
+                {language.webLanguage === "PL"
+                  ? "JAKIE MECHANIZMY DZIAŁAJĄ PODCZAS ZABIEGU?"
+                  : "WHAT MECHANISMS WORK DURING THE TREATMENT?"}
+              </Typography>
+              {language.webLanguage === "PL" &&
+                carbonPeelDataPL.mechanismDuringTreatment.map(
+                  (mechanism, index) => (
+                    <React.Fragment key={index}>
+                      <Typography
+                        variant={downMd ? "body2" : "body1"}
+                        textAlign="left"
+                        width="100%"
+                      >
+                        {index + 1}. {mechanism.title}
+                      </Typography>
+                      <Typography
+                        variant={downMd ? "body2" : "body1"}
+                        textAlign="left"
+                        width="100%"
+                        fontWeight={300}
+                      >
+                        {mechanism.description}
+                      </Typography>
+                    </React.Fragment>
+                  )
+                )}
+              {language.webLanguage === "ENG" &&
+                carbonPeelDataEN.mechanismDuringTreatment.map(
+                  (mechanism, index) => (
+                    <React.Fragment key={index}>
+                      <Typography
+                        variant={downMd ? "body2" : "body1"}
+                        textAlign="left"
+                        width="100%"
+                      >
+                        {index + 1}. {mechanism.title}
+                      </Typography>
+                      <Typography
+                        variant={downMd ? "body2" : "body1"}
+                        textAlign="left"
+                        width="100%"
+                        fontWeight={300}
+                      >
+                        {mechanism.description}
+                      </Typography>
+                    </React.Fragment>
+                  )
+                )}
+            </Grid>
+            <Grid size={12}>
+              <Divider />
+            </Grid>
+            <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
+              <Typography
+                variant={downMd ? "body2" : "body1"}
+                textAlign="left"
+                width={"100%"}
+                gutterBottom
+              >
+                {language.webLanguage === "PL"
+                  ? "EFEKTY ZABIEGU"
+                  : "TREATMENT EFFECTS"}
+              </Typography>
+              {language.webLanguage === "PL" &&
+                carbonPeelDataPL.effectsOfTratment.map((effect, index) => (
+                  <Typography
+                    variant={downMd ? "body2" : "body1"}
+                    textAlign="left"
+                    width="100%"
+                    key={index}
+                  >
+                    - {effect}
+                  </Typography>
+                ))}
+              {language.webLanguage !== "PL" &&
+                carbonPeelDataEN.effectsOfTratment.map((effect, index) => (
+                  <Typography
+                    variant={downMd ? "body2" : "body1"}
+                    textAlign="left"
+                    width="100%"
+                    key={index}
+                  >
+                    - {effect}
+                  </Typography>
+                ))}
             </Grid>
           </Grid>
         </Grid>
@@ -362,6 +459,94 @@ export default function CarbonPeelView() {
                   </Typography>
                 </React.Fragment>
               ))}
+          </Grid>
+          <Grid size={12}>
+            <Divider />
+          </Grid>
+          <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
+            <Typography
+              variant={downMd ? "body1" : "h6"}
+              textAlign="left"
+              sx={{ fontWeight: "200" }}
+              width={"100%"}
+              fontStyle="italic"
+            >
+              {language.webLanguage === "PL"
+                ? "JAK SIĘ PRZYGOTOWAĆ DO ZABIEGU?"
+                : "HOW TO PREPARE FOR THE TREATMENT?"}
+            </Typography>
+            {language.webLanguage === "PL" &&
+              carbonPeelDataPL.preparationBeforeTreatment.map(
+                (preparation, index) => (
+                  <React.Fragment key={index}>
+                    <Typography
+                      variant={downMd ? "body2" : "body1"}
+                      textAlign="left"
+                      width="100%"
+                    >
+                      - {preparation}
+                    </Typography>
+                  </React.Fragment>
+                )
+              )}
+            {language.webLanguage === "ENG" &&
+              carbonPeelDataEN.preparationBeforeTreatment.map(
+                (preparation, index) => (
+                  <React.Fragment key={index}>
+                    <Typography
+                      variant={downMd ? "body2" : "body1"}
+                      textAlign="left"
+                      width="100%"
+                    >
+                      - {preparation}
+                    </Typography>
+                  </React.Fragment>
+                )
+              )}
+          </Grid>
+          <Grid size={12}>
+            <Divider />
+          </Grid>
+          <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
+            <Typography
+              variant={downMd ? "body1" : "h6"}
+              textAlign="left"
+              sx={{ fontWeight: "200" }}
+              width={"100%"}
+              fontStyle="italic"
+            >
+              {language.webLanguage === "PL"
+                ? "ZALECENIA POZABIEGOWE"
+                : "POST-TREATMENT RECOMMENDATIONS"}
+            </Typography>
+            {language.webLanguage === "PL" &&
+              carbonPeelDataPL.postTreatmentRecommendations.map(
+                (recommendation, index) => (
+                  <React.Fragment key={index}>
+                    <Typography
+                      variant={downMd ? "body2" : "body1"}
+                      textAlign="left"
+                      width="100%"
+                    >
+                      - {recommendation}
+                    </Typography>
+                  </React.Fragment>
+                )
+              )}
+            {language.webLanguage === "ENG" &&
+              carbonPeelDataEN.postTreatmentRecommendations.map(
+                (recommendation, index) => (
+                  <React.Fragment key={index}>
+                    <Typography
+                      variant={downMd ? "body2" : "body1"}
+                      textAlign="left"
+                      width="100%"
+                    >
+                      - {recommendation}
+                    </Typography>
+                  </React.Fragment>
+                )
+              )}
           </Grid>
         </Grid>
       </Grid>

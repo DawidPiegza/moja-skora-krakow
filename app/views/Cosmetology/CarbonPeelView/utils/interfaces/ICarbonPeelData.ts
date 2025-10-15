@@ -16,7 +16,6 @@ export interface ICarbonPeelData {
     title: string;
     description: string;
   }[];
-  feelingDuringTreatment: string;
-  preparationBeforeTreatment: string;
+  preparationBeforeTreatment: string[];
   postTreatmentRecommendations: string[];
 }
