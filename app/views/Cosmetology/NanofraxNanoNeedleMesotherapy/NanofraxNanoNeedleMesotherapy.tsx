@@ -215,7 +215,25 @@ export default function NanofraxNanoNeedleMesotherapy() {
             <Grid size={12}>
               <Divider />
             </Grid>
-
+            <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
+              <Typography
+                variant={downMd ? "body1" : "h6"}
+                textAlign="left"
+                sx={{ fontWeight: "200" }}
+                width={"100%"}
+                fontStyle="italic"
+              >
+                {language.webLanguage === "PL"
+                  ? "NANOFRAX – BEZPIECZNE ROZWIĄZANIE DLA CUKRZYKÓW I KOBIET W CIĄŻY"
+                  : "NANOFRAX – A SAFE OPTION FOR DIABETICS AND PREGNANT WOMEN"}
+              </Typography>
+              {language.webLanguage === "PL"
+                ? nanofraxNanoNeedleMesotherapyData.recomendationsForTreatment
+                : nanofraxNanoNeedleMesotherapyDataEN.recomendationsForTreatment}
+            </Grid>
+            <Grid size={12}>
+              <Divider />
+            </Grid>
             <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
               <Typography
                 variant={downMd ? "body1" : "h6"}
@@ -434,25 +452,6 @@ export default function NanofraxNanoNeedleMesotherapy() {
                   </React.Fragment>
                 )
               )}
-          </Grid>
-          <Grid size={12}>
-            <Divider />
-          </Grid>
-          <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
-            <Typography
-              variant={downMd ? "body1" : "h6"}
-              textAlign="left"
-              sx={{ fontWeight: "200" }}
-              width={"100%"}
-              fontStyle="italic"
-            >
-              {language.webLanguage === "PL"
-                ? "NANOFRAX – BEZPIECZNE ROZWIĄZANIE DLA CUKRZYKÓW I KOBIET W CIĄŻY"
-                : "NANOFRAX – A SAFE OPTION FOR DIABETICS AND PREGNANT WOMEN"}
-            </Typography>
-            {language.webLanguage === "PL"
-              ? nanofraxNanoNeedleMesotherapyData.recomendationsForTreatment
-              : nanofraxNanoNeedleMesotherapyDataEN.recomendationsForTreatment}
           </Grid>
           <Grid size={12}>
             <Divider />

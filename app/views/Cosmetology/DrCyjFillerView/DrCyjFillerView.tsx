@@ -14,7 +14,7 @@ import {
 } from "@mui/material";
 import React from "react";
 import { WebsiteLanguageContext } from "../../../shared/contexts/LanguageContext";
-import mezoterapia_iglowa_dr_cyj_1 from "../../../../public/images/mezoterapia_iglowa_dr_cyj_1.jpeg";
+import mezoterapia_iglowa_dr_cyj from "../../../../public/images/mezoterapia_iglowa_dr_cyj.jpeg";
 import { drCyjFillerDataPL, drCyjFillerDataENG } from "./data/drCyjFillerData";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
@@ -190,7 +190,7 @@ export default function DrCyjFillerView() {
                 width: "auto",
               }}
               alt="The house from the offer."
-              src={mezoterapia_iglowa_dr_cyj_1}
+              src={mezoterapia_iglowa_dr_cyj}
             />
           </Grid>
           <Grid size={downMd ? 12 : 7} p={1} container spacing={3}>

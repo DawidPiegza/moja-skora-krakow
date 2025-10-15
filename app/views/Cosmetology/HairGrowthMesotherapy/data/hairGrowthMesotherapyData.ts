@@ -1,8 +1,8 @@
 import type { IServiceObject } from "../../../../shared/utils/interfaces/IServiceObject";
-import mezoterapia_skory_glowy from "../../../../../public/images/mezoterapia_skóry_głowy.jpeg";
+import hair_growth_mesotherapy from "../../../../../public/images/hair_growth_mesotherapy.jpeg";
 
 export const hairGrowthMesotherapyDataPL: IServiceObject = {
-  treatmentPhotoURL: mezoterapia_skory_glowy,
+  treatmentPhotoURL: hair_growth_mesotherapy,
   description:
     "Mezoterapia igłowa skóry głowy to zaawansowany zabieg z zakresu kosmetologii estetycznej, polegający na punktowym wprowadzaniu specjalnie opracowanego koktajlu substancji aktywnych bezpośrednio w warstwę skóry właściwej, tuż przy cebulkach włosów. Mikronakłucia wykonywane bardzo cienką igłą zwiększają mikrokrążenie, poprawiają natlenienie tkanek i umożliwiają maksymalne wykorzystanie potencjału aplikowanych składników odżywczych.\nW naszych terapiach stosujemy wyłącznie preparaty bazujące na kwasie hialuronowym, wzbogacone m.in. o witaminy z grupy B, aminokwasy siarkowe, cynk, miedź, peptydy biomimetyczne oraz czynniki wzrostu – wszystkie klinicznie przebadane i certyfikowane. Tak dobrana formuła skutecznie hamuje nadmierne wypadanie, stymuluje wzrost nowych włosów i poprawia ogólną kondycję skóry głowy.",
   infoTable: {
@@ -42,7 +42,7 @@ export const hairGrowthMesotherapyDataPL: IServiceObject = {
 };
 
 export const hairGrowthMesotherapyDataENG: IServiceObject = {
-  treatmentPhotoURL: mezoterapia_skory_glowy,
+  treatmentPhotoURL: hair_growth_mesotherapy,
   description: `Scalp mesotherapy is an advanced aesthetic procedure that involves injecting a specially formulated cocktail of active ingredients directly into the dermis, close to the hair follicles.
 Using a fine needle, the substances are delivered point by point, which stimulates microcirculation, improves oxygenation of the tissues, and maximizes the effectiveness of the nutrients.
 In our treatments, we use only high-quality, clinically tested and certified formulas based on hyaluronic acid, enriched with B-group vitamins, sulfur-containing amino acids, zinc, copper, biomimetic peptides, and growth factors.

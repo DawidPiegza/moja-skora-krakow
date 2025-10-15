@@ -19,7 +19,7 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import GoogleIcon from "@mui/icons-material/Google";
 import { WebsiteLanguageContext } from "../../../shared/contexts/LanguageContext";
-import mezoterapia_skóry_głowy from "../../../../public/images/mezoterapia_skóry_głowy.jpeg";
+import hair_growth_mesotherapy from "../../../../public/images/hair_growth_mesotherapy.jpeg";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import RepeatIcon from "@mui/icons-material/Repeat";
 import EventRepeatIcon from "@mui/icons-material/EventRepeat";
@@ -195,7 +195,7 @@ export default function HairGrowthMesotherapy() {
                 width: "100%",
               }}
               alt="The house from the offer."
-              src={mezoterapia_skóry_głowy}
+              src={hair_growth_mesotherapy}
             />
           </Grid>
           <Grid size={downMd ? 12 : 7} p={1} container spacing={3}>
