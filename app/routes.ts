@@ -13,6 +13,14 @@ export default [
     "./views/Consultation/ConsultationServiceView/ConsultationServiceView.tsx"
   ),
   route(
+    "/eyebrow_and_eyelash_styling",
+    "./views/EyebrowAndEyelashStylingCategoryView/EyebrowAndEyelashStylingCategoryView.tsx"
+  ),
+  route(
+    "/eyebrow_and_eyelash_styling/eyebrow_lamination",
+    "./views/EyebrowAndEyelashStyling/EyebrowLaminationView/EyebrowLaminationView.tsx"
+  ),
+  route(
     "/permanent_makeup",
     "./views/PermanentMakeupCategoryView/PermanentMakeupCategoryView.tsx"
   ),

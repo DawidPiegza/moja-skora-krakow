@@ -1,3 +1,5 @@
+import React from "react";
+import { WebsiteLanguageContext } from "../../../shared/contexts/LanguageContext";
 import {
   BottomNavigation,
   BottomNavigationAction,
@@ -12,30 +14,23 @@ import {
   useMediaQuery,
   useTheme,
 } from "@mui/material";
-import React from "react";
-import { WebsiteLanguageContext } from "../../../shared/contexts/LanguageContext";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import GoogleIcon from "@mui/icons-material/Google";
 import RepeatIcon from "@mui/icons-material/Repeat";
 import EventRepeatIcon from "@mui/icons-material/EventRepeat";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
-import laser_removal from "../../../../public/images/laser_removal.png";
-import laser_removal_effect_0 from "../../../../public/images/laser_removal_effect_0.png";
-import laser_removal_effect_1 from "../../../../public/images/laser_removal_effect_1.png";
-import laser_removal_effect_2 from "../../../../public/images/laser_removal_effect_2.png";
-import laser_removal_effect_3 from "../../../../public/images/laser_removal_effect_3.png";
-import laser_removal_effect_4 from "../../../../public/images/laser_removal_effect_4.png";
-import laser_removal_effect_5 from "../../../../public/images/laser_removal_effect_5.png";
-import laser_removal_effect_6 from "../../../../public/images/laser_removal_effect_6.png";
-import laser_removal_effect_7 from "../../../../public/images/laser_removal_effect_7.png";
-
+import eyebrow_lamination from "../../../../public/images/eyebrow_lamination.png";
 import {
-  laserRemovalOfPermanentMakeupAndTattoosPL,
-  laserRemovalOfPermanentMakeupAndTattoosEN,
-} from "./data/laserRemovalOfPermanentMakeupAndTattoosData";
+  eyebrowLaminationDataPL,
+  eyebrowLaminationDataEN,
+} from "./data/eyebrowLaminationData";
+import eyebrow_lamination_effect_0 from "../../../../public/images/eyebrow_lamination_effect_0.png";
+import eyebrow_lamination_effect_1 from "../../../../public/images/eyebrow_lamination_effect_1.png";
+import eyebrow_lamination_effect_2 from "../../../../public/images/eyebrow_lamination_effect_2.png";
+import eyebrow_lamination_effect_3 from "../../../../public/images/eyebrow_lamination_effect_3.png";
 
-export default function LipAugmentationAndContouringView() {
+export default function EyebrowLaminationView() {
   const { language } = React.useContext(WebsiteLanguageContext);
   const theme = useTheme();
   const downMd = useMediaQuery(theme.breakpoints.down("md"));
@@ -70,7 +65,9 @@ export default function LipAugmentationAndContouringView() {
                 },
               })}
             >
-              {language.webLanguage === "PL" ? "Kosmetologia" : "Cosmetology"}
+              {language.webLanguage === "PL"
+                ? "Stylizacja brwi i rzęs"
+                : "Eyebrow & eyelash styling"}
             </Link>
             <Typography
               sx={(theme) => ({
@@ -82,8 +79,8 @@ export default function LipAugmentationAndContouringView() {
               })}
             >
               {language.webLanguage === "PL"
-                ? "Laserowe usuwanie makijażu permanentnego i tatuażu"
-                : "Laser removal of permanent makeup and tattoos"}
+                ? "Laminacja brwi"
+                : "Eyebrow lamination"}
             </Typography>
           </Breadcrumbs>
         </Grid>
@@ -105,8 +102,8 @@ export default function LipAugmentationAndContouringView() {
               sx={{ fontWeight: "350" }}
             >
               {language.webLanguage === "PL"
-                ? "Laserowe usuwanie makijażu permanentnego i tatuażu".toUpperCase()
-                : "Laser removal of permanent makeup and tattoos".toUpperCase()}
+                ? "Laminacja brwi".toUpperCase()
+                : "Eyebrow lamination".toUpperCase()}
             </Typography>
           </Grid>
         </Grid>
@@ -128,10 +125,8 @@ export default function LipAugmentationAndContouringView() {
               <AccessTimeIcon fontSize="medium" sx={{ color: "#616161" }} />
               <Typography variant="body1" fontWeight={400}>
                 {language.webLanguage === "PL"
-                  ? laserRemovalOfPermanentMakeupAndTattoosPL.infoTable
-                      .timeOfTreatment
-                  : laserRemovalOfPermanentMakeupAndTattoosEN.infoTable
-                      .timeOfTreatment}
+                  ? eyebrowLaminationDataPL.infoTable.timeOfTreatment
+                  : eyebrowLaminationDataEN.infoTable.timeOfTreatment}
               </Typography>
               <Typography variant="body2" fontWeight={300}>
                 {language.webLanguage === "PL"
@@ -157,10 +152,8 @@ export default function LipAugmentationAndContouringView() {
               <RepeatIcon fontSize="medium" sx={{ color: "#616161" }} />
               <Typography variant="body1" fontWeight={400}>
                 {language.webLanguage === "PL"
-                  ? laserRemovalOfPermanentMakeupAndTattoosPL.infoTable
-                      .recommendedNumber
-                  : laserRemovalOfPermanentMakeupAndTattoosEN.infoTable
-                      .recommendedNumber}
+                  ? eyebrowLaminationDataPL.infoTable.recommendedNumber
+                  : eyebrowLaminationDataEN.infoTable.recommendedNumber}
               </Typography>
               <Typography variant="body2" fontWeight={300}>
                 {language.webLanguage === "PL"
@@ -186,10 +179,8 @@ export default function LipAugmentationAndContouringView() {
               <EventRepeatIcon fontSize="medium" sx={{ color: "#616161" }} />
               <Typography variant="body1" fontWeight={400}>
                 {language.webLanguage === "PL"
-                  ? laserRemovalOfPermanentMakeupAndTattoosPL.infoTable
-                      .intervals
-                  : laserRemovalOfPermanentMakeupAndTattoosEN.infoTable
-                      .intervals}
+                  ? eyebrowLaminationDataPL.infoTable.intervals
+                  : eyebrowLaminationDataEN.infoTable.intervals}
               </Typography>
               <Typography variant="body2" fontWeight={300}>
                 {language.webLanguage === "PL"
@@ -207,8 +198,7 @@ export default function LipAugmentationAndContouringView() {
                 height: "100%",
                 width: "100%",
               }}
-              alt="The house from the offer."
-              src={laser_removal}
+              src={eyebrow_lamination}
             />
           </Grid>
           <Grid size={downMd ? 12 : 7} p={1} container spacing={3}>
@@ -217,11 +207,11 @@ export default function LipAugmentationAndContouringView() {
                 variant={downMd ? "body2" : "body1"}
                 textAlign="left"
                 width={"100%"}
+                gutterBottom
               >
-                {language.webLanguage === "PL" &&
-                  laserRemovalOfPermanentMakeupAndTattoosPL.treatmentOverview}
-                {language.webLanguage === "ENG" &&
-                  laserRemovalOfPermanentMakeupAndTattoosEN.treatmentOverview}
+                {language.webLanguage === "PL"
+                  ? eyebrowLaminationDataPL.overviewOfTreatment
+                  : eyebrowLaminationDataEN.overviewOfTreatment}
               </Typography>
             </Grid>
             <Grid size={12}>
@@ -236,35 +226,19 @@ export default function LipAugmentationAndContouringView() {
                 fontStyle="italic"
               >
                 {language.webLanguage === "PL"
-                  ? "JAK PRZYGOTOWAĆ SIĘ DO ZABIEGU?"
-                  : "HOW TO PREPARE FOR THE PROCEDURE?"}
+                  ? "CZYM JEST BOTOX BRWI?"
+                  : "WHAT IS EYEBROW BOTOX?"}
               </Typography>
-              {language.webLanguage === "PL" &&
-                laserRemovalOfPermanentMakeupAndTattoosPL.preparationForTreatment.map(
-                  (preparation, index) => (
-                    <Typography
-                      variant={downMd ? "body2" : "body1"}
-                      textAlign="left"
-                      width="100%"
-                      key={index}
-                    >
-                      - {preparation}
-                    </Typography>
-                  )
-                )}
-              {language.webLanguage === "ENG" &&
-                laserRemovalOfPermanentMakeupAndTattoosEN.preparationForTreatment.map(
-                  (preparation, index) => (
-                    <Typography
-                      variant={downMd ? "body2" : "body1"}
-                      textAlign="left"
-                      width="100%"
-                      key={index}
-                    >
-                      - {preparation}
-                    </Typography>
-                  )
-                )}
+              <Typography
+                variant={downMd ? "body2" : "body1"}
+                textAlign="left"
+                width={"100%"}
+                gutterBottom
+              >
+                {language.webLanguage === "PL"
+                  ? eyebrowLaminationDataPL.eyebrowBotoxDescription
+                  : eyebrowLaminationDataEN.eyebrowBotoxDescription}
+              </Typography>
             </Grid>
             <Grid size={12}>
               <Divider />
@@ -282,49 +256,29 @@ export default function LipAugmentationAndContouringView() {
                   : "HOW DOES THE TREATMENT WORK?"}
               </Typography>
               {language.webLanguage === "PL" &&
-                laserRemovalOfPermanentMakeupAndTattoosPL.courseOfTreatment.map(
-                  (item, index) => (
-                    <React.Fragment key={index}>
-                      <Typography
-                        variant={downMd ? "body2" : "body1"}
-                        textAlign="left"
-                        width="100%"
-                      >
-                        {index + 1}. {item.title}
-                      </Typography>
-                      <Typography
-                        variant={downMd ? "body2" : "body1"}
-                        textAlign="left"
-                        width="100%"
-                        fontWeight={300}
-                      >
-                        {item.description}
-                      </Typography>
-                    </React.Fragment>
-                  )
-                )}
+                eyebrowLaminationDataPL.courseOfTreatment.map((step, index) => (
+                  <React.Fragment key={index}>
+                    <Typography
+                      variant={downMd ? "body2" : "body1"}
+                      textAlign="left"
+                      width="100%"
+                    >
+                      - {step}
+                    </Typography>
+                  </React.Fragment>
+                ))}
               {language.webLanguage === "ENG" &&
-                laserRemovalOfPermanentMakeupAndTattoosEN.courseOfTreatment.map(
-                  (item, index) => (
-                    <React.Fragment key={index}>
-                      <Typography
-                        variant={downMd ? "body2" : "body1"}
-                        textAlign="left"
-                        width="100%"
-                      >
-                        {index + 1}. {item.title}
-                      </Typography>
-                      <Typography
-                        variant={downMd ? "body2" : "body1"}
-                        textAlign="left"
-                        width="100%"
-                        fontWeight={300}
-                      >
-                        {item.description}
-                      </Typography>
-                    </React.Fragment>
-                  )
-                )}
+                eyebrowLaminationDataEN.courseOfTreatment.map((step, index) => (
+                  <React.Fragment key={index}>
+                    <Typography
+                      variant={downMd ? "body2" : "body1"}
+                      textAlign="left"
+                      width="100%"
+                    >
+                      - {step}
+                    </Typography>
+                  </React.Fragment>
+                ))}
             </Grid>
           </Grid>
         </Grid>
@@ -347,31 +301,32 @@ export default function LipAugmentationAndContouringView() {
             >
               {language.webLanguage === "PL"
                 ? "PRZECIWWSKAZANIA DO ZABIEGU"
-                : "CONTRAINDICATIONS TO THE TREATMENT"}
+                : "CONTRAINDICATIONS FOR THE TREATMENT"}
             </Typography>
+
             {language.webLanguage === "PL" &&
-              laserRemovalOfPermanentMakeupAndTattoosPL.contraindications.map(
-                (contrindication, index) => (
+              eyebrowLaminationDataPL.contraindicationsToTreatment.map(
+                (indication, index) => (
                   <Typography
                     variant={downMd ? "body2" : "body1"}
                     textAlign="left"
                     width="100%"
                     key={index}
                   >
-                    - {contrindication}
+                    - {indication}
                   </Typography>
                 )
               )}
-            {language.webLanguage === "ENG" &&
-              laserRemovalOfPermanentMakeupAndTattoosEN.contraindications.map(
-                (contrindication, index) => (
+            {language.webLanguage !== "PL" &&
+              eyebrowLaminationDataEN.contraindicationsToTreatment.map(
+                (indication, index) => (
                   <Typography
                     variant={downMd ? "body2" : "body1"}
                     textAlign="left"
                     width="100%"
                     key={index}
                   >
-                    - {contrindication}
+                    - {indication}
                   </Typography>
                 )
               )}
@@ -401,10 +356,11 @@ export default function LipAugmentationAndContouringView() {
             >
               {language.webLanguage === "PL"
                 ? "WSKAZANIA DO ZABIEGU"
-                : "INDICATIONS FOR TREATMENT"}
+                : "INDICATIONS FOR THE TREATMENT"}
             </Typography>
+
             {language.webLanguage === "PL" &&
-              laserRemovalOfPermanentMakeupAndTattoosPL.indicationsToTreatment.map(
+              eyebrowLaminationDataPL.indicationsToTreatment.map(
                 (indication, index) => (
                   <Typography
                     variant={downMd ? "body2" : "body1"}
@@ -416,8 +372,8 @@ export default function LipAugmentationAndContouringView() {
                   </Typography>
                 )
               )}
-            {language.webLanguage === "ENG" &&
-              laserRemovalOfPermanentMakeupAndTattoosEN.indicationsToTreatment.map(
+            {language.webLanguage !== "PL" &&
+              eyebrowLaminationDataEN.indicationsToTreatment.map(
                 (indication, index) => (
                   <Typography
                     variant={downMd ? "body2" : "body1"}
@@ -433,7 +389,6 @@ export default function LipAugmentationAndContouringView() {
           <Grid size={12}>
             <Divider />
           </Grid>
-
           <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
             <Typography
               variant={downMd ? "body1" : "h6"}
@@ -447,31 +402,59 @@ export default function LipAugmentationAndContouringView() {
                 : "POST-TREATMENT RECOMMENDATIONS"}
             </Typography>
             {language.webLanguage === "PL" &&
-              laserRemovalOfPermanentMakeupAndTattoosPL.postTreatmentRecommendations.map(
-                (care, index) => (
-                  <Typography
-                    variant={downMd ? "body2" : "body1"}
-                    textAlign="left"
-                    width="100%"
-                    key={index}
-                  >
-                    - {care}
-                  </Typography>
+              eyebrowLaminationDataPL.postTreatmentRecommendations.map(
+                (recommendation, index) => (
+                  <React.Fragment key={index}>
+                    <Typography
+                      variant={downMd ? "body2" : "body1"}
+                      textAlign="left"
+                      width="100%"
+                    >
+                      - {recommendation}
+                    </Typography>
+                  </React.Fragment>
                 )
               )}
-            {language.webLanguage !== "PL" &&
-              laserRemovalOfPermanentMakeupAndTattoosEN.postTreatmentRecommendations.map(
-                (care, index) => (
-                  <Typography
-                    variant={downMd ? "body2" : "body1"}
-                    textAlign="left"
-                    width="100%"
-                    key={index}
-                  >
-                    - {care}
-                  </Typography>
+            {language.webLanguage === "ENG" &&
+              eyebrowLaminationDataEN.postTreatmentRecommendations.map(
+                (recommendation, index) => (
+                  <React.Fragment key={index}>
+                    <Typography
+                      variant={downMd ? "body2" : "body1"}
+                      textAlign="left"
+                      width="100%"
+                    >
+                      - {recommendation}
+                    </Typography>
+                  </React.Fragment>
                 )
               )}
+          </Grid>
+          <Grid size={12}>
+            <Divider />
+          </Grid>
+          <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
+            <Typography
+              variant={downMd ? "body1" : "h6"}
+              textAlign="left"
+              sx={{ fontWeight: "200" }}
+              width={"100%"}
+              fontStyle="italic"
+            >
+              {language.webLanguage === "PL"
+                ? "JAK DŁUGO UTRZYMUJĄ SIĘ EFEKTY?"
+                : "HOW LONG DO THE EFFECTS LAST?"}
+            </Typography>
+
+            <Typography
+              variant={downMd ? "body2" : "body1"}
+              textAlign="left"
+              width="100%"
+            >
+              {language.webLanguage === "PL"
+                ? eyebrowLaminationDataPL.constancyOfResults
+                : eyebrowLaminationDataEN.constancyOfResults}
+            </Typography>
           </Grid>
           <Grid size={12}>
             <Divider />
@@ -500,7 +483,7 @@ export default function LipAugmentationAndContouringView() {
                     width: "100%",
                   }}
                   alt="The house from the offer."
-                  src={laser_removal_effect_0}
+                  src={eyebrow_lamination_effect_0}
                 />
               </Grid>
               <Grid size={downMd ? 12 : 6}>
@@ -512,7 +495,7 @@ export default function LipAugmentationAndContouringView() {
                     width: "100%",
                   }}
                   alt="The house from the offer."
-                  src={laser_removal_effect_1}
+                  src={eyebrow_lamination_effect_1}
                 />
               </Grid>
               <Grid size={downMd ? 12 : 6}>
@@ -524,7 +507,7 @@ export default function LipAugmentationAndContouringView() {
                     width: "100%",
                   }}
                   alt="The house from the offer."
-                  src={laser_removal_effect_2}
+                  src={eyebrow_lamination_effect_2}
                 />
               </Grid>
               <Grid size={downMd ? 12 : 6}>
@@ -536,55 +519,7 @@ export default function LipAugmentationAndContouringView() {
                     width: "100%",
                   }}
                   alt="The house from the offer."
-                  src={laser_removal_effect_3}
-                />
-              </Grid>
-              <Grid size={downMd ? 12 : 6}>
-                <Box
-                  p={2}
-                  component="img"
-                  sx={{
-                    height: "100%",
-                    width: "100%",
-                  }}
-                  alt="The house from the offer."
-                  src={laser_removal_effect_4}
-                />
-              </Grid>
-              <Grid size={downMd ? 12 : 6}>
-                <Box
-                  p={2}
-                  component="img"
-                  sx={{
-                    height: "100%",
-                    width: "100%",
-                  }}
-                  alt="The house from the offer."
-                  src={laser_removal_effect_5}
-                />
-              </Grid>
-              <Grid size={downMd ? 12 : 6}>
-                <Box
-                  p={2}
-                  component="img"
-                  sx={{
-                    height: "100%",
-                    width: "100%",
-                  }}
-                  alt="The house from the offer."
-                  src={laser_removal_effect_6}
-                />
-              </Grid>
-              <Grid size={downMd ? 12 : 6}>
-                <Box
-                  p={2}
-                  component="img"
-                  sx={{
-                    height: "100%",
-                    width: "100%",
-                  }}
-                  alt="The house from the offer."
-                  src={laser_removal_effect_7}
+                  src={eyebrow_lamination_effect_3}
                 />
               </Grid>
             </Grid>
