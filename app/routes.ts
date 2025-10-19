@@ -21,6 +21,10 @@ export default [
     "./views/EyebrowAndEyelashStyling/EyebrowLaminationView/EyebrowLaminationView.tsx"
   ),
   route(
+    "/eyebrow_and_eyelash_styling/lash_lift",
+    "./views/EyebrowAndEyelashStyling/LashLiftView/LashLiftView.tsx"
+  ),
+  route(
     "/permanent_makeup",
     "./views/PermanentMakeupCategoryView/PermanentMakeupCategoryView.tsx"
   ),

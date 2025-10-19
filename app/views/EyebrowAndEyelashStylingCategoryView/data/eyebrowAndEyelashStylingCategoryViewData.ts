@@ -14,4 +14,18 @@ export const eyebrowAndEyelashStylingCategoryViewData: ICategoryViewData[] = [
       navigateURL: "eyebrow_lamination",
     },
   },
+  {
+    pl: {
+      title: "Lifting rzęs",
+      description:
+        "Lifting rzęs to zabieg, który naturalnie podkręca, unosi i wydłuża rzęsy bez potrzeby użycia zalotki czy sztucznych rzęs. Efekt to optycznie dłuższe i bardziej widoczne rzęsy. Zabieg polega na nawinięciu naturalnych rzęs na silikonowy wałeczek, dopasowany indywidualnie do długości rzęs. Następnie aplikowane są specjalne preparaty, które utrwalają nowe ułożenie włosków.",
+      navigateURL: "lash_lift",
+    },
+    eng: {
+      title: "Lash lift",
+      description:
+        "A lash lift is a treatment that naturally curls, lifts and visually lengthens the lashes – without the need for a lash curler or extensions. The result is a more open, defined look and lashes that appear longer and darker. During the treatment, natural lashes are wrapped around a silicone rod individually chosen to match the client’s lash length. Then, special solutions are applied to set the new shape of the hairs.",
+      navigateURL: "lash_lift",
+    },
+  },
 ];
