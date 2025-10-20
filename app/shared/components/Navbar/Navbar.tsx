@@ -82,8 +82,6 @@ export default function Navbar({ setSideDrawerOpen }: INavbarProps) {
 
                   <LanguageMenu />
                   <ButtonBase
-                    href="https://booksy.com/pl-pl/249371_moja-skora_salon-kosmetyczny_8820_krakow#ba_s=seo"
-                    target="_blank"
                     sx={{
                       marginLeft: 1,
                       paddingY: "10px",
@@ -95,6 +93,12 @@ export default function Navbar({ setSideDrawerOpen }: INavbarProps) {
                       },
                       outline: "1px solid rgba(0,0,0,0.3)",
                     }}
+                    onClick={() =>
+                      window.open(
+                        "https://booksy.com/pl-pl/249371_moja-skora_salon-kosmetyczny_8820_krakow",
+                        "_blank"
+                      )
+                    }
                   >
                     <Box
                       component="img"
@@ -129,6 +133,12 @@ export default function Navbar({ setSideDrawerOpen }: INavbarProps) {
                       src={booksy_icon}
                       alt="logo booksy"
                       height={"25px"}
+                      onClick={() =>
+                        window.open(
+                          "https://booksy.com/pl-pl/249371_moja-skora_salon-kosmetyczny_8820_krakow",
+                          "_blank"
+                        )
+                      }
                     />
                   </ButtonBase>
                   <IconButton

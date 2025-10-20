@@ -255,9 +255,30 @@ export default function PriceListView() {
         elevation={1}
       >
         <BottomNavigation sx={{ width: "100%" }} showLabels>
-          <BottomNavigationAction label="Facebook" icon={<FacebookIcon />} />
-          <BottomNavigationAction label="Google" icon={<GoogleIcon />} />
-          <BottomNavigationAction label="Instagram" icon={<InstagramIcon />} />
+          <BottomNavigationAction
+            component="a"
+            href="https://www.facebook.com/people/Moja-Sk%C3%B3ra-Kosmetologia-Makija%C5%BC-permanentny/61561822193882/"
+            target="_blank"
+            rel="noopener noreferrer"
+            label="Facebook"
+            icon={<FacebookIcon />}
+          />
+          <BottomNavigationAction
+            component="a"
+            href="https://share.google/cZjmIrreCPS9W4K7i"
+            target="_blank"
+            rel="noopener noreferrer"
+            label="Google"
+            icon={<GoogleIcon />}
+          />
+          <BottomNavigationAction
+            component="a"
+            href="https://www.instagram.com/mojaskora.krakow/"
+            target="_blank"
+            rel="noopener noreferrer"
+            label="Instagram"
+            icon={<InstagramIcon />}
+          />
         </BottomNavigation>
       </Box>
     </Container>

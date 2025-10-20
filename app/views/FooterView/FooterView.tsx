@@ -14,7 +14,6 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import GoogleIcon from "@mui/icons-material/Google";
 import { useNavigate } from "react-router";
 import { WebsiteLanguageContext } from "../../shared/contexts/LanguageContext";
-
 import React from "react";
 
 export default function FooterView() {
@@ -92,7 +91,13 @@ export default function FooterView() {
             component={Button}
             color="text.primary"
             width="max-content"
-            href="https://booksy.com/pl-pl/249371_moja-skora_salon-kosmetyczny_8820_krakow"
+            onClick={() =>
+              window.open(
+                "https://booksy.com/pl-pl/249371_moja-skora_salon-kosmetyczny_8820_krakow",
+                "_blank",
+                "noopener noreferrer"
+              )
+            }
           >
             Booksy
           </Typography>
