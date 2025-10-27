@@ -135,4 +135,18 @@ export const cosmetologyViewData: ICategoryViewData[] = [
       navigateURL: "pca_skin_therapeutic_treatments_for_the_face",
     },
   },
+  {
+    pl: {
+      title: "Oxygenating Trio",
+      description:
+        "Oxygenating Trio – trzystopniowy zabieg intensywnej regeneracji i dotlenienia skóry. Oxygenating Trio to nowoczesny, trzyetapowy zabieg, którego celem jest kompleksowa poprawa kondycji skóry – poprzez jej dotlenienie, detoksykację oraz głęboką regenerację. Zabieg skutecznie neutralizuje skutki stresu oksydacyjnego, zanieczyszczeń środowiskowych oraz zmęczenia, przywracając skórze świeżość, równowagę i promienny wygląd. Każdy z trzech etapów działa na innym poziomie skóry, przygotowując ją do kolejnych kroków i intensyfikując efekty końcowe. To sprawia, że Oxygenating Trio nie tylko oczyszcza, ale również przywraca skórze zdolność do samoregeneracji i prawidłowego funkcjonowania.",
+      navigateURL: "oxygenating_trio",
+    },
+    eng: {
+      title: "Oxygenating Trio",
+      description:
+        "Oxygenating Trio – a three-step treatment for intensive skin regeneration and oxygenation. Oxygenating Trio is a modern, three-phase treatment designed to deeply regenerate, detoxify, and oxygenate the skin. It effectively neutralizes the effects of oxidative stress, environmental pollutants, and fatigue, restoring a fresh, balanced, and radiant appearance. Each of the three stages works on a different level of the skin, preparing it for the next steps and enhancing the final results. This makes the Oxygenating Trio not only purifying, but also a treatment that restores the skin’s ability to self-regenerate and function properly.",
+      navigateURL: "oxygenating_trio",
+    },
+  },
 ];

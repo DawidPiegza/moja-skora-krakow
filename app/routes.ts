@@ -88,4 +88,8 @@ export default [
     "/cosmetology/pca_skin_therapeutic_treatments_for_the_face",
     "./views/Cosmetology/PcaSkinView/PcaSkinView.tsx"
   ),
+  route(
+    "/cosmetology/oxygenating_trio",
+    "./views/Cosmetology/OxygenatingTrioView/OxygenatingTrioView.tsx"
+  ),
 ] satisfies RouteConfig;
