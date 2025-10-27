@@ -84,4 +84,8 @@ export default [
     "/cosmetology/laser_removal_of_permanent_makeup_and_tattoos",
     "./views/Cosmetology/LaserRemovalOfPermanentMakeupAndTattoosView/LaserRemovalOfPermanentMakeupAndTattoosView.tsx"
   ),
+  route(
+    "/cosmetology/pca_skin_therapeutic_treatments_for_the_face",
+    "./views/Cosmetology/PcaSkinView/PcaSkinView.tsx"
+  ),
 ] satisfies RouteConfig;
