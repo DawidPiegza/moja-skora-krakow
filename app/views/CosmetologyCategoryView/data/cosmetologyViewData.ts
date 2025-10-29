@@ -149,4 +149,18 @@ export const cosmetologyViewData: ICategoryViewData[] = [
       navigateURL: "oxygenating_trio",
     },
   },
+  {
+    pl: {
+      title: "PRO XN – SILNA TERAPIA ANTYOKSYDACYJNA",
+      description:
+        "PRO XN to zaawansowana terapia antyoksydacyjna oparta na wysoce aktywnym Kompleksie Ksantohumolu, wspieranym przez synergicznie działające substancje czynne. Zabieg został stworzony z myślą o regeneracji skóry po procedurach inwazyjnych oraz profilaktyce przeciwstarzeniowej. Dzięki swojej innowacyjnej formule skutecznie neutralizuje stres oksydacyjny – główną przyczynę przedwczesnego starzenia się skóry – zapewniając widoczne, potwierdzone badaniami efekty terapeutyczne.",
+      navigateURL: "pro_xn",
+    },
+    eng: {
+      title: "PRO XN – INTENSIVE ANTIOXIDANT THERAPY",
+      description:
+        "PRO XN is an advanced antioxidant therapy based on a highly active Xanthohumol Complex, supported by synergistically acting active ingredients. The treatment was created with the aim of regenerating the skin after invasive procedures and preventing aging. Thanks to its innovative formula, it effectively neutralizes oxidative stress – the main cause of premature skin aging – providing visible, research-confirmed therapeutic effects.",
+      navigateURL: "pro_xn",
+    },
+  },
 ];
