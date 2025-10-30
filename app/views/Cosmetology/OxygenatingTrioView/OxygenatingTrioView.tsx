@@ -104,9 +104,8 @@ export default function OxygenatingTrioView() {
               component="img"
               sx={{
                 height: "100%",
-                width: "auto",
+                width: "100%",
               }}
-              alt="The house from the offer."
               src={oxygenating_trio}
             />
           </Grid>

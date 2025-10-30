@@ -98,6 +98,7 @@ export default function XanthohumolRecoveryTreatmentAccordion({
                 )
               )}
           </Grid>
+
           <Grid size={12}>
             <Divider />
           </Grid>
@@ -178,6 +179,49 @@ export default function XanthohumolRecoveryTreatmentAccordion({
                     key={index}
                   >
                     - {contraindication}
+                  </Typography>
+                )
+              )}
+          </Grid>
+          <Grid size={12}>
+            <Divider />
+          </Grid>
+          <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
+            <Typography
+              variant={downMd ? "body1" : "h6"}
+              textAlign="left"
+              sx={{ fontWeight: "200" }}
+              width={"100%"}
+              fontStyle="italic"
+              gutterBottom
+            >
+              {language.webLanguage === "PL"
+                ? "KLUCZOWE SKŁADNIKI AKTYWNE TERAPII PRO XN".toUpperCase()
+                : "KEY ACTIVE INGREDIENTS IN PRO XN THERAPY".toUpperCase()}
+            </Typography>
+            {language.webLanguage === "PL" &&
+              propsPL.xanthohumolRecoveryTreatment.keyIngredientsProXnTreatment.map(
+                (keyIngredientsProXnTreatment, index) => (
+                  <Typography
+                    variant={downMd ? "body2" : "body1"}
+                    textAlign="left"
+                    width="100%"
+                    key={index}
+                  >
+                    - {keyIngredientsProXnTreatment}
+                  </Typography>
+                )
+              )}
+            {language.webLanguage !== "PL" &&
+              propsPL.xanthohumolRecoveryTreatment.keyIngredientsProXnTreatment.map(
+                (keyIngredientsProXnTreatment, index) => (
+                  <Typography
+                    variant={downMd ? "body2" : "body1"}
+                    textAlign="left"
+                    width="100%"
+                    key={index}
+                  >
+                    - {keyIngredientsProXnTreatment}
                   </Typography>
                 )
               )}

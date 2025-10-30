@@ -18,7 +18,9 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import GoogleIcon from "@mui/icons-material/Google";
 import { proXnDataPL, proXnDataEN } from "./data/proXnData";
-import carbon_peeling from "../../../../public/images/carbon_peeling.png";
+import pro_xn from "../../../../public/images/pro_xn.png";
+import pro_xn_effect_0 from "../../../../public/images/pro_xn_effect_0.png";
+import pro_xn_effect_1 from "../../../../public/images/pro_xn_effect_1.png";
 import XanthohumolRecoveryTreatmentAccordion from "./components/XanthohumolRecoveryTreatmentAccordion/XanthohumolRecoveryTreatmentAccordion";
 import PhaSolutionTreatmentAccordion from "./components/PhaSolutionTreatmentAccordion/PhaSolutionTreatmentAccordion";
 import NovaPeelTreatmentAccordion from "./components/NovaPeelTreatmentAccordion/NovaPeelTreatmentAccordion";
@@ -98,7 +100,6 @@ export default function ProXnView() {
             </Typography>
           </Grid>
         </Grid>
-
         <Grid size={12} container p={1}>
           <Grid size={downMd ? 12 : 5}>
             <Box
@@ -107,10 +108,9 @@ export default function ProXnView() {
                 height: "100%",
                 width: "100%",
               }}
-              src={carbon_peeling}
+              src={pro_xn}
             />
           </Grid>
-
           <Grid size={downMd ? 12 : 7} p={1} container spacing={3}>
             <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
               <Typography
@@ -207,6 +207,48 @@ export default function ProXnView() {
             propsPL={proXnDataPL}
             propsEN={proXnDataEN}
           />
+        </Grid>
+        <Grid size={12}>
+          <Divider />
+        </Grid>
+        <Grid size={12} container spacing={2}>
+          <Grid size={12}>
+            <Typography
+              variant={downMd ? "body1" : "h6"}
+              textAlign="left"
+              sx={{ fontWeight: "200" }}
+              width={"100%"}
+              fontStyle="italic"
+            >
+              {language.webLanguage === "PL"
+                ? "PRZED I PO ZABIEGU"
+                : "BEFORE AND AFTER TREATMENT"}
+            </Typography>
+          </Grid>
+          <Grid size={12} container spacing={3}>
+            <Grid size={downMd ? 12 : 6}>
+              <Box
+                p={2}
+                component="img"
+                sx={{
+                  height: "100%",
+                  width: "100%",
+                }}
+                src={pro_xn_effect_0}
+              />
+            </Grid>
+            <Grid size={downMd ? 12 : 6}>
+              <Box
+                p={2}
+                component="img"
+                sx={{
+                  height: "100%",
+                  width: "100%",
+                }}
+                src={pro_xn_effect_1}
+              />
+            </Grid>
+          </Grid>
         </Grid>
       </Grid>
       <Box

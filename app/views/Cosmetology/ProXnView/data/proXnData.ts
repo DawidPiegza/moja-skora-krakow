@@ -18,7 +18,6 @@ export const proXnDataPL: IProXnData = {
     overview:
       "Najsilniejsza terapia antyoksydacyjna. Kuracja dedykowana regeneracji skóry po zabiegach inwazyjnych i stresie środowiskowym.",
     treatmentIngredients: {
-      ingredient: "XANTOHUMOL COMPLEX AMPOULE i STERILE BIOCELL FACIAL MASK",
       overview: [
         "Ampułka z wysokoskoncentrowanym Kompleksem Ksantohumolu, wzbogacona o: Dysmutazę ponadtlenkową (enzym antyoksydacyjny), 3‑O etylowy kwas askorbinowy (stabilna forma witaminy C), Niacynamid (poprawa bariery lipidowej), Koenzym Q10 (wsparcie metabolizmu komórkowego).",
         "Sterylna, biocelulozowa maska o wysokiej higroskopijności – działa jak druga skóra, tworzy okluzję, maksymalizuje przenikanie składników aktywnych i zapewnia intensywne, długotrwałe nawilżenie.",
@@ -35,15 +34,16 @@ export const proXnDataPL: IProXnData = {
         "Nadwrażliwość na którykolwiek ze składników preparatu",
       ],
     },
+    keyIngredientsProXnTreatment: [
+      "Kompleks Ksantohumolu – silny przeciwutleniacz neutralizujący stres oksydacyjny, wspiera regenerację i działa przeciwstarzeniowo",
+      "Dysmutaza ponadtlenkowa – enzym antyoksydacyjny chroniący komórki przed uszkodzeniami",
+      "3‑O etylowy kwas askorbinowy – stabilna forma witaminy C o działaniu rozjaśniającym i stymulującym syntezę kolagenu",
+      "Koenzym Q10 – wspomaga metabolizm komórkowy i redukuje oznaki starzenia",
+      "Niacynamid (witamina B3) – poprawia strukturę skóry, wzmacnia barierę lipidową i wyrównuje koloryt",
+      "Jony srebra – działają przeciwbakteryjnie i łagodząco",
+    ],
   },
-  keyIngredientsProXnTreatment: [
-    "Kompleks Ksantohumolu – silny przeciwutleniacz neutralizujący stres oksydacyjny, wspiera regenerację i działa przeciwstarzeniowo",
-    "Dysmutaza ponadtlenkowa – enzym antyoksydacyjny chroniący komórki przed uszkodzeniami",
-    "3‑O etylowy kwas askorbinowy – stabilna forma witaminy C o działaniu rozjaśniającym i stymulującym syntezę kolagenu",
-    "Koenzym Q10 – wspomaga metabolizm komórkowy i redukuje oznaki starzenia",
-    "Niacynamid (witamina B3) – poprawia strukturę skóry, wzmacnia barierę lipidową i wyrównuje koloryt",
-    "Jony srebra – działają przeciwbakteryjnie i łagodząco",
-  ],
+
   phaSolutionTreatment: {
     overview:
       "PHA SOLUTION to wyjątkowo łagodna formuła eksfoliująca, opracowana z myślą o skórach szczególnie wrażliwych, atopowych i naczyniowych. Główne składniki – glukonolakton i kwas azelainowy – zapewniają skuteczną, a jednocześnie delikatną odnowę naskórka bez ryzyka podrażnień.",
@@ -109,7 +109,6 @@ export const proXnDataEN: IProXnData = {
     overview:
       "The most powerful antioxidant therapy. A treatment dedicated to skin recovery following invasive procedures and environmental stress.",
     treatmentIngredients: {
-      ingredient: "XANTOHUMOL COMPLEX AMPOULE and STERILE BIOCELL FACIAL MASK",
       overview: [
         "An ampoule with a highly concentrated Xanthohumol Complex enriched with: Superoxide dismutase (potent antioxidant enzyme), 3‑O ethyl ascorbic acid (stable form of vitamin C), Niacinamide (strengthens the lipid barrier), Coenzyme Q10 (supports cellular energy production).",
         "A sterile biocellulose mask with high hygroscopicity acting like a second skin. It creates an occlusive layer to maximize the penetration of active ingredients and deliver intense, long‑lasting hydration.",
@@ -126,15 +125,16 @@ export const proXnDataEN: IProXnData = {
         "Hypersensitivity to any of the ingredients",
       ],
     },
+    keyIngredientsProXnTreatment: [
+      "Xanthohumol Complex – a powerful antioxidant that supports regeneration and anti‑aging",
+      "Superoxide dismutase – protects cells from damage",
+      "3‑O ethyl ascorbic acid – brightens skin and boosts collagen synthesis",
+      "Coenzyme Q10 – supports cellular metabolism and reduces signs of aging",
+      "Niacinamide (vitamin B3) – improves skin texture, strengthens the barrier, and evens skin tone",
+      "Silver ions – provide antibacterial and soothing effects",
+    ],
   },
-  keyIngredientsProXnTreatment: [
-    "Xanthohumol Complex – a powerful antioxidant that supports regeneration and anti‑aging",
-    "Superoxide dismutase – protects cells from damage",
-    "3‑O ethyl ascorbic acid – brightens skin and boosts collagen synthesis",
-    "Coenzyme Q10 – supports cellular metabolism and reduces signs of aging",
-    "Niacinamide (vitamin B3) – improves skin texture, strengthens the barrier, and evens skin tone",
-    "Silver ions – provide antibacterial and soothing effects",
-  ],
+
   phaSolutionTreatment: {
     overview:
       "PHA SOLUTION is an exceptionally mild exfoliating formula designed for sensitive, atopic, and couperose‑prone skin. Its main ingredients—gluconolactone and azelaic acid—ensure effective yet gentle epidermal renewal without the risk of irritation.",

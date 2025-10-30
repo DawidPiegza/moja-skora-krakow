@@ -9,8 +9,9 @@ export interface IProXnData {
       indications: string[];
       contraindications: string[];
     };
+    keyIngredientsProXnTreatment: string[];
   };
-  keyIngredientsProXnTreatment: string[];
+
   phaSolutionTreatment: {
     overview: string;
     actionOfTreatment: string[];
