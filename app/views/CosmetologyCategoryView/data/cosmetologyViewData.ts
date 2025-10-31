@@ -151,16 +151,30 @@ export const cosmetologyViewData: ICategoryViewData[] = [
   },
   {
     pl: {
-      title: "PRO XN – SILNA TERAPIA ANTYOKSYDACYJNA",
+      title: "PRO XN – Silna terapia antyoksydacyjna",
       description:
         "PRO XN to zaawansowana terapia antyoksydacyjna oparta na wysoce aktywnym Kompleksie Ksantohumolu, wspieranym przez synergicznie działające substancje czynne. Zabieg został stworzony z myślą o regeneracji skóry po procedurach inwazyjnych oraz profilaktyce przeciwstarzeniowej. Dzięki swojej innowacyjnej formule skutecznie neutralizuje stres oksydacyjny – główną przyczynę przedwczesnego starzenia się skóry – zapewniając widoczne, potwierdzone badaniami efekty terapeutyczne.",
       navigateURL: "pro_xn",
     },
     eng: {
-      title: "PRO XN – INTENSIVE ANTIOXIDANT THERAPY",
+      title: "PRO XN – Intensive antioxidant therapy",
       description:
         "PRO XN is an advanced antioxidant therapy based on a highly active Xanthohumol Complex, supported by synergistically acting active ingredients. The treatment was created with the aim of regenerating the skin after invasive procedures and preventing aging. Thanks to its innovative formula, it effectively neutralizes oxidative stress – the main cause of premature skin aging – providing visible, research-confirmed therapeutic effects.",
       navigateURL: "pro_xn",
+    },
+  },
+  {
+    pl: {
+      title: "Autorski zabieg Glass Skin",
+      description:
+        "Autorski zabieg Glass Skin to zaawansowana terapia pielęgnacyjna inspirowana koreańskimi rytuałami piękna, stworzona z myślą o przywróceniu skórze intensywnego blasku, gładkości i równomiernego kolorytu. Zabieg dedykowany jest każdemu, kto marzy o promiennej, „szklanej” skórze – wolnej od szarości, odwodnienia i oznak zmęczenia. W trakcie terapii łączymy innowacyjne technologie z wysoce skoncentrowanymi składnikami aktywnymi, takimi jak: kwas hialuronowy, niacynamid, peptydy biomimetyczne, antyoksydanty oraz substancje rozświetlające i nawilżające. Całość została zaprojektowana jako rytuał wieloetapowy – z precyzyjnie dobranym oczyszczeniem, eksfoliacją, masażem oraz aplikacją boosterów i masek typu glow.",
+      navigateURL: "glass_skin",
+    },
+    eng: {
+      title: "Signature Glass Skin Treatment",
+      description:
+        "Our Signature Glass Skin Treatment is an advanced skincare therapy inspired by Korean beauty rituals. It was designed to restore your skin’s radiant glow, smoothness, and even tone. This treatment is ideal for anyone dreaming of luminous, “glass-like” skin – free from dullness, dehydration, and signs of fatigue. The procedure combines innovative technologies with highly concentrated active ingredients such as hyaluronic acid, niacinamide, biomimetic peptides, antioxidants, and illuminating, moisturizing complexes. The treatment is structured as a multi-step ritual that includes deep cleansing, exfoliation, massage, and application of glow-boosting serums and masks.",
+      navigateURL: "glass_skin",
     },
   },
 ];

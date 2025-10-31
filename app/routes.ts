@@ -92,5 +92,9 @@ export default [
     "/cosmetology/oxygenating_trio",
     "./views/Cosmetology/OxygenatingTrioView/OxygenatingTrioView.tsx"
   ),
+  route(
+    "/cosmetology/glass_skin",
+    "./views/Cosmetology/GlassSkinView/GlassSkinView.tsx"
+  ),
   route("/cosmetology/pro_xn", "./views/Cosmetology/ProXnView/ProXnView.tsx"),
 ] satisfies RouteConfig;
