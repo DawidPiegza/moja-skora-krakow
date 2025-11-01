@@ -5,6 +5,7 @@ import {
   AccordionSummary,
   Divider,
   Grid,
+  Paper,
   Typography,
   useMediaQuery,
   useTheme,
@@ -27,7 +28,7 @@ export default function PhaSolutionTreatmentAccordion({
   const { language } = React.useContext(WebsiteLanguageContext);
 
   return (
-    <Accordion disableGutters>
+    <Accordion disableGutters component={Paper} sx={{ boxShadow: "none" }}>
       <AccordionSummary
         expandIcon={<ExpandMoreIcon />}
         sx={{ bgcolor: "#fafafa" }}

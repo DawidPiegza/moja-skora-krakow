@@ -24,7 +24,12 @@ import {
   needleMesotherapyDataEN,
   needleMesotherapyDataPL,
 } from "./data/needleMesotherapyData";
+import {
+  needleMesotherapySpecificTreatmentsPL,
+  needleMesotherapySpecificTreatmentsEN,
+} from "./data/needleMesotherapySpecificTreatments";
 import needle_mesotherapy from "../../../../public/images/needle_mesotherapy.png";
+import NeedlMesotherapySpecificTreatmentAccordion from "./components/NeedlMesotherapySpecificTreatmentAccordion/NeedlMesotherapySpecificTreatmentAccordion";
 
 export default function NeedleMesotherapyView() {
   const { language } = React.useContext(WebsiteLanguageContext);
@@ -475,6 +480,31 @@ export default function NeedleMesotherapyView() {
                   </Typography>
                 )
               )}
+          </Grid>
+          <Grid size={12}>
+            <Divider />
+          </Grid>
+          <Grid size={12} display="flex" flexDirection={"column"}>
+            {language.webLanguage === "PL" && (
+              <React.Fragment>
+                {needleMesotherapySpecificTreatmentsPL.map((treatment) => (
+                  <NeedlMesotherapySpecificTreatmentAccordion
+                    key={treatment.treatmentName}
+                    treatment={treatment}
+                  />
+                ))}
+              </React.Fragment>
+            )}
+            {language.webLanguage === "ENG" && (
+              <React.Fragment>
+                {needleMesotherapySpecificTreatmentsEN.map((treatment) => (
+                  <NeedlMesotherapySpecificTreatmentAccordion
+                    key={treatment.treatmentName}
+                    treatment={treatment}
+                  />
+                ))}
+              </React.Fragment>
+            )}
           </Grid>
         </Grid>
       </Grid>

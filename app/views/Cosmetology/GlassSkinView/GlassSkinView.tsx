@@ -70,8 +70,8 @@ export default function GlassSkinView() {
               })}
             >
               {language.webLanguage === "PL"
-                ? "AUTORSKI ZABIEG GLASS SKIN".toUpperCase()
-                : "SIGNATURE GLASS SKIN TREATMENT".toUpperCase()}
+                ? "Autorski zabieg Glass Skin"
+                : "Signature Glass Skin Treatment"}
             </Typography>
           </Breadcrumbs>
         </Grid>
@@ -93,8 +93,8 @@ export default function GlassSkinView() {
               sx={{ fontWeight: "350" }}
             >
               {language.webLanguage === "PL"
-                ? "AUTORSKI ZABIEG GLASS SKIN".toUpperCase()
-                : "SIGNATURE GLASS SKIN TREATMENT".toUpperCase()}
+                ? "Autorski zabieg Glass Skin".toUpperCase()
+                : "Signature Glass Skin Treatment".toUpperCase()}
             </Typography>
           </Grid>
         </Grid>

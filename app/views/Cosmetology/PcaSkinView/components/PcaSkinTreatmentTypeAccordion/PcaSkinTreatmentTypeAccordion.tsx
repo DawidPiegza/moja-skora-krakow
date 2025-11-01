@@ -30,7 +30,7 @@ export default function PcaSkinTreatmentTypeAccordion(
     <React.Fragment>
       {pcaSkinData.typesOfPcaSkinTreatments.map((treatment, index) => {
         return (
-          <Accordion key={index} disableGutters>
+          <Accordion key={index} component={Paper} sx={{ boxShadow: "none" }}>
             <AccordionSummary
               expandIcon={<ExpandMoreIcon />}
               sx={{ bgcolor: "#fafafa" }}
