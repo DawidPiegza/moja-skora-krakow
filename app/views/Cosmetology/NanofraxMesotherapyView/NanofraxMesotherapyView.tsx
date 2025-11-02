@@ -185,18 +185,17 @@ export default function NanofraxMesotherapyView() {
           </Grid>
         </Grid>
         <Grid size={12} container p={1}>
-          <Grid size={downMd ? 12 : 5}>
+          <Grid size={downMd ? 12 : 4}>
             <Box
               component="img"
               sx={{
                 height: "100%",
                 width: "100%",
               }}
-              alt="The house from the offer."
               src={nanofrax_mesotherapy}
             />
           </Grid>
-          <Grid size={downMd ? 12 : 7} p={1} container spacing={3}>
+          <Grid size={downMd ? 12 : 8} p={1} container spacing={3}>
             <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
               <Typography
                 variant={downMd ? "body2" : "body1"}
@@ -234,49 +233,6 @@ export default function NanofraxMesotherapyView() {
                   ? nanofraxMesotherapyDataPL.causesOfEfficiency
                   : nanofraxMesotherapyDataENG.causesOfEfficiency}
               </Typography>
-            </Grid>
-            <Grid size={12}>
-              <Divider />
-            </Grid>
-            <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
-              <Typography
-                variant={downMd ? "body1" : "h6"}
-                textAlign="left"
-                sx={{ fontWeight: "200" }}
-                width={"100%"}
-                fontStyle="italic"
-              >
-                {language.webLanguage === "PL"
-                  ? "WSKAZANIA DO ZABIEGU"
-                  : "INDICATIONS FOR THE TREATMENT"}
-              </Typography>
-
-              {language.webLanguage === "PL" &&
-                nanofraxMesotherapyDataPL.indicationsToTreatment.map(
-                  (indication, index) => (
-                    <Typography
-                      variant={downMd ? "body2" : "body1"}
-                      textAlign="left"
-                      width="100%"
-                      key={index}
-                    >
-                      - {indication}
-                    </Typography>
-                  )
-                )}
-              {language.webLanguage !== "PL" &&
-                nanofraxMesotherapyDataENG.indicationsToTreatment.map(
-                  (indication, index) => (
-                    <Typography
-                      variant={downMd ? "body2" : "body1"}
-                      textAlign="left"
-                      width="100%"
-                      key={index}
-                    >
-                      - {indication}
-                    </Typography>
-                  )
-                )}
             </Grid>
           </Grid>
         </Grid>
@@ -353,6 +309,76 @@ export default function NanofraxMesotherapyView() {
               fontStyle="italic"
             >
               {language.webLanguage === "PL"
+                ? "WSKAZANIA DO ZABIEGU"
+                : "INDICATIONS FOR THE TREATMENT"}
+            </Typography>
+
+            {language.webLanguage === "PL" &&
+              nanofraxMesotherapyDataPL.indicationsToTreatment.map(
+                (indication, index) => (
+                  <Typography
+                    variant={downMd ? "body2" : "body1"}
+                    textAlign="left"
+                    width="100%"
+                    key={index}
+                  >
+                    - {indication}
+                  </Typography>
+                )
+              )}
+            {language.webLanguage !== "PL" &&
+              nanofraxMesotherapyDataENG.indicationsToTreatment.map(
+                (indication, index) => (
+                  <Typography
+                    variant={downMd ? "body2" : "body1"}
+                    textAlign="left"
+                    width="100%"
+                    key={index}
+                  >
+                    - {indication}
+                  </Typography>
+                )
+              )}
+          </Grid>
+
+          <Grid size={12}>
+            <Divider />
+          </Grid>
+          <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
+            <Typography
+              variant={downMd ? "body1" : "h6"}
+              textAlign="left"
+              sx={{ fontWeight: "200" }}
+              width={"100%"}
+              fontStyle="italic"
+            >
+              {language.webLanguage === "PL"
+                ? "Czym jest technika One Needle i dla kogo jest przeznaczona?".toUpperCase()
+                : "What is the One Needle Technique and Who Is It For?".toUpperCase()}
+            </Typography>
+            <Typography
+              variant={downMd ? "body2" : "body1"}
+              textAlign="left"
+              width="100%"
+              gutterBottom
+            >
+              {language.webLanguage === "PL"
+                ? nanofraxMesotherapyDataPL.oneNeedleOverview
+                : nanofraxMesotherapyDataENG.oneNeedleOverview}
+            </Typography>
+          </Grid>
+          <Grid size={12}>
+            <Divider />
+          </Grid>
+          <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
+            <Typography
+              variant={downMd ? "body1" : "h6"}
+              textAlign="left"
+              sx={{ fontWeight: "200" }}
+              width={"100%"}
+              fontStyle="italic"
+            >
+              {language.webLanguage === "PL"
                 ? "EFEKTY ZABIEGU"
                 : "TREATMENT RESULTS"}
             </Typography>
@@ -382,32 +408,6 @@ export default function NanofraxMesotherapyView() {
                   </Typography>
                 )
               )}
-          </Grid>
-          <Grid size={12}>
-            <Divider />
-          </Grid>
-          <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
-            <Typography
-              variant={downMd ? "body1" : "h6"}
-              textAlign="left"
-              sx={{ fontWeight: "200" }}
-              width={"100%"}
-              fontStyle="italic"
-            >
-              {language.webLanguage === "PL"
-                ? "Czym jest technika One Needle i dla kogo jest przeznaczona?".toUpperCase()
-                : "What is the One Needle Technique and Who Is It For?".toUpperCase()}
-            </Typography>
-            <Typography
-              variant={downMd ? "body2" : "body1"}
-              textAlign="left"
-              width="100%"
-              gutterBottom
-            >
-              {language.webLanguage === "PL"
-                ? nanofraxMesotherapyDataPL.oneNeedleOverview
-                : nanofraxMesotherapyDataENG.oneNeedleOverview}
-            </Typography>
           </Grid>
           <Grid size={12}>
             <Divider />

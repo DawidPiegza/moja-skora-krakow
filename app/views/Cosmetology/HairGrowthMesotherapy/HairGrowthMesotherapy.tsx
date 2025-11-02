@@ -187,7 +187,7 @@ export default function HairGrowthMesotherapy() {
           </Grid>
         </Grid>
         <Grid size={12} container p={1}>
-          <Grid size={downMd ? 12 : 5}>
+          <Grid size={downMd ? 12 : 4}>
             <Box
               component="img"
               sx={{
@@ -198,7 +198,7 @@ export default function HairGrowthMesotherapy() {
               src={hair_growth_mesotherapy}
             />
           </Grid>
-          <Grid size={downMd ? 12 : 7} p={1} container spacing={3}>
+          <Grid size={downMd ? 12 : 8} p={1} container spacing={3}>
             <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
               <Typography
                 variant={downMd ? "body2" : "body1"}
@@ -223,79 +223,20 @@ export default function HairGrowthMesotherapy() {
                 fontStyle="italic"
               >
                 {language.webLanguage === "PL"
-                  ? "WSKAZANIA DO ZABIEGU"
-                  : "INDICATIONS FOR THE TREATMENT"}
+                  ? "JAK PRZEBIEGA ZABIEG?"
+                  : "HOW DOES THE TREATMENT WORK?"}
               </Typography>
-
-              {language.webLanguage === "PL" &&
-                hairGrowthMesotherapyDataPL.indicationsToTreatment.map(
-                  (indication, index) => (
-                    <Typography
-                      variant={downMd ? "body2" : "body1"}
-                      textAlign="left"
-                      width="100%"
-                      key={index}
-                    >
-                      - {indication}
-                    </Typography>
-                  )
-                )}
-              {language.webLanguage !== "PL" &&
-                hairGrowthMesotherapyDataENG.indicationsToTreatment.map(
-                  (indication, index) => (
-                    <Typography
-                      variant={downMd ? "body2" : "body1"}
-                      textAlign="left"
-                      width="100%"
-                      key={index}
-                    >
-                      - {indication}
-                    </Typography>
-                  )
-                )}
-            </Grid>
-            <Grid size={12}>
-              <Divider />
-            </Grid>
-            <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
               <Typography
-                variant={downMd ? "body1" : "h6"}
+                variant={downMd ? "body2" : "body1"}
                 textAlign="left"
-                sx={{ fontWeight: "200" }}
-                width={"100%"}
-                fontStyle="italic"
+                width="100%"
+                gutterBottom
               >
-                {language.webLanguage === "PL"
-                  ? "PRZECIWWSKAZANIA DO ZABIEGU "
-                  : "CONTRAINDICATIONS FOR THE TREATMENT"}
+                {language.webLanguage === "PL" &&
+                  hairGrowthMesotherapyDataPL.courseOfTreatment}
+                {language.webLanguage !== "PL" &&
+                  hairGrowthMesotherapyDataENG.courseOfTreatment}
               </Typography>
-
-              {language.webLanguage === "PL" &&
-                hairGrowthMesotherapyDataPL.contraindications.map(
-                  (indication, index) => (
-                    <Typography
-                      variant={downMd ? "body2" : "body1"}
-                      textAlign="left"
-                      width="100%"
-                      key={index}
-                    >
-                      - {indication}
-                    </Typography>
-                  )
-                )}
-              {language.webLanguage !== "PL" &&
-                hairGrowthMesotherapyDataENG.contraindications.map(
-                  (indication, index) => (
-                    <Typography
-                      variant={downMd ? "body2" : "body1"}
-                      textAlign="left"
-                      width="100%"
-                      key={index}
-                    >
-                      - {indication}
-                    </Typography>
-                  )
-                )}
             </Grid>
           </Grid>
         </Grid>
@@ -303,6 +244,109 @@ export default function HairGrowthMesotherapy() {
           <Divider />
         </Grid>
         <Grid size={12} p={1} container spacing={3}>
+          <Grid
+            size={downMd ? 12 : 5}
+            display="flex"
+            flexDirection={"column"}
+            rowGap={2}
+          >
+            <Typography
+              variant={downMd ? "body1" : "h6"}
+              textAlign="left"
+              sx={{ fontWeight: "200" }}
+              width={"100%"}
+              fontStyle="italic"
+            >
+              {language.webLanguage === "PL"
+                ? "WSKAZANIA DO ZABIEGU"
+                : "INDICATIONS FOR THE TREATMENT"}
+            </Typography>
+
+            {language.webLanguage === "PL" &&
+              hairGrowthMesotherapyDataPL.indicationsToTreatment.map(
+                (indication, index) => (
+                  <Typography
+                    variant={downMd ? "body2" : "body1"}
+                    textAlign="left"
+                    width="100%"
+                    key={index}
+                  >
+                    - {indication}
+                  </Typography>
+                )
+              )}
+            {language.webLanguage !== "PL" &&
+              hairGrowthMesotherapyDataENG.indicationsToTreatment.map(
+                (indication, index) => (
+                  <Typography
+                    variant={downMd ? "body2" : "body1"}
+                    textAlign="left"
+                    width="100%"
+                    key={index}
+                  >
+                    - {indication}
+                  </Typography>
+                )
+              )}
+          </Grid>
+          {downMd && (
+            <Grid size={12}>
+              <Divider />
+            </Grid>
+          )}
+          {!downMd && (
+            <Grid size={2} display={"flex"} justifyContent={"center"}>
+              <Divider orientation="vertical" />
+            </Grid>
+          )}
+          <Grid
+            size={downMd ? 12 : 5}
+            display="flex"
+            flexDirection={"column"}
+            rowGap={2}
+          >
+            <Typography
+              variant={downMd ? "body1" : "h6"}
+              textAlign="left"
+              sx={{ fontWeight: "200" }}
+              width={"100%"}
+              fontStyle="italic"
+            >
+              {language.webLanguage === "PL"
+                ? "PRZECIWWSKAZANIA DO ZABIEGU "
+                : "CONTRAINDICATIONS FOR THE TREATMENT"}
+            </Typography>
+
+            {language.webLanguage === "PL" &&
+              hairGrowthMesotherapyDataPL.contraindications.map(
+                (indication, index) => (
+                  <Typography
+                    variant={downMd ? "body2" : "body1"}
+                    textAlign="left"
+                    width="100%"
+                    key={index}
+                  >
+                    - {indication}
+                  </Typography>
+                )
+              )}
+            {language.webLanguage !== "PL" &&
+              hairGrowthMesotherapyDataENG.contraindications.map(
+                (indication, index) => (
+                  <Typography
+                    variant={downMd ? "body2" : "body1"}
+                    textAlign="left"
+                    width="100%"
+                    key={index}
+                  >
+                    - {indication}
+                  </Typography>
+                )
+              )}
+          </Grid>
+          <Grid size={12}>
+            <Divider />
+          </Grid>
           <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
             <Typography
               variant={downMd ? "body1" : "h6"}
@@ -341,33 +385,6 @@ export default function HairGrowthMesotherapy() {
                   </Typography>
                 )
               )}
-          </Grid>
-          <Grid size={12}>
-            <Divider />
-          </Grid>
-          <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
-            <Typography
-              variant={downMd ? "body1" : "h6"}
-              textAlign="left"
-              sx={{ fontWeight: "200" }}
-              width={"100%"}
-              fontStyle="italic"
-            >
-              {language.webLanguage === "PL"
-                ? "JAK PRZEBIEGA ZABIEG?"
-                : "HOW DOES THE TREATMENT WORK?"}
-            </Typography>
-            <Typography
-              variant={downMd ? "body2" : "body1"}
-              textAlign="left"
-              width="100%"
-              gutterBottom
-            >
-              {language.webLanguage === "PL" &&
-                hairGrowthMesotherapyDataPL.courseOfTreatment}
-              {language.webLanguage !== "PL" &&
-                hairGrowthMesotherapyDataENG.courseOfTreatment}
-            </Typography>
           </Grid>
           <Grid size={12}>
             <Divider />

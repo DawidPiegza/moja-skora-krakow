@@ -190,18 +190,17 @@ export default function NeedleMesotherapyView() {
           </Grid>
         </Grid>
         <Grid size={12} container p={1}>
-          <Grid size={downMd ? 12 : 5}>
+          <Grid size={downMd ? 12 : 4}>
             <Box
               component="img"
               sx={{
                 height: "100%",
                 width: "100%",
               }}
-              alt="The house from the offer."
               src={needle_mesotherapy}
             />
           </Grid>
-          <Grid size={downMd ? 12 : 7} p={1} container spacing={3}>
+          <Grid size={downMd ? 12 : 8} p={1} container spacing={3}>
             <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
               <Typography
                 variant={downMd ? "body2" : "body1"}
@@ -239,48 +238,6 @@ export default function NeedleMesotherapyView() {
                   ? needleMesotherapyDataPL.preparationForTreatment
                   : needleMesotherapyDataEN.preparationForTreatment}
               </Typography>
-            </Grid>
-            <Grid size={12}>
-              <Divider />
-            </Grid>
-            <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
-              <Typography
-                variant={downMd ? "body1" : "h6"}
-                textAlign="left"
-                sx={{ fontWeight: "200" }}
-                width={"100%"}
-                fontStyle="italic"
-              >
-                {language.webLanguage === "PL"
-                  ? "WSKAZANIA DO ZABIEGU"
-                  : "INDICATIONS FOR THE TREATMENT"}
-              </Typography>
-              {language.webLanguage === "PL" &&
-                needleMesotherapyDataPL.indicationsToTreatment.map(
-                  (indication, index) => (
-                    <Typography
-                      variant={downMd ? "body2" : "body1"}
-                      textAlign="left"
-                      width="100%"
-                      key={index}
-                    >
-                      - {indication}
-                    </Typography>
-                  )
-                )}
-              {language.webLanguage !== "PL" &&
-                needleMesotherapyDataEN.indicationsToTreatment.map(
-                  (indication, index) => (
-                    <Typography
-                      variant={downMd ? "body2" : "body1"}
-                      textAlign="left"
-                      width="100%"
-                      key={index}
-                    >
-                      - {indication}
-                    </Typography>
-                  )
-                )}
             </Grid>
           </Grid>
         </Grid>
@@ -349,6 +306,48 @@ export default function NeedleMesotherapyView() {
             flexDirection={"column"}
             rowGap={2}
           >
+            <Typography
+              variant={downMd ? "body1" : "h6"}
+              textAlign="left"
+              sx={{ fontWeight: "200" }}
+              width={"100%"}
+              fontStyle="italic"
+            >
+              {language.webLanguage === "PL"
+                ? "WSKAZANIA DO ZABIEGU"
+                : "INDICATIONS FOR THE TREATMENT"}
+            </Typography>
+            {language.webLanguage === "PL" &&
+              needleMesotherapyDataPL.indicationsToTreatment.map(
+                (indication, index) => (
+                  <Typography
+                    variant={downMd ? "body2" : "body1"}
+                    textAlign="left"
+                    width="100%"
+                    key={index}
+                  >
+                    - {indication}
+                  </Typography>
+                )
+              )}
+            {language.webLanguage !== "PL" &&
+              needleMesotherapyDataEN.indicationsToTreatment.map(
+                (indication, index) => (
+                  <Typography
+                    variant={downMd ? "body2" : "body1"}
+                    textAlign="left"
+                    width="100%"
+                    key={index}
+                  >
+                    - {indication}
+                  </Typography>
+                )
+              )}
+          </Grid>
+          <Grid size={12}>
+            <Divider />
+          </Grid>
+          <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
             <Typography
               variant={downMd ? "body1" : "h6"}
               textAlign="left"

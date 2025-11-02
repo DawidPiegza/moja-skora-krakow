@@ -1,8 +1,6 @@
 import type { IServiceObject } from "../../../../shared/utils/interfaces/IServiceObject";
-import mezoterapia_iglowa_dr_cyj from "/public/images/mezoterapia_iglowa_dr_cyj.jpeg";
 
 export const drCyjFillerDataPL: IServiceObject = {
-  treatmentPhotoURL: mezoterapia_iglowa_dr_cyj,
   description:
     "Mezoterapia skóry głowy z wykorzystaniem preparatów Dr Cyj to nowoczesna, peptydowa terapia, która skutecznie przeciwdziała wypadaniu włosów oraz stymuluje ich wzrost. Dzięki specjalnie opracowanemu składowi, zabieg poprawia mikrokrążenie i wspomaga regenerację mieszków włosowych.",
   infoTable: {
@@ -49,7 +47,6 @@ export const drCyjFillerDataPL: IServiceObject = {
 };
 
 export const drCyjFillerDataENG: IServiceObject = {
-  treatmentPhotoURL: mezoterapia_iglowa_dr_cyj,
   description:
     "Dr. CYJ scalp mesotherapy is a modern peptide-based therapy that effectively prevents hair loss and stimulates hair growth. Its advanced formula helps to improve microcirculation and supports the regeneration of hair follicles.",
   infoTable: {

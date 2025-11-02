@@ -80,9 +80,7 @@ export default function LashLiftView() {
                 },
               })}
             >
-              {language.webLanguage === "PL"
-                ? "Laminacja brwi"
-                : "Eyebrow lamination"}
+              {language.webLanguage === "PL" ? "Lifting rzęs" : "Lash lift"}
             </Typography>
           </Breadcrumbs>
         </Grid>
@@ -104,8 +102,8 @@ export default function LashLiftView() {
               sx={{ fontWeight: "350" }}
             >
               {language.webLanguage === "PL"
-                ? "Laminacja brwi".toUpperCase()
-                : "Eyebrow lamination".toUpperCase()}
+                ? "Lifting rzęs".toUpperCase()
+                : "Lash lift".toUpperCase()}
             </Typography>
           </Grid>
         </Grid>

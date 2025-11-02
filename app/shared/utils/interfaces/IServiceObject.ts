@@ -1,5 +1,5 @@
 export interface IServiceObject {
-  treatmentPhotoURL: string;
+  treatmentPhotoURL?: string;
   description: string;
   infoTable: {
     recommendedNumber: string;

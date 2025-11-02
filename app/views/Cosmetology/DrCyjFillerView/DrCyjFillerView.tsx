@@ -14,7 +14,7 @@ import {
 } from "@mui/material";
 import React from "react";
 import { WebsiteLanguageContext } from "../../../shared/contexts/LanguageContext";
-import mezoterapia_iglowa_dr_cyj from "../../../../public/images/mezoterapia_iglowa_dr_cyj.jpeg";
+import cyj_filler from "../../../../public/images/cyj_filler.jpeg";
 import { drCyjFillerDataPL, drCyjFillerDataENG } from "./data/drCyjFillerData";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
@@ -182,18 +182,17 @@ export default function DrCyjFillerView() {
           </Grid>
         </Grid>
         <Grid size={12} container p={1}>
-          <Grid size={downMd ? 12 : 5}>
+          <Grid size={downMd ? 12 : 4}>
             <Box
               component="img"
               sx={{
                 height: "100%",
                 width: "auto",
               }}
-              alt="The house from the offer."
-              src={mezoterapia_iglowa_dr_cyj}
+              src={cyj_filler}
             />
           </Grid>
-          <Grid size={downMd ? 12 : 7} p={1} container spacing={3}>
+          <Grid size={downMd ? 12 : 8} p={1} container>
             <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
               <Typography
                 variant={downMd ? "body2" : "body1"}
@@ -205,6 +204,7 @@ export default function DrCyjFillerView() {
                   : drCyjFillerDataENG.description}
               </Typography>
             </Grid>
+
             <Grid size={12}>
               <Divider />
             </Grid>
@@ -217,39 +217,25 @@ export default function DrCyjFillerView() {
                 fontStyle="italic"
               >
                 {language.webLanguage === "PL"
-                  ? "WSKAZANIA DO ZABIEGU"
-                  : "INDICATIONS FOR THE TREATMENT"}
+                  ? "JAK PRZEBIEGA ZABIEG?"
+                  : "HOW DOES THE TREATMENT WORK?"}
               </Typography>
-              {language.webLanguage === "PL" &&
-                drCyjFillerDataPL.indicationsToTreatment.map(
-                  (indication, index) => (
-                    <Typography
-                      variant={downMd ? "body2" : "body1"}
-                      textAlign="left"
-                      width="100%"
-                      key={index}
-                    >
-                      - {indication}
-                    </Typography>
-                  )
-                )}
-              {language.webLanguage !== "PL" &&
-                drCyjFillerDataENG.indicationsToTreatment.map(
-                  (indication, index) => (
-                    <Typography
-                      variant={downMd ? "body2" : "body1"}
-                      textAlign="left"
-                      width="100%"
-                      key={index}
-                    >
-                      - {indication}
-                    </Typography>
-                  )
-                )}
+              <Typography
+                variant={downMd ? "body2" : "body1"}
+                textAlign="left"
+                width="100%"
+                gutterBottom
+              >
+                {language.webLanguage === "PL" &&
+                  drCyjFillerDataPL.courseOfTreatment}
+                {language.webLanguage !== "PL" &&
+                  drCyjFillerDataENG.courseOfTreatment}
+              </Typography>
             </Grid>
             <Grid size={12}>
               <Divider />
             </Grid>
+
             <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
               <Typography
                 variant={downMd ? "body1" : "h6"}
@@ -345,6 +331,49 @@ export default function DrCyjFillerView() {
               fontStyle="italic"
             >
               {language.webLanguage === "PL"
+                ? "WSKAZANIA DO ZABIEGU"
+                : "INDICATIONS FOR THE TREATMENT"}
+            </Typography>
+            {language.webLanguage === "PL" &&
+              drCyjFillerDataPL.indicationsToTreatment.map(
+                (indication, index) => (
+                  <Typography
+                    variant={downMd ? "body2" : "body1"}
+                    textAlign="left"
+                    width="100%"
+                    key={index}
+                  >
+                    - {indication}
+                  </Typography>
+                )
+              )}
+            {language.webLanguage !== "PL" &&
+              drCyjFillerDataENG.indicationsToTreatment.map(
+                (indication, index) => (
+                  <Typography
+                    variant={downMd ? "body2" : "body1"}
+                    textAlign="left"
+                    width="100%"
+                    key={index}
+                  >
+                    - {indication}
+                  </Typography>
+                )
+              )}
+          </Grid>
+
+          <Grid size={12}>
+            <Divider />
+          </Grid>
+          <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
+            <Typography
+              variant={downMd ? "body1" : "h6"}
+              textAlign="left"
+              sx={{ fontWeight: "200" }}
+              width={"100%"}
+              fontStyle="italic"
+            >
+              {language.webLanguage === "PL"
                 ? "EFEKTY ZABIEGU"
                 : "TREATMENT RESULTS"}
             </Typography>
@@ -374,33 +403,7 @@ export default function DrCyjFillerView() {
           <Grid size={12}>
             <Divider />
           </Grid>
-          <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
-            <Typography
-              variant={downMd ? "body1" : "h6"}
-              textAlign="left"
-              sx={{ fontWeight: "200" }}
-              width={"100%"}
-              fontStyle="italic"
-            >
-              {language.webLanguage === "PL"
-                ? "JAK PRZEBIEGA ZABIEG?"
-                : "HOW DOES THE TREATMENT WORK?"}
-            </Typography>
-            <Typography
-              variant={downMd ? "body2" : "body1"}
-              textAlign="left"
-              width="100%"
-              gutterBottom
-            >
-              {language.webLanguage === "PL" &&
-                drCyjFillerDataPL.courseOfTreatment}
-              {language.webLanguage !== "PL" &&
-                drCyjFillerDataENG.courseOfTreatment}
-            </Typography>
-          </Grid>
-          <Grid size={12}>
-            <Divider />
-          </Grid>
+
           <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
             <Typography
               variant={downMd ? "body1" : "h6"}
