@@ -90,7 +90,6 @@ export default function ConsultationServiceView() {
                 height: "100%",
                 width: "100%",
               }}
-              alt="The house from the offer."
               src={konsultacja_kosmetologiczna}
             />
           </Grid>

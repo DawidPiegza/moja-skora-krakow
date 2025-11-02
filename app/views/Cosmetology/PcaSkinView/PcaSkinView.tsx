@@ -191,19 +191,18 @@ export default function PcaSkinView() {
             </Box>
           </Grid>
         </Grid>
-        <Grid size={12} container p={1}>
-          <Grid size={downMd ? 12 : 5}>
+        <Grid size={12} container p={1} alignItems={"center"}>
+          <Grid size={downMd ? 12 : 4}>
             <Box
               component="img"
               sx={{
-                height: "100%",
-                width: "100%",
+                height: "auto",
+                width: "auto",
               }}
-              alt="The house from the offer."
               src={pca_skin}
             />
           </Grid>
-          <Grid size={downMd ? 12 : 7} p={1} container spacing={3}>
+          <Grid size={downMd ? 12 : 8} p={1} container spacing={3}>
             <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
               <Typography
                 variant={downMd ? "body2" : "body1"}
@@ -228,32 +227,32 @@ export default function PcaSkinView() {
                 fontStyle="italic"
               >
                 {language.webLanguage === "PL"
-                  ? "JAK PRZEBIEGA ZABIEG?"
-                  : "HOW DOES THE TREATMENT WORK?"}
+                  ? "PRZYGOTOWANIE DO ZABIEGU"
+                  : "PREPARATION FOR THE TREATMENT"}
               </Typography>
               {language.webLanguage === "PL" &&
-                pcaSkinDataPL.basicStepsOfPcaSkinTreatment.map(
-                  (step, index) => (
+                pcaSkinDataPL.preparationForTreatment.map(
+                  (preparation, index) => (
                     <Typography
                       variant={downMd ? "body2" : "body1"}
                       textAlign="left"
                       width="100%"
                       key={index}
                     >
-                      {`${index + 1}. ${step}`}
+                      - {preparation}
                     </Typography>
                   )
                 )}
-              {language.webLanguage !== "PL" &&
-                pcaSkinDataEN.basicStepsOfPcaSkinTreatment.map(
-                  (step, index) => (
+              {language.webLanguage === "ENG" &&
+                pcaSkinDataEN.preparationForTreatment.map(
+                  (preparation, index) => (
                     <Typography
                       variant={downMd ? "body2" : "body1"}
                       textAlign="left"
                       width="100%"
                       key={index}
                     >
-                      {`${index + 1}. ${step}`}
+                      - {preparation}
                     </Typography>
                   )
                 )}
@@ -356,6 +355,7 @@ export default function PcaSkinView() {
                 </Typography>
               ))}
           </Grid>
+
           <Grid size={12}>
             <Divider />
           </Grid>
@@ -368,35 +368,31 @@ export default function PcaSkinView() {
               fontStyle="italic"
             >
               {language.webLanguage === "PL"
-                ? "PRZYGOTOWANIE DO ZABIEGU"
-                : "PREPARATION FOR THE TREATMENT"}
+                ? "JAK PRZEBIEGA ZABIEG?"
+                : "HOW DOES THE TREATMENT WORK?"}
             </Typography>
             {language.webLanguage === "PL" &&
-              pcaSkinDataPL.preparationForTreatment.map(
-                (preparation, index) => (
-                  <Typography
-                    variant={downMd ? "body2" : "body1"}
-                    textAlign="left"
-                    width="100%"
-                    key={index}
-                  >
-                    - {preparation}
-                  </Typography>
-                )
-              )}
-            {language.webLanguage === "ENG" &&
-              pcaSkinDataEN.preparationForTreatment.map(
-                (preparation, index) => (
-                  <Typography
-                    variant={downMd ? "body2" : "body1"}
-                    textAlign="left"
-                    width="100%"
-                    key={index}
-                  >
-                    - {preparation}
-                  </Typography>
-                )
-              )}
+              pcaSkinDataPL.basicStepsOfPcaSkinTreatment.map((step, index) => (
+                <Typography
+                  variant={downMd ? "body2" : "body1"}
+                  textAlign="left"
+                  width="100%"
+                  key={index}
+                >
+                  {`${index + 1}. ${step}`}
+                </Typography>
+              ))}
+            {language.webLanguage !== "PL" &&
+              pcaSkinDataEN.basicStepsOfPcaSkinTreatment.map((step, index) => (
+                <Typography
+                  variant={downMd ? "body2" : "body1"}
+                  textAlign="left"
+                  width="100%"
+                  key={index}
+                >
+                  {`${index + 1}. ${step}`}
+                </Typography>
+              ))}
           </Grid>
           <Grid size={12}>
             <Divider />
@@ -533,7 +529,6 @@ export default function PcaSkinView() {
                     height: "100%",
                     width: "100%",
                   }}
-                  alt="The house from the offer."
                   src={pca_skin_effect_0}
                 />
               </Grid>
@@ -545,7 +540,6 @@ export default function PcaSkinView() {
                     height: "100%",
                     width: "100%",
                   }}
-                  alt="The house from the offer."
                   src={pca_skin_effect_1}
                 />
               </Grid>
@@ -557,7 +551,6 @@ export default function PcaSkinView() {
                     height: "100%",
                     width: "100%",
                   }}
-                  alt="The house from the offer."
                   src={pca_skin_effect_2}
                 />
               </Grid>
@@ -569,7 +562,6 @@ export default function PcaSkinView() {
                     height: "100%",
                     width: "100%",
                   }}
-                  alt="The house from the offer."
                   src={pca_skin_effect_3}
                 />
               </Grid>
@@ -581,7 +573,6 @@ export default function PcaSkinView() {
                     height: "100%",
                     width: "100%",
                   }}
-                  alt="The house from the offer."
                   src={pca_skin_effect_4}
                 />
               </Grid>
@@ -593,7 +584,6 @@ export default function PcaSkinView() {
                     height: "100%",
                     width: "100%",
                   }}
-                  alt="The house from the offer."
                   src={pca_skin_effect_5}
                 />
               </Grid>
@@ -605,7 +595,6 @@ export default function PcaSkinView() {
                     height: "100%",
                     width: "100%",
                   }}
-                  alt="The house from the offer."
                   src={pca_skin_effect_6}
                 />
               </Grid>
@@ -617,7 +606,6 @@ export default function PcaSkinView() {
                     height: "100%",
                     width: "100%",
                   }}
-                  alt="The house from the offer."
                   src={pca_skin_effect_7}
                 />
               </Grid>

@@ -203,7 +203,6 @@ export default function PermanentLipMakeupView() {
                 height: "100%",
                 width: "100%",
               }}
-              alt="The house from the offer."
               src={permanent_lip_makeup}
             />
           </Grid>
@@ -589,7 +588,6 @@ export default function PermanentLipMakeupView() {
                     height: "100%",
                     width: "100%",
                   }}
-                  alt="The house from the offer."
                   src={permanent_lip_makeup_effect_0}
                 />
               </Grid>
@@ -601,7 +599,6 @@ export default function PermanentLipMakeupView() {
                     height: "100%",
                     width: "100%",
                   }}
-                  alt="The house from the offer."
                   src={permanent_lip_makeup_effect_1}
                 />
               </Grid>
@@ -613,7 +610,6 @@ export default function PermanentLipMakeupView() {
                     height: "100%",
                     width: "100%",
                   }}
-                  alt="The house from the offer."
                   src={permanent_lip_makeup_effect_2}
                 />
               </Grid>
@@ -625,7 +621,6 @@ export default function PermanentLipMakeupView() {
                     height: "100%",
                     width: "100%",
                   }}
-                  alt="The house from the offer."
                   src={permanent_lip_makeup_effect_5}
                 />
               </Grid>
@@ -637,7 +632,6 @@ export default function PermanentLipMakeupView() {
                     height: "100%",
                     width: "100%",
                   }}
-                  alt="The house from the offer."
                   src={permanent_lip_makeup_effect_6}
                 />
               </Grid>
@@ -649,7 +643,6 @@ export default function PermanentLipMakeupView() {
                     height: "100%",
                     width: "100%",
                   }}
-                  alt="The house from the offer."
                   src={permanent_lip_makeup_effect_7}
                 />
               </Grid>
@@ -661,7 +654,6 @@ export default function PermanentLipMakeupView() {
                     height: "100%",
                     width: "100%",
                   }}
-                  alt="The house from the offer."
                   src={permanent_lip_makeup_effect_8}
                 />
               </Grid>
@@ -673,7 +665,6 @@ export default function PermanentLipMakeupView() {
                     height: "100%",
                     width: "100%",
                   }}
-                  alt="The house from the offer."
                   src={permanent_lip_makeup_effect_9}
                 />
               </Grid>

@@ -187,19 +187,18 @@ export default function NanofraxNanoNeedleMesotherapy() {
             </Box>
           </Grid>
         </Grid>
-        <Grid size={12} container p={1}>
-          <Grid size={downMd ? 12 : 5}>
+        <Grid size={12} container p={1} alignItems={"center"}>
+          <Grid size={downMd ? 12 : 4}>
             <Box
               component="img"
               sx={{
-                height: "100%",
-                width: "100%",
+                height: "auto",
+                width: "auto",
               }}
-              alt="The house from the offer."
               src={nanofrax_nano_needle}
             />
           </Grid>
-          <Grid size={downMd ? 12 : 7} p={1} container spacing={3}>
+          <Grid size={downMd ? 12 : 8} p={1} container spacing={3}>
             <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
               <Typography
                 variant={downMd ? "body2" : "body1"}
@@ -230,61 +229,6 @@ export default function NanofraxNanoNeedleMesotherapy() {
               {language.webLanguage === "PL"
                 ? nanofraxNanoNeedleMesotherapyData.recomendationsForTreatment
                 : nanofraxNanoNeedleMesotherapyDataEN.recomendationsForTreatment}
-            </Grid>
-            <Grid size={12}>
-              <Divider />
-            </Grid>
-            <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
-              <Typography
-                variant={downMd ? "body1" : "h6"}
-                textAlign="left"
-                sx={{ fontWeight: "200" }}
-                width={"100%"}
-                fontStyle="italic"
-              >
-                {language.webLanguage === "PL"
-                  ? "Mezoterapia nanoigłowa doskonale sprawdza się jako:".toUpperCase()
-                  : "Nano-needle mesotherapy is ideal as".toUpperCase()}
-              </Typography>
-
-              {language.webLanguage === "PL" &&
-                nanofraxNanoNeedleMesotherapyData.advantagesOfTreatment.advantages.map(
-                  (advantage, index) => (
-                    <Typography
-                      variant={downMd ? "body2" : "body1"}
-                      textAlign="left"
-                      width="100%"
-                      key={index}
-                    >
-                      - {advantage}
-                    </Typography>
-                  )
-                )}
-              {language.webLanguage !== "PL" &&
-                nanofraxNanoNeedleMesotherapyDataEN.advantagesOfTreatment.advantages.map(
-                  (advantage, index) => (
-                    <Typography
-                      variant={downMd ? "body2" : "body1"}
-                      textAlign="left"
-                      width="100%"
-                      key={index}
-                    >
-                      - {advantage}
-                    </Typography>
-                  )
-                )}
-              <Typography
-                variant={downMd ? "body2" : "body1"}
-                textAlign="left"
-                width="100%"
-                gutterBottom
-              >
-                {language.webLanguage === "PL"
-                  ? nanofraxNanoNeedleMesotherapyData.advantagesOfTreatment
-                      .additionalInfo
-                  : nanofraxNanoNeedleMesotherapyDataEN.advantagesOfTreatment
-                      .additionalInfo}
-              </Typography>
             </Grid>
           </Grid>
         </Grid>
@@ -405,53 +349,47 @@ export default function NanofraxNanoNeedleMesotherapy() {
               fontStyle="italic"
             >
               {language.webLanguage === "PL"
-                ? "JAK PRZEBIEGA ZABIEG?"
-                : "HOW DOES THE TREATMENT WORK?"}
+                ? "Mezoterapia nanoigłowa doskonale sprawdza się jako:".toUpperCase()
+                : "Nano-needle mesotherapy is ideal as".toUpperCase()}
             </Typography>
             {language.webLanguage === "PL" &&
-              nanofraxNanoNeedleMesotherapyData.courseOfTreatment.map(
-                (indication, index) => (
-                  <React.Fragment key={index}>
-                    <Typography
-                      variant={downMd ? "body2" : "body1"}
-                      textAlign="left"
-                      width="100%"
-                    >
-                      {index + 1}. {indication.title}
-                    </Typography>
-                    <Typography
-                      variant={downMd ? "body2" : "body1"}
-                      textAlign="left"
-                      width="100%"
-                      fontWeight={300}
-                    >
-                      {indication.description}
-                    </Typography>
-                  </React.Fragment>
+              nanofraxNanoNeedleMesotherapyData.advantagesOfTreatment.advantages.map(
+                (advantage, index) => (
+                  <Typography
+                    variant={downMd ? "body2" : "body1"}
+                    textAlign="left"
+                    width="100%"
+                    key={index}
+                  >
+                    - {advantage}
+                  </Typography>
                 )
               )}
-            {language.webLanguage === "ENG" &&
-              nanofraxNanoNeedleMesotherapyDataEN.courseOfTreatment.map(
-                (indication, index) => (
-                  <React.Fragment key={index}>
-                    <Typography
-                      variant={downMd ? "body2" : "body1"}
-                      textAlign="left"
-                      width="100%"
-                    >
-                      {index + 1}. {indication.title}
-                    </Typography>
-                    <Typography
-                      variant={downMd ? "body2" : "body1"}
-                      textAlign="left"
-                      width="100%"
-                      fontWeight={300}
-                    >
-                      {indication.description}
-                    </Typography>
-                  </React.Fragment>
+            {language.webLanguage !== "PL" &&
+              nanofraxNanoNeedleMesotherapyDataEN.advantagesOfTreatment.advantages.map(
+                (advantage, index) => (
+                  <Typography
+                    variant={downMd ? "body2" : "body1"}
+                    textAlign="left"
+                    width="100%"
+                    key={index}
+                  >
+                    - {advantage}
+                  </Typography>
                 )
               )}
+            <Typography
+              variant={downMd ? "body2" : "body1"}
+              textAlign="left"
+              width="100%"
+              gutterBottom
+            >
+              {language.webLanguage === "PL"
+                ? nanofraxNanoNeedleMesotherapyData.advantagesOfTreatment
+                    .additionalInfo
+                : nanofraxNanoNeedleMesotherapyDataEN.advantagesOfTreatment
+                    .additionalInfo}
+            </Typography>
           </Grid>
           <Grid size={12}>
             <Divider />

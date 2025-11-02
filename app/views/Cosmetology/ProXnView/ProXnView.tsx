@@ -100,18 +100,18 @@ export default function ProXnView() {
             </Typography>
           </Grid>
         </Grid>
-        <Grid size={12} container p={1}>
-          <Grid size={downMd ? 12 : 5}>
+        <Grid size={12} container p={1} alignItems={"center"}>
+          <Grid size={downMd ? 12 : 4}>
             <Box
               component="img"
               sx={{
-                height: "100%",
-                width: "100%",
+                height: "auto",
+                width: "auto",
               }}
               src={pro_xn}
             />
           </Grid>
-          <Grid size={downMd ? 12 : 7} p={1} container spacing={3}>
+          <Grid size={downMd ? 12 : 8} p={1} container spacing={3}>
             <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
               <Typography
                 variant={downMd ? "body2" : "body1"}
@@ -124,32 +124,7 @@ export default function ProXnView() {
                   : proXnDataEN.overview}
               </Typography>
             </Grid>
-            <Grid size={12}>
-              <Divider />
-            </Grid>
-            <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
-              <Typography
-                variant={downMd ? "body1" : "h6"}
-                textAlign="left"
-                sx={{ fontWeight: "200" }}
-                width={"100%"}
-                fontStyle="italic"
-              >
-                {language.webLanguage === "PL"
-                  ? "Działanie Kompleksu Ksantohumolu".toUpperCase()
-                  : "Action of the Xanthohumol Complex".toUpperCase()}
-              </Typography>
-              <Typography
-                variant={downMd ? "body2" : "body1"}
-                textAlign="left"
-                width={"100%"}
-                gutterBottom
-              >
-                {language.webLanguage === "PL"
-                  ? proXnDataPL.xanthohumolComplexOverview
-                  : proXnDataEN.xanthohumolComplexOverview}
-              </Typography>
-            </Grid>
+
             <Grid size={12}>
               <Divider />
             </Grid>
@@ -190,6 +165,33 @@ export default function ProXnView() {
                 ))}
             </Grid>
           </Grid>
+        </Grid>
+        <Grid size={12}>
+          <Divider />
+        </Grid>
+
+        <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
+          <Typography
+            variant={downMd ? "body1" : "h6"}
+            textAlign="left"
+            sx={{ fontWeight: "200" }}
+            width={"100%"}
+            fontStyle="italic"
+          >
+            {language.webLanguage === "PL"
+              ? "Działanie Kompleksu Ksantohumolu".toUpperCase()
+              : "Action of the Xanthohumol Complex".toUpperCase()}
+          </Typography>
+          <Typography
+            variant={downMd ? "body2" : "body1"}
+            textAlign="left"
+            width={"100%"}
+            gutterBottom
+          >
+            {language.webLanguage === "PL"
+              ? proXnDataPL.xanthohumolComplexOverview
+              : proXnDataEN.xanthohumolComplexOverview}
+          </Typography>
         </Grid>
         <Grid size={12}>
           <Divider />

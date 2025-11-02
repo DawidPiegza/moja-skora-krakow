@@ -98,18 +98,18 @@ export default function OxygenatingTrioView() {
             </Typography>
           </Grid>
         </Grid>
-        <Grid size={12} container p={1}>
-          <Grid size={downMd ? 12 : 5}>
+        <Grid size={12} container p={1} alignItems={"center"}>
+          <Grid size={downMd ? 12 : 4}>
             <Box
               component="img"
               sx={{
-                height: "100%",
-                width: "100%",
+                height: "auto",
+                width: "auto",
               }}
               src={oxygenating_trio}
             />
           </Grid>
-          <Grid size={downMd ? 12 : 7} p={1} container spacing={3}>
+          <Grid size={downMd ? 12 : 8} p={1} container spacing={3}>
             <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
               <Typography
                 variant={downMd ? "body2" : "body1"}
@@ -121,31 +121,7 @@ export default function OxygenatingTrioView() {
                   : oxygenatingTrioDataEN.description}
               </Typography>
             </Grid>
-            <Grid size={12}>
-              <Divider />
-            </Grid>
-            <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
-              <Typography
-                variant={downMd ? "body1" : "h6"}
-                textAlign="left"
-                sx={{ fontWeight: "200" }}
-                width={"100%"}
-                fontStyle="italic"
-              >
-                {language.webLanguage === "PL"
-                  ? "Dla kogo przeznaczony jest zabieg Oxygenating Trio?".toUpperCase()
-                  : "WHO IS THE OXYGENATING TRIO TREATMENT FOR?".toUpperCase()}
-              </Typography>
-              <Typography
-                variant={downMd ? "body2" : "body1"}
-                textAlign="left"
-                width={"100%"}
-              >
-                {language.webLanguage === "PL"
-                  ? oxygenatingTrioDataPL.forWhom
-                  : oxygenatingTrioDataEN.forWhom}
-              </Typography>
-            </Grid>
+
             <Grid size={12}>
               <Divider />
             </Grid>
@@ -189,6 +165,31 @@ export default function OxygenatingTrioView() {
                 )}
             </Grid>
           </Grid>
+        </Grid>
+        <Grid size={12}>
+          <Divider />
+        </Grid>
+        <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
+          <Typography
+            variant={downMd ? "body1" : "h6"}
+            textAlign="left"
+            sx={{ fontWeight: "200" }}
+            width={"100%"}
+            fontStyle="italic"
+          >
+            {language.webLanguage === "PL"
+              ? "Dla kogo przeznaczony jest zabieg Oxygenating Trio?".toUpperCase()
+              : "WHO IS THE OXYGENATING TRIO TREATMENT FOR?".toUpperCase()}
+          </Typography>
+          <Typography
+            variant={downMd ? "body2" : "body1"}
+            textAlign="left"
+            width={"100%"}
+          >
+            {language.webLanguage === "PL"
+              ? oxygenatingTrioDataPL.forWhom
+              : oxygenatingTrioDataEN.forWhom}
+          </Typography>
         </Grid>
         <Grid size={12}>
           <Divider />

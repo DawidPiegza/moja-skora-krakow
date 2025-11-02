@@ -180,19 +180,18 @@ export default function CarbonPeelView() {
             </Box>
           </Grid>
         </Grid>
-        <Grid size={12} container p={1}>
-          <Grid size={downMd ? 12 : 5}>
+        <Grid size={12} container p={1} alignItems={"center"}>
+          <Grid size={downMd ? 12 : 4}>
             <Box
               component="img"
               sx={{
-                height: "100%",
-                width: "100%",
+                height: "auto",
+                width: "auto",
               }}
               src={carbon_peeling}
             />
           </Grid>
-
-          <Grid size={downMd ? 12 : 7} p={1} container spacing={3}>
+          <Grid size={downMd ? 12 : 8} p={1} container spacing={3}>
             <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
               <Typography
                 variant={downMd ? "body2" : "body1"}
@@ -264,43 +263,6 @@ export default function CarbonPeelView() {
                     </React.Fragment>
                   )
                 )}
-            </Grid>
-            <Grid size={12}>
-              <Divider />
-            </Grid>
-            <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
-              <Typography
-                variant={downMd ? "body2" : "body1"}
-                textAlign="left"
-                width={"100%"}
-                gutterBottom
-              >
-                {language.webLanguage === "PL"
-                  ? "EFEKTY ZABIEGU"
-                  : "TREATMENT EFFECTS"}
-              </Typography>
-              {language.webLanguage === "PL" &&
-                carbonPeelDataPL.effectsOfTratment.map((effect, index) => (
-                  <Typography
-                    variant={downMd ? "body2" : "body1"}
-                    textAlign="left"
-                    width="100%"
-                    key={index}
-                  >
-                    - {effect}
-                  </Typography>
-                ))}
-              {language.webLanguage !== "PL" &&
-                carbonPeelDataEN.effectsOfTratment.map((effect, index) => (
-                  <Typography
-                    variant={downMd ? "body2" : "body1"}
-                    textAlign="left"
-                    width="100%"
-                    key={index}
-                  >
-                    - {effect}
-                  </Typography>
-                ))}
             </Grid>
           </Grid>
         </Grid>
@@ -503,6 +465,44 @@ export default function CarbonPeelView() {
                   </React.Fragment>
                 )
               )}
+          </Grid>
+          <Grid size={12}>
+            <Divider />
+          </Grid>
+          <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
+            <Typography
+              variant={downMd ? "body1" : "h6"}
+              textAlign="left"
+              sx={{ fontWeight: "200" }}
+              width={"100%"}
+              fontStyle="italic"
+            >
+              {language.webLanguage === "PL"
+                ? "EFEKTY ZABIEGU"
+                : "TREATMENT EFFECTS"}
+            </Typography>
+            {language.webLanguage === "PL" &&
+              carbonPeelDataPL.effectsOfTratment.map((effect, index) => (
+                <Typography
+                  variant={downMd ? "body2" : "body1"}
+                  textAlign="left"
+                  width="100%"
+                  key={index}
+                >
+                  - {effect}
+                </Typography>
+              ))}
+            {language.webLanguage !== "PL" &&
+              carbonPeelDataEN.effectsOfTratment.map((effect, index) => (
+                <Typography
+                  variant={downMd ? "body2" : "body1"}
+                  textAlign="left"
+                  width="100%"
+                  key={index}
+                >
+                  - {effect}
+                </Typography>
+              ))}
           </Grid>
           <Grid size={12}>
             <Divider />

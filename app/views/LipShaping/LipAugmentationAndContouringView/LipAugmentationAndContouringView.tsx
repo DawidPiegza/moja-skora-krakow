@@ -204,7 +204,6 @@ export default function LipAugmentationAndContouringView() {
                 height: "100%",
                 width: "100%",
               }}
-              alt="The house from the offer."
               src={lip_augmentation_and_contouring}
             />
           </Grid>
@@ -647,7 +646,6 @@ export default function LipAugmentationAndContouringView() {
                     height: "100%",
                     width: "100%",
                   }}
-                  alt="The house from the offer."
                   src={lip_augmentation_and_contouring_effect_4}
                 />
               </Grid>
@@ -659,7 +657,6 @@ export default function LipAugmentationAndContouringView() {
                     height: "100%",
                     width: "100%",
                   }}
-                  alt="The house from the offer."
                   src={lip_augmentation_and_contouring_effect_3}
                 />
               </Grid>
@@ -671,7 +668,6 @@ export default function LipAugmentationAndContouringView() {
                     height: "100%",
                     width: "100%",
                   }}
-                  alt="The house from the offer."
                   src={lip_augmentation_and_contouring_effect_1}
                 />
               </Grid>
@@ -683,7 +679,6 @@ export default function LipAugmentationAndContouringView() {
                     height: "100%",
                     width: "100%",
                   }}
-                  alt="The house from the offer."
                   src={lip_augmentation_and_contouring_effect_2}
                 />
               </Grid>
@@ -695,7 +690,6 @@ export default function LipAugmentationAndContouringView() {
                     height: "100%",
                     width: "100%",
                   }}
-                  alt="The house from the offer."
                   src={lip_augmentation_and_contouring_effect_5}
                 />
               </Grid>
@@ -707,7 +701,6 @@ export default function LipAugmentationAndContouringView() {
                     height: "100%",
                     width: "100%",
                   }}
-                  alt="The house from the offer."
                   src={lip_augmentation_and_contouring_effect_6}
                 />
               </Grid>

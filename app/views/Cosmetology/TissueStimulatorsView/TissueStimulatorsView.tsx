@@ -184,19 +184,18 @@ export default function TissueStimulatorsView() {
             </Box>
           </Grid>
         </Grid>
-        <Grid size={12} container p={1}>
-          <Grid size={downMd ? 12 : 5}>
+        <Grid size={12} container p={1} alignItems={"center"}>
+          <Grid size={downMd ? 12 : 4}>
             <Box
               component="img"
               sx={{
-                height: "100%",
-                width: "100%",
+                height: "auto",
+                width: "auto",
               }}
-              alt="The house from the offer."
               src={tissue_stimulators}
             />
           </Grid>
-          <Grid size={downMd ? 12 : 7} p={1} container spacing={3}>
+          <Grid size={downMd ? 12 : 8} p={1} container spacing={3}>
             <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
               <Typography
                 variant={downMd ? "body2" : "body1"}
@@ -221,32 +220,32 @@ export default function TissueStimulatorsView() {
                 fontStyle="italic"
               >
                 {language.webLanguage === "PL"
-                  ? "WSKAZANIA DO ZABIEGU"
-                  : "INDICATIONS FOR THE TREATMENT"}
+                  ? "ZALECENIA PRZED ZABIEGIEM"
+                  : '"PRE-TREATMENT RECOMMENDATIONS'}
               </Typography>
               {language.webLanguage === "PL" &&
-                tissueStimulatorsDataPL.indicationsToTreatment.map(
-                  (indication, index) => (
+                tissueStimulatorsDataPL.preparationForTreatment.map(
+                  (preparation, index) => (
                     <Typography
                       variant={downMd ? "body2" : "body1"}
                       textAlign="left"
                       width="100%"
                       key={index}
                     >
-                      - {indication}
+                      - {preparation}
                     </Typography>
                   )
                 )}
               {language.webLanguage !== "PL" &&
-                tissueStimulatorsDataEN.indicationsToTreatment.map(
-                  (indication, index) => (
+                tissueStimulatorsDataEN.preparationForTreatment.map(
+                  (preparation, index) => (
                     <Typography
                       variant={downMd ? "body2" : "body1"}
                       textAlign="left"
                       width="100%"
                       key={index}
                     >
-                      - {indication}
+                      - {preparation}
                     </Typography>
                   )
                 )}
@@ -371,32 +370,32 @@ export default function TissueStimulatorsView() {
               fontStyle="italic"
             >
               {language.webLanguage === "PL"
-                ? "ZALECENIA PRZED ZABIEGIEM"
-                : '"PRE-TREATMENT RECOMMENDATIONS'}
+                ? "WSKAZANIA DO ZABIEGU"
+                : "INDICATIONS FOR THE TREATMENT"}
             </Typography>
             {language.webLanguage === "PL" &&
-              tissueStimulatorsDataPL.preparationForTreatment.map(
-                (preparation, index) => (
+              tissueStimulatorsDataPL.indicationsToTreatment.map(
+                (indication, index) => (
                   <Typography
                     variant={downMd ? "body2" : "body1"}
                     textAlign="left"
                     width="100%"
                     key={index}
                   >
-                    - {preparation}
+                    - {indication}
                   </Typography>
                 )
               )}
             {language.webLanguage !== "PL" &&
-              tissueStimulatorsDataEN.preparationForTreatment.map(
-                (preparation, index) => (
+              tissueStimulatorsDataEN.indicationsToTreatment.map(
+                (indication, index) => (
                   <Typography
                     variant={downMd ? "body2" : "body1"}
                     textAlign="left"
                     width="100%"
                     key={index}
                   >
-                    - {preparation}
+                    - {indication}
                   </Typography>
                 )
               )}

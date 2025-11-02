@@ -199,24 +199,24 @@ export default function LipAugmentationAndContouringView() {
             </Box>
           </Grid>
         </Grid>
-        <Grid size={12} container p={1}>
-          <Grid size={downMd ? 12 : 5}>
+        <Grid size={12} container p={1} alignItems={"center"}>
+          <Grid size={downMd ? 12 : 4}>
             <Box
               component="img"
               sx={{
                 height: "100%",
                 width: "100%",
               }}
-              alt="The house from the offer."
               src={laser_removal}
             />
           </Grid>
-          <Grid size={downMd ? 12 : 7} p={1} container spacing={3}>
+          <Grid size={downMd ? 12 : 8} p={1} container spacing={3}>
             <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
               <Typography
                 variant={downMd ? "body2" : "body1"}
                 textAlign="left"
                 width={"100%"}
+                gutterBottom
               >
                 {language.webLanguage === "PL" &&
                   laserRemovalOfPermanentMakeupAndTattoosPL.treatmentOverview}
@@ -263,66 +263,6 @@ export default function LipAugmentationAndContouringView() {
                     >
                       - {preparation}
                     </Typography>
-                  )
-                )}
-            </Grid>
-            <Grid size={12}>
-              <Divider />
-            </Grid>
-            <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
-              <Typography
-                variant={downMd ? "body1" : "h6"}
-                textAlign="left"
-                sx={{ fontWeight: "200" }}
-                width={"100%"}
-                fontStyle="italic"
-              >
-                {language.webLanguage === "PL"
-                  ? "JAK PRZEBIEGA ZABIEG?"
-                  : "HOW DOES THE TREATMENT WORK?"}
-              </Typography>
-              {language.webLanguage === "PL" &&
-                laserRemovalOfPermanentMakeupAndTattoosPL.courseOfTreatment.map(
-                  (item, index) => (
-                    <React.Fragment key={index}>
-                      <Typography
-                        variant={downMd ? "body2" : "body1"}
-                        textAlign="left"
-                        width="100%"
-                      >
-                        {index + 1}. {item.title}
-                      </Typography>
-                      <Typography
-                        variant={downMd ? "body2" : "body1"}
-                        textAlign="left"
-                        width="100%"
-                        fontWeight={300}
-                      >
-                        {item.description}
-                      </Typography>
-                    </React.Fragment>
-                  )
-                )}
-              {language.webLanguage === "ENG" &&
-                laserRemovalOfPermanentMakeupAndTattoosEN.courseOfTreatment.map(
-                  (item, index) => (
-                    <React.Fragment key={index}>
-                      <Typography
-                        variant={downMd ? "body2" : "body1"}
-                        textAlign="left"
-                        width="100%"
-                      >
-                        {index + 1}. {item.title}
-                      </Typography>
-                      <Typography
-                        variant={downMd ? "body2" : "body1"}
-                        textAlign="left"
-                        width="100%"
-                        fontWeight={300}
-                      >
-                        {item.description}
-                      </Typography>
-                    </React.Fragment>
                   )
                 )}
             </Grid>
@@ -433,7 +373,66 @@ export default function LipAugmentationAndContouringView() {
           <Grid size={12}>
             <Divider />
           </Grid>
-
+          <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
+            <Typography
+              variant={downMd ? "body1" : "h6"}
+              textAlign="left"
+              sx={{ fontWeight: "200" }}
+              width={"100%"}
+              fontStyle="italic"
+            >
+              {language.webLanguage === "PL"
+                ? "JAK PRZEBIEGA ZABIEG?"
+                : "HOW DOES THE TREATMENT WORK?"}
+            </Typography>
+            {language.webLanguage === "PL" &&
+              laserRemovalOfPermanentMakeupAndTattoosPL.courseOfTreatment.map(
+                (item, index) => (
+                  <React.Fragment key={index}>
+                    <Typography
+                      variant={downMd ? "body2" : "body1"}
+                      textAlign="left"
+                      width="100%"
+                    >
+                      {index + 1}. {item.title}
+                    </Typography>
+                    <Typography
+                      variant={downMd ? "body2" : "body1"}
+                      textAlign="left"
+                      width="100%"
+                      fontWeight={300}
+                    >
+                      {item.description}
+                    </Typography>
+                  </React.Fragment>
+                )
+              )}
+            {language.webLanguage === "ENG" &&
+              laserRemovalOfPermanentMakeupAndTattoosEN.courseOfTreatment.map(
+                (item, index) => (
+                  <React.Fragment key={index}>
+                    <Typography
+                      variant={downMd ? "body2" : "body1"}
+                      textAlign="left"
+                      width="100%"
+                    >
+                      {index + 1}. {item.title}
+                    </Typography>
+                    <Typography
+                      variant={downMd ? "body2" : "body1"}
+                      textAlign="left"
+                      width="100%"
+                      fontWeight={300}
+                    >
+                      {item.description}
+                    </Typography>
+                  </React.Fragment>
+                )
+              )}
+          </Grid>
+          <Grid size={12}>
+            <Divider />
+          </Grid>
           <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
             <Typography
               variant={downMd ? "body1" : "h6"}
@@ -499,7 +498,6 @@ export default function LipAugmentationAndContouringView() {
                     height: "100%",
                     width: "100%",
                   }}
-                  alt="The house from the offer."
                   src={laser_removal_effect_0}
                 />
               </Grid>
@@ -511,7 +509,6 @@ export default function LipAugmentationAndContouringView() {
                     height: "100%",
                     width: "100%",
                   }}
-                  alt="The house from the offer."
                   src={laser_removal_effect_1}
                 />
               </Grid>
@@ -523,7 +520,6 @@ export default function LipAugmentationAndContouringView() {
                     height: "100%",
                     width: "100%",
                   }}
-                  alt="The house from the offer."
                   src={laser_removal_effect_2}
                 />
               </Grid>
@@ -535,7 +531,6 @@ export default function LipAugmentationAndContouringView() {
                     height: "100%",
                     width: "100%",
                   }}
-                  alt="The house from the offer."
                   src={laser_removal_effect_3}
                 />
               </Grid>
@@ -547,7 +542,6 @@ export default function LipAugmentationAndContouringView() {
                     height: "100%",
                     width: "100%",
                   }}
-                  alt="The house from the offer."
                   src={laser_removal_effect_4}
                 />
               </Grid>
@@ -559,7 +553,6 @@ export default function LipAugmentationAndContouringView() {
                     height: "100%",
                     width: "100%",
                   }}
-                  alt="The house from the offer."
                   src={laser_removal_effect_5}
                 />
               </Grid>
@@ -571,7 +564,6 @@ export default function LipAugmentationAndContouringView() {
                     height: "100%",
                     width: "100%",
                   }}
-                  alt="The house from the offer."
                   src={laser_removal_effect_6}
                 />
               </Grid>
@@ -583,7 +575,6 @@ export default function LipAugmentationAndContouringView() {
                     height: "100%",
                     width: "100%",
                   }}
-                  alt="The house from the offer."
                   src={laser_removal_effect_7}
                 />
               </Grid>

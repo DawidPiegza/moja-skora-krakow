@@ -181,18 +181,18 @@ export default function DrCyjFillerView() {
             </Box>
           </Grid>
         </Grid>
-        <Grid size={12} container p={1}>
+        <Grid size={12} container p={1} alignItems={"center"}>
           <Grid size={downMd ? 12 : 4}>
             <Box
               component="img"
               sx={{
-                height: "100%",
+                height: "auto",
                 width: "auto",
               }}
               src={cyj_filler}
             />
           </Grid>
-          <Grid size={downMd ? 12 : 8} p={1} container>
+          <Grid size={downMd ? 12 : 8} p={1} container spacing={3}>
             <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
               <Typography
                 variant={downMd ? "body2" : "body1"}
@@ -204,7 +204,6 @@ export default function DrCyjFillerView() {
                   : drCyjFillerDataENG.description}
               </Typography>
             </Grid>
-
             <Grid size={12}>
               <Divider />
             </Grid>

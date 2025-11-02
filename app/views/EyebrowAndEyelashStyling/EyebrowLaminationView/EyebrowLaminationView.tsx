@@ -482,7 +482,6 @@ export default function EyebrowLaminationView() {
                     height: "100%",
                     width: "100%",
                   }}
-                  alt="The house from the offer."
                   src={eyebrow_lamination_effect_0}
                 />
               </Grid>
@@ -494,7 +493,6 @@ export default function EyebrowLaminationView() {
                     height: "100%",
                     width: "100%",
                   }}
-                  alt="The house from the offer."
                   src={eyebrow_lamination_effect_1}
                 />
               </Grid>
@@ -506,7 +504,6 @@ export default function EyebrowLaminationView() {
                     height: "100%",
                     width: "100%",
                   }}
-                  alt="The house from the offer."
                   src={eyebrow_lamination_effect_2}
                 />
               </Grid>
@@ -518,7 +515,6 @@ export default function EyebrowLaminationView() {
                     height: "100%",
                     width: "100%",
                   }}
-                  alt="The house from the offer."
                   src={eyebrow_lamination_effect_3}
                 />
               </Grid>
