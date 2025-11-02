@@ -6,6 +6,7 @@ import OpinionsView from "../OpinionsView/OpinionsView";
 import FooterView from "../FooterView/FooterView";
 import { useEffect, useState } from "react";
 import React from "react";
+import SafeTreatmentsForPregnantView from "../SafeTreatmentsForPregnantView/SafeTreatmentsForPregnantView";
 
 export default function AppContainer() {
   const [isLoading, setLoading] = useState<boolean>(true);
@@ -20,6 +21,8 @@ export default function AppContainer() {
         <Stack width="100vw" height="max-content" rowGap={3}>
           <LandingPageView />
           <ServiceCategories />
+          <Divider />
+          <SafeTreatmentsForPregnantView />
           <Divider />
           <OurBrandsView />
           <Divider />
