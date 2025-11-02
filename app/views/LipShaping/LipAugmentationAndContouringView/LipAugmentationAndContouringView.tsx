@@ -196,18 +196,18 @@ export default function LipAugmentationAndContouringView() {
             </Box>
           </Grid>
         </Grid>
-        <Grid size={12} container p={1}>
-          <Grid size={downMd ? 12 : 5}>
+        <Grid size={12} container p={1} alignItems={"center"}>
+          <Grid size={downMd ? 12 : 4}>
             <Box
               component="img"
               sx={{
-                height: "100%",
-                width: "100%",
+                height: "auto",
+                width: "auto",
               }}
               src={lip_augmentation_and_contouring}
             />
           </Grid>
-          <Grid size={downMd ? 12 : 7} p={1} container spacing={3}>
+          <Grid size={downMd ? 12 : 8} p={1} container spacing={3}>
             <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
               <Typography
                 variant={downMd ? "body2" : "body1"}
@@ -258,48 +258,6 @@ export default function LipAugmentationAndContouringView() {
                       key={index}
                     >
                       - {effect}
-                    </Typography>
-                  )
-                )}
-            </Grid>
-            <Grid size={12}>
-              <Divider />
-            </Grid>
-            <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
-              <Typography
-                variant={downMd ? "body1" : "h6"}
-                textAlign="left"
-                sx={{ fontWeight: "200" }}
-                width={"100%"}
-                fontStyle="italic"
-              >
-                {language.webLanguage === "PL"
-                  ? "JAK PRZYGOTOWAĆ SIĘ DO ZABIEGU?"
-                  : "HOW TO PREPARE FOR THE PROCEDURE?"}
-              </Typography>
-              {language.webLanguage === "PL" &&
-                lipAugmentationAndContouringDataPL.preparationForTreatment.map(
-                  (preparation, index) => (
-                    <Typography
-                      variant={downMd ? "body2" : "body1"}
-                      textAlign="left"
-                      width="100%"
-                      key={index}
-                    >
-                      - {preparation}
-                    </Typography>
-                  )
-                )}
-              {language.webLanguage === "ENG" &&
-                lipAugmentationAndContouringDataEN.preparationForTreatment.map(
-                  (preparation, index) => (
-                    <Typography
-                      variant={downMd ? "body2" : "body1"}
-                      textAlign="left"
-                      width="100%"
-                      key={index}
-                    >
-                      - {preparation}
                     </Typography>
                   )
                 )}
@@ -465,6 +423,48 @@ export default function LipAugmentationAndContouringView() {
                       {item.description}
                     </Typography>
                   </React.Fragment>
+                )
+              )}
+          </Grid>
+          <Grid size={12}>
+            <Divider />
+          </Grid>
+          <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
+            <Typography
+              variant={downMd ? "body1" : "h6"}
+              textAlign="left"
+              sx={{ fontWeight: "200" }}
+              width={"100%"}
+              fontStyle="italic"
+            >
+              {language.webLanguage === "PL"
+                ? "JAK PRZYGOTOWAĆ SIĘ DO ZABIEGU?"
+                : "HOW TO PREPARE FOR THE PROCEDURE?"}
+            </Typography>
+            {language.webLanguage === "PL" &&
+              lipAugmentationAndContouringDataPL.preparationForTreatment.map(
+                (preparation, index) => (
+                  <Typography
+                    variant={downMd ? "body2" : "body1"}
+                    textAlign="left"
+                    width="100%"
+                    key={index}
+                  >
+                    - {preparation}
+                  </Typography>
+                )
+              )}
+            {language.webLanguage === "ENG" &&
+              lipAugmentationAndContouringDataEN.preparationForTreatment.map(
+                (preparation, index) => (
+                  <Typography
+                    variant={downMd ? "body2" : "body1"}
+                    textAlign="left"
+                    width="100%"
+                    key={index}
+                  >
+                    - {preparation}
+                  </Typography>
                 )
               )}
           </Grid>

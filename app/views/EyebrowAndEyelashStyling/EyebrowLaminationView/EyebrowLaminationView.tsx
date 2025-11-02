@@ -190,8 +190,8 @@ export default function EyebrowLaminationView() {
             </Box>
           </Grid>
         </Grid>
-        <Grid size={12} container p={1}>
-          <Grid size={downMd ? 12 : 5}>
+        <Grid size={12} container p={1} alignItems={"center"}>
+          <Grid size={downMd ? 12 : 4}>
             <Box
               component="img"
               sx={{
@@ -201,7 +201,7 @@ export default function EyebrowLaminationView() {
               src={eyebrow_lamination}
             />
           </Grid>
-          <Grid size={downMd ? 12 : 7} p={1} container spacing={3}>
+          <Grid size={downMd ? 12 : 8} p={1} container spacing={3}>
             <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
               <Typography
                 variant={downMd ? "body2" : "body1"}
@@ -214,32 +214,7 @@ export default function EyebrowLaminationView() {
                   : eyebrowLaminationDataEN.overviewOfTreatment}
               </Typography>
             </Grid>
-            <Grid size={12}>
-              <Divider />
-            </Grid>
-            <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
-              <Typography
-                variant={downMd ? "body1" : "h6"}
-                textAlign="left"
-                sx={{ fontWeight: "200" }}
-                width={"100%"}
-                fontStyle="italic"
-              >
-                {language.webLanguage === "PL"
-                  ? "CZYM JEST BOTOX BRWI?"
-                  : "WHAT IS EYEBROW BOTOX?"}
-              </Typography>
-              <Typography
-                variant={downMd ? "body2" : "body1"}
-                textAlign="left"
-                width={"100%"}
-                gutterBottom
-              >
-                {language.webLanguage === "PL"
-                  ? eyebrowLaminationDataPL.eyebrowBotoxDescription
-                  : eyebrowLaminationDataEN.eyebrowBotoxDescription}
-              </Typography>
-            </Grid>
+
             <Grid size={12}>
               <Divider />
             </Grid>
@@ -429,6 +404,32 @@ export default function EyebrowLaminationView() {
                   </React.Fragment>
                 )
               )}
+          </Grid>
+          <Grid size={12}>
+            <Divider />
+          </Grid>
+          <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
+            <Typography
+              variant={downMd ? "body1" : "h6"}
+              textAlign="left"
+              sx={{ fontWeight: "200" }}
+              width={"100%"}
+              fontStyle="italic"
+            >
+              {language.webLanguage === "PL"
+                ? "CZYM JEST BOTOX BRWI?"
+                : "WHAT IS EYEBROW BOTOX?"}
+            </Typography>
+            <Typography
+              variant={downMd ? "body2" : "body1"}
+              textAlign="left"
+              width={"100%"}
+              gutterBottom
+            >
+              {language.webLanguage === "PL"
+                ? eyebrowLaminationDataPL.eyebrowBotoxDescription
+                : eyebrowLaminationDataEN.eyebrowBotoxDescription}
+            </Typography>
           </Grid>
           <Grid size={12}>
             <Divider />

@@ -190,18 +190,18 @@ export default function LashLiftView() {
             </Box>
           </Grid>
         </Grid>
-        <Grid size={12} container p={1}>
-          <Grid size={downMd ? 12 : 5}>
+        <Grid size={12} container p={1} alignItems={"center"}>
+          <Grid size={downMd ? 12 : 4}>
             <Box
               component="img"
               sx={{
-                height: "100%",
-                width: "100%",
+                height: "auto",
+                width: "auto",
               }}
               src={lash_lift}
             />
           </Grid>
-          <Grid size={downMd ? 12 : 7} p={1} container spacing={3}>
+          <Grid size={downMd ? 12 : 8} p={1} container spacing={3}>
             <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
               <Typography
                 variant={downMd ? "body2" : "body1"}
@@ -214,32 +214,7 @@ export default function LashLiftView() {
                   : lashLiftDataEN.overviewOfTreatment}
               </Typography>
             </Grid>
-            <Grid size={12}>
-              <Divider />
-            </Grid>
-            <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
-              <Typography
-                variant={downMd ? "body1" : "h6"}
-                textAlign="left"
-                sx={{ fontWeight: "200" }}
-                width={"100%"}
-                fontStyle="italic"
-              >
-                {language.webLanguage === "PL"
-                  ? "CZYM JEST BOTOX RZĘS?"
-                  : "WHAT IS LASH BOTOX?"}
-              </Typography>
-              <Typography
-                variant={downMd ? "body2" : "body1"}
-                textAlign="left"
-                width={"100%"}
-                gutterBottom
-              >
-                {language.webLanguage === "PL"
-                  ? lashLiftDataPL.lashBotoxDescription
-                  : lashLiftDataEN.lashBotoxDescription}
-              </Typography>
-            </Grid>
+
             <Grid size={12}>
               <Divider />
             </Grid>
@@ -425,6 +400,32 @@ export default function LashLiftView() {
                   </React.Fragment>
                 )
               )}
+          </Grid>
+          <Grid size={12}>
+            <Divider />
+          </Grid>
+          <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
+            <Typography
+              variant={downMd ? "body1" : "h6"}
+              textAlign="left"
+              sx={{ fontWeight: "200" }}
+              width={"100%"}
+              fontStyle="italic"
+            >
+              {language.webLanguage === "PL"
+                ? "CZYM JEST BOTOX RZĘS?"
+                : "WHAT IS LASH BOTOX?"}
+            </Typography>
+            <Typography
+              variant={downMd ? "body2" : "body1"}
+              textAlign="left"
+              width={"100%"}
+              gutterBottom
+            >
+              {language.webLanguage === "PL"
+                ? lashLiftDataPL.lashBotoxDescription
+                : lashLiftDataEN.lashBotoxDescription}
+            </Typography>
           </Grid>
           <Grid size={12}>
             <Divider />
