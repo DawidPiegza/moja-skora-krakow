@@ -7,7 +7,7 @@ export const hairGrowthMesotherapyDataPL: IServiceObject = {
     "Mezoterapia igłowa skóry głowy to zaawansowany zabieg z zakresu kosmetologii estetycznej, polegający na punktowym wprowadzaniu specjalnie opracowanego koktajlu substancji aktywnych bezpośrednio w warstwę skóry właściwej, tuż przy cebulkach włosów. Mikronakłucia wykonywane bardzo cienką igłą zwiększają mikrokrążenie, poprawiają natlenienie tkanek i umożliwiają maksymalne wykorzystanie potencjału aplikowanych składników odżywczych.\nW naszych terapiach stosujemy wyłącznie preparaty bazujące na kwasie hialuronowym, wzbogacone m.in. o witaminy z grupy B, aminokwasy siarkowe, cynk, miedź, peptydy biomimetyczne oraz czynniki wzrostu – wszystkie klinicznie przebadane i certyfikowane. Tak dobrana formuła skutecznie hamuje nadmierne wypadanie, stymuluje wzrost nowych włosów i poprawia ogólną kondycję skóry głowy.",
   infoTable: {
     recommendedNumber: "4–6 zabiegów",
-    timeOfTreatment: "30 min",
+    timeOfTreatment: "30 minut",
     intervals: "co 2 tygodnie",
   },
   indicationsToTreatment: [

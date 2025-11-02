@@ -6,8 +6,8 @@ export const nanofraxMesotherapyDataPL: INanofraxMesotherapyData = {
     "One Needle to zaawansowany kartridż z pojedynczą igłą, stworzony z myślą o punktowym, celowanym działaniu w miejscach wymagających szczególnej precyzji. Umożliwia dokładne nakłucia o większej głębokości, pozwalając na skuteczną stymulację skóry w trudniejszych obszarach. Zabieg z użyciem techniki One Needle polecany jest szczególnie w przypadku: – pojedynczych zmarszczek mimicznych (np. bruzdy nosowo-wargowe, lwia zmarszczka), – punktowych przebarwień (melasma, przebarwienia pozapalne), – blizn potrądzikowych i pourazowych, – wiotkości i utraty elastyczności w obrębie okolicy oka, ust, brody, – rozstępów – technika One Needle umożliwia precyzyjną mikrostymulację rozciągniętej skóry w miejscu rozstępów, co sprzyja jej regeneracji, rozjaśnieniu i ujędrnieniu.",
   infoTable: {
     recommendedNumber: "3-6 zabiegów",
-    timeOfTreatment: "1.5h",
-    intervals: "2-4 tygodnie",
+    timeOfTreatment: "1.5 godziny",
+    intervals: "co 2-4 tygodnie",
   },
 
   indicationsToTreatment: [

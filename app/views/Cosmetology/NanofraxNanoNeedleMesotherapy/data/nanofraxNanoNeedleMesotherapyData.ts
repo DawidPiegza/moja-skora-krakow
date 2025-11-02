@@ -7,8 +7,8 @@ export const nanofraxNanoNeedleMesotherapyData: INanofraxNanoNeedleMesotherapy =
 
     infoTable: {
       recommendedNumber: "3-6 zabiegów",
-      timeOfTreatment: "1.5h",
-      intervals: "2-4 tygodnie",
+      timeOfTreatment: "1.5 godziny",
+      intervals: "co 2-4 tygodnie",
     },
     indicationsToTreatment: [
       "Odwodnienie, szorstkość, utrata blasku",

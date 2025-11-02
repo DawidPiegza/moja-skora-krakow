@@ -3,8 +3,8 @@ import type { IEyebrowLaminationData } from "../utils/interfaces/IEyebrowLaminat
 export const eyebrowLaminationDataPL: IEyebrowLaminationData = {
   infoTable: {
     recommendedNumber: "Indywidualnie",
-    timeOfTreatment: "1–1,5h",
-    intervals: "6–8 tygodni",
+    timeOfTreatment: "1–1,5 godziny",
+    intervals: "co 6–8 tygodni",
   },
   overviewOfTreatment:
     "Laminacja brwi to zabieg stylizacji, który pozwala ujarzmić niesforne włoski, nadać im odpowiedni kierunek i sprawić, że brwi wyglądają na pełniejsze i bardziej zadbane. Efekt utrzymuje się przez kilka tygodni. Laminacja polega na zmiękczeniu i nadaniu nowego kształtu włoskom brwi za pomocą odpowiednich preparatów chemicznych. Dzięki temu można podnieść, wyprostować lub ‘wyczesać’ brwi tak, aby wyglądały gęściej i równiej.",

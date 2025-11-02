@@ -4,8 +4,8 @@ export const lipAugmentationAndContouringDataPL: ILipAugmentationAndContouring =
   {
     infoTable: {
       recommendedNumber: "1 zabieg",
-      timeOfTreatment: "45–60 min",
-      intervals: "3 miesiące",
+      timeOfTreatment: "45–60 minut",
+      intervals: "co 3 miesiące",
     },
     effectsOfTratment: [
       "Likwidacja asymetrii",

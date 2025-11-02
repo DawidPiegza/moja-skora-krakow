@@ -4,9 +4,9 @@ export const pcaSkinDataPL: IPcaSkinData = {
   overview:
     "PCA Skin Polska to oficjalny przedstawiciel amerykańskiej marki PCA Skin – lidera w dziedzinie zaawansowanych peelingów chemicznych oraz specjalistycznej pielęgnacji skóry. Marka od 30 lat obecna jest w podręcznikach dermatologii estetycznej i profesjonalnych publikacjach medycznych, jako twórca przełomowych formuł terapeutycznych. Produkty PCA Skin są przeznaczone wyłącznie dla lekarzy i licencjonowanych kosmetologów. Oparte są na składnikach aktywnych, takich jak kwasy AHA/BHA, enzymy oraz antyoksydanty, które skutecznie wspomagają leczenie wielu problemów skórnych – od trądziku, przez przebarwienia, po oznaki starzenia. Marka słynie z innowacyjnych rozwiązań, m.in. technologii samoneutralizujących się kwasów, co zwiększa bezpieczeństwo i skuteczność zabiegów.",
   infoTable: {
-    recommendedNumber: "4–6",
+    recommendedNumber: "4–6 zabiegów",
     timeOfTreatment: "45 minut",
-    intervals: "2–4 tygodnie",
+    intervals: "co 2–4 tygodnie",
   },
   preparationForTreatment: [
     "Unikać opalania i ekspozycji na słońce przez co najmniej 7 dni.",
@@ -159,7 +159,7 @@ export const pcaSkinDataEN: IPcaSkinData = {
   overview:
     "PCA Skin Polska is the official representative of the American brand PCA Skin – a global leader in advanced chemical peels and professional skincare solutions. For over 30 years, the brand has been featured in dermatology textbooks and medical publications as a pioneer in breakthrough therapeutic formulations. PCA Skin products are intended exclusively for physicians and licensed aestheticians. They are based on active ingredients such as AHA/BHA acids, enzymes, and antioxidants, which effectively support the treatment of various skin concerns – from acne and hyperpigmentation to signs of aging. The brand is known for its innovative solutions, including self-neutralizing acid technology, which enhances both the safety and effectiveness of treatments.",
   infoTable: {
-    recommendedNumber: "4–6",
+    recommendedNumber: "4–6 treatments",
     timeOfTreatment: "45 minutes",
     intervals: "2–4 weeks",
   },

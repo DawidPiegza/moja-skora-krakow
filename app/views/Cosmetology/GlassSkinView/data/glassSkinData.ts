@@ -4,7 +4,7 @@ export const glassSkinDataPL: IGlassSkinData = {
   infoTable: {
     recommendedNumber: "3 zabiegi",
     timeOfTreatment: "60 minut",
-    intervals: "2–3 tygodnie",
+    intervals: "co 2–3 tygodnie",
   },
   overview:
     "Autorski zabieg Glass Skin to zaawansowana terapia pielęgnacyjna inspirowana koreańskimi rytuałami piękna, stworzona z myślą o przywróceniu skórze intensywnego blasku, gładkości i równomiernego kolorytu. Zabieg dedykowany jest każdemu, kto marzy o promiennej, „szklanej” skórze – wolnej od szarości, odwodnienia i oznak zmęczenia. W trakcie terapii łączymy innowacyjne technologie z wysoce skoncentrowanymi składnikami aktywnymi, takimi jak: kwas hialuronowy, niacynamid, peptydy biomimetyczne, antyoksydanty oraz substancje rozświetlające i nawilżające. Całość została zaprojektowana jako rytuał wieloetapowy – z precyzyjnie dobranym oczyszczeniem, eksfoliacją, masażem oraz aplikacją boosterów i masek typu glow.",

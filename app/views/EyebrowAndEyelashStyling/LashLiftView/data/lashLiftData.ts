@@ -3,8 +3,8 @@ import type { ILashLiftData } from "../utils/interfaces/ILashLiftData";
 export const lashLiftDataPL: ILashLiftData = {
   infoTable: {
     recommendedNumber: "Indywidualnie",
-    timeOfTreatment: "1–1,5h",
-    intervals: "6–8 tygodni",
+    timeOfTreatment: "1–1,5 godziny",
+    intervals: "co 6–8 tygodni",
   },
   overviewOfTreatment:
     "Lifting rzęs to zabieg, który naturalnie podkręca, unosi i optycznie wydłuża rzęsy bez potrzeby użycia zalotki czy doklejania sztucznych rzęs. Efekt to bardziej widoczne, podkreślone rzęsy oraz otwarte spojrzenie. Zabieg polega na nawinięciu naturalnych rzęs na silikonowy wałeczek dopasowany do długości włosków, a następnie aplikacji specjalnych preparatów, które utrwalają ich nowe, uniesione ułożenie. Trwałość efektu to zwykle 5–7 tygodni (w zależności od pielęgnacji i indywidualnych predyspozycji).",

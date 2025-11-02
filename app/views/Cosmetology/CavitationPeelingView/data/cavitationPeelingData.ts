@@ -5,8 +5,8 @@ export const cavitationPeelingDataPL: ICavitationPeeling = {
     "Peeling kawitacyjny to bezpieczna i bezinwazyjna forma oczyszczania skóry, która wykorzystuje fale ultradźwiękowe do usunięcia martwych komórek naskórka, zanieczyszczeń, nadmiaru sebum oraz resztek kosmetyków i bakterii. Dzięki zjawisku kawitacji, na zwilżonej skórze tworzą się mikroskopijne pęcherzyki, które pod wpływem drgań ultradźwiękowych pękają, delikatnie rozbijając zrogowaciały naskórek. To sprawia, że zabieg jest wyjątkowo delikatny, a jednocześnie skuteczny nawet w głębszych warstwach skóry, w przeciwieństwie do klasycznych peelingów mechanicznych czy enzymatycznych. Efektem zabiegu jest natychmiastowe oczyszczenie i odświeżenie skóry, poprawa jej dotlenienia, rozjaśnienie kolorytu oraz przygotowanie do dalszych etapów pielęgnacyjnych. Skóra po zabiegu znacznie lepiej wchłania substancje aktywne zawarte w preparatach– dzięki czemu ich działanie jest bardziej intensywne.",
   infoTable: {
     recommendedNumber: "3-6 zabiegów",
-    timeOfTreatment: "30 min",
-    intervals: "2-3 tygodnie",
+    timeOfTreatment: "30 minut",
+    intervals: "co 2-3 tygodnie",
   },
   indicationsToTreatment: [
     "Cera tłusta i mieszana",

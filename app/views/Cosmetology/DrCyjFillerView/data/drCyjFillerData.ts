@@ -5,7 +5,7 @@ export const drCyjFillerDataPL: IServiceObject = {
     "Mezoterapia skóry głowy z wykorzystaniem preparatów Dr Cyj to nowoczesna, peptydowa terapia, która skutecznie przeciwdziała wypadaniu włosów oraz stymuluje ich wzrost. Dzięki specjalnie opracowanemu składowi, zabieg poprawia mikrokrążenie i wspomaga regenerację mieszków włosowych.",
   infoTable: {
     recommendedNumber: "4 zabiegi",
-    timeOfTreatment: "30 min",
+    timeOfTreatment: "30 minut",
     intervals: "co 2 tygodnie",
   },
   indicationsToTreatment: [

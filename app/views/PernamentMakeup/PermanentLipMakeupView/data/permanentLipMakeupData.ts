@@ -4,7 +4,7 @@ export const permanentLipMakeupDataPL: IPermanentLipMakeup = {
   infoTable: {
     recommendedNumber: "1 zabieg",
     timeOfTreatment: "2–3 godziny",
-    intervals: "2–3 lata",
+    intervals: "co 2–3 lata",
   },
   overview:
     "Makijaż permanentny ust to nowoczesna i precyzyjna metoda pigmentacji, pozwalająca na podkreślenie naturalnego kształtu ust, wyrównanie konturu oraz nadanie im wyrazistości i estetycznego kolorytu. Pigment wprowadzany jest płytko w skórę właściwą, co umożliwia uzyskanie trwałego, a jednocześnie subtelnego efektu. Zabieg wykonywany jest z zachowaniem najwyższych standardów higieny, przy użyciu certyfikowanych pigmentów oraz profesjonalnych narzędzi, co zapewnia bezpieczeństwo i wysoką jakość rezultatów. Prawidłowo wykonany makijaż permanentny ust pozwala skorygować asymetrię, wyrównać koloryt oraz optycznie powiększyć usta, nadając im symetryczny, zadbany wygląd. Efekt końcowy dobierany jest indywidualnie, zgodnie z preferencjami klientki – tak, aby usta wyglądały atrakcyjnie zarówno w codziennym, naturalnym wydaniu, jak i w pełnym makijażu. Trwałość makijażu zależy od typu skóry i innych czynników zewnętrznych i wewnętrznych organizmu.",

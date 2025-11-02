@@ -5,7 +5,7 @@ export const laserRemovalOfPermanentMakeupAndTattoosPL: ILaserRemovalOfPermanent
     infoTable: {
       recommendedNumber: "Indywidualnie",
       timeOfTreatment: "Indywidualnie",
-      intervals: "4-8 tygodnie",
+      intervals: "co 4-8 tygodnie",
     },
     treatmentOverview:
       "Podczas usuwania makijażu permanentnego lub tatuażu laser emituje światło o długości fali 532 nm albo 1064 nm – w zależności od rodzaju pigmentu. Technologia Q-switch nie narusza naskórka lub powoduje jedynie minimalne jego uszkodzenie. W miejscu zabiegu pojawia się łagodny stan zapalny, który aktywuje układ immunologiczny – makrofagi usuwają wówczas rozbite na mniejsze fragmenty cząsteczki barwnika.",

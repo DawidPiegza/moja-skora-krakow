@@ -6,7 +6,7 @@ export const needleMesotherapyDataPL: INeedleMesotherapyData = {
   infoTable: {
     recommendedNumber: "3-6 zabiegów",
     timeOfTreatment: "30-60 minut",
-    intervals: "Co 2-4 tygodnie",
+    intervals: "co 2-4 tygodnie",
   },
   indicationsToTreatment: [
     "Utrata gęstości i elastyczności skóry",
@@ -80,7 +80,7 @@ export const needleMesotherapyDataEN: INeedleMesotherapyData = {
   infoTable: {
     recommendedNumber: "3 to 6 treatments",
     timeOfTreatment: "1.5 hours",
-    intervals: "Every 2–3 weeks",
+    intervals: "every 2–3 weeks",
   },
   indicationsToTreatment: [
     "Loss of skin density and elasticity",
