@@ -27,6 +27,12 @@ import lip_augmentation_and_contouring_effect_3 from "../../../../public/images/
 import lip_augmentation_and_contouring_effect_4 from "../../../../public/images/lip_augmentation_and_contouring_effect_4.jpeg";
 import lip_augmentation_and_contouring_effect_5 from "../../../../public/images/lip_augmentation_and_contouring_effect_5.jpeg";
 import lip_augmentation_and_contouring_effect_6 from "../../../../public/images/lip_augmentation_and_contouring_effect_6.jpeg";
+import lip_augmentation_and_contouring_effect_7 from "../../../../public/images/lip_augmentation_and_contouring_effect_7.jpg";
+import lip_augmentation_and_contouring_effect_8 from "../../../../public/images/lip_augmentation_and_contouring_effect_8.jpg";
+import lip_augmentation_and_contouring_effect_9 from "../../../../public/images/lip_augmentation_and_contouring_effect_9.jpg";
+import lip_augmentation_and_contouring_effect_10 from "../../../../public/images/lip_augmentation_and_contouring_effect_10.jpg";
+import lip_augmentation_and_contouring_effect_11 from "../../../../public/images/lip_augmentation_and_contouring_effect_11.jpg";
+import lip_augmentation_and_contouring_effect_12 from "../../../../public/images/lip_augmentation_and_contouring_effect_12.jpg";
 
 import {
   lipAugmentationAndContouringDataPL,
@@ -702,6 +708,72 @@ export default function LipAugmentationAndContouringView() {
                     width: "100%",
                   }}
                   src={lip_augmentation_and_contouring_effect_6}
+                />
+              </Grid>
+              <Grid size={downMd ? 12 : 6}>
+                <Box
+                  p={2}
+                  component="img"
+                  sx={{
+                    height: "100%",
+                    width: "100%",
+                  }}
+                  src={lip_augmentation_and_contouring_effect_7}
+                />
+              </Grid>
+              <Grid size={downMd ? 12 : 6}>
+                <Box
+                  p={2}
+                  component="img"
+                  sx={{
+                    height: "100%",
+                    width: "100%",
+                  }}
+                  src={lip_augmentation_and_contouring_effect_8}
+                />
+              </Grid>
+              <Grid size={downMd ? 12 : 6}>
+                <Box
+                  p={2}
+                  component="img"
+                  sx={{
+                    height: "100%",
+                    width: "100%",
+                  }}
+                  src={lip_augmentation_and_contouring_effect_9}
+                />
+              </Grid>
+              <Grid size={downMd ? 12 : 6}>
+                <Box
+                  p={2}
+                  component="img"
+                  sx={{
+                    height: "100%",
+                    width: "100%",
+                  }}
+                  src={lip_augmentation_and_contouring_effect_10}
+                />
+              </Grid>
+              <Grid size={downMd ? 12 : 6}>
+                <Box
+                  p={2}
+                  component="img"
+                  sx={{
+                    height: "100%",
+                    width: "100%",
+                  }}
+                  src={lip_augmentation_and_contouring_effect_11}
+                />
+              </Grid>
+              <Grid size={downMd ? 12 : 6}>
+                <Box
+                  p={2}
+                  component="img"
+                  sx={{
+                    height: "100%",
+                    width: "100%",
+                  }}
+                  src={lip_augmentation_and_contouring_effect_12}
                 />
               </Grid>
             </Grid>

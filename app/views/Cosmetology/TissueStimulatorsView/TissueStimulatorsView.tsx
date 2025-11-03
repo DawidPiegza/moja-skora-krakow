@@ -25,6 +25,8 @@ import {
   tissueStimulatorsDataEN,
 } from "./data/tissueStimulatorsData";
 import tissue_stimulators from "../../../../public/images/tissue_stimulators.png";
+import tissue_stimulators_effect_0 from "../../../../public/images/tissue_stimulators_effect_0.png";
+import tissue_stimulators_effect_1 from "../../../../public/images/tissue_stimulators_effect_1.png";
 
 export default function TissueStimulatorsView() {
   const { language } = React.useContext(WebsiteLanguageContext);
@@ -539,6 +541,48 @@ export default function TissueStimulatorsView() {
                   </Typography>
                 )
               )}
+          </Grid>
+          <Grid size={12}>
+            <Divider />
+          </Grid>
+          <Grid size={12} container spacing={2}>
+            <Grid size={12}>
+              <Typography
+                variant={downMd ? "body1" : "h6"}
+                textAlign="left"
+                sx={{ fontWeight: "200" }}
+                width={"100%"}
+                fontStyle="italic"
+              >
+                {language.webLanguage === "PL"
+                  ? "PRZED I PO ZABIEGU"
+                  : "BEFORE AND AFTER TREATMENT"}
+              </Typography>
+            </Grid>
+            <Grid size={12} container spacing={3}>
+              <Grid size={downMd ? 12 : 6}>
+                <Box
+                  p={2}
+                  component="img"
+                  sx={{
+                    height: "100%",
+                    width: "100%",
+                  }}
+                  src={tissue_stimulators_effect_0}
+                />
+              </Grid>
+              <Grid size={downMd ? 12 : 6}>
+                <Box
+                  p={2}
+                  component="img"
+                  sx={{
+                    height: "100%",
+                    width: "100%",
+                  }}
+                  src={tissue_stimulators_effect_1}
+                />
+              </Grid>
+            </Grid>
           </Grid>
         </Grid>
       </Grid>

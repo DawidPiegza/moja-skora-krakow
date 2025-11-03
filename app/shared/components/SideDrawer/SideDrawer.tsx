@@ -1,4 +1,7 @@
 import {
+  Accordion,
+  AccordionDetails,
+  AccordionSummary,
   Box,
   ButtonBase,
   Divider,
@@ -8,6 +11,7 @@ import {
   ListItemButton,
   ListItemIcon,
   ListItemText,
+  Typography,
 } from "@mui/material";
 import HomeIcon from "@mui/icons-material/Home";
 import ContactPageIcon from "@mui/icons-material/ContactPage";
@@ -18,6 +22,12 @@ import { useNavigate } from "react-router";
 import TranslateIcon from "@mui/icons-material/Translate";
 import CardGiftcardIcon from "@mui/icons-material/CardGiftcard";
 import LocalOfferIcon from "@mui/icons-material/LocalOffer";
+import Collapse from "@mui/material/Collapse";
+import ExpandLess from "@mui/icons-material/ExpandLess";
+import ExpandMore from "@mui/icons-material/ExpandMore";
+import StarBorder from "@mui/icons-material/StarBorder";
+import ListAltIcon from "@mui/icons-material/ListAlt";
+import { serviceCategoriesList } from "../../../views/ServiceCategoriesView/data/serviceCategoriesList";
 
 interface ISideDrawerProps {
   open: boolean;
@@ -33,6 +43,11 @@ export default function SideDrawer({
   )!;
   const navTo = useNavigate();
   const [languageMenuOpen, setLanguageMenuOpen] = React.useState(false);
+  const [isServicesListOpen, setIsServicesListOpen] = React.useState(false);
+
+  const handleClick = () => {
+    setIsServicesListOpen(!isServicesListOpen);
+  };
 
   const menuItems = [
     {
@@ -85,6 +100,38 @@ export default function SideDrawer({
               </ListItemButton>
             </ListItem>
           ))}
+          <ListItemButton onClick={handleClick}>
+            <ListItemIcon>
+              <ListAltIcon />
+            </ListItemIcon>
+            <ListItemText primary="Lista zabiegów" />
+            {isServicesListOpen ? <ExpandLess /> : <ExpandMore />}
+          </ListItemButton>
+          <Collapse in={isServicesListOpen} timeout="auto" unmountOnExit>
+            <List component="div">
+              {serviceCategoriesList.map((category, index) => (
+                <React.Fragment key={index}>
+                  <ListItemButton
+                    sx={{ pl: 4 }}
+                    onClick={() => {
+                      setSideDrawerOpen((prev) => !prev);
+                      setIsServicesListOpen((prev) => !prev);
+                      navTo(category.categoryURL);
+                    }}
+                  >
+                    <ListItemText
+                      primary={
+                        language.webLanguage === "PL"
+                          ? category.title
+                          : category.titleENG
+                      }
+                    />
+                  </ListItemButton>
+                  <Divider variant="middle" />
+                </React.Fragment>
+              ))}
+            </List>
+          </Collapse>
           <ListItem disablePadding>
             <ListItemButton
               onClick={(e) => {
