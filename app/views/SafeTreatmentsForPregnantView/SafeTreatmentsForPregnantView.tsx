@@ -56,9 +56,9 @@ export default function SafeTreatmentsForPregnantView() {
             size={downMd ? 12 : 8}
             container
             direction={"column"}
-            rowGap={2}
+            rowGap={3}
           >
-            <Grid size={12} px={1}>
+            <Grid size={12}>
               <Typography
                 variant={downMd ? "body1" : "h6"}
                 textAlign="left"
@@ -72,7 +72,7 @@ export default function SafeTreatmentsForPregnantView() {
                   : "LIST OF SAFE TREATMENTS FOR PREGNANT AND BREASTFEEDING WOMEN (LINKS BELOW):"}
               </Typography>
             </Grid>
-            <Grid size={12} container direction={"column"} rowGap={1}>
+            <Grid size={12} container direction={"column"} rowGap={0.5}>
               {safeTreatmentsForPregnantPL.links.map((link, index) => (
                 <Grid key={index} size={12}>
                   <Button
@@ -92,14 +92,16 @@ export default function SafeTreatmentsForPregnantView() {
                       component="span"
                       variant={downMd ? "body2" : "body1"}
                     >
-                      {link.linkName}
+                      {language.webLanguage === "PL"
+                        ? link.linkName
+                        : link.linkNameENG}
                     </Typography>
                   </Button>
                 </Grid>
               ))}
             </Grid>
 
-            <Grid size={12} px={1}>
+            <Grid size={12}>
               <Typography
                 variant="subtitle2"
                 textAlign="left"

@@ -1,7 +1,6 @@
 import { Links, Meta, Outlet, Scripts, ScrollRestoration } from "react-router";
 import { ThemeProvider } from "@mui/material/styles";
 import { theme } from "./shared/styles/MUIGlobalStyle";
-
 import "./app.css";
 import { useState } from "react";
 import SideDrawer from "./shared/components/SideDrawer/SideDrawer";
@@ -32,11 +31,15 @@ export default function App() {
   return (
     <ThemeProvider theme={theme}>
       <WebsiteLanguageProvider>
-        <Navbar setSideDrawerOpen={setSideDrawerOpen} />
-        <SideDrawer
-          open={isSideDrawerOpen}
-          setSideDrawerOpen={setSideDrawerOpen}
-        />
+        {typeof window !== "undefined" && window.location.pathname !== "/" && (
+          <>
+            <Navbar setSideDrawerOpen={setSideDrawerOpen} />
+            <SideDrawer
+              open={isSideDrawerOpen}
+              setSideDrawerOpen={setSideDrawerOpen}
+            />
+          </>
+        )}
         <Outlet />
       </WebsiteLanguageProvider>
     </ThemeProvider>

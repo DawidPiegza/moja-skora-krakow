@@ -10,17 +10,19 @@ import {
 import { serviceCategoriesList } from "./data/serviceCategoriesList";
 import ServiceCategoryCard from "./components/ServiceCategoryCard/ServiceCategoryCard";
 import { WebsiteLanguageContext } from "../../shared/contexts/LanguageContext";
-import React from "react";
+import React, { useState } from "react";
 import ServiceCategoryCardSmallScreen from "./components/ServiceCategoryCardSmallScreen/ServiceCategoryCardSmallScreen";
 import booksy_logo from "../../../public/images/booksy_logo.png";
+import Navbar from "../../shared/components/Navbar/Navbar";
 
 export default function ServiceCategories() {
   const { language } = React.useContext(WebsiteLanguageContext);
   const theme = useTheme();
   const downMd = useMediaQuery(theme.breakpoints.down("md"));
+  const [isSideDrawerOpen, setSideDrawerOpen] = useState<boolean>(false);
 
   return (
-    <Container maxWidth="xl">
+    <Container maxWidth="xl" sx={{ marginTop: 3 }}>
       <Grid container rowSpacing={5} py={2} px={2}>
         <Grid size={12}>
           <Typography

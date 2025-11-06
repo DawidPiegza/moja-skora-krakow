@@ -104,7 +104,11 @@ export default function SideDrawer({
             <ListItemIcon>
               <ListAltIcon />
             </ListItemIcon>
-            <ListItemText primary="Lista zabiegów" />
+            <ListItemText
+              primary={
+                language.webLanguage === "PL" ? "Lista zabiegów" : "Treatments"
+              }
+            />
             {isServicesListOpen ? <ExpandLess /> : <ExpandMore />}
           </ListItemButton>
           <Collapse in={isServicesListOpen} timeout="auto" unmountOnExit>
@@ -132,48 +136,49 @@ export default function SideDrawer({
               ))}
             </List>
           </Collapse>
-          <ListItem disablePadding>
-            <ListItemButton
-              onClick={(e) => {
-                e.stopPropagation();
-                setLanguageMenuOpen(!languageMenuOpen);
-              }}
-            >
-              <ListItemIcon>
-                <TranslateIcon />
-              </ListItemIcon>
-              <ListItemText
-                primary={language.webLanguage === "PL" ? "Język" : "Language"}
-              />
-            </ListItemButton>
-          </ListItem>
-
-          {languageMenuOpen && (
-            <>
-              <ListItem disablePadding>
-                <ListItemButton
-                  onClick={() => {
-                    setPL_Language();
-                    setSideDrawerOpen(false);
-                  }}
-                >
-                  <ListItemText primary="Polski" sx={{ pl: 4 }} />
-                </ListItemButton>
-              </ListItem>
-              {languageMenuOpen && <Divider variant="middle" />}
-
-              <ListItem disablePadding>
-                <ListItemButton
-                  onClick={() => {
-                    setENG_Language();
-                    setSideDrawerOpen(false);
-                  }}
-                >
-                  <ListItemText primary="English" sx={{ pl: 4 }} />
-                </ListItemButton>
-              </ListItem>
-            </>
-          )}
+          <ListItemButton onClick={() => setLanguageMenuOpen((prev) => !prev)}>
+            <ListItemIcon>
+              <TranslateIcon />
+            </ListItemIcon>
+            <ListItemText
+              primary={language.webLanguage === "PL" ? "Język" : "Language"}
+            />
+            {languageMenuOpen ? <ExpandLess /> : <ExpandMore />}
+          </ListItemButton>
+          <Collapse in={languageMenuOpen} timeout="auto" unmountOnExit>
+            <List component="div">
+              {[
+                {
+                  title: "Polski",
+                  titleENG: "Polish",
+                  setLanguageFunction: setPL_Language,
+                },
+                {
+                  title: "English",
+                  titleENG: "English",
+                  setLanguageFunction: setENG_Language,
+                },
+              ].map((category, index) => (
+                <React.Fragment key={index}>
+                  <ListItemButton
+                    sx={{ pl: 4 }}
+                    onClick={() => {
+                      category.setLanguageFunction();
+                    }}
+                  >
+                    <ListItemText
+                      primary={
+                        language.webLanguage === "PL"
+                          ? category.title
+                          : category.titleENG
+                      }
+                    />
+                  </ListItemButton>
+                  <Divider variant="middle" />
+                </React.Fragment>
+              ))}
+            </List>
+          </Collapse>
         </List>
       </Box>
     </Drawer>

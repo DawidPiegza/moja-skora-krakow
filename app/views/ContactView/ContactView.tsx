@@ -132,7 +132,7 @@ export default function ContactView() {
                         : "Address"}
                     </Typography>
                     <Typography variant="body2" fontWeight={300}>
-                      ul. Świętego Sebastiana 22/2C, 31-049 Kraków
+                      Świętego Sebastiana 22/2C, 31-049 Kraków
                     </Typography>
                   </Box>
                 </Grid>
@@ -188,7 +188,9 @@ export default function ContactView() {
                         : "Opening Hours"}
                     </Typography>
                     <Typography variant="body2" fontWeight={300}>
-                      Pon - Pt: 8:00 – 21:00 oraz Sb: 8:00 – 16:00
+                      {language.webLanguage === "PL"
+                        ? "Pon - Pt: 8:00 – 21:00 oraz Sb: 8:00 – 16:00"
+                        : "Mon - Fri: 8:00 AM – 9:00 PM and Sat: 8:00 AM – 4:00 PM"}
                     </Typography>
                   </Box>
                 </Grid>

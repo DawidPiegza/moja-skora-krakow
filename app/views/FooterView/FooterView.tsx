@@ -116,7 +116,9 @@ export default function FooterView() {
                 : "Opening Hours"}
             </Typography>
             <Typography variant="body2">
-              Pon - Pt: 8:00 – 21:00 oraz Sb: 8:00 – 16:00
+              {language.webLanguage === "PL"
+                ? "Pon - Pt: 8:00 – 21:00 oraz Sb: 8:00 – 16:00"
+                : "Mon - Fri: 8:00 AM – 9:00 PM and Sat: 8:00 AM – 4:00 PM"}
             </Typography>
             <Typography variant="body2" fontWeight={700}>
               {language.webLanguage === "PL"

@@ -6,22 +6,27 @@ export const safeTreatmentsForPregnantPL: ISafeTreatmentsForPregnant = {
   links: [
     {
       linkName: "Oxygenating trio solo lub w połączeniu z maską Hydrate",
+      linkNameENG: "Oxygenating Trio solo or combined with Hydrate mask",
       url: "/cosmetology/oxygenating_trio",
     },
     {
-      linkName: `Autorski zabieg ProXN I stopnia - ”zabieg regenerująco-kojący na twarz”`,
+      linkName: `Autorski zabieg ProXN I stopnia - ”Zabieg regenerująco-kojący na twarz”`,
+      linkNameENG: `ProXN Level I proprietary treatment - "Regenerating and soothing facial treatment"`,
       url: "/cosmetology/pro_xn",
     },
     {
       linkName: "Mezoterapia nanoigłowa NanoFrax",
+      linkNameENG: "Nanofrax nano-needle mesotherapy",
       url: "/cosmetology/nanofrax_mesotherapy",
     },
     {
       linkName: "Lifting rzęs",
+      linkNameENG: "Lash lift",
       url: "/eyebrow_and_eyelash_styling/lash_lift",
     },
     {
       linkName: "Regulacja brwi + koloryzacja",
+      linkNameENG: "Eyebrow shaping + tinting",
       url: "/eyebrow_and_eyelash_styling/eyebrow_lamination",
     },
   ],

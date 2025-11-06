@@ -7,9 +7,12 @@ import FooterView from "../FooterView/FooterView";
 import { useEffect, useState } from "react";
 import React from "react";
 import SafeTreatmentsForPregnantView from "../SafeTreatmentsForPregnantView/SafeTreatmentsForPregnantView";
+import Navbar from "../../shared/components/Navbar/Navbar";
+import SideDrawer from "../../shared/components/SideDrawer/SideDrawer";
 
 export default function AppContainer() {
   const [isLoading, setLoading] = useState<boolean>(true);
+  const [isSideDrawerOpen, setSideDrawerOpen] = useState<boolean>(false);
 
   useEffect(() => {
     setLoading(false);
@@ -18,24 +21,31 @@ export default function AppContainer() {
   return (
     <React.Fragment>
       {!isLoading && (
-        <Stack width="100vw" height="max-content" rowGap={3}>
+        <Stack width="100vw" height="max-content" rowGap={0}>
           <LandingPageView />
-          <ServiceCategories />
-          <Divider />
-          <SafeTreatmentsForPregnantView />
-          <Divider />
-          <OurBrandsView />
-          <Divider />
-          <OpinionsView />
-          <Divider />
-          <Stack
-            width="100vw"
-            height="max-content"
-            direction="column"
-            alignItems="center"
-            justifyContent="flex-start"
-          >
-            <FooterView />
+          <Navbar setSideDrawerOpen={setSideDrawerOpen} />
+          <SideDrawer
+            open={isSideDrawerOpen}
+            setSideDrawerOpen={setSideDrawerOpen}
+          />
+          <Stack width="100vw" height="max-content" rowGap={3}>
+            <ServiceCategories />
+            <Divider />
+            <SafeTreatmentsForPregnantView />
+            <Divider />
+            <OurBrandsView />
+            <Divider />
+            <OpinionsView />
+            <Divider />
+            <Stack
+              width="100vw"
+              height="max-content"
+              direction="column"
+              alignItems="center"
+              justifyContent="flex-start"
+            >
+              <FooterView />
+            </Stack>
           </Stack>
         </Stack>
       )}
