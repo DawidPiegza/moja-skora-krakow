@@ -89,6 +89,19 @@ export default function CosmetologyCategoryView() {
             variant="outlined"
             marginBottom={3}
           >
+            <Grid size={12} textAlign={"center"}>
+              <Typography
+                variant={downMD ? "h6" : "h5"}
+                sx={{ fontWeight: "400" }}
+                width={"100%"}
+                gutterBottom
+              >
+                {language.webLanguage === "PL"
+                  ? "TERAPIE SKÓRY"
+                  : "SKIN THERAPIES"}
+              </Typography>
+              <Divider variant="middle" />
+            </Grid>
             {cosmetologyViewData.map(
               (el, index) =>
                 el.pl.subcategories === "skin_therapy" && (
@@ -153,6 +166,19 @@ export default function CosmetologyCategoryView() {
             variant="outlined"
             marginBottom={3}
           >
+            <Grid size={12} textAlign={"center"}>
+              <Typography
+                variant={downMD ? "h6" : "h5"}
+                sx={{ fontWeight: "400" }}
+                width={"100%"}
+                gutterBottom
+              >
+                {language.webLanguage === "PL"
+                  ? "ZABIEGI IGŁOWE"
+                  : "NEEDLE TREATMENTS"}
+              </Typography>
+              <Divider variant="middle" />
+            </Grid>
             {cosmetologyViewData.map(
               (el, index) =>
                 el.pl.subcategories === "needle_treatments" && (
@@ -216,6 +242,19 @@ export default function CosmetologyCategoryView() {
             variant="outlined"
             marginBottom={3}
           >
+            <Grid size={12} textAlign={"center"}>
+              <Typography
+                variant={downMD ? "h6" : "h5"}
+                sx={{ fontWeight: "400" }}
+                width={"100%"}
+                gutterBottom
+              >
+                {language.webLanguage === "PL"
+                  ? "ZABIEGI LASEROWE"
+                  : "LASER TREATMENTS"}
+              </Typography>
+              <Divider variant="middle" />
+            </Grid>
             {cosmetologyViewData.map(
               (el, index) =>
                 el.pl.subcategories === "laser_treatments" && (
