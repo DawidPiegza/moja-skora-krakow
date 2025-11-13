@@ -80,55 +80,195 @@ export default function CosmetologyCategoryView() {
               </Typography>
             </Grid>
           </Grid>
-          <Grid size={12} container spacing={2}>
-            {cosmetologyViewData.map((el, index) => (
-              <Grid
-                key={index}
-                size={downMD ? 12 : 6}
-                container
-                component={Paper}
-                variant="outlined"
-                p={2}
-              >
-                <Grid size={12}>
-                  <Typography variant="body1" fontWeight={400}>
-                    {language.webLanguage === "PL" ? el.pl.title : el.eng.title}
-                  </Typography>
-                </Grid>
-                <Grid size={12}>
-                  {downMD && (
-                    <Typography variant="body2" fontWeight={300}>
-                      {language.webLanguage === "PL"
-                        ? el.pl.description.slice(0, 300) + "..."
-                        : el.eng.description.slice(0, 300) + "..."}
-                    </Typography>
-                  )}
-                  {!downMD && (
-                    <Typography variant="body2" fontWeight={300}>
-                      {language.webLanguage === "PL"
-                        ? el.pl.description.slice(0, 300) + "..."
-                        : el.eng.description.slice(0, 300) + "..."}
-                    </Typography>
-                  )}
-                </Grid>
-                <Grid size={12} display={"flex"} alignItems={"flex-end"}>
-                  <Button
+          <Grid
+            size={12}
+            container
+            spacing={2}
+            component={Paper}
+            p={1}
+            variant="outlined"
+            marginBottom={3}
+          >
+            {cosmetologyViewData.map(
+              (el, index) =>
+                el.pl.subcategories === "skin_therapy" && (
+                  <Grid
+                    key={index}
+                    size={downMD ? 12 : 6}
+                    container
+                    component={Paper}
                     variant="outlined"
-                    onClick={() => navTo(el.pl.navigateURL)}
-                    sx={{
-                      color: "text.primary",
-                      borderColor: "text.primary",
-                      "&:hover": {
-                        borderColor: "text.primary",
-                        backgroundColor: "rgba(0,0,0,0.04)",
-                      },
-                    }}
+                    p={2}
                   >
-                    {language.webLanguage === "PL" ? "wybierz" : "choose"}
-                  </Button>
-                </Grid>
-              </Grid>
-            ))}
+                    <Grid size={12}>
+                      <Typography variant="body1" fontWeight={400}>
+                        {language.webLanguage === "PL"
+                          ? el.pl.title
+                          : el.eng.title}
+                      </Typography>
+                    </Grid>
+                    <Grid size={12}>
+                      {downMD && (
+                        <Typography variant="body2" fontWeight={300}>
+                          {language.webLanguage === "PL"
+                            ? el.pl.description.slice(0, 300) + "..."
+                            : el.eng.description.slice(0, 300) + "..."}
+                        </Typography>
+                      )}
+                      {!downMD && (
+                        <Typography variant="body2" fontWeight={300}>
+                          {language.webLanguage === "PL"
+                            ? el.pl.description.slice(0, 300) + "..."
+                            : el.eng.description.slice(0, 300) + "..."}
+                        </Typography>
+                      )}
+                    </Grid>
+                    <Grid size={12} display={"flex"} alignItems={"flex-end"}>
+                      <Button
+                        variant="outlined"
+                        onClick={() => navTo(el.pl.navigateURL)}
+                        sx={{
+                          color: "text.primary",
+                          borderColor: "text.primary",
+                          "&:hover": {
+                            borderColor: "text.primary",
+                            backgroundColor: "rgba(0,0,0,0.04)",
+                          },
+                        }}
+                      >
+                        {language.webLanguage === "PL" ? "wybierz" : "choose"}
+                      </Button>
+                    </Grid>
+                  </Grid>
+                )
+            )}
+          </Grid>
+
+          <Grid
+            size={12}
+            container
+            spacing={2}
+            component={Paper}
+            p={1}
+            variant="outlined"
+            marginBottom={3}
+          >
+            {cosmetologyViewData.map(
+              (el, index) =>
+                el.pl.subcategories === "needle_treatments" && (
+                  <Grid
+                    key={index}
+                    size={downMD ? 12 : 6}
+                    container
+                    component={Paper}
+                    variant="outlined"
+                    p={2}
+                  >
+                    <Grid size={12}>
+                      <Typography variant="body1" fontWeight={400}>
+                        {language.webLanguage === "PL"
+                          ? el.pl.title
+                          : el.eng.title}
+                      </Typography>
+                    </Grid>
+                    <Grid size={12}>
+                      {downMD && (
+                        <Typography variant="body2" fontWeight={300}>
+                          {language.webLanguage === "PL"
+                            ? el.pl.description.slice(0, 300) + "..."
+                            : el.eng.description.slice(0, 300) + "..."}
+                        </Typography>
+                      )}
+                      {!downMD && (
+                        <Typography variant="body2" fontWeight={300}>
+                          {language.webLanguage === "PL"
+                            ? el.pl.description.slice(0, 300) + "..."
+                            : el.eng.description.slice(0, 300) + "..."}
+                        </Typography>
+                      )}
+                    </Grid>
+                    <Grid size={12} display={"flex"} alignItems={"flex-end"}>
+                      <Button
+                        variant="outlined"
+                        onClick={() => navTo(el.pl.navigateURL)}
+                        sx={{
+                          color: "text.primary",
+                          borderColor: "text.primary",
+                          "&:hover": {
+                            borderColor: "text.primary",
+                            backgroundColor: "rgba(0,0,0,0.04)",
+                          },
+                        }}
+                      >
+                        {language.webLanguage === "PL" ? "wybierz" : "choose"}
+                      </Button>
+                    </Grid>
+                  </Grid>
+                )
+            )}
+          </Grid>
+          <Grid
+            size={12}
+            container
+            spacing={2}
+            component={Paper}
+            p={1}
+            variant="outlined"
+            marginBottom={3}
+          >
+            {cosmetologyViewData.map(
+              (el, index) =>
+                el.pl.subcategories === "laser_treatments" && (
+                  <Grid
+                    key={index}
+                    size={downMD ? 12 : 6}
+                    container
+                    component={Paper}
+                    variant="outlined"
+                    p={2}
+                  >
+                    <Grid size={12}>
+                      <Typography variant="body1" fontWeight={400}>
+                        {language.webLanguage === "PL"
+                          ? el.pl.title
+                          : el.eng.title}
+                      </Typography>
+                    </Grid>
+                    <Grid size={12}>
+                      {downMD && (
+                        <Typography variant="body2" fontWeight={300}>
+                          {language.webLanguage === "PL"
+                            ? el.pl.description.slice(0, 300) + "..."
+                            : el.eng.description.slice(0, 300) + "..."}
+                        </Typography>
+                      )}
+                      {!downMD && (
+                        <Typography variant="body2" fontWeight={300}>
+                          {language.webLanguage === "PL"
+                            ? el.pl.description.slice(0, 300) + "..."
+                            : el.eng.description.slice(0, 300) + "..."}
+                        </Typography>
+                      )}
+                    </Grid>
+                    <Grid size={12} display={"flex"} alignItems={"flex-end"}>
+                      <Button
+                        variant="outlined"
+                        onClick={() => navTo(el.pl.navigateURL)}
+                        sx={{
+                          color: "text.primary",
+                          borderColor: "text.primary",
+                          "&:hover": {
+                            borderColor: "text.primary",
+                            backgroundColor: "rgba(0,0,0,0.04)",
+                          },
+                        }}
+                      >
+                        {language.webLanguage === "PL" ? "wybierz" : "choose"}
+                      </Button>
+                    </Grid>
+                  </Grid>
+                )
+            )}
           </Grid>
         </Grid>
       </Grid>

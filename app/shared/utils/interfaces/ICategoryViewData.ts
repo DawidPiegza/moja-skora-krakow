@@ -3,10 +3,12 @@ export interface ICategoryViewData {
     title: string;
     description: string;
     navigateURL: string;
+    subcategories?: string;
   };
   eng: {
     title: string;
     description: string;
     navigateURL: string;
+    subcategories?: string;
   };
 }
