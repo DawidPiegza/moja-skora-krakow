@@ -57,9 +57,9 @@ export default function LandingPageView() {
       >
         <Box
           component={motion.div}
-          initial={{ opacity: 1, scale: 0 }}
+          initial={{ opacity: 1, scale: downMd ? 1 : 1.2 }}
           animate={{
-            scale: [1, 1.1, 1],
+            scale: downMd ? [1, 1.1, 1] : [1.2, 1.3, 1.2],
             opacity: 1,
           }}
           transition={{
