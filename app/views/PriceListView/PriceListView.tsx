@@ -115,7 +115,6 @@ export default function PriceListView() {
             py={downMd ? 1 : 2}
           >
             <Typography
-              gutterBottom
               width={"100%"}
               variant={"h4"}
               textAlign="left"
@@ -125,41 +124,7 @@ export default function PriceListView() {
                 ? "Cennik".toUpperCase()
                 : "Price List".toUpperCase()}
             </Typography>
-            <Typography
-              variant={downMd ? "h6" : "h5"}
-              textAlign="center"
-              sx={{ fontWeight: "300" }}
-              width={"100%"}
-              fontStyle="italic"
-              gutterBottom
-              paddingTop={2}
-            >
-              {language.webLanguage === "PL"
-                ? "Zastanawiasz się, który zabieg będzie dla Ciebie najlepszy?"
-                : "Wondering which treatment will suit you best?"}
-            </Typography>
-            <Typography
-              textAlign="center"
-              sx={{ fontWeight: "200" }}
-              width={"100%"}
-              fontStyle="italic"
-              variant={downMd ? "body1" : "h6"}
-              gutterBottom
-            >
-              {language.webLanguage === "PL"
-                ? "Skontaktuj się z naszą recepcją i umów na konsultację – omówimy Twoje oczekiwania i dobierzemy indywidualny plan zabiegowy dopasowany do Twoich potrzeb."
-                : "Contact our reception to schedule a consultation – we’ll discuss your expectations and design a personalized treatment plan tailored to your needs."}
-            </Typography>
-            <Button
-              color="inherit"
-              fullWidth
-              onClick={() => navTo("/contact")}
-              sx={{ marginBottom: 2 }}
-            >
-              {language.webLanguage === "PL" ? "Kontakt" : "Contact"}
-            </Button>
           </Grid>
-
           <Grid size={12} display="flex" justifyContent={"flex-end"}>
             <TextField
               placeholder={language.webLanguage === "ENG" ? "Search" : "Szukaj"}
@@ -245,6 +210,47 @@ export default function PriceListView() {
               </TableBody>
             </Table>
           </TableContainer>
+        </Grid>
+        <Grid
+          size={12}
+          display="flex"
+          flexDirection={"column"}
+          rowGap={1}
+          my={2}
+        >
+          <Typography
+            variant={downMd ? "h6" : "h5"}
+            textAlign="center"
+            sx={{ fontWeight: "300" }}
+            width={"100%"}
+            fontStyle="italic"
+            gutterBottom
+            paddingTop={2}
+          >
+            {language.webLanguage === "PL"
+              ? "Zastanawiasz się, który zabieg będzie dla Ciebie najlepszy?"
+              : "Wondering which treatment will suit you best?"}
+          </Typography>
+          <Typography
+            textAlign="center"
+            sx={{ fontWeight: "200" }}
+            width={"100%"}
+            fontStyle="italic"
+            variant={downMd ? "body1" : "h6"}
+            gutterBottom
+          >
+            {language.webLanguage === "PL"
+              ? "Skontaktuj się z naszą recepcją i umów na konsultację – omówimy Twoje oczekiwania i dobierzemy indywidualny plan zabiegowy dopasowany do Twoich potrzeb."
+              : "Contact our reception to schedule a consultation – we’ll discuss your expectations and design a personalized treatment plan tailored to your needs."}
+          </Typography>
+          <Button
+            color="inherit"
+            fullWidth
+            onClick={() => navTo("/contact")}
+            sx={{ marginBottom: 2 }}
+          >
+            {language.webLanguage === "PL" ? "Kontakt" : "Contact"}
+          </Button>
         </Grid>
       </Grid>
       <Box
