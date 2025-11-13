@@ -143,9 +143,10 @@ export default function CosmetologyCategoryView() {
                         sx={{
                           color: "text.primary",
                           borderColor: "text.primary",
+                          backgroundColor: "#f5f5f5",
                           "&:hover": {
                             borderColor: "text.primary",
-                            backgroundColor: "rgba(0,0,0,0.04)",
+                            backgroundColor: "#e0e0e0",
                           },
                         }}
                       >
@@ -220,7 +221,7 @@ export default function CosmetologyCategoryView() {
                         sx={{
                           color: "text.primary",
                           borderColor: "text.primary",
-                          backgroundColor: "#e0e0e0",
+                          backgroundColor: "#f5f5f5",
                           "&:hover": {
                             borderColor: "text.primary",
                             backgroundColor: "#e0e0e0",
