@@ -1,5 +1,5 @@
 import { Box, useMediaQuery, useTheme } from "@mui/material";
-import logo_moja_skora from "../../../public/images/logo_moja_skora.png";
+import main_page_logo from "../../../public/images/main_page_logo.svg";
 import { motion } from "framer-motion";
 import landing_page_image_1 from "../../../public/images/landing_page_image_1.jpg";
 import landing_page_image_1_small_screen from "../../../public/images/landing_page_image_1_small_screen.jpg";
@@ -71,7 +71,7 @@ export default function LandingPageView() {
         >
           <Box
             component="img"
-            src={logo_moja_skora}
+            src={main_page_logo}
             alt="Moja Skóra"
             sx={{
               height: "60vh",
