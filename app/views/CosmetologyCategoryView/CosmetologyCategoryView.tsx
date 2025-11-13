@@ -149,9 +149,7 @@ export default function CosmetologyCategoryView() {
                           },
                         }}
                       >
-                        {language.webLanguage === "PL"
-                          ? "dowiedz się więcej"
-                          : "choose"}
+                        {language.webLanguage === "PL" ? "sprawdź" : "check"}
                       </Button>
                     </Grid>
                   </Grid>
@@ -228,7 +226,7 @@ export default function CosmetologyCategoryView() {
                           },
                         }}
                       >
-                        {language.webLanguage === "PL" ? "wybierz" : "choose"}
+                        {language.webLanguage === "PL" ? "sprawdź" : "check"}
                       </Button>
                     </Grid>
                   </Grid>
@@ -296,15 +294,15 @@ export default function CosmetologyCategoryView() {
                         variant="outlined"
                         onClick={() => navTo(el.pl.navigateURL)}
                         sx={{
-                          color: "text.primary",
-                          borderColor: "text.primary",
+                          color: "#757575",
+                          borderColor: "#bdbdbd",
                           "&:hover": {
-                            borderColor: "text.primary",
+                            borderColor: "#757575",
                             backgroundColor: "rgba(0,0,0,0.04)",
                           },
                         }}
                       >
-                        {language.webLanguage === "PL" ? "wybierz" : "choose"}
+                        {language.webLanguage === "PL" ? "sprawdź" : "check"}
                       </Button>
                     </Grid>
                   </Grid>
