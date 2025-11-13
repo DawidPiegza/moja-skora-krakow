@@ -60,96 +60,45 @@ export default function Navbar({ setSideDrawerOpen }: INavbarProps) {
                 />
               </ButtonBase>
 
-              {!downMd && (
-                <Box>
-                  <Button color="inherit" onClick={() => navTo("/")}>
-                    {language.webLanguage === "PL"
-                      ? "Strona Główna"
-                      : "Main Page"}
-                  </Button>
-                  <Button color="inherit" onClick={() => navTo("our_team")}>
-                    {language.webLanguage === "PL" ? "O Nas" : "About Us"}
-                  </Button>
-                  <Button color="inherit" onClick={() => navTo("/voucher")}>
-                    {language.webLanguage === "PL" ? "Voucher" : "Voucher"}
-                  </Button>
-                  <Button color="inherit" onClick={() => navTo("/price_list")}>
-                    {language.webLanguage === "PL" ? "Cennik" : "Price List"}
-                  </Button>
-                  <Button color="inherit" onClick={() => navTo("contact")}>
-                    {language.webLanguage === "PL" ? "Kontakt" : "Contact"}
-                  </Button>
-
-                  <LanguageMenu />
-                  <ButtonBase
-                    sx={{
-                      marginLeft: 1,
-                      paddingY: "10px",
-                      paddingX: "10px",
-                      borderRadius: 1,
-                      transition: "background-color 0.2s ease",
-                      "&:hover": {
-                        backgroundColor: "rgba(0,0,0,0.05)",
-                      },
-                      outline: "1px solid rgba(0,0,0,0.3)",
-                    }}
+              <Box
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "0.5rem",
+                }}
+              >
+                <ButtonBase
+                  onClick={() => navTo("/")}
+                  sx={{
+                    padding: 1,
+                    borderRadius: "10px",
+                    transition: "background-color 0.2s ease",
+                    "&:hover": {
+                      backgroundColor: "rgba(0,0,0,0.05)",
+                    },
+                  }}
+                >
+                  <Box
+                    component="img"
+                    src={booksy_icon}
+                    alt="logo booksy"
+                    height={"25px"}
                     onClick={() =>
                       window.open(
                         "https://booksy.com/pl-pl/249371_moja-skora_salon-kosmetyczny_8820_krakow",
                         "_blank"
                       )
                     }
-                  >
-                    <Box
-                      component="img"
-                      src={booksy_logo}
-                      alt="logo booksy"
-                      height={"16px"}
-                    />
-                  </ButtonBase>
-                </Box>
-              )}
-              {downMd && (
-                <Box
-                  sx={{
-                    display: "flex",
-                    alignItems: "center",
-                    gap: "0.5rem",
-                  }}
+                  />
+                </ButtonBase>
+                <IconButton
+                  size="large"
+                  color="inherit"
+                  onClick={() => setSideDrawerOpen(true)}
                 >
-                  <ButtonBase
-                    onClick={() => navTo("/")}
-                    sx={{
-                      padding: 1,
-                      borderRadius: "10px",
-                      transition: "background-color 0.2s ease",
-                      "&:hover": {
-                        backgroundColor: "rgba(0,0,0,0.05)",
-                      },
-                    }}
-                  >
-                    <Box
-                      component="img"
-                      src={booksy_icon}
-                      alt="logo booksy"
-                      height={"25px"}
-                      onClick={() =>
-                        window.open(
-                          "https://booksy.com/pl-pl/249371_moja-skora_salon-kosmetyczny_8820_krakow",
-                          "_blank"
-                        )
-                      }
-                    />
-                  </ButtonBase>
-                  <IconButton
-                    size="large"
-                    color="inherit"
-                    onClick={() => setSideDrawerOpen(true)}
-                  >
-                    <MenuIcon />
-                  </IconButton>
-                </Box>
-              )}
+                  <MenuIcon />
+                </IconButton>
+              </Box>
             </Toolbar>
           </Container>
         </AppBar>

@@ -12,7 +12,7 @@ export default function LandingPageView() {
       sx={{
         position: "relative",
         width: "100vw",
-        height: "calc(100vh)",
+        height: downMd ? "calc(100vh - 56px)" : "calc(100vh - 64px)",
         overflow: "hidden",
         filter: "grayscale(100%)",
         display: "flex",

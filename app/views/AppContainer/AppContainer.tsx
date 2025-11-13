@@ -20,32 +20,30 @@ export default function AppContainer() {
 
   return (
     <React.Fragment>
+      <Navbar setSideDrawerOpen={setSideDrawerOpen} />
+      <SideDrawer
+        open={isSideDrawerOpen}
+        setSideDrawerOpen={setSideDrawerOpen}
+      />
       {!isLoading && (
-        <Stack width="100vw" height="max-content" rowGap={0}>
+        <Stack width="100vw" height="max-content" rowGap={2}>
           <LandingPageView />
-          <Navbar setSideDrawerOpen={setSideDrawerOpen} />
-          <SideDrawer
-            open={isSideDrawerOpen}
-            setSideDrawerOpen={setSideDrawerOpen}
-          />
-          <Stack width="100vw" height="max-content" rowGap={3}>
-            <ServiceCategories />
-            <Divider />
-            <SafeTreatmentsForPregnantView />
-            <Divider />
-            <OurBrandsView />
-            <Divider />
-            <OpinionsView />
-            <Divider />
-            <Stack
-              width="100vw"
-              height="max-content"
-              direction="column"
-              alignItems="center"
-              justifyContent="flex-start"
-            >
-              <FooterView />
-            </Stack>
+          <ServiceCategories />
+          <Divider />
+          <SafeTreatmentsForPregnantView />
+          <Divider />
+          <OurBrandsView />
+          <Divider />
+          <OpinionsView />
+          <Divider />
+          <Stack
+            width="100vw"
+            height="max-content"
+            direction="column"
+            alignItems="center"
+            justifyContent="flex-start"
+          >
+            <FooterView />
           </Stack>
         </Stack>
       )}

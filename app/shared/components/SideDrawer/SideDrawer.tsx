@@ -49,12 +49,19 @@ export default function SideDrawer({
     setIsServicesListOpen(!isServicesListOpen);
   };
 
-  const menuItems = [
+  const menuItemsFirstPart = [
     {
       name: language.webLanguage === "PL" ? "Strona Główna" : "Main Page",
       link: "/",
       icon: <HomeIcon />,
     },
+    {
+      name: language.webLanguage === "PL" ? "Cennik" : "Price list",
+      link: "/price_list",
+      icon: <LocalOfferIcon />,
+    },
+  ];
+  const menuItemsSecondPart = [
     {
       name: language.webLanguage === "PL" ? "O Nas" : "About Us",
       link: "/our_team",
@@ -65,11 +72,7 @@ export default function SideDrawer({
       link: "/voucher",
       icon: <CardGiftcardIcon />,
     },
-    {
-      name: language.webLanguage === "PL" ? "Cennik" : "Price list",
-      link: "/price_list",
-      icon: <LocalOfferIcon />,
-    },
+
     {
       name: language.webLanguage === "PL" ? "Kontakt" : "Contact",
       link: "/contact",
@@ -87,7 +90,7 @@ export default function SideDrawer({
         justifyContent={"space-between"}
       >
         <List>
-          {menuItems.map((item, index) => (
+          {menuItemsFirstPart.map((item, index) => (
             <ListItem disablePadding key={index}>
               <ListItemButton
                 onClick={() => {
@@ -105,9 +108,7 @@ export default function SideDrawer({
               <ListAltIcon />
             </ListItemIcon>
             <ListItemText
-              primary={
-                language.webLanguage === "PL" ? "Lista zabiegów" : "Treatments"
-              }
+              primary={language.webLanguage === "PL" ? "Oferta" : "Offer"}
             />
             {isServicesListOpen ? <ExpandLess /> : <ExpandMore />}
           </ListItemButton>
@@ -136,6 +137,19 @@ export default function SideDrawer({
               ))}
             </List>
           </Collapse>
+          {menuItemsSecondPart.map((item, index) => (
+            <ListItem disablePadding key={index}>
+              <ListItemButton
+                onClick={() => {
+                  navTo(item.link);
+                  setSideDrawerOpen(false);
+                }}
+              >
+                <ListItemIcon>{item.icon}</ListItemIcon>
+                <ListItemText primary={item.name} />
+              </ListItemButton>
+            </ListItem>
+          ))}
           <ListItemButton onClick={() => setLanguageMenuOpen((prev) => !prev)}>
             <ListItemIcon>
               <TranslateIcon />
