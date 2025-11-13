@@ -216,7 +216,8 @@ export default function PriceListView() {
           display="flex"
           flexDirection={"column"}
           rowGap={1}
-          my={2}
+          my={1}
+          px={1}
         >
           <Typography
             variant={downMd ? "h6" : "h5"}
