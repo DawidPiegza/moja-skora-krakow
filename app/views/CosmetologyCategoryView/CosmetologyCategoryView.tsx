@@ -149,7 +149,9 @@ export default function CosmetologyCategoryView() {
                           },
                         }}
                       >
-                        {language.webLanguage === "PL" ? "wybierz" : "choose"}
+                        {language.webLanguage === "PL"
+                          ? "dowiedz się więcej"
+                          : "choose"}
                       </Button>
                     </Grid>
                   </Grid>
