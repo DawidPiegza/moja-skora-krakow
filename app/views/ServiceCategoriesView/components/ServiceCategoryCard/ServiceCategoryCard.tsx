@@ -39,10 +39,10 @@ export default function ServiceCategoryCard({
             sx={{
               position: "relative",
               "&:hover img": {
-                filter: "none", // usuwa grayscale przy hover
+                filter: "none",
               },
               "&:hover .overlay": {
-                backgroundColor: "rgba(255, 255, 255, 0)", // usuwa mgiełkę przy hover
+                backgroundColor: "rgba(255, 255, 255, 0)",
               },
             }}
           >

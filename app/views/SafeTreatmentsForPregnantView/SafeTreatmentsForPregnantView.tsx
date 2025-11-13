@@ -68,8 +68,8 @@ export default function SafeTreatmentsForPregnantView() {
                 gutterBottom
               >
                 {language.webLanguage === "PL"
-                  ? " LISTA ZABIEGÓW BEZPIECZNYCH DLA KOBIET W CIĄŻY I KOBIET KARMIĄCYCH (ODNOŚNIKI PONIŻEJ):"
-                  : "LIST OF SAFE TREATMENTS FOR PREGNANT AND BREASTFEEDING WOMEN (LINKS BELOW):"}
+                  ? " LISTA ZABIEGÓW BEZPIECZNYCH DLA KOBIET W CIĄŻY I KOBIET KARMIĄCYCH:"
+                  : "LIST OF SAFE TREATMENTS FOR PREGNANT AND BREASTFEEDING WOMEN:"}
               </Typography>
             </Grid>
             <Grid size={12} container direction={"column"} rowGap={0.5}>

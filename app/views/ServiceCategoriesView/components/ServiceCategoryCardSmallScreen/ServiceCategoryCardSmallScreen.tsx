@@ -48,6 +48,13 @@ export default function ServiceCategoryCardSmallScreen({
   const onTouchMove = (e: React.TouchEvent) => {
     const t = e.touches[0];
     touchEndX.current = t.clientX;
+    if (touchStartX.current != null && touchStartY.current != null) {
+      const dx = t.clientX - touchStartX.current;
+      const dy = t.clientY - touchStartY.current;
+      if (Math.abs(dx) > Math.abs(dy)) {
+        if (e.cancelable) e.preventDefault();
+      }
+    }
   };
 
   const onTouchEnd = (e: React.TouchEvent) => {
@@ -63,7 +70,7 @@ export default function ServiceCategoryCardSmallScreen({
     const dy = e.changedTouches[0].clientY - (touchStartY.current ?? 0);
     const absDX = Math.abs(dx);
     const absDY = Math.abs(dy);
-    const SWIPE_THRESHOLD = 50;
+    const SWIPE_THRESHOLD = 25;
 
     if (absDX > SWIPE_THRESHOLD && absDX > absDY) {
       swipeHandled.current = true;
@@ -173,6 +180,10 @@ export default function ServiceCategoryCardSmallScreen({
             onTouchStart={onTouchStart}
             onTouchMove={onTouchMove}
             onTouchEnd={onTouchEnd}
+            sx={{
+              touchAction: "pan-x",
+              overscrollBehavior: "contain",
+            }}
           >
             <Box
               sx={{
