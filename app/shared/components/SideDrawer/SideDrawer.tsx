@@ -28,6 +28,7 @@ import ExpandMore from "@mui/icons-material/ExpandMore";
 import StarBorder from "@mui/icons-material/StarBorder";
 import ListAltIcon from "@mui/icons-material/ListAlt";
 import { serviceCategoriesList } from "../../../views/ServiceCategoriesView/data/serviceCategoriesList";
+import { serviceSubcategories } from "./data/serviceSubcategories";
 
 interface ISideDrawerProps {
   open: boolean;
@@ -44,6 +45,13 @@ export default function SideDrawer({
   const navTo = useNavigate();
   const [languageMenuOpen, setLanguageMenuOpen] = React.useState(false);
   const [isServicesListOpen, setIsServicesListOpen] = React.useState(false);
+  const [isSubcategoriesListOpen, setIsSubcategoriesListOpen] = React.useState({
+    eyebrow_and_eyelash_styling: false,
+    permanent_makeup: false,
+    lip_shaping: false,
+    cosmetology: false,
+    consultation: false,
+  });
 
   const handleClick = () => {
     setIsServicesListOpen(!isServicesListOpen);
@@ -119,9 +127,26 @@ export default function SideDrawer({
                   <ListItemButton
                     sx={{ pl: 4 }}
                     onClick={() => {
-                      setSideDrawerOpen((prev) => !prev);
-                      setIsServicesListOpen((prev) => !prev);
-                      navTo(category.categoryURL);
+                      if (category.categoryKey !== "consultation") {
+                        setIsSubcategoriesListOpen((prev) => {
+                          const key =
+                            category.categoryKey! as keyof typeof prev;
+                          const reset: typeof prev = Object.keys(prev).reduce(
+                            (acc, k) => {
+                              acc[k as keyof typeof prev] = false;
+                              return acc;
+                            },
+                            {} as typeof prev
+                          );
+                          return {
+                            ...reset,
+                            [key]: !prev[key],
+                          };
+                        });
+                      } else {
+                        setSideDrawerOpen((prev) => !prev);
+                        navTo(category.categoryURL);
+                      }
                     }}
                   >
                     <ListItemText
@@ -131,7 +156,52 @@ export default function SideDrawer({
                           : category.titleENG
                       }
                     />
+                    {category.categoryKey !== "consultation" && (
+                      <React.Fragment>
+                        {isSubcategoriesListOpen[category.categoryKey!] ? (
+                          <ExpandLess />
+                        ) : (
+                          <ExpandMore />
+                        )}
+                      </React.Fragment>
+                    )}
                   </ListItemButton>
+                  <Collapse
+                    in={isSubcategoriesListOpen[category.categoryKey!]}
+                    timeout="auto"
+                    unmountOnExit
+                  >
+                    <List component="div">
+                      {(() => {
+                        const filtered = serviceSubcategories.filter(
+                          (subcategory) =>
+                            subcategory.category === category.categoryKey
+                        );
+                        return filtered.map((subcategory, subIndex) => (
+                          <React.Fragment key={subIndex}>
+                            <ListItemButton
+                              sx={{ pl: 8 }}
+                              onClick={() => {
+                                setSideDrawerOpen((prev) => !prev);
+                                navTo(subcategory.subcategoryURL);
+                              }}
+                            >
+                              <ListItemText
+                                primary={
+                                  language.webLanguage === "PL"
+                                    ? subcategory.title
+                                    : subcategory.titleENG
+                                }
+                              />
+                            </ListItemButton>
+                            {subIndex < filtered.length - 1 && (
+                              <Divider variant="middle" />
+                            )}
+                          </React.Fragment>
+                        ));
+                      })()}
+                    </List>
+                  </Collapse>
                   <Divider variant="middle" />
                 </React.Fragment>
               ))}
