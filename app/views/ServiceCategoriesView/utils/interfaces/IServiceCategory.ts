@@ -9,5 +9,6 @@ export interface IServiceCategory {
     | "permanent_makeup"
     | "lip_shaping"
     | "cosmetology"
-    | "consultation";
+    | "consultation"
+    | "pregnancy_treatments";
 }

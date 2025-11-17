@@ -25,7 +25,6 @@ import LocalOfferIcon from "@mui/icons-material/LocalOffer";
 import Collapse from "@mui/material/Collapse";
 import ExpandLess from "@mui/icons-material/ExpandLess";
 import ExpandMore from "@mui/icons-material/ExpandMore";
-import StarBorder from "@mui/icons-material/StarBorder";
 import ListAltIcon from "@mui/icons-material/ListAlt";
 import { serviceCategoriesList } from "../../../views/ServiceCategoriesView/data/serviceCategoriesList";
 import { serviceSubcategories } from "./data/serviceSubcategories";
@@ -51,6 +50,7 @@ export default function SideDrawer({
     lip_shaping: false,
     cosmetology: false,
     consultation: false,
+    pregnancy_treatments: false,
   });
 
   const handleClick = () => {
@@ -127,7 +127,10 @@ export default function SideDrawer({
                   <ListItemButton
                     sx={{ pl: 4 }}
                     onClick={() => {
-                      if (category.categoryKey !== "consultation") {
+                      if (
+                        category.categoryKey !== "consultation" &&
+                        category.categoryKey !== "pregnancy_treatments"
+                      ) {
                         setIsSubcategoriesListOpen((prev) => {
                           const key =
                             category.categoryKey! as keyof typeof prev;
@@ -156,15 +159,16 @@ export default function SideDrawer({
                           : category.titleENG
                       }
                     />
-                    {category.categoryKey !== "consultation" && (
-                      <React.Fragment>
-                        {isSubcategoriesListOpen[category.categoryKey!] ? (
-                          <ExpandLess />
-                        ) : (
-                          <ExpandMore />
-                        )}
-                      </React.Fragment>
-                    )}
+                    {category.categoryKey !== "consultation" &&
+                      category.categoryKey !== "pregnancy_treatments" && (
+                        <React.Fragment>
+                          {isSubcategoriesListOpen[category.categoryKey!] ? (
+                            <ExpandLess />
+                          ) : (
+                            <ExpandMore />
+                          )}
+                        </React.Fragment>
+                      )}
                   </ListItemButton>
                   <Collapse
                     in={isSubcategoriesListOpen[category.categoryKey!]}

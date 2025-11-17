@@ -13,6 +13,10 @@ export default [
     "./views/Consultation/ConsultationServiceView/ConsultationServiceView.tsx"
   ),
   route(
+    "/pregnancy_treatments",
+    "./views/PregnancyTreatmentView/PregnancyTreatmentsView.tsx"
+  ),
+  route(
     "/eyebrow_and_eyelash_styling",
     "./views/EyebrowAndEyelashStylingCategoryView/EyebrowAndEyelashStylingCategoryView.tsx"
   ),

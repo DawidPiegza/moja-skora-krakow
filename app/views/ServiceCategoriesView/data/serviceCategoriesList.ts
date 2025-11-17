@@ -4,6 +4,7 @@ import kosmetologia from "../../../../public/images/kosmetologia.jpg";
 import modelowanie_ust from "../../../../public/images/modelowanie_ust.jpg";
 import stylizacja_brwi_i_rzes from "../../../../public/images/stylizacja_brwi_i_rzes.jpg";
 import konsultacja from "../../../../public/images/konsultacja.jpeg";
+import safe_treatments_for_pregnant from "../../../../public/images/safe_treatments_for_pregnant.jpeg";
 
 export const serviceCategoriesList: IServiceCategory[] = [
   {
@@ -51,5 +52,14 @@ export const serviceCategoriesList: IServiceCategory[] = [
     pictureURL: konsultacja,
     categoryURL: "/consultation",
     categoryKey: "consultation",
+  },
+  {
+    title: "Zabiegi dla kobiet w ciąży",
+    titleENG: "Pregnancy treatments",
+    content:
+      "LISTA ZABIEGÓW BEZPIECZNYCH DLA KOBIET W CIĄŻY I KOBIET KARMIĄCYCH",
+    pictureURL: safe_treatments_for_pregnant,
+    categoryURL: "/pregnancy_treatments",
+    categoryKey: "pregnancy_treatments",
   },
 ];

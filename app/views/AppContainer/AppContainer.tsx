@@ -6,7 +6,6 @@ import OpinionsView from "../OpinionsView/OpinionsView";
 import FooterView from "../FooterView/FooterView";
 import { useEffect, useState } from "react";
 import React from "react";
-import SafeTreatmentsForPregnantView from "../SafeTreatmentsForPregnantView/SafeTreatmentsForPregnantView";
 import Navbar from "../../shared/components/Navbar/Navbar";
 import SideDrawer from "../../shared/components/SideDrawer/SideDrawer";
 
@@ -29,8 +28,6 @@ export default function AppContainer() {
         <Stack width="100vw" height="max-content" rowGap={2}>
           <LandingPageView />
           <ServiceCategories />
-          <Divider />
-          <SafeTreatmentsForPregnantView />
           <Divider />
           <OurBrandsView />
           <Divider />

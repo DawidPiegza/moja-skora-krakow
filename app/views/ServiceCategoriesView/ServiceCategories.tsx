@@ -3,6 +3,7 @@ import {
   ButtonBase,
   Container,
   Grid,
+  IconButton,
   Typography,
   useMediaQuery,
   useTheme,
@@ -10,16 +11,40 @@ import {
 import { serviceCategoriesList } from "./data/serviceCategoriesList";
 import ServiceCategoryCard from "./components/ServiceCategoryCard/ServiceCategoryCard";
 import { WebsiteLanguageContext } from "../../shared/contexts/LanguageContext";
-import React, { useState } from "react";
+import React from "react";
 import ServiceCategoryCardSmallScreen from "./components/ServiceCategoryCardSmallScreen/ServiceCategoryCardSmallScreen";
 import booksy_logo from "../../../public/images/booksy_logo.png";
-import Navbar from "../../shared/components/Navbar/Navbar";
+import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 
 export default function ServiceCategories() {
   const { language } = React.useContext(WebsiteLanguageContext);
   const theme = useTheme();
   const downMd = useMediaQuery(theme.breakpoints.down("md"));
-  const [isSideDrawerOpen, setSideDrawerOpen] = useState<boolean>(false);
+
+  const [currentIndex, setCurrentIndex] = React.useState([0, 1, 2]);
+  const [direction, setDirection] = React.useState<1 | -1>(1);
+  const [animationCycle, setAnimationCycle] = React.useState(0);
+
+  const handlePrevious = () => {
+    setDirection(-1);
+    setAnimationCycle((c) => c + 1);
+    setCurrentIndex((prevIndex) =>
+      prevIndex.map((index) =>
+        index === 0 ? serviceCategoriesList.length - 1 : index - 1
+      )
+    );
+  };
+
+  const handleNext = () => {
+    setDirection(1);
+    setAnimationCycle((c) => c + 1);
+    setCurrentIndex((prevIndex) =>
+      prevIndex.map((index) =>
+        index === serviceCategoriesList.length - 1 ? 0 : index + 1
+      )
+    );
+  };
 
   return (
     <Container maxWidth="xl" sx={{ marginTop: 3 }}>
@@ -51,11 +76,41 @@ export default function ServiceCategories() {
               serviceCategoriesList={serviceCategoriesList}
             />
           ) : (
-            <>
-              {serviceCategoriesList.map((category, index) => (
-                <ServiceCategoryCard serviceCategory={category} key={index} />
+            <Grid size={12} container spacing={2} justifyContent={"center"}>
+              <Grid size={1} height={"100%"}>
+                <IconButton
+                  size="large"
+                  sx={{
+                    width: "100%",
+                    height: "100%",
+                    borderRadius: "0",
+                  }}
+                  onClick={handlePrevious}
+                >
+                  <ArrowBackIosIcon fontSize="inherit" />
+                </IconButton>
+              </Grid>
+              {currentIndex.map((i) => (
+                <ServiceCategoryCard
+                  serviceCategory={serviceCategoriesList[i]}
+                  slideDirection={direction}
+                  key={`${i}-${animationCycle}`}
+                />
               ))}
-            </>
+              <Grid size={1} height={"100%"}>
+                <IconButton
+                  size="large"
+                  sx={{
+                    width: "100%",
+                    height: "100%",
+                    borderRadius: "0",
+                  }}
+                  onClick={handleNext}
+                >
+                  <ArrowForwardIosIcon fontSize="inherit" />
+                </IconButton>
+              </Grid>
+            </Grid>
           )}
         </Grid>
         <Grid

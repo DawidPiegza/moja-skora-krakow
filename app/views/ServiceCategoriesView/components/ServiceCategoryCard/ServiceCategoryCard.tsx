@@ -13,12 +13,15 @@ import { theme } from "../../../../shared/styles/MUIGlobalStyle";
 
 import { WebsiteLanguageContext } from "../../../../shared/contexts/LanguageContext";
 import { useNavigate } from "react-router";
+import { motion } from "framer-motion";
 interface IServiceCategoryCardProps {
   serviceCategory: IServiceCategory;
+  slideDirection?: 1 | -1;
 }
 
 export default function ServiceCategoryCard({
   serviceCategory,
+  slideDirection,
 }: IServiceCategoryCardProps) {
   const domwMd = useMediaQuery(theme.breakpoints.down("md"));
   const betweenMD_and_LG = useMediaQuery(theme.breakpoints.between("sm", 1400));
@@ -30,8 +33,12 @@ export default function ServiceCategoryCard({
     <Grid
       size={{
         xs: 12,
-        lg: 2.33,
+        lg: 3,
       }}
+      component={motion.div}
+      initial={{ x: (slideDirection ?? 1) * 25, opacity: 0 }}
+      animate={{ x: 0, opacity: 1 }}
+      transition={{ duration: 0.25, ease: "easeOut" }}
     >
       <Card sx={{ width: "100%" }} elevation={1}>
         <CardActionArea onClick={() => navTo(serviceCategory.categoryURL)}>
