@@ -27,6 +27,8 @@ import {
 import tissue_stimulators from "../../../../public/images/tissue_stimulators.png";
 import tissue_stimulators_effect_0 from "../../../../public/images/tissue_stimulators_effect_0.png";
 import tissue_stimulators_effect_1 from "../../../../public/images/tissue_stimulators_effect_1.png";
+import tissue_stimulators_effect_2 from "../../../../public/images/tissue_stimulators_effect_2.png";
+import tissue_stimulators_effect_3 from "../../../../public/images/tissue_stimulators_effect_3.png";
 
 export default function TissueStimulatorsView() {
   const { language } = React.useContext(WebsiteLanguageContext);
@@ -555,12 +557,12 @@ export default function TissueStimulatorsView() {
                 fontStyle="italic"
               >
                 {language.webLanguage === "PL"
-                  ? "PRZED I PO ZABIEGU"
-                  : "BEFORE AND AFTER TREATMENT"}
+                  ? "EFEKTY ZABIEGU"
+                  : "TREATMENT EFFECTS"}
               </Typography>
             </Grid>
             <Grid size={12} container spacing={3}>
-              <Grid size={downMd ? 12 : 6}>
+              <Grid size={downMd ? 12 : 3}>
                 <Box
                   p={2}
                   component="img"
@@ -571,7 +573,7 @@ export default function TissueStimulatorsView() {
                   src={tissue_stimulators_effect_0}
                 />
               </Grid>
-              <Grid size={downMd ? 12 : 6}>
+              <Grid size={downMd ? 12 : 3}>
                 <Box
                   p={2}
                   component="img"
@@ -580,6 +582,28 @@ export default function TissueStimulatorsView() {
                     width: "100%",
                   }}
                   src={tissue_stimulators_effect_1}
+                />
+              </Grid>
+              <Grid size={downMd ? 12 : 3}>
+                <Box
+                  p={2}
+                  component="img"
+                  sx={{
+                    height: "100%",
+                    width: "100%",
+                  }}
+                  src={tissue_stimulators_effect_2}
+                />
+              </Grid>
+              <Grid size={downMd ? 12 : 3}>
+                <Box
+                  p={2}
+                  component="img"
+                  sx={{
+                    height: "100%",
+                    width: "100%",
+                  }}
+                  src={tissue_stimulators_effect_3}
                 />
               </Grid>
             </Grid>

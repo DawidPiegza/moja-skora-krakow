@@ -223,8 +223,8 @@ export default function ProXnView() {
               fontStyle="italic"
             >
               {language.webLanguage === "PL"
-                ? "PRZED I PO ZABIEGU"
-                : "BEFORE AND AFTER TREATMENT"}
+                ? "EFEKTY ZABIEGU"
+                : "TREATMENT EFFECTS"}
             </Typography>
           </Grid>
           <Grid size={12} container spacing={3}>

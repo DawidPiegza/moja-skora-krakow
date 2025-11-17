@@ -31,6 +31,8 @@ import pca_skin_effect_4 from "../../../../public/images/pca_skin_effect_4.png";
 import pca_skin_effect_5 from "../../../../public/images/pca_skin_effect_5.png";
 import pca_skin_effect_6 from "../../../../public/images/pca_skin_effect_6.png";
 import pca_skin_effect_7 from "../../../../public/images/pca_skin_effect_7.png";
+import pca_skin_effect_8 from "../../../../public/images/pca_skin_effect_8.png";
+import pca_skin_effect_9 from "../../../../public/images/pca_skin_effect_9.png";
 
 export default function PcaSkinView() {
   const { language } = React.useContext(WebsiteLanguageContext);
@@ -516,12 +518,12 @@ export default function PcaSkinView() {
                 fontStyle="italic"
               >
                 {language.webLanguage === "PL"
-                  ? "PRZED I PO ZABIEGU"
-                  : "BEFORE AND AFTER TREATMENT"}
+                  ? "EFEKTY ZABIEGU"
+                  : "TREATMENT EFFECTS"}
               </Typography>
             </Grid>
             <Grid size={12} container spacing={3}>
-              <Grid size={downMd ? 12 : 6}>
+              <Grid size={downMd ? 12 : 4}>
                 <Box
                   p={2}
                   component="img"
@@ -532,7 +534,7 @@ export default function PcaSkinView() {
                   src={pca_skin_effect_0}
                 />
               </Grid>
-              <Grid size={downMd ? 12 : 6}>
+              <Grid size={downMd ? 12 : 4}>
                 <Box
                   p={2}
                   component="img"
@@ -543,7 +545,7 @@ export default function PcaSkinView() {
                   src={pca_skin_effect_1}
                 />
               </Grid>
-              <Grid size={downMd ? 12 : 6}>
+              <Grid size={downMd ? 12 : 4}>
                 <Box
                   p={2}
                   component="img"
@@ -554,7 +556,7 @@ export default function PcaSkinView() {
                   src={pca_skin_effect_2}
                 />
               </Grid>
-              <Grid size={downMd ? 12 : 6}>
+              <Grid size={downMd ? 12 : 4}>
                 <Box
                   p={2}
                   component="img"
@@ -565,7 +567,7 @@ export default function PcaSkinView() {
                   src={pca_skin_effect_3}
                 />
               </Grid>
-              <Grid size={downMd ? 12 : 6}>
+              <Grid size={downMd ? 12 : 4}>
                 <Box
                   p={2}
                   component="img"
@@ -576,7 +578,7 @@ export default function PcaSkinView() {
                   src={pca_skin_effect_4}
                 />
               </Grid>
-              <Grid size={downMd ? 12 : 6}>
+              <Grid size={downMd ? 12 : 4}>
                 <Box
                   p={2}
                   component="img"
@@ -587,7 +589,7 @@ export default function PcaSkinView() {
                   src={pca_skin_effect_5}
                 />
               </Grid>
-              <Grid size={downMd ? 12 : 6}>
+              <Grid size={downMd ? 12 : 4}>
                 <Box
                   p={2}
                   component="img"
@@ -598,7 +600,7 @@ export default function PcaSkinView() {
                   src={pca_skin_effect_6}
                 />
               </Grid>
-              <Grid size={downMd ? 12 : 6}>
+              <Grid size={downMd ? 12 : 4}>
                 <Box
                   p={2}
                   component="img"
@@ -607,6 +609,28 @@ export default function PcaSkinView() {
                     width: "100%",
                   }}
                   src={pca_skin_effect_7}
+                />
+              </Grid>
+              <Grid size={downMd ? 12 : 4}>
+                <Box
+                  p={2}
+                  component="img"
+                  sx={{
+                    height: "100%",
+                    width: "100%",
+                  }}
+                  src={pca_skin_effect_8}
+                />
+              </Grid>
+              <Grid size={downMd ? 12 : 4}>
+                <Box
+                  p={2}
+                  component="img"
+                  sx={{
+                    height: "100%",
+                    width: "100%",
+                  }}
+                  src={pca_skin_effect_9}
                 />
               </Grid>
             </Grid>

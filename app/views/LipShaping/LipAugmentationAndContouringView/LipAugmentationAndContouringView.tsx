@@ -33,6 +33,7 @@ import lip_augmentation_and_contouring_effect_9 from "../../../../public/images/
 import lip_augmentation_and_contouring_effect_10 from "../../../../public/images/lip_augmentation_and_contouring_effect_10.jpg";
 import lip_augmentation_and_contouring_effect_11 from "../../../../public/images/lip_augmentation_and_contouring_effect_11.jpg";
 import lip_augmentation_and_contouring_effect_12 from "../../../../public/images/lip_augmentation_and_contouring_effect_12.jpg";
+import lip_augmentation_and_contouring_effect_14 from "../../../../public/images/lip_augmentation_and_contouring_effect_14.jpg";
 
 import {
   lipAugmentationAndContouringDataPL,
@@ -639,12 +640,12 @@ export default function LipAugmentationAndContouringView() {
                 fontStyle="italic"
               >
                 {language.webLanguage === "PL"
-                  ? "PRZED I PO ZABIEGU"
-                  : "BEFORE AND AFTER TREATMENT"}
+                  ? "EFEKTY ZABIEGU"
+                  : "TREATMENT EFFECTS"}
               </Typography>
             </Grid>
             <Grid size={12} container spacing={3}>
-              <Grid size={downMd ? 12 : 6}>
+              <Grid size={downMd ? 12 : 4}>
                 <Box
                   p={2}
                   component="img"
@@ -655,7 +656,7 @@ export default function LipAugmentationAndContouringView() {
                   src={lip_augmentation_and_contouring_effect_4}
                 />
               </Grid>
-              <Grid size={downMd ? 12 : 6}>
+              <Grid size={downMd ? 12 : 4}>
                 <Box
                   p={2}
                   component="img"
@@ -666,7 +667,7 @@ export default function LipAugmentationAndContouringView() {
                   src={lip_augmentation_and_contouring_effect_3}
                 />
               </Grid>
-              <Grid size={downMd ? 12 : 6}>
+              <Grid size={downMd ? 12 : 4}>
                 <Box
                   p={2}
                   component="img"
@@ -677,7 +678,7 @@ export default function LipAugmentationAndContouringView() {
                   src={lip_augmentation_and_contouring_effect_1}
                 />
               </Grid>
-              <Grid size={downMd ? 12 : 6}>
+              <Grid size={downMd ? 12 : 4}>
                 <Box
                   p={2}
                   component="img"
@@ -688,7 +689,7 @@ export default function LipAugmentationAndContouringView() {
                   src={lip_augmentation_and_contouring_effect_2}
                 />
               </Grid>
-              <Grid size={downMd ? 12 : 6}>
+              <Grid size={downMd ? 12 : 4}>
                 <Box
                   p={2}
                   component="img"
@@ -699,7 +700,7 @@ export default function LipAugmentationAndContouringView() {
                   src={lip_augmentation_and_contouring_effect_5}
                 />
               </Grid>
-              <Grid size={downMd ? 12 : 6}>
+              <Grid size={downMd ? 12 : 4}>
                 <Box
                   p={2}
                   component="img"
@@ -710,7 +711,7 @@ export default function LipAugmentationAndContouringView() {
                   src={lip_augmentation_and_contouring_effect_6}
                 />
               </Grid>
-              <Grid size={downMd ? 12 : 6}>
+              <Grid size={downMd ? 12 : 4}>
                 <Box
                   p={2}
                   component="img"
@@ -721,7 +722,7 @@ export default function LipAugmentationAndContouringView() {
                   src={lip_augmentation_and_contouring_effect_7}
                 />
               </Grid>
-              <Grid size={downMd ? 12 : 6}>
+              <Grid size={downMd ? 12 : 4}>
                 <Box
                   p={2}
                   component="img"
@@ -732,7 +733,7 @@ export default function LipAugmentationAndContouringView() {
                   src={lip_augmentation_and_contouring_effect_8}
                 />
               </Grid>
-              <Grid size={downMd ? 12 : 6}>
+              <Grid size={downMd ? 12 : 4}>
                 <Box
                   p={2}
                   component="img"
@@ -743,7 +744,7 @@ export default function LipAugmentationAndContouringView() {
                   src={lip_augmentation_and_contouring_effect_9}
                 />
               </Grid>
-              <Grid size={downMd ? 12 : 6}>
+              <Grid size={downMd ? 12 : 4}>
                 <Box
                   p={2}
                   component="img"
@@ -754,7 +755,7 @@ export default function LipAugmentationAndContouringView() {
                   src={lip_augmentation_and_contouring_effect_10}
                 />
               </Grid>
-              <Grid size={downMd ? 12 : 6}>
+              <Grid size={downMd ? 12 : 4}>
                 <Box
                   p={2}
                   component="img"
@@ -765,7 +766,7 @@ export default function LipAugmentationAndContouringView() {
                   src={lip_augmentation_and_contouring_effect_11}
                 />
               </Grid>
-              <Grid size={downMd ? 12 : 6}>
+              <Grid size={downMd ? 12 : 4}>
                 <Box
                   p={2}
                   component="img"
@@ -774,6 +775,18 @@ export default function LipAugmentationAndContouringView() {
                     width: "100%",
                   }}
                   src={lip_augmentation_and_contouring_effect_12}
+                />
+              </Grid>
+
+              <Grid size={downMd ? 12 : 4}>
+                <Box
+                  p={2}
+                  component="img"
+                  sx={{
+                    height: "100%",
+                    width: "100%",
+                  }}
+                  src={lip_augmentation_and_contouring_effect_14}
                 />
               </Grid>
             </Grid>

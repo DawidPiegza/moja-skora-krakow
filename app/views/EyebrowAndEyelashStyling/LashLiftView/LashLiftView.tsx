@@ -29,6 +29,7 @@ import lash_lift_effect_4 from "../../../../public/images/lash_lift_effect_4.png
 import lash_lift_effect_5 from "../../../../public/images/lash_lift_effect_5.png";
 import lash_lift_effect_6 from "../../../../public/images/lash_lift_effect_6.png";
 import lash_lift_effect_7 from "../../../../public/images/lash_lift_effect_7.png";
+import lash_lift_effect_8 from "../../../../public/images/lash_lift_effect_8.png";
 
 import { lashLiftDataPL, lashLiftDataEN } from "./data/lashLiftData";
 
@@ -440,12 +441,12 @@ export default function LashLiftView() {
                 fontStyle="italic"
               >
                 {language.webLanguage === "PL"
-                  ? "PRZED I PO ZABIEGU"
-                  : "BEFORE AND AFTER TREATMENT"}
+                  ? "EFEKTY ZABIEGU"
+                  : "TREATMENT EFFECTS"}
               </Typography>
             </Grid>
             <Grid size={12} container spacing={3}>
-              <Grid size={downMd ? 12 : 6}>
+              <Grid size={downMd ? 12 : 4}>
                 <Box
                   p={2}
                   component="img"
@@ -456,7 +457,7 @@ export default function LashLiftView() {
                   src={lash_lift_effect_0}
                 />
               </Grid>
-              <Grid size={downMd ? 12 : 6}>
+              <Grid size={downMd ? 12 : 4}>
                 <Box
                   p={2}
                   component="img"
@@ -467,7 +468,7 @@ export default function LashLiftView() {
                   src={lash_lift_effect_1}
                 />
               </Grid>
-              <Grid size={downMd ? 12 : 6}>
+              <Grid size={downMd ? 12 : 4}>
                 <Box
                   p={2}
                   component="img"
@@ -478,7 +479,7 @@ export default function LashLiftView() {
                   src={lash_lift_effect_2}
                 />
               </Grid>
-              <Grid size={downMd ? 12 : 6}>
+              <Grid size={downMd ? 12 : 4}>
                 <Box
                   p={2}
                   component="img"
@@ -489,7 +490,7 @@ export default function LashLiftView() {
                   src={lash_lift_effect_3}
                 />
               </Grid>
-              <Grid size={downMd ? 12 : 6}>
+              <Grid size={downMd ? 12 : 4}>
                 <Box
                   p={2}
                   component="img"
@@ -500,7 +501,7 @@ export default function LashLiftView() {
                   src={lash_lift_effect_4}
                 />
               </Grid>
-              <Grid size={downMd ? 12 : 6}>
+              <Grid size={downMd ? 12 : 4}>
                 <Box
                   p={2}
                   component="img"
@@ -511,7 +512,7 @@ export default function LashLiftView() {
                   src={lash_lift_effect_5}
                 />
               </Grid>
-              <Grid size={downMd ? 12 : 6}>
+              <Grid size={downMd ? 12 : 4}>
                 <Box
                   p={2}
                   component="img"
@@ -522,7 +523,7 @@ export default function LashLiftView() {
                   src={lash_lift_effect_6}
                 />
               </Grid>
-              <Grid size={downMd ? 12 : 6}>
+              <Grid size={downMd ? 12 : 4}>
                 <Box
                   p={2}
                   component="img"
@@ -531,6 +532,17 @@ export default function LashLiftView() {
                     width: "100%",
                   }}
                   src={lash_lift_effect_7}
+                />
+              </Grid>
+              <Grid size={downMd ? 12 : 4}>
+                <Box
+                  p={2}
+                  component="img"
+                  sx={{
+                    height: "100%",
+                    width: "100%",
+                  }}
+                  src={lash_lift_effect_8}
                 />
               </Grid>
             </Grid>

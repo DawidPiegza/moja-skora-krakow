@@ -470,12 +470,12 @@ export default function EyebrowLaminationView() {
                 fontStyle="italic"
               >
                 {language.webLanguage === "PL"
-                  ? "PRZED I PO ZABIEGU"
-                  : "BEFORE AND AFTER TREATMENT"}
+                  ? "EFEKTY ZABIEGU"
+                  : "TREATMENT EFFECTS"}
               </Typography>
             </Grid>
             <Grid size={12} container spacing={3}>
-              <Grid size={downMd ? 12 : 6}>
+              <Grid size={downMd ? 12 : 3}>
                 <Box
                   p={2}
                   component="img"
@@ -486,7 +486,7 @@ export default function EyebrowLaminationView() {
                   src={eyebrow_lamination_effect_0}
                 />
               </Grid>
-              <Grid size={downMd ? 12 : 6}>
+              <Grid size={downMd ? 12 : 3}>
                 <Box
                   p={2}
                   component="img"
@@ -497,7 +497,7 @@ export default function EyebrowLaminationView() {
                   src={eyebrow_lamination_effect_1}
                 />
               </Grid>
-              <Grid size={downMd ? 12 : 6}>
+              <Grid size={downMd ? 12 : 3}>
                 <Box
                   p={2}
                   component="img"
@@ -508,7 +508,7 @@ export default function EyebrowLaminationView() {
                   src={eyebrow_lamination_effect_2}
                 />
               </Grid>
-              <Grid size={downMd ? 12 : 6}>
+              <Grid size={downMd ? 12 : 3}>
                 <Box
                   p={2}
                   component="img"

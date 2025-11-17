@@ -485,12 +485,12 @@ export default function LipAugmentationAndContouringView() {
                 fontStyle="italic"
               >
                 {language.webLanguage === "PL"
-                  ? "PRZED I PO ZABIEGU"
-                  : "BEFORE AND AFTER TREATMENT"}
+                  ? "EFEKTY ZABIEGU"
+                  : "TREATMENT EFFECTS"}
               </Typography>
             </Grid>
             <Grid size={12} container spacing={3}>
-              <Grid size={downMd ? 12 : 6}>
+              <Grid size={downMd ? 12 : 3}>
                 <Box
                   p={2}
                   component="img"
@@ -501,7 +501,7 @@ export default function LipAugmentationAndContouringView() {
                   src={laser_removal_effect_0}
                 />
               </Grid>
-              <Grid size={downMd ? 12 : 6}>
+              <Grid size={downMd ? 12 : 3}>
                 <Box
                   p={2}
                   component="img"
@@ -512,7 +512,7 @@ export default function LipAugmentationAndContouringView() {
                   src={laser_removal_effect_1}
                 />
               </Grid>
-              <Grid size={downMd ? 12 : 6}>
+              <Grid size={downMd ? 12 : 3}>
                 <Box
                   p={2}
                   component="img"
@@ -523,7 +523,7 @@ export default function LipAugmentationAndContouringView() {
                   src={laser_removal_effect_2}
                 />
               </Grid>
-              <Grid size={downMd ? 12 : 6}>
+              <Grid size={downMd ? 12 : 3}>
                 <Box
                   p={2}
                   component="img"
@@ -534,7 +534,7 @@ export default function LipAugmentationAndContouringView() {
                   src={laser_removal_effect_3}
                 />
               </Grid>
-              <Grid size={downMd ? 12 : 6}>
+              <Grid size={downMd ? 12 : 3}>
                 <Box
                   p={2}
                   component="img"
@@ -545,7 +545,7 @@ export default function LipAugmentationAndContouringView() {
                   src={laser_removal_effect_4}
                 />
               </Grid>
-              <Grid size={downMd ? 12 : 6}>
+              <Grid size={downMd ? 12 : 3}>
                 <Box
                   p={2}
                   component="img"
@@ -556,7 +556,7 @@ export default function LipAugmentationAndContouringView() {
                   src={laser_removal_effect_5}
                 />
               </Grid>
-              <Grid size={downMd ? 12 : 6}>
+              <Grid size={downMd ? 12 : 3}>
                 <Box
                   p={2}
                   component="img"
@@ -567,7 +567,7 @@ export default function LipAugmentationAndContouringView() {
                   src={laser_removal_effect_6}
                 />
               </Grid>
-              <Grid size={downMd ? 12 : 6}>
+              <Grid size={downMd ? 12 : 3}>
                 <Box
                   p={2}
                   component="img"

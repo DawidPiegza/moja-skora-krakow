@@ -83,54 +83,66 @@ export default function EyebrowAndEyelashStylingCategoryView() {
             </Grid>
           </Grid>
           <Grid size={12} container spacing={2}>
-            {eyebrowAndEyelashStylingCategoryViewData.map((el, index) => (
-              <Grid
-                key={index}
-                size={downMD ? 12 : 6}
-                container
-                component={Paper}
-                variant="outlined"
-                p={2}
-              >
-                <Grid size={12}>
-                  <Typography variant="body1" fontWeight={400}>
-                    {language.webLanguage === "PL" ? el.pl.title : el.eng.title}
-                  </Typography>
-                </Grid>
-                <Grid size={12}>
-                  {downMD && (
-                    <Typography variant="body2" fontWeight={300}>
+            <Grid
+              size={12}
+              container
+              spacing={2}
+              component={Paper}
+              p={1}
+              variant="outlined"
+            >
+              {eyebrowAndEyelashStylingCategoryViewData.map((el, index) => (
+                <Grid
+                  key={index}
+                  size={downMD ? 12 : 6}
+                  container
+                  component={Paper}
+                  variant="outlined"
+                  p={2}
+                >
+                  <Grid size={12}>
+                    <Typography variant="body1" fontWeight={400}>
                       {language.webLanguage === "PL"
-                        ? el.pl.description.slice(0, 300) + "..."
-                        : el.eng.description.slice(0, 300) + "..."}
+                        ? el.pl.title
+                        : el.eng.title}
                     </Typography>
-                  )}
-                  {!downMD && (
-                    <Typography variant="body2" fontWeight={300}>
-                      {language.webLanguage === "PL"
-                        ? el.pl.description.slice(0, 300) + "..."
-                        : el.eng.description.slice(0, 300) + "..."}
-                    </Typography>
-                  )}
-                </Grid>
-                <Grid size={12} display={"flex"} alignItems={"flex-end"}>
-                  <Button
-                    variant="outlined"
-                    onClick={() => navTo(el.pl.navigateURL)}
-                    sx={{
-                      color: "text.primary",
-                      borderColor: "text.primary",
-                      "&:hover": {
+                  </Grid>
+                  <Grid size={12}>
+                    {downMD && (
+                      <Typography variant="body2" fontWeight={300}>
+                        {language.webLanguage === "PL"
+                          ? el.pl.description.slice(0, 300) + "..."
+                          : el.eng.description.slice(0, 300) + "..."}
+                      </Typography>
+                    )}
+                    {!downMD && (
+                      <Typography variant="body2" fontWeight={300}>
+                        {language.webLanguage === "PL"
+                          ? el.pl.description.slice(0, 300) + "..."
+                          : el.eng.description.slice(0, 300) + "..."}
+                      </Typography>
+                    )}
+                  </Grid>
+                  <Grid size={12} display={"flex"} alignItems={"flex-end"}>
+                    <Button
+                      variant="outlined"
+                      onClick={() => navTo(el.pl.navigateURL)}
+                      sx={{
+                        color: "text.primary",
                         borderColor: "text.primary",
-                        backgroundColor: "rgba(0,0,0,0.04)",
-                      },
-                    }}
-                  >
-                    {language.webLanguage === "PL" ? "wybierz" : "choose"}
-                  </Button>
+                        backgroundColor: "#f5f5f5",
+                        "&:hover": {
+                          borderColor: "text.primary",
+                          backgroundColor: "#e0e0e0",
+                        },
+                      }}
+                    >
+                      {language.webLanguage === "PL" ? "sprawdź" : "check"}
+                    </Button>
+                  </Grid>
                 </Grid>
-              </Grid>
-            ))}
+              ))}
+            </Grid>
           </Grid>
         </Grid>
       </Grid>
