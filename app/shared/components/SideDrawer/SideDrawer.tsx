@@ -25,6 +25,7 @@ import LocalOfferIcon from "@mui/icons-material/LocalOffer";
 import Collapse from "@mui/material/Collapse";
 import ExpandLess from "@mui/icons-material/ExpandLess";
 import ExpandMore from "@mui/icons-material/ExpandMore";
+import DiscountIcon from "@mui/icons-material/Discount";
 import ListAltIcon from "@mui/icons-material/ListAlt";
 import { serviceCategoriesList } from "../../../views/ServiceCategoriesView/data/serviceCategoriesList";
 import { serviceSubcategories } from "./data/serviceSubcategories";
@@ -52,6 +53,7 @@ export default function SideDrawer({
     consultation: false,
     pregnancy_treatments: false,
   });
+  const [promotionsMenuOpen, setPromotionsMenuOpen] = React.useState(false);
 
   const handleClick = () => {
     setIsServicesListOpen(!isServicesListOpen);
@@ -79,6 +81,11 @@ export default function SideDrawer({
       name: language.webLanguage === "PL" ? "Voucher" : "Voucher",
       link: "/voucher",
       icon: <CardGiftcardIcon />,
+    },
+    {
+      name: language.webLanguage === "PL" ? "Promocje" : "Promotions",
+      link: "/promotions",
+      icon: <DiscountIcon />,
     },
 
     {

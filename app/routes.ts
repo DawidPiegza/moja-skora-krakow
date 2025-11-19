@@ -8,6 +8,7 @@ export default [
   route("/statute", "./views/StatueView/StatueView.tsx"),
   route("/voucher_statute", "./views/VoucherStatueView/VoucherStatueView.tsx"),
   route("/voucher", "./views/ClinicVoucherView/ClinicVoucherView.tsx"),
+  route("/promotions", "./views/PromotionsView/PromotionsView.tsx"),
   route(
     "/consultation",
     "./views/Consultation/ConsultationServiceView/ConsultationServiceView.tsx"
