@@ -18,13 +18,13 @@ export const serviceSubcategories: IServiceSubcategory[] = [
   // Permanent Makeup
   {
     category: "permanent_makeup",
-    title: "Makijaż pernamentny brwi",
+    title: "Makijaż permanentny brwi",
     titleENG: "Permanent eyebrow makeup",
     subcategoryURL: "/permanent_makeup/permanent_eyebrow_makeup",
   },
   {
     category: "permanent_makeup",
-    title: "Makijaż pernamentny ust",
+    title: "Makijaż permanentny ust",
     titleENG: "Permanent lip makeup",
     subcategoryURL: "/permanent_makeup/permanent_lip_makeup",
   },

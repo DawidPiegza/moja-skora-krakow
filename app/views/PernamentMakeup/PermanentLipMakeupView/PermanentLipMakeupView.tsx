@@ -85,7 +85,7 @@ export default function PermanentLipMakeupView() {
               })}
             >
               {language.webLanguage === "PL"
-                ? "Makijaż pernamentny ust"
+                ? "Makijaż permanentny ust"
                 : "Permanent lip makeup"}
             </Typography>
           </Breadcrumbs>

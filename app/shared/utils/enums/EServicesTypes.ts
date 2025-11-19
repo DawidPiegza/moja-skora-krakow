@@ -1,5 +1,5 @@
 export enum servicesTypes {
   kosmetologia = "Kosmetologia",
-  makijazPernamentny = "Makijaż pernamentny",
+  makijazPermanentny = "Makijaż permanentny",
   stylizacjaBrwiIrzes = "Stylizacja brwi i rzęs",
 }

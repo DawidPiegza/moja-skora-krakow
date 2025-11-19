@@ -86,7 +86,7 @@ export default function PermanentEyebrowMakeupView() {
               })}
             >
               {language.webLanguage === "PL"
-                ? "Makijaż pernamentny brwi"
+                ? "Makijaż permanentny brwi"
                 : "Permanent eyebrow makeup"}
             </Typography>
           </Breadcrumbs>
@@ -109,7 +109,7 @@ export default function PermanentEyebrowMakeupView() {
               sx={{ fontWeight: "350" }}
             >
               {language.webLanguage === "PL"
-                ? "Makijaż pernamentny brwi".toUpperCase()
+                ? "Makijaż permanentny brwi".toUpperCase()
                 : "Permanent eyebrow makeup".toUpperCase()}
             </Typography>
           </Grid>

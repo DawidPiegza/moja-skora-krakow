@@ -29,6 +29,8 @@ import eyebrow_lamination_effect_0 from "../../../../public/images/eyebrow_lamin
 import eyebrow_lamination_effect_1 from "../../../../public/images/eyebrow_lamination_effect_1.png";
 import eyebrow_lamination_effect_2 from "../../../../public/images/eyebrow_lamination_effect_2.png";
 import eyebrow_lamination_effect_3 from "../../../../public/images/eyebrow_lamination_effect_3.png";
+import eyebrow_lamination_effect_4 from "../../../../public/images/eyebrow_lamination_effect_4.jpg";
+import eyebrow_lamination_effect_5 from "../../../../public/images/eyebrow_lamination_effect_5.jpg";
 
 export default function EyebrowLaminationView() {
   const { language } = React.useContext(WebsiteLanguageContext);
@@ -475,7 +477,7 @@ export default function EyebrowLaminationView() {
               </Typography>
             </Grid>
             <Grid size={12} container spacing={3}>
-              <Grid size={downMd ? 12 : 3}>
+              <Grid size={downMd ? 12 : 4}>
                 <Box
                   p={2}
                   component="img"
@@ -486,7 +488,7 @@ export default function EyebrowLaminationView() {
                   src={eyebrow_lamination_effect_0}
                 />
               </Grid>
-              <Grid size={downMd ? 12 : 3}>
+              <Grid size={downMd ? 12 : 4}>
                 <Box
                   p={2}
                   component="img"
@@ -497,7 +499,7 @@ export default function EyebrowLaminationView() {
                   src={eyebrow_lamination_effect_1}
                 />
               </Grid>
-              <Grid size={downMd ? 12 : 3}>
+              <Grid size={downMd ? 12 : 4}>
                 <Box
                   p={2}
                   component="img"
@@ -508,7 +510,7 @@ export default function EyebrowLaminationView() {
                   src={eyebrow_lamination_effect_2}
                 />
               </Grid>
-              <Grid size={downMd ? 12 : 3}>
+              <Grid size={downMd ? 12 : 4}>
                 <Box
                   p={2}
                   component="img"
@@ -517,6 +519,28 @@ export default function EyebrowLaminationView() {
                     width: "100%",
                   }}
                   src={eyebrow_lamination_effect_3}
+                />
+              </Grid>
+              <Grid size={downMd ? 12 : 4}>
+                <Box
+                  p={2}
+                  component="img"
+                  sx={{
+                    height: "100%",
+                    width: "100%",
+                  }}
+                  src={eyebrow_lamination_effect_4}
+                />
+              </Grid>
+              <Grid size={downMd ? 12 : 4}>
+                <Box
+                  p={2}
+                  component="img"
+                  sx={{
+                    height: "100%",
+                    width: "100%",
+                  }}
+                  src={eyebrow_lamination_effect_5}
                 />
               </Grid>
             </Grid>
