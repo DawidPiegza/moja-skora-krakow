@@ -10,6 +10,11 @@ export default [
   route("/voucher", "./views/ClinicVoucherView/ClinicVoucherView.tsx"),
   route("/promotions", "./views/PromotionsView/PromotionsView.tsx"),
   route(
+    "/promotions_terms_and_conditions",
+    "./views/PromotionsTermsAndConditionsView/PromotionsTermsAndConditionsView.tsx"
+  ),
+
+  route(
     "/consultation",
     "./views/Consultation/ConsultationServiceView/ConsultationServiceView.tsx"
   ),

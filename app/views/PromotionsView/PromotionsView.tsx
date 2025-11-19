@@ -19,11 +19,14 @@ import {
 } from "@mui/material";
 import { WebsiteLanguageContext } from "../../shared/contexts/LanguageContext";
 import promotion_image from "../../../public/images/promotion_image.jpg";
+import { useNavigate } from "react-router";
 
 export default function PromotionsView() {
   const { language } = React.useContext(WebsiteLanguageContext);
   const theme = useTheme();
   const downMd = useMediaQuery(theme.breakpoints.down("md"));
+  const navTo = useNavigate();
+
   return (
     <Container maxWidth="xl">
       <Grid container spacing={2} paddingTop={2} paddingBottom={"80px"}>
@@ -225,7 +228,7 @@ export default function PromotionsView() {
                 width={"100%"}
                 gutterBottom
               >
-                {language.webLanguage !== "PL"
+                {language.webLanguage === "PL"
                   ? "2. Promocja dotyczy zabiegów o wartości co najmniej 140 zł."
                   : "2. The promotion applies to treatments worth at least 140 PLN."}
               </Typography>
@@ -262,6 +265,7 @@ export default function PromotionsView() {
               </Typography>
               <Grid size={12}>
                 <Button
+                  onClick={() => navTo("/promotions_terms_and_conditions")}
                   sx={(theme) => ({
                     color: "text.primary",
                     fontSize: theme.typography.caption.fontSize,
