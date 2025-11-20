@@ -25,11 +25,13 @@ import permanent_eyebrow_makeup_effect_1 from "../../../../public/images/permane
 import permanent_eyebrow_makeup_effect_2 from "../../../../public/images/permanent_eyebrow_makeup_effect_2.png";
 import permanent_eyebrow_makeup_effect_3 from "../../../../public/images/permanent_eyebrow_makeup_effect_3.png";
 import permanent_eyebrow_makeup_effect_4 from "../../../../public/images/permanent_eyebrow_makeup_effect_4.png";
-import permanent_eyebrow_makeup_effect_10 from "../../../../public/images/permanent_eyebrow_makeup_effect_10.png";
-import permanent_eyebrow_makeup_effect_6 from "../../../../public/images/permanent_eyebrow_makeup_effect_6.png";
+import permanent_eyebrow_makeup_effect_5 from "../../../../public/images/permanent_eyebrow_makeup_effect_5.jpg";
+import permanent_eyebrow_makeup_effect_6 from "../../../../public/images/permanent_eyebrow_makeup_effect_6.jpg";
 import permanent_eyebrow_makeup_effect_7 from "../../../../public/images/permanent_eyebrow_makeup_effect_7.png";
 import permanent_eyebrow_makeup_effect_8 from "../../../../public/images/permanent_eyebrow_makeup_effect_8.png";
-import permanent_eyebrow_makeup_effect_9 from "../../../../public/images/permanent_eyebrow_makeup_effect_9.png";
+import permanent_eyebrow_makeup_effect_9 from "../../../../public/images/permanent_eyebrow_makeup_effect_9.jpg";
+import permanent_eyebrow_makeup_effect_10 from "../../../../public/images/permanent_eyebrow_makeup_effect_10.jpg";
+import permanent_eyebrow_makeup_effect_11 from "../../../../public/images/permanent_eyebrow_makeup_effect_11.jpg";
 
 import {
   pernamentEyebrowMakeupDataPL,
@@ -609,28 +611,7 @@ export default function PermanentEyebrowMakeupView() {
                   src={permanent_eyebrow_makeup_effect_4}
                 />
               </Grid>
-              <Grid size={downMd ? 12 : 4}>
-                <Box
-                  p={2}
-                  component="img"
-                  sx={{
-                    height: "100%",
-                    width: "100%",
-                  }}
-                  src={permanent_eyebrow_makeup_effect_10}
-                />
-              </Grid>
-              <Grid size={downMd ? 12 : 4}>
-                <Box
-                  p={2}
-                  component="img"
-                  sx={{
-                    height: "100%",
-                    width: "100%",
-                  }}
-                  src={permanent_eyebrow_makeup_effect_6}
-                />
-              </Grid>
+
               <Grid size={downMd ? 12 : 4}>
                 <Box
                   p={2}
@@ -661,7 +642,52 @@ export default function PermanentEyebrowMakeupView() {
                     height: "100%",
                     width: "100%",
                   }}
+                  src={permanent_eyebrow_makeup_effect_6}
+                />
+              </Grid>
+
+              <Grid size={downMd ? 12 : 4}>
+                <Box
+                  p={2}
+                  component="img"
+                  sx={{
+                    height: "100%",
+                    width: "100%",
+                  }}
                   src={permanent_eyebrow_makeup_effect_9}
+                />
+              </Grid>
+              <Grid size={downMd ? 12 : 4}>
+                <Box
+                  p={2}
+                  component="img"
+                  sx={{
+                    height: "100%",
+                    width: "100%",
+                  }}
+                  src={permanent_eyebrow_makeup_effect_10}
+                />
+              </Grid>
+              <Grid size={downMd ? 12 : 4}>
+                <Box
+                  p={2}
+                  component="img"
+                  sx={{
+                    height: "100%",
+                    width: "100%",
+                  }}
+                  src={permanent_eyebrow_makeup_effect_11}
+                />
+              </Grid>
+              <Grid size={downMd ? 12 : 4}>
+                <Box
+                  p={2}
+                  component="img"
+                  sx={{
+                    height: "100%",
+                    width: "100%",
+                  }}
+                  src={permanent_eyebrow_makeup_effect_5}
                 />
               </Grid>
             </Grid>

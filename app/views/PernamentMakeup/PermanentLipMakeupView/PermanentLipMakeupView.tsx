@@ -21,14 +21,16 @@ import RepeatIcon from "@mui/icons-material/Repeat";
 import EventRepeatIcon from "@mui/icons-material/EventRepeat";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import permanent_lip_makeup_effect_0 from "../../../../public/images/permanent_lip_makeup_effect_0.png";
+import permanent_lip_makeup_effect_1 from "../../../../public/images/permanent_lip_makeup_effect_1.jpg";
+import permanent_lip_makeup_effect_3 from "../../../../public/images/permanent_lip_makeup_effect_3.jpg";
+import permanent_lip_makeup_effect_4 from "../../../../public/images/permanent_lip_makeup_effect_4.jpg";
+
 import permanent_lip_makeup_effect_11 from "../../../../public/images/permanent_lip_makeup_effect_11.png";
 import permanent_lip_makeup_effect_2 from "../../../../public/images/permanent_lip_makeup_effect_2.png";
 import permanent_lip_makeup_effect_5 from "../../../../public/images/permanent_lip_makeup_effect_5.png";
 import permanent_lip_makeup_effect_6 from "../../../../public/images/permanent_lip_makeup_effect_6.png";
 import permanent_lip_makeup_effect_7 from "../../../../public/images/permanent_lip_makeup_effect_7.png";
 import permanent_lip_makeup_effect_8 from "../../../../public/images/permanent_lip_makeup_effect_8.png";
-import permanent_lip_makeup_effect_9 from "../../../../public/images/permanent_lip_makeup_effect_9.png";
-import permanent_lip_makeup_effect_10 from "../../../../public/images/permanent_lip_makeup_effect_10.png";
 import permanent_lip_makeup from "../../../../public/images/permanent_lip_makeup.png";
 
 import {
@@ -600,6 +602,39 @@ export default function PermanentLipMakeupView() {
                     height: "100%",
                     width: "100%",
                   }}
+                  src={permanent_lip_makeup_effect_1}
+                />
+              </Grid>
+              <Grid size={downMd ? 12 : 4}>
+                <Box
+                  p={2}
+                  component="img"
+                  sx={{
+                    height: "100%",
+                    width: "100%",
+                  }}
+                  src={permanent_lip_makeup_effect_3}
+                />
+              </Grid>
+              <Grid size={downMd ? 12 : 4}>
+                <Box
+                  p={2}
+                  component="img"
+                  sx={{
+                    height: "100%",
+                    width: "100%",
+                  }}
+                  src={permanent_lip_makeup_effect_4}
+                />
+              </Grid>
+              <Grid size={downMd ? 12 : 4}>
+                <Box
+                  p={2}
+                  component="img"
+                  sx={{
+                    height: "100%",
+                    width: "100%",
+                  }}
                   src={permanent_lip_makeup_effect_11}
                 />
               </Grid>
@@ -656,28 +691,6 @@ export default function PermanentLipMakeupView() {
                     width: "100%",
                   }}
                   src={permanent_lip_makeup_effect_8}
-                />
-              </Grid>
-              <Grid size={downMd ? 12 : 4}>
-                <Box
-                  p={2}
-                  component="img"
-                  sx={{
-                    height: "100%",
-                    width: "100%",
-                  }}
-                  src={permanent_lip_makeup_effect_9}
-                />
-              </Grid>
-              <Grid size={downMd ? 12 : 4}>
-                <Box
-                  p={2}
-                  component="img"
-                  sx={{
-                    height: "100%",
-                    width: "100%",
-                  }}
-                  src={permanent_lip_makeup_effect_10}
                 />
               </Grid>
             </Grid>
