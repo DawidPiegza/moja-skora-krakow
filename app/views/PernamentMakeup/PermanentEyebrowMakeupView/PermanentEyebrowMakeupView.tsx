@@ -37,7 +37,7 @@ import {
   pernamentEyebrowMakeupDataPL,
   pernamentEyebrowMakeupDataEN,
 } from "./data/pernamentEyebrowMakeupData";
-import permanent_eyebrow_makeup from "../../../../public/images/permanent_eyebrow_makeup.png";
+import permanent_eyebrow_makeup from "../../../../public/images/permanent_eyebrow_makeup.jpg";
 
 export default function PermanentEyebrowMakeupView() {
   const { language } = React.useContext(WebsiteLanguageContext);

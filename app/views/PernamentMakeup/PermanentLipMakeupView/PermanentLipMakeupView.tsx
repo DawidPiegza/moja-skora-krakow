@@ -602,17 +602,6 @@ export default function PermanentLipMakeupView() {
                     height: "100%",
                     width: "100%",
                   }}
-                  src={permanent_lip_makeup_effect_1}
-                />
-              </Grid>
-              <Grid size={downMd ? 12 : 4}>
-                <Box
-                  p={2}
-                  component="img"
-                  sx={{
-                    height: "100%",
-                    width: "100%",
-                  }}
                   src={permanent_lip_makeup_effect_3}
                 />
               </Grid>

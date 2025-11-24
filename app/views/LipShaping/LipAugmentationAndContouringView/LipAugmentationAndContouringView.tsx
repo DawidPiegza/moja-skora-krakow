@@ -20,12 +20,12 @@ import GoogleIcon from "@mui/icons-material/Google";
 import RepeatIcon from "@mui/icons-material/Repeat";
 import EventRepeatIcon from "@mui/icons-material/EventRepeat";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
-import lip_augmentation_and_contouring from "../../../../public/images/lip_augmentation_and_contouring.jpeg";
+import lip_augmentation_and_contouring from "../../../../public/images/lip_augmentation_and_contouring.jpg";
 import lip_augmentation_and_contouring_effect_1 from "../../../../public/images/lip_augmentation_and_contouring_effect_1.jpeg";
 import lip_augmentation_and_contouring_effect_2 from "../../../../public/images/lip_augmentation_and_contouring_effect_2.jpeg";
 import lip_augmentation_and_contouring_effect_3 from "../../../../public/images/lip_augmentation_and_contouring_effect_3.jpeg";
 import lip_augmentation_and_contouring_effect_4 from "../../../../public/images/lip_augmentation_and_contouring_effect_4.jpeg";
-import lip_augmentation_and_contouring_effect_5 from "../../../../public/images/lip_augmentation_and_contouring_effect_5.jpeg";
+import lip_augmentation_and_contouring_effect_5 from "../../../../public/images/lip_augmentation_and_contouring_effect_5.jpg";
 import lip_augmentation_and_contouring_effect_6 from "../../../../public/images/lip_augmentation_and_contouring_effect_6.jpeg";
 import lip_augmentation_and_contouring_effect_7 from "../../../../public/images/lip_augmentation_and_contouring_effect_7.jpg";
 import lip_augmentation_and_contouring_effect_8 from "../../../../public/images/lip_augmentation_and_contouring_effect_8.jpg";
@@ -33,7 +33,6 @@ import lip_augmentation_and_contouring_effect_9 from "../../../../public/images/
 import lip_augmentation_and_contouring_effect_10 from "../../../../public/images/lip_augmentation_and_contouring_effect_10.jpg";
 import lip_augmentation_and_contouring_effect_11 from "../../../../public/images/lip_augmentation_and_contouring_effect_11.jpg";
 import lip_augmentation_and_contouring_effect_12 from "../../../../public/images/lip_augmentation_and_contouring_effect_12.jpg";
-import lip_augmentation_and_contouring_effect_14 from "../../../../public/images/lip_augmentation_and_contouring_effect_14.jpg";
 
 import {
   lipAugmentationAndContouringDataPL,
@@ -269,6 +268,48 @@ export default function LipAugmentationAndContouringView() {
                   )
                 )}
             </Grid>
+            <Grid size={12}>
+              <Divider />
+            </Grid>
+            <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
+              <Typography
+                variant={downMd ? "body1" : "h6"}
+                textAlign="left"
+                sx={{ fontWeight: "200" }}
+                width={"100%"}
+                fontStyle="italic"
+              >
+                {language.webLanguage === "PL"
+                  ? "JAK PRZYGOTOWAĆ SIĘ DO ZABIEGU?"
+                  : "HOW TO PREPARE FOR THE PROCEDURE?"}
+              </Typography>
+              {language.webLanguage === "PL" &&
+                lipAugmentationAndContouringDataPL.preparationForTreatment.map(
+                  (preparation, index) => (
+                    <Typography
+                      variant={downMd ? "body2" : "body1"}
+                      textAlign="left"
+                      width="100%"
+                      key={index}
+                    >
+                      - {preparation}
+                    </Typography>
+                  )
+                )}
+              {language.webLanguage === "ENG" &&
+                lipAugmentationAndContouringDataEN.preparationForTreatment.map(
+                  (preparation, index) => (
+                    <Typography
+                      variant={downMd ? "body2" : "body1"}
+                      textAlign="left"
+                      width="100%"
+                      key={index}
+                    >
+                      - {preparation}
+                    </Typography>
+                  )
+                )}
+            </Grid>
           </Grid>
         </Grid>
         <Grid size={12}>
@@ -436,48 +477,7 @@ export default function LipAugmentationAndContouringView() {
           <Grid size={12}>
             <Divider />
           </Grid>
-          <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
-            <Typography
-              variant={downMd ? "body1" : "h6"}
-              textAlign="left"
-              sx={{ fontWeight: "200" }}
-              width={"100%"}
-              fontStyle="italic"
-            >
-              {language.webLanguage === "PL"
-                ? "JAK PRZYGOTOWAĆ SIĘ DO ZABIEGU?"
-                : "HOW TO PREPARE FOR THE PROCEDURE?"}
-            </Typography>
-            {language.webLanguage === "PL" &&
-              lipAugmentationAndContouringDataPL.preparationForTreatment.map(
-                (preparation, index) => (
-                  <Typography
-                    variant={downMd ? "body2" : "body1"}
-                    textAlign="left"
-                    width="100%"
-                    key={index}
-                  >
-                    - {preparation}
-                  </Typography>
-                )
-              )}
-            {language.webLanguage === "ENG" &&
-              lipAugmentationAndContouringDataEN.preparationForTreatment.map(
-                (preparation, index) => (
-                  <Typography
-                    variant={downMd ? "body2" : "body1"}
-                    textAlign="left"
-                    width="100%"
-                    key={index}
-                  >
-                    - {preparation}
-                  </Typography>
-                )
-              )}
-          </Grid>
-          <Grid size={12}>
-            <Divider />
-          </Grid>
+
           <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
             <Typography
               variant={downMd ? "body1" : "h6"}
@@ -697,17 +697,6 @@ export default function LipAugmentationAndContouringView() {
                     height: "100%",
                     width: "100%",
                   }}
-                  src={lip_augmentation_and_contouring_effect_5}
-                />
-              </Grid>
-              <Grid size={downMd ? 12 : 4}>
-                <Box
-                  p={2}
-                  component="img"
-                  sx={{
-                    height: "100%",
-                    width: "100%",
-                  }}
                   src={lip_augmentation_and_contouring_effect_6}
                 />
               </Grid>
@@ -777,7 +766,6 @@ export default function LipAugmentationAndContouringView() {
                   src={lip_augmentation_and_contouring_effect_12}
                 />
               </Grid>
-
               <Grid size={downMd ? 12 : 4}>
                 <Box
                   p={2}
@@ -786,7 +774,7 @@ export default function LipAugmentationAndContouringView() {
                     height: "100%",
                     width: "100%",
                   }}
-                  src={lip_augmentation_and_contouring_effect_14}
+                  src={lip_augmentation_and_contouring_effect_5}
                 />
               </Grid>
             </Grid>

@@ -70,7 +70,7 @@ export default function DrCyjFillerView() {
               })}
             >
               {language.webLanguage === "PL"
-                ? "Mezoterapia igłowa skóry głowy Dr. cyj"
+                ? "Mezoterapia igłowa skóry głowy DR CYJ"
                 : "Cyj Filler - Scalp mesotherapy treatment"}
             </Typography>
           </Breadcrumbs>
@@ -93,7 +93,7 @@ export default function DrCyjFillerView() {
               sx={{ fontWeight: "350" }}
             >
               {language.webLanguage === "PL"
-                ? "Mezoterapia igłowa skóry głowy Dr. cyj".toUpperCase()
+                ? "Mezoterapia igłowa skóry głowy DR CYJ".toUpperCase()
                 : "Cyj Filler - Scalp mesotherapy treatment".toUpperCase()}
             </Typography>
           </Grid>
@@ -244,8 +244,8 @@ export default function DrCyjFillerView() {
                 fontStyle="italic"
               >
                 {language.webLanguage === "PL"
-                  ? "DR. CYJ – TERAPIA PEPTYDOWA NA WYPADANIE WŁOSÓW"
-                  : "DR. CYJ – PEPTIDE THERAPY FOR HAIR LOSS"}
+                  ? "DR CYJ – TERAPIA PEPTYDOWA NA WYPADANIE WŁOSÓW"
+                  : "DR CYJ – PEPTIDE THERAPY FOR HAIR LOSS"}
               </Typography>
               <Typography
                 variant={downMd ? "body2" : "body1"}
@@ -280,7 +280,7 @@ export default function DrCyjFillerView() {
             >
               {language.webLanguage === "PL"
                 ? "PRZECIWWSKAZANIA DO ZABIEGU MEZOTERAPII IGŁOWEJ"
-                : "CONTRAINDICATIONS FOR DR. CYJ SCALP MESOTHERAPY"}
+                : "CONTRAINDICATIONS FOR DR CYJ SCALP MESOTHERAPY"}
             </Typography>
 
             {language.webLanguage === "PL" &&

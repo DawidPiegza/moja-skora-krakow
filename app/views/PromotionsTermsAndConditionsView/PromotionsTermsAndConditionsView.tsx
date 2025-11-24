@@ -66,7 +66,7 @@ export default function PromotionsTermsAndConditionsView() {
           display="flex"
           flexDirection="column"
           justifyContent="center"
-          alignItems="center"
+          alignItems="flex-start"
           rowGap={1}
           py={downMd ? 1 : 4}
         >
@@ -86,7 +86,7 @@ export default function PromotionsTermsAndConditionsView() {
             gutterBottom
             width={"100%"}
             variant={"body1"}
-            textAlign="center"
+            textAlign="left"
             sx={{ fontWeight: "400" }}
             py={downMd ? 1 : 2}
           >
@@ -96,7 +96,7 @@ export default function PromotionsTermsAndConditionsView() {
               : "§1 TERMS OF USING THE PROMOTION"}
           </Typography>
           <Typography
-            textAlign="center"
+            textAlign="left"
             variant={"body2"}
             fontWeight={300}
             gutterBottom
@@ -106,7 +106,7 @@ export default function PromotionsTermsAndConditionsView() {
               : "1. To use the promotion, the referring person must provide the first and last name of their friend when booking an appointment on Booksy (in the notes) or contact us via SMS or private message on social media."}
           </Typography>
           <Typography
-            textAlign="center"
+            textAlign="left"
             variant={"body2"}
             fontWeight={300}
             gutterBottom
@@ -116,7 +116,7 @@ export default function PromotionsTermsAndConditionsView() {
               : "2. The referred person must be a new client of the Moja Skóra clinic and attend their first visit."}
           </Typography>
           <Typography
-            textAlign="center"
+            textAlign="left"
             variant={"body2"}
             fontWeight={300}
             gutterBottom
@@ -126,7 +126,7 @@ export default function PromotionsTermsAndConditionsView() {
               : "3. After the friend’s visit, the referring person receives a 100 PLN discount on a treatment."}
           </Typography>
           <Typography
-            textAlign="center"
+            textAlign="left"
             variant={"body2"}
             fontWeight={300}
             gutterBottom
@@ -139,7 +139,7 @@ export default function PromotionsTermsAndConditionsView() {
             gutterBottom
             width={"100%"}
             variant={"body1"}
-            textAlign="center"
+            textAlign="left"
             sx={{ fontWeight: "400" }}
             py={downMd ? 1 : 2}
           >
@@ -149,7 +149,7 @@ export default function PromotionsTermsAndConditionsView() {
               : "§2 PROMOTION RULES"}
           </Typography>
           <Typography
-            textAlign="center"
+            textAlign="left"
             variant={"body2"}
             fontWeight={300}
             gutterBottom
@@ -159,7 +159,7 @@ export default function PromotionsTermsAndConditionsView() {
               : "1. To use the promotion, the referring person must provide the first and last name of their friend when booking an appointment on Booksy (in the notes) or contact us via SMS or private message on social media."}
           </Typography>
           <Typography
-            textAlign="center"
+            textAlign="left"
             variant={"body2"}
             fontWeight={300}
             gutterBottom
@@ -169,7 +169,7 @@ export default function PromotionsTermsAndConditionsView() {
               : "2. The discount applies to treatments worth at least 140 PLN."}
           </Typography>
           <Typography
-            textAlign="center"
+            textAlign="left"
             variant={"body2"}
             fontWeight={300}
             gutterBottom
@@ -198,7 +198,7 @@ export default function PromotionsTermsAndConditionsView() {
           />
           <BottomNavigationAction
             component="a"
-            href="https://maps.app.goo.gl/DthUc2eKTyvEEHFN8?g_st=am"
+            href="https://share.google/cZjmIrreCPS9W4K7i"
             target="_blank"
             rel="noopener noreferrer"
             label="Google"

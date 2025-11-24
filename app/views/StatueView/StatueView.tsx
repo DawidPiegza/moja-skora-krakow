@@ -67,7 +67,7 @@ export default function StatueView() {
           display="flex"
           flexDirection="column"
           justifyContent="center"
-          alignItems="center"
+          alignItems="flex-start"
           rowGap={1}
           py={downMd ? 1 : 4}
         >
@@ -92,7 +92,7 @@ export default function StatueView() {
                 gutterBottom
                 width={"100%"}
                 variant={"body1"}
-                textAlign="center"
+                textAlign="left"
                 sx={{ fontWeight: "400" }}
                 py={downMd ? 1 : 2}
               >
@@ -103,7 +103,7 @@ export default function StatueView() {
                   return (
                     <Typography
                       key={index}
-                      textAlign="center"
+                      textAlign="left"
                       variant={"body2"}
                       fontWeight={300}
                       gutterBottom

@@ -48,7 +48,7 @@ export const drCyjFillerDataPL: IServiceObject = {
 
 export const drCyjFillerDataENG: IServiceObject = {
   description:
-    "Dr. CYJ scalp mesotherapy is a modern peptide-based therapy that effectively prevents hair loss and stimulates hair growth. Its advanced formula helps to improve microcirculation and supports the regeneration of hair follicles.",
+    "DR CYJ scalp mesotherapy is a modern peptide-based therapy that effectively prevents hair loss and stimulates hair growth. Its advanced formula helps to improve microcirculation and supports the regeneration of hair follicles.",
   infoTable: {
     recommendedNumber: "4 treatments",
     timeOfTreatment: "30 minutes",
@@ -64,7 +64,7 @@ export const drCyjFillerDataENG: IServiceObject = {
     "Improving hair growth and condition after a transplant",
   ],
   compositionOfPreparation: `7 biomimetic peptides – Decapeptide-28, Oligopeptide-71, Octapeptide-2, Decapeptide-18, Oligopeptide-54, Octapeptide-11, Decapeptide-10 – each of these peptides has a unique function, yet they work synergistically to enhance the overall effectiveness of the therapy.\nThese peptides block the effects of dihydrotestosterone (DHT) – the hormone responsible for hair loss in androgenic alopecia – stimulate the growth of new hair, and prevent scalp cell degradation. This carefully selected combination helps regenerate the scalp, strengthen hair follicles, and slow down the hair loss process.\n\n– Hyaluronic acid (0.7%) – A partially stabilized form of hyaluronic acid that enhances the absorption of active ingredients, allowing them to penetrate deeper into the skin and increasing the overall effectiveness of the treatment.`,
-  descriptionOfPreparation: `Dr. CYJ Hair Filler is an innovative product that effectively combats hair thinning and excessive hair loss. Its advanced formula combines 7 biomimetic peptides with hyaluronic acid and utilizes Sustained Release Technology – a delivery system that gradually releases active ingredients for up to 14 days after the treatment. This prolonged release ensures long-lasting results and allows the active ingredients to work more effectively on the scalp.`,
+  descriptionOfPreparation: `DR CYJ Hair Filler is an innovative product that effectively combats hair thinning and excessive hair loss. Its advanced formula combines 7 biomimetic peptides with hyaluronic acid and utilizes Sustained Release Technology – a delivery system that gradually releases active ingredients for up to 14 days after the treatment. This prolonged release ensures long-lasting results and allows the active ingredients to work more effectively on the scalp.`,
   effectsOfTratment: [
     "Stimulation of new hair growth",
     "Reduction of hair loss",
