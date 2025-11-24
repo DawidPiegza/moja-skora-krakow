@@ -14,7 +14,9 @@ import {
 } from "@mui/material";
 import React from "react";
 import { WebsiteLanguageContext } from "../../../shared/contexts/LanguageContext";
+import cyj_filler_2 from "../../../../public/images/cyj_filler_2.jpeg";
 import cyj_filler from "../../../../public/images/cyj_filler.jpeg";
+
 import { drCyjFillerDataPL, drCyjFillerDataENG } from "./data/drCyjFillerData";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
@@ -70,7 +72,7 @@ export default function DrCyjFillerView() {
               })}
             >
               {language.webLanguage === "PL"
-                ? "Mezoterapia igłowa skóry głowy DR CYJ"
+                ? "Mezoterapia igłowa skóry głowy Dr. cyj"
                 : "Cyj Filler - Scalp mesotherapy treatment"}
             </Typography>
           </Breadcrumbs>
@@ -93,7 +95,7 @@ export default function DrCyjFillerView() {
               sx={{ fontWeight: "350" }}
             >
               {language.webLanguage === "PL"
-                ? "Mezoterapia igłowa skóry głowy DR CYJ".toUpperCase()
+                ? "Mezoterapia igłowa skóry głowy Dr. cyj".toUpperCase()
                 : "Cyj Filler - Scalp mesotherapy treatment".toUpperCase()}
             </Typography>
           </Grid>
@@ -189,7 +191,7 @@ export default function DrCyjFillerView() {
                 height: "auto",
                 width: "auto",
               }}
-              src={cyj_filler}
+              src={cyj_filler_2}
             />
           </Grid>
           <Grid size={downMd ? 12 : 8} p={1} container spacing={3}>
@@ -234,7 +236,6 @@ export default function DrCyjFillerView() {
             <Grid size={12}>
               <Divider />
             </Grid>
-
             <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
               <Typography
                 variant={downMd ? "body1" : "h6"}
@@ -244,8 +245,8 @@ export default function DrCyjFillerView() {
                 fontStyle="italic"
               >
                 {language.webLanguage === "PL"
-                  ? "DR CYJ – TERAPIA PEPTYDOWA NA WYPADANIE WŁOSÓW"
-                  : "DR CYJ – PEPTIDE THERAPY FOR HAIR LOSS"}
+                  ? "DR. CYJ – TERAPIA PEPTYDOWA NA WYPADANIE WŁOSÓW"
+                  : "DR. CYJ – PEPTIDE THERAPY FOR HAIR LOSS"}
               </Typography>
               <Typography
                 variant={downMd ? "body2" : "body1"}
@@ -259,6 +260,83 @@ export default function DrCyjFillerView() {
                   drCyjFillerDataENG.descriptionOfPreparation}
               </Typography>
             </Grid>
+          </Grid>
+          <Grid size={12}>
+            <Divider />
+          </Grid>
+          <Grid size={downMd ? 12 : 8} p={1} container spacing={3}>
+            <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
+              <Typography
+                variant={downMd ? "body1" : "h6"}
+                textAlign="left"
+                sx={{ fontWeight: "200" }}
+                width={"100%"}
+                fontStyle="italic"
+              >
+                {language.webLanguage === "PL"
+                  ? "EFEKTY ZABIEGU"
+                  : "TREATMENT RESULTS"}
+              </Typography>
+              {language.webLanguage === "PL" &&
+                drCyjFillerDataPL.effectsOfTratment.map((effect, index) => (
+                  <Typography
+                    variant={downMd ? "body2" : "body1"}
+                    textAlign="left"
+                    width="100%"
+                    key={index}
+                  >
+                    - {effect}
+                  </Typography>
+                ))}
+              {language.webLanguage !== "PL" &&
+                drCyjFillerDataENG.effectsOfTratment.map((effect, index) => (
+                  <Typography
+                    variant={downMd ? "body2" : "body1"}
+                    textAlign="left"
+                    width="100%"
+                    key={index}
+                  >
+                    - {effect}
+                  </Typography>
+                ))}
+            </Grid>
+            <Grid size={12}>
+              <Divider />
+            </Grid>
+            <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
+              <Typography
+                variant={downMd ? "body1" : "h6"}
+                textAlign="left"
+                sx={{ fontWeight: "200" }}
+                width={"100%"}
+                fontStyle="italic"
+              >
+                {language.webLanguage === "PL"
+                  ? "SKŁAD PREPARATU"
+                  : "FORMULATION"}
+              </Typography>
+              <Typography
+                variant={downMd ? "body2" : "body1"}
+                textAlign="left"
+                width="100%"
+                gutterBottom
+              >
+                {language.webLanguage === "PL" &&
+                  drCyjFillerDataPL.compositionOfPreparation}
+                {language.webLanguage !== "PL" &&
+                  drCyjFillerDataENG.compositionOfPreparation}
+              </Typography>
+            </Grid>
+          </Grid>
+          <Grid size={downMd ? 12 : 4}>
+            <Box
+              component="img"
+              sx={{
+                height: "auto",
+                width: "auto",
+              }}
+              src={cyj_filler}
+            />
           </Grid>
         </Grid>
         <Grid size={12}>
@@ -280,7 +358,7 @@ export default function DrCyjFillerView() {
             >
               {language.webLanguage === "PL"
                 ? "PRZECIWWSKAZANIA DO ZABIEGU MEZOTERAPII IGŁOWEJ"
-                : "CONTRAINDICATIONS FOR DR CYJ SCALP MESOTHERAPY"}
+                : "CONTRAINDICATIONS FOR DR. CYJ SCALP MESOTHERAPY"}
             </Typography>
 
             {language.webLanguage === "PL" &&
@@ -359,73 +437,6 @@ export default function DrCyjFillerView() {
                   </Typography>
                 )
               )}
-          </Grid>
-
-          <Grid size={12}>
-            <Divider />
-          </Grid>
-          <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
-            <Typography
-              variant={downMd ? "body1" : "h6"}
-              textAlign="left"
-              sx={{ fontWeight: "200" }}
-              width={"100%"}
-              fontStyle="italic"
-            >
-              {language.webLanguage === "PL"
-                ? "EFEKTY ZABIEGU"
-                : "TREATMENT RESULTS"}
-            </Typography>
-            {language.webLanguage === "PL" &&
-              drCyjFillerDataPL.effectsOfTratment.map((effect, index) => (
-                <Typography
-                  variant={downMd ? "body2" : "body1"}
-                  textAlign="left"
-                  width="100%"
-                  key={index}
-                >
-                  - {effect}
-                </Typography>
-              ))}
-            {language.webLanguage !== "PL" &&
-              drCyjFillerDataENG.effectsOfTratment.map((effect, index) => (
-                <Typography
-                  variant={downMd ? "body2" : "body1"}
-                  textAlign="left"
-                  width="100%"
-                  key={index}
-                >
-                  - {effect}
-                </Typography>
-              ))}
-          </Grid>
-          <Grid size={12}>
-            <Divider />
-          </Grid>
-
-          <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
-            <Typography
-              variant={downMd ? "body1" : "h6"}
-              textAlign="left"
-              sx={{ fontWeight: "200" }}
-              width={"100%"}
-              fontStyle="italic"
-            >
-              {language.webLanguage === "PL"
-                ? "SKŁAD PREPARATU"
-                : "FORMULATION"}
-            </Typography>
-            <Typography
-              variant={downMd ? "body2" : "body1"}
-              textAlign="left"
-              width="100%"
-              gutterBottom
-            >
-              {language.webLanguage === "PL" &&
-                drCyjFillerDataPL.compositionOfPreparation}
-              {language.webLanguage !== "PL" &&
-                drCyjFillerDataENG.compositionOfPreparation}
-            </Typography>
           </Grid>
           <Grid size={12}>
             <Divider />
