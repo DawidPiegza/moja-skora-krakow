@@ -137,32 +137,41 @@ export default function ContactView() {
                   </Box>
                 </Grid>
                 <Grid size={downMd ? 12 : 4}>
-                  <Box
-                    p={1}
-                    width="100%"
-                    display="flex"
-                    flexDirection="column"
-                    justifyContent="center"
-                    component={Paper}
-                    variant="outlined"
-                    textAlign="center"
-                    alignItems="center"
-                    rowGap={0.5}
-                    height={"100%"}
+                  <ButtonBase
+                    component="a"
+                    href="tel:+48518456332"
+                    sx={{ width: "100%", borderRadius: 1 }}
+                    aria-label={
+                      language.webLanguage === "PL" ? "Zadzwoń" : "Call"
+                    }
                   >
-                    <LocalPhoneOutlinedIcon
-                      fontSize="medium"
-                      sx={{ color: "#616161" }}
-                    />
-                    <Typography variant="body1" fontWeight={400}>
-                      {language.webLanguage === "PL"
-                        ? "Numer telefonu"
-                        : "Phone Number"}
-                    </Typography>
-                    <Typography variant="body2" fontWeight={300}>
-                      518 456 332
-                    </Typography>
-                  </Box>
+                    <Box
+                      p={1}
+                      width="100%"
+                      display="flex"
+                      flexDirection="column"
+                      justifyContent="center"
+                      component={Paper}
+                      variant="outlined"
+                      textAlign="center"
+                      alignItems="center"
+                      rowGap={0.5}
+                      height={"100%"}
+                    >
+                      <LocalPhoneOutlinedIcon
+                        fontSize="medium"
+                        sx={{ color: "#616161" }}
+                      />
+                      <Typography variant="body1" fontWeight={400}>
+                        {language.webLanguage === "PL"
+                          ? "Numer telefonu"
+                          : "Phone Number"}
+                      </Typography>
+                      <Typography variant="body2" fontWeight={300}>
+                        518 456 332
+                      </Typography>
+                    </Box>
+                  </ButtonBase>
                 </Grid>
                 <Grid size={downMd ? 12 : 4}>
                   <Box
@@ -412,7 +421,7 @@ export default function ContactView() {
           />
           <BottomNavigationAction
             component="a"
-            href="https://share.google/cZjmIrreCPS9W4K7i"
+            href="https://maps.app.goo.gl/DthUc2eKTyvEEHFN8?g_st=am"
             target="_blank"
             rel="noopener noreferrer"
             label="Google"

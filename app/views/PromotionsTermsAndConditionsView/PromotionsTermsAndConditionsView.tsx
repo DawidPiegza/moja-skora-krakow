@@ -198,7 +198,7 @@ export default function PromotionsTermsAndConditionsView() {
           />
           <BottomNavigationAction
             component="a"
-            href="https://share.google/cZjmIrreCPS9W4K7i"
+            href="https://maps.app.goo.gl/DthUc2eKTyvEEHFN8?g_st=am"
             target="_blank"
             rel="noopener noreferrer"
             label="Google"
