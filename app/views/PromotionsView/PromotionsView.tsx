@@ -19,6 +19,8 @@ import {
 } from "@mui/material";
 import { WebsiteLanguageContext } from "../../shared/contexts/LanguageContext";
 import promotion_image from "../../../public/images/promotion_image.jpg";
+import promotion_image_eng from "../../../public/images/promotion_image_eng.jpg";
+
 import { useNavigate } from "react-router";
 
 export default function PromotionsView() {
@@ -101,7 +103,11 @@ export default function PromotionsView() {
                 height: "100%",
                 width: "100%",
               }}
-              src={promotion_image}
+              src={
+                language.webLanguage === "PL"
+                  ? promotion_image
+                  : promotion_image_eng
+              }
             />
           </Grid>
           <Grid size={downMd ? 12 : 7} container direction="column" rowGap={3}>

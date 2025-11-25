@@ -72,7 +72,7 @@ export default function DrCyjFillerView() {
               })}
             >
               {language.webLanguage === "PL"
-                ? "Mezoterapia igłowa skóry głowy Dr. cyj"
+                ? "Mezoterapia igłowa skóry głowy DR. CYJ"
                 : "Cyj Filler - Scalp mesotherapy treatment"}
             </Typography>
           </Breadcrumbs>
@@ -95,7 +95,7 @@ export default function DrCyjFillerView() {
               sx={{ fontWeight: "350" }}
             >
               {language.webLanguage === "PL"
-                ? "Mezoterapia igłowa skóry głowy Dr. cyj".toUpperCase()
+                ? "Mezoterapia igłowa skóry głowy DR. CYJ".toUpperCase()
                 : "Cyj Filler - Scalp mesotherapy treatment".toUpperCase()}
             </Typography>
           </Grid>
@@ -183,12 +183,12 @@ export default function DrCyjFillerView() {
             </Box>
           </Grid>
         </Grid>
-        <Grid size={12} container p={1} alignItems={"center"}>
+        <Grid size={12} container p={1} alignItems={"stretch"}>
           <Grid size={downMd ? 12 : 4}>
             <Box
               component="img"
               sx={{
-                height: "auto",
+                height: downMd ? "auto" : "100%",
                 width: "auto",
               }}
               src={cyj_filler_2}
@@ -332,7 +332,7 @@ export default function DrCyjFillerView() {
             <Box
               component="img"
               sx={{
-                height: "auto",
+                height: downMd ? "auto" : "100%",
                 width: "auto",
               }}
               src={cyj_filler}

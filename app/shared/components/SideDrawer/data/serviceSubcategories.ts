@@ -52,7 +52,7 @@ export const serviceSubcategories: IServiceSubcategory[] = [
   },
   {
     category: "cosmetology",
-    title: "Mezoterapia igłowa skóry głowy DR CYJ",
+    title: "Mezoterapia igłowa skóry głowy DR. CYJ",
     titleENG: "Cyj Filler - Scalp mesotherapy treatment",
     subcategoryURL: "/cosmetology/dr_cyj_filler_mesotherapy",
   },

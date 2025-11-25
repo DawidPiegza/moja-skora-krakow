@@ -2,7 +2,7 @@ import type { IServiceObject } from "../../../../shared/utils/interfaces/IServic
 
 export const drCyjFillerDataPL: IServiceObject = {
   description:
-    "Mezoterapia skóry głowy z wykorzystaniem preparatów Dr Cyj to nowoczesna, peptydowa terapia, która skutecznie przeciwdziała wypadaniu włosów oraz stymuluje ich wzrost. Dzięki specjalnie opracowanemu składowi, zabieg poprawia mikrokrążenie i wspomaga regenerację mieszków włosowych.",
+    "Mezoterapia skóry głowy z wykorzystaniem preparatów DR. CYJ to nowoczesna, peptydowa terapia, która skutecznie przeciwdziała wypadaniu włosów oraz stymuluje ich wzrost. Dzięki specjalnie opracowanemu składowi, zabieg poprawia mikrokrążenie i wspomaga regenerację mieszków włosowych.",
   infoTable: {
     recommendedNumber: "4 zabiegi",
     timeOfTreatment: "30 minut",
@@ -18,7 +18,7 @@ export const drCyjFillerDataPL: IServiceObject = {
     "Poprawienie wzrostu włosów oraz ich kondycji po przeszczepie",
   ],
   compositionOfPreparation: `7 peptydów biomimetycznych – Dekapeptyd-28, Oligopeptyd-71, Oktapeptyd-2, Dekapeptyd-18, Oligopeptyd-54, Oktapeptyd-11, Dekapeptyd-10 – każdy z tych peptydów ma swoje unikalną funkcję, ale wzajemnie wzmacniają swoje działanie, co zapewnia maksymalną skuteczność terapii. Peptydy te blokują wpływ dihydrotestosteronu (DHT), hormonu odpowiedzialnego za wypadanie włosów w łysieniu androgenowym, stymulują wzrost nowych włosów oraz zapobiegają obumieraniu komórek skóry głowy. Dzięki tak dobranej kombinacji, peptydy skutecznie regenerują skórę głowy, wzmacniają mieszki włosowe i spowalniają proces wypadania włosów.\n\n- Kwas hialuronowy (0,7%) – częściowo stabilizowany kwas hialuronowy wspomaga wchłanianie składników aktywnych, umożliwiając ich głębsze wnikanie w skórę i zwiększając efektywność zabiegu.`,
-  descriptionOfPreparation: `Dr Cyj Hair Filler to innowacyjny preparat, który skutecznie przeciwdziała łysieniu i nadmiernemu wypadaniu włosów. Jego zaawansowana formuła, oparta na połączeniu 7 peptydów biomimetycznych i kwasu hialuronowego, oraz technologii Sustained Release Technology (technologia przedłużonego uwalniania substancji aktywnych), zapewnia stopniowe i długotrwałe uwalnianie składników aktywnych przez 14 dni po zabiegu. Dzięki temu, efekty działania preparatu utrzymują się przez dłuższy czas, a składniki aktywne mogą skutecznie działać na skórę głowy.`,
+  descriptionOfPreparation: `DR. CYJ Hair Filler to innowacyjny preparat, który skutecznie przeciwdziała łysieniu i nadmiernemu wypadaniu włosów. Jego zaawansowana formuła, oparta na połączeniu 7 peptydów biomimetycznych i kwasu hialuronowego, oraz technologii Sustained Release Technology (technologia przedłużonego uwalniania substancji aktywnych), zapewnia stopniowe i długotrwałe uwalnianie składników aktywnych przez 14 dni po zabiegu. Dzięki temu, efekty działania preparatu utrzymują się przez dłuższy czas, a składniki aktywne mogą skutecznie działać na skórę głowy.`,
   effectsOfTratment: [
     "Stymulacja wzrostu nowych włosów",
     "Redukcja wypadania włosów",
@@ -48,7 +48,7 @@ export const drCyjFillerDataPL: IServiceObject = {
 
 export const drCyjFillerDataENG: IServiceObject = {
   description:
-    "DR CYJ scalp mesotherapy is a modern peptide-based therapy that effectively prevents hair loss and stimulates hair growth. Its advanced formula helps to improve microcirculation and supports the regeneration of hair follicles.",
+    "DR. CYJ scalp mesotherapy is a modern peptide-based therapy that effectively prevents hair loss and stimulates hair growth. Its advanced formula helps to improve microcirculation and supports the regeneration of hair follicles.",
   infoTable: {
     recommendedNumber: "4 treatments",
     timeOfTreatment: "30 minutes",
@@ -64,7 +64,7 @@ export const drCyjFillerDataENG: IServiceObject = {
     "Improving hair growth and condition after a transplant",
   ],
   compositionOfPreparation: `7 biomimetic peptides – Decapeptide-28, Oligopeptide-71, Octapeptide-2, Decapeptide-18, Oligopeptide-54, Octapeptide-11, Decapeptide-10 – each of these peptides has a unique function, yet they work synergistically to enhance the overall effectiveness of the therapy.\nThese peptides block the effects of dihydrotestosterone (DHT) – the hormone responsible for hair loss in androgenic alopecia – stimulate the growth of new hair, and prevent scalp cell degradation. This carefully selected combination helps regenerate the scalp, strengthen hair follicles, and slow down the hair loss process.\n\n– Hyaluronic acid (0.7%) – A partially stabilized form of hyaluronic acid that enhances the absorption of active ingredients, allowing them to penetrate deeper into the skin and increasing the overall effectiveness of the treatment.`,
-  descriptionOfPreparation: `DR CYJ Hair Filler is an innovative product that effectively combats hair thinning and excessive hair loss. Its advanced formula combines 7 biomimetic peptides with hyaluronic acid and utilizes Sustained Release Technology – a delivery system that gradually releases active ingredients for up to 14 days after the treatment. This prolonged release ensures long-lasting results and allows the active ingredients to work more effectively on the scalp.`,
+  descriptionOfPreparation: `DR. CYJ Hair Filler is an innovative product that effectively combats hair thinning and excessive hair loss. Its advanced formula combines 7 biomimetic peptides with hyaluronic acid and utilizes Sustained Release Technology – a delivery system that gradually releases active ingredients for up to 14 days after the treatment. This prolonged release ensures long-lasting results and allows the active ingredients to work more effectively on the scalp.`,
   effectsOfTratment: [
     "Stimulation of new hair growth",
     "Reduction of hair loss",

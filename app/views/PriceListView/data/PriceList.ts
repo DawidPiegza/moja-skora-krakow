@@ -207,7 +207,8 @@ export const PriceList: IPriceList = {
       category: "Mezoterapia igłowa skóry głowy",
       priceListItems: [
         {
-          itemName: "DR CYJ Hair Filler - erapia peptydowa na wypadanie włosów",
+          itemName:
+            "DR. CYJ Hair Filler - erapia peptydowa na wypadanie włosów",
           price: 700,
         },
         {
@@ -221,12 +222,12 @@ export const PriceList: IPriceList = {
         {
           itemName: "Pakiet ZDROWE WŁOSY",
           itemDescription:
-            "1x mezoterapia igłowa- nawilżenie skóry głowy + 4x DR CYJ Hair Filler",
+            "1x mezoterapia igłowa- nawilżenie skóry głowy + 4x DR. CYJ Hair Filler",
           price: 2740,
           isBundle: true,
         },
         {
-          itemName: "Pakiet 4 zabiegów DR CYJ Hair Filler ",
+          itemName: "Pakiet 4 zabiegów DR. CYJ Hair Filler ",
           price: 2400,
           isBundle: true,
         },
