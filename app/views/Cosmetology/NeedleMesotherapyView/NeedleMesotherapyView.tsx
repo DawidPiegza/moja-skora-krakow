@@ -29,6 +29,8 @@ import {
   needleMesotherapySpecificTreatmentsEN,
 } from "./data/needleMesotherapySpecificTreatments";
 import needle_mesotherapy from "../../../../public/images/needle_mesotherapy.png";
+import needle_mesotherapy_2 from "../../../../public/images/needle_mesotherapy_2.png";
+
 import NeedlMesotherapySpecificTreatmentAccordion from "./components/NeedlMesotherapySpecificTreatmentAccordion/NeedlMesotherapySpecificTreatmentAccordion";
 
 export default function NeedleMesotherapyView() {
@@ -189,12 +191,12 @@ export default function NeedleMesotherapyView() {
             </Box>
           </Grid>
         </Grid>
-        <Grid size={12} container p={1} alignItems={"center"}>
+        <Grid size={12} container p={1} alignItems={"stretch"}>
           <Grid size={downMd ? 12 : 4}>
             <Box
               component="img"
               sx={{
-                height: "auto",
+                height: downMd ? "auto" : "100%",
                 width: "auto",
               }}
               src={needle_mesotherapy}
@@ -245,6 +247,102 @@ export default function NeedleMesotherapyView() {
           <Divider />
         </Grid>
         <Grid size={12} p={1} container spacing={3}>
+          <Grid size={downMd ? 12 : 8} p={1} container spacing={3}>
+            <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
+              <Typography
+                variant={downMd ? "body1" : "h6"}
+                textAlign="left"
+                sx={{ fontWeight: "200" }}
+                width={"100%"}
+                fontStyle="italic"
+              >
+                {language.webLanguage === "PL"
+                  ? "EFEKTY ZABIEGU"
+                  : "TREATMENT RESULTS"}
+              </Typography>
+              {language.webLanguage === "PL" &&
+                needleMesotherapyDataPL.effectsOfTratment.map(
+                  (effect, index) => (
+                    <Typography
+                      variant={downMd ? "body2" : "body1"}
+                      textAlign="left"
+                      width="100%"
+                      key={index}
+                    >
+                      - {effect}
+                    </Typography>
+                  )
+                )}
+              {language.webLanguage !== "PL" &&
+                needleMesotherapyDataEN.effectsOfTratment.map(
+                  (effect, index) => (
+                    <Typography
+                      variant={downMd ? "body2" : "body1"}
+                      textAlign="left"
+                      width="100%"
+                      key={index}
+                    >
+                      - {effect}
+                    </Typography>
+                  )
+                )}
+            </Grid>
+            <Grid size={12}>
+              <Divider />
+            </Grid>
+            <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
+              <Typography
+                variant={downMd ? "body1" : "h6"}
+                textAlign="left"
+                sx={{ fontWeight: "200" }}
+                width={"100%"}
+                fontStyle="italic"
+              >
+                {language.webLanguage === "PL"
+                  ? "ZALECENIA POZABIEGOWE"
+                  : "POST-TREATMENT RECOMMENDATIONS"}
+              </Typography>
+              {language.webLanguage === "PL" &&
+                needleMesotherapyDataPL.postTreatmentRecommendations.map(
+                  (recomendation, index) => (
+                    <Typography
+                      variant={downMd ? "body2" : "body1"}
+                      textAlign="left"
+                      width="100%"
+                      key={index}
+                    >
+                      - {recomendation}
+                    </Typography>
+                  )
+                )}
+              {language.webLanguage !== "PL" &&
+                needleMesotherapyDataEN.postTreatmentRecommendations.map(
+                  (recomendation, index) => (
+                    <Typography
+                      variant={downMd ? "body2" : "body1"}
+                      textAlign="left"
+                      width="100%"
+                      key={index}
+                    >
+                      - {recomendation}
+                    </Typography>
+                  )
+                )}
+            </Grid>
+          </Grid>
+          <Grid size={downMd ? 12 : 4}>
+            <Box
+              component="img"
+              sx={{
+                height: downMd ? "auto" : "100%",
+                width: "auto",
+              }}
+              src={needle_mesotherapy_2}
+            />
+          </Grid>
+          <Grid size={12}>
+            <Divider />
+          </Grid>
           <Grid
             size={downMd ? 12 : 5}
             display="flex"
@@ -356,44 +454,6 @@ export default function NeedleMesotherapyView() {
               fontStyle="italic"
             >
               {language.webLanguage === "PL"
-                ? "EFEKTY ZABIEGU"
-                : "TREATMENT RESULTS"}
-            </Typography>
-            {language.webLanguage === "PL" &&
-              needleMesotherapyDataPL.effectsOfTratment.map((effect, index) => (
-                <Typography
-                  variant={downMd ? "body2" : "body1"}
-                  textAlign="left"
-                  width="100%"
-                  key={index}
-                >
-                  - {effect}
-                </Typography>
-              ))}
-            {language.webLanguage !== "PL" &&
-              needleMesotherapyDataEN.effectsOfTratment.map((effect, index) => (
-                <Typography
-                  variant={downMd ? "body2" : "body1"}
-                  textAlign="left"
-                  width="100%"
-                  key={index}
-                >
-                  - {effect}
-                </Typography>
-              ))}
-          </Grid>
-          <Grid size={12}>
-            <Divider />
-          </Grid>
-          <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
-            <Typography
-              variant={downMd ? "body1" : "h6"}
-              textAlign="left"
-              sx={{ fontWeight: "200" }}
-              width={"100%"}
-              fontStyle="italic"
-            >
-              {language.webLanguage === "PL"
                 ? "JAK PRZEBIEGA ZABIEG?"
                 : "HOW DOES THE TREATMENT WORK?"}
             </Typography>
@@ -437,48 +497,6 @@ export default function NeedleMesotherapyView() {
                   </Typography>
                 </React.Fragment>
               ))}
-          </Grid>
-          <Grid size={12}>
-            <Divider />
-          </Grid>
-          <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
-            <Typography
-              variant={downMd ? "body1" : "h6"}
-              textAlign="left"
-              sx={{ fontWeight: "200" }}
-              width={"100%"}
-              fontStyle="italic"
-            >
-              {language.webLanguage === "PL"
-                ? "ZALECENIA POZABIEGOWE"
-                : "POST-TREATMENT RECOMMENDATIONS"}
-            </Typography>
-            {language.webLanguage === "PL" &&
-              needleMesotherapyDataPL.postTreatmentRecommendations.map(
-                (recomendation, index) => (
-                  <Typography
-                    variant={downMd ? "body2" : "body1"}
-                    textAlign="left"
-                    width="100%"
-                    key={index}
-                  >
-                    - {recomendation}
-                  </Typography>
-                )
-              )}
-            {language.webLanguage !== "PL" &&
-              needleMesotherapyDataEN.postTreatmentRecommendations.map(
-                (recomendation, index) => (
-                  <Typography
-                    variant={downMd ? "body2" : "body1"}
-                    textAlign="left"
-                    width="100%"
-                    key={index}
-                  >
-                    - {recomendation}
-                  </Typography>
-                )
-              )}
           </Grid>
           <Grid size={12}>
             <Divider />

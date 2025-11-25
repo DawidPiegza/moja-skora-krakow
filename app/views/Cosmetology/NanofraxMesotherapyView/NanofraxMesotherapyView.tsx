@@ -21,6 +21,8 @@ import RepeatIcon from "@mui/icons-material/Repeat";
 import EventRepeatIcon from "@mui/icons-material/EventRepeat";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import nanofrax_mesotherapy from "../../../../public/images/nanofrax_mesotherapy.jpeg";
+import nanofrax_mesotherapy_2 from "../../../../public/images/nanofrax_mesotherapy_2.jpg";
+
 import {
   nanofraxMesotherapyDataPL,
   nanofraxMesotherapyDataENG,
@@ -184,7 +186,12 @@ export default function NanofraxMesotherapyView() {
             </Box>
           </Grid>
         </Grid>
-        <Grid size={12} container p={1} alignItems={"center"}>
+        <Grid
+          size={12}
+          container
+          p={1}
+          alignItems={downMd ? "flex-start" : "stretch"}
+        >
           <Grid size={downMd ? 12 : 4}>
             <Box
               component="img"
@@ -234,6 +241,90 @@ export default function NanofraxMesotherapyView() {
                   : nanofraxMesotherapyDataENG.causesOfEfficiency}
               </Typography>
             </Grid>
+          </Grid>
+        </Grid>
+        <Grid size={12}>
+          <Divider />
+        </Grid>
+        <Grid
+          size={12}
+          container
+          direction={"row"}
+          alignItems={"stretch"}
+          height={"max-content"}
+        >
+          <Grid
+            size={downMd ? 12 : 8}
+            display="flex"
+            flexDirection={"column"}
+            rowGap={2}
+            justifyContent={downMd ? "flex-start" : "space-between"}
+          >
+            <Typography
+              variant={downMd ? "body1" : "h6"}
+              textAlign="left"
+              sx={{ fontWeight: "200" }}
+              width={"100%"}
+              fontStyle="italic"
+            >
+              {language.webLanguage === "PL"
+                ? "JAK PRZEBIEGA ZABIEG?"
+                : "HOW DOES THE TREATMENT WORK?"}
+            </Typography>
+            {language.webLanguage === "PL" &&
+              nanofraxMesotherapyDataPL.courseOfTreatment.map(
+                (indication, index) => (
+                  <React.Fragment key={index}>
+                    <Typography
+                      variant={downMd ? "body2" : "body1"}
+                      textAlign="left"
+                      width="100%"
+                    >
+                      {index + 1}. {indication.title}
+                    </Typography>
+                    <Typography
+                      variant={downMd ? "body2" : "body1"}
+                      textAlign="left"
+                      width="100%"
+                      fontWeight={300}
+                    >
+                      {indication.description}
+                    </Typography>
+                  </React.Fragment>
+                )
+              )}
+            {language.webLanguage === "ENG" &&
+              nanofraxMesotherapyDataENG.courseOfTreatment.map(
+                (indication, index) => (
+                  <React.Fragment key={index}>
+                    <Typography
+                      variant={downMd ? "body2" : "body1"}
+                      textAlign="left"
+                      width="100%"
+                    >
+                      {index + 1}. {indication.title}
+                    </Typography>
+                    <Typography
+                      variant={downMd ? "body2" : "body1"}
+                      textAlign="left"
+                      width="100%"
+                      fontWeight={300}
+                    >
+                      {indication.description}
+                    </Typography>
+                  </React.Fragment>
+                )
+              )}
+          </Grid>
+          <Grid size={downMd ? 12 : 4}>
+            <Box
+              component="img"
+              sx={{
+                height: downMd ? "auto" : "100%",
+                width: "auto",
+              }}
+              src={nanofrax_mesotherapy_2}
+            />
           </Grid>
         </Grid>
         <Grid size={12}>
@@ -413,66 +504,6 @@ export default function NanofraxMesotherapyView() {
             <Divider />
           </Grid>
 
-          <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
-            <Typography
-              variant={downMd ? "body1" : "h6"}
-              textAlign="left"
-              sx={{ fontWeight: "200" }}
-              width={"100%"}
-              fontStyle="italic"
-            >
-              {language.webLanguage === "PL"
-                ? "JAK PRZEBIEGA ZABIEG?"
-                : "HOW DOES THE TREATMENT WORK?"}
-            </Typography>
-            {language.webLanguage === "PL" &&
-              nanofraxMesotherapyDataPL.courseOfTreatment.map(
-                (indication, index) => (
-                  <React.Fragment key={index}>
-                    <Typography
-                      variant={downMd ? "body2" : "body1"}
-                      textAlign="left"
-                      width="100%"
-                    >
-                      {index + 1}. {indication.title}
-                    </Typography>
-                    <Typography
-                      variant={downMd ? "body2" : "body1"}
-                      textAlign="left"
-                      width="100%"
-                      fontWeight={300}
-                    >
-                      {indication.description}
-                    </Typography>
-                  </React.Fragment>
-                )
-              )}
-            {language.webLanguage === "ENG" &&
-              nanofraxMesotherapyDataENG.courseOfTreatment.map(
-                (indication, index) => (
-                  <React.Fragment key={index}>
-                    <Typography
-                      variant={downMd ? "body2" : "body1"}
-                      textAlign="left"
-                      width="100%"
-                    >
-                      {index + 1}. {indication.title}
-                    </Typography>
-                    <Typography
-                      variant={downMd ? "body2" : "body1"}
-                      textAlign="left"
-                      width="100%"
-                      fontWeight={300}
-                    >
-                      {indication.description}
-                    </Typography>
-                  </React.Fragment>
-                )
-              )}
-          </Grid>
-          <Grid size={12}>
-            <Divider />
-          </Grid>
           <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
             <Typography
               variant={downMd ? "body1" : "h6"}

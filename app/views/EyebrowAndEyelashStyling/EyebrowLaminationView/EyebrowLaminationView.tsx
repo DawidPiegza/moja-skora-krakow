@@ -21,6 +21,8 @@ import RepeatIcon from "@mui/icons-material/Repeat";
 import EventRepeatIcon from "@mui/icons-material/EventRepeat";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import eyebrow_lamination from "../../../../public/images/eyebrow_lamination.png";
+import eyebrow_lamination_2 from "../../../../public/images/eyebrow_lamination_2.png";
+
 import {
   eyebrowLaminationDataPL,
   eyebrowLaminationDataEN,
@@ -192,13 +194,13 @@ export default function EyebrowLaminationView() {
             </Box>
           </Grid>
         </Grid>
-        <Grid size={12} container p={1} alignItems={"center"}>
+        <Grid size={12} container p={1} alignItems={"stretch"}>
           <Grid size={downMd ? 12 : 4}>
             <Box
               component="img"
               sx={{
-                height: "100%",
-                width: "100%",
+                height: downMd ? "auto" : "100%",
+                width: "auto",
               }}
               src={eyebrow_lamination}
             />
@@ -259,6 +261,117 @@ export default function EyebrowLaminationView() {
             </Grid>
           </Grid>
         </Grid>
+        <Grid size={12}>
+          <Divider />
+        </Grid>
+        <Grid size={12} container alignItems={"stretch"}>
+          <Grid size={downMd ? 12 : 8} p={1} container spacing={3}>
+            <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
+              <Typography
+                variant={downMd ? "body1" : "h6"}
+                textAlign="left"
+                sx={{ fontWeight: "200" }}
+                width={"100%"}
+                fontStyle="italic"
+              >
+                {language.webLanguage === "PL"
+                  ? "ZALECENIA POZABIEGOWE"
+                  : "POST-TREATMENT RECOMMENDATIONS"}
+              </Typography>
+              {language.webLanguage === "PL" &&
+                eyebrowLaminationDataPL.postTreatmentRecommendations.map(
+                  (recommendation, index) => (
+                    <React.Fragment key={index}>
+                      <Typography
+                        variant={downMd ? "body2" : "body1"}
+                        textAlign="left"
+                        width="100%"
+                      >
+                        - {recommendation}
+                      </Typography>
+                    </React.Fragment>
+                  )
+                )}
+              {language.webLanguage === "ENG" &&
+                eyebrowLaminationDataEN.postTreatmentRecommendations.map(
+                  (recommendation, index) => (
+                    <React.Fragment key={index}>
+                      <Typography
+                        variant={downMd ? "body2" : "body1"}
+                        textAlign="left"
+                        width="100%"
+                      >
+                        - {recommendation}
+                      </Typography>
+                    </React.Fragment>
+                  )
+                )}
+            </Grid>
+            <Grid size={12}>
+              <Divider />
+            </Grid>
+            <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
+              <Typography
+                variant={downMd ? "body1" : "h6"}
+                textAlign="left"
+                sx={{ fontWeight: "200" }}
+                width={"100%"}
+                fontStyle="italic"
+              >
+                {language.webLanguage === "PL"
+                  ? "CZYM JEST BOTOX BRWI?"
+                  : "WHAT IS EYEBROW BOTOX?"}
+              </Typography>
+              <Typography
+                variant={downMd ? "body2" : "body1"}
+                textAlign="left"
+                width={"100%"}
+                gutterBottom
+              >
+                {language.webLanguage === "PL"
+                  ? eyebrowLaminationDataPL.eyebrowBotoxDescription
+                  : eyebrowLaminationDataEN.eyebrowBotoxDescription}
+              </Typography>
+            </Grid>
+            <Grid size={12}>
+              <Divider />
+            </Grid>
+            <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
+              <Typography
+                variant={downMd ? "body1" : "h6"}
+                textAlign="left"
+                sx={{ fontWeight: "200" }}
+                width={"100%"}
+                fontStyle="italic"
+              >
+                {language.webLanguage === "PL"
+                  ? "JAK DŁUGO UTRZYMUJĄ SIĘ EFEKTY?"
+                  : "HOW LONG DO THE EFFECTS LAST?"}
+              </Typography>
+
+              <Typography
+                variant={downMd ? "body2" : "body1"}
+                textAlign="left"
+                width="100%"
+              >
+                {language.webLanguage === "PL"
+                  ? eyebrowLaminationDataPL.constancyOfResults
+                  : eyebrowLaminationDataEN.constancyOfResults}
+              </Typography>
+            </Grid>
+          </Grid>
+          <Grid size={downMd ? 12 : 4}>
+            <Box
+              component="img"
+              sx={{
+                height: downMd ? "auto" : "100%",
+                width: "auto",
+              }}
+              src={eyebrow_lamination_2}
+            />
+          </Grid>
+        </Grid>
+
         <Grid size={12}>
           <Divider />
         </Grid>
@@ -366,102 +479,7 @@ export default function EyebrowLaminationView() {
           <Grid size={12}>
             <Divider />
           </Grid>
-          <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
-            <Typography
-              variant={downMd ? "body1" : "h6"}
-              textAlign="left"
-              sx={{ fontWeight: "200" }}
-              width={"100%"}
-              fontStyle="italic"
-            >
-              {language.webLanguage === "PL"
-                ? "ZALECENIA POZABIEGOWE"
-                : "POST-TREATMENT RECOMMENDATIONS"}
-            </Typography>
-            {language.webLanguage === "PL" &&
-              eyebrowLaminationDataPL.postTreatmentRecommendations.map(
-                (recommendation, index) => (
-                  <React.Fragment key={index}>
-                    <Typography
-                      variant={downMd ? "body2" : "body1"}
-                      textAlign="left"
-                      width="100%"
-                    >
-                      - {recommendation}
-                    </Typography>
-                  </React.Fragment>
-                )
-              )}
-            {language.webLanguage === "ENG" &&
-              eyebrowLaminationDataEN.postTreatmentRecommendations.map(
-                (recommendation, index) => (
-                  <React.Fragment key={index}>
-                    <Typography
-                      variant={downMd ? "body2" : "body1"}
-                      textAlign="left"
-                      width="100%"
-                    >
-                      - {recommendation}
-                    </Typography>
-                  </React.Fragment>
-                )
-              )}
-          </Grid>
-          <Grid size={12}>
-            <Divider />
-          </Grid>
-          <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
-            <Typography
-              variant={downMd ? "body1" : "h6"}
-              textAlign="left"
-              sx={{ fontWeight: "200" }}
-              width={"100%"}
-              fontStyle="italic"
-            >
-              {language.webLanguage === "PL"
-                ? "CZYM JEST BOTOX BRWI?"
-                : "WHAT IS EYEBROW BOTOX?"}
-            </Typography>
-            <Typography
-              variant={downMd ? "body2" : "body1"}
-              textAlign="left"
-              width={"100%"}
-              gutterBottom
-            >
-              {language.webLanguage === "PL"
-                ? eyebrowLaminationDataPL.eyebrowBotoxDescription
-                : eyebrowLaminationDataEN.eyebrowBotoxDescription}
-            </Typography>
-          </Grid>
-          <Grid size={12}>
-            <Divider />
-          </Grid>
-          <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
-            <Typography
-              variant={downMd ? "body1" : "h6"}
-              textAlign="left"
-              sx={{ fontWeight: "200" }}
-              width={"100%"}
-              fontStyle="italic"
-            >
-              {language.webLanguage === "PL"
-                ? "JAK DŁUGO UTRZYMUJĄ SIĘ EFEKTY?"
-                : "HOW LONG DO THE EFFECTS LAST?"}
-            </Typography>
 
-            <Typography
-              variant={downMd ? "body2" : "body1"}
-              textAlign="left"
-              width="100%"
-            >
-              {language.webLanguage === "PL"
-                ? eyebrowLaminationDataPL.constancyOfResults
-                : eyebrowLaminationDataEN.constancyOfResults}
-            </Typography>
-          </Grid>
-          <Grid size={12}>
-            <Divider />
-          </Grid>
           <Grid size={12} container spacing={2}>
             <Grid size={12}>
               <Typography

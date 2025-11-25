@@ -38,6 +38,7 @@ import {
   pernamentEyebrowMakeupDataEN,
 } from "./data/pernamentEyebrowMakeupData";
 import permanent_eyebrow_makeup from "../../../../public/images/permanent_eyebrow_makeup.jpg";
+import permanent_eyebrow_makeup_2 from "../../../../public/images/permanent_eyebrow_makeup_2.png";
 
 export default function PermanentEyebrowMakeupView() {
   const { language } = React.useContext(WebsiteLanguageContext);
@@ -199,12 +200,12 @@ export default function PermanentEyebrowMakeupView() {
             </Box>
           </Grid>
         </Grid>
-        <Grid size={12} container p={1} alignItems={"center"}>
+        <Grid size={12} container p={1} alignItems={"stretch"}>
           <Grid size={downMd ? 12 : 4}>
             <Box
               component="img"
               sx={{
-                height: "auto",
+                height: downMd ? "auto" : "100%",
                 width: "auto",
               }}
               src={permanent_eyebrow_makeup}
@@ -266,6 +267,101 @@ export default function PermanentEyebrowMakeupView() {
             </Grid>
           </Grid>
         </Grid>
+        <Grid size={12}>
+          <Divider />
+        </Grid>
+        <Grid
+          size={12}
+          container
+          sx={{
+            alignItems: downMd ? "flex-start" : "stretch",
+          }}
+        >
+          <Grid
+            size={downMd ? 12 : 8}
+            p={1}
+            container
+            spacing={3}
+            alignItems={"flex-start"}
+          >
+            <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
+              <Typography
+                variant={downMd ? "body1" : "h6"}
+                textAlign="left"
+                sx={{ fontWeight: "200" }}
+                width={"100%"}
+                fontStyle="italic"
+              >
+                {language.webLanguage === "PL"
+                  ? "JAK PRZYGOTOWAĆ SIĘ DO ZABIEGU?"
+                  : "HOW TO PREPARE FOR THE PROCEDURE?"}
+              </Typography>
+              {language.webLanguage === "PL" &&
+                pernamentEyebrowMakeupDataPL.preparationForTreatment.map(
+                  (preparation, index) => (
+                    <Typography
+                      variant={downMd ? "body2" : "body1"}
+                      textAlign="left"
+                      width="100%"
+                      key={index}
+                    >
+                      - {preparation}
+                    </Typography>
+                  )
+                )}
+              {language.webLanguage === "ENG" &&
+                pernamentEyebrowMakeupDataEN.preparationForTreatment.map(
+                  (preparation, index) => (
+                    <Typography
+                      variant={downMd ? "body2" : "body1"}
+                      textAlign="left"
+                      width="100%"
+                      key={index}
+                    >
+                      - {preparation}
+                    </Typography>
+                  )
+                )}
+            </Grid>
+            <Grid size={12}>
+              <Divider />
+            </Grid>
+            <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
+              <Typography
+                variant={downMd ? "body1" : "h6"}
+                textAlign="left"
+                sx={{ fontWeight: "200" }}
+                width={"100%"}
+                fontStyle="italic"
+              >
+                {language.webLanguage === "PL"
+                  ? "JAK CZĘSTO POWTARZAĆ ZABIEG?"
+                  : "HOW OFTEN TO REPEAT THE TREATMENT?"}
+              </Typography>
+
+              <Typography
+                variant={downMd ? "body2" : "body1"}
+                textAlign="left"
+                width="100%"
+              >
+                {language.webLanguage === "PL"
+                  ? pernamentEyebrowMakeupDataPL.treatmentCycles
+                  : pernamentEyebrowMakeupDataEN.treatmentCycles}
+              </Typography>
+            </Grid>
+          </Grid>
+          <Grid size={downMd ? 12 : 4}>
+            <Box
+              component="img"
+              sx={{
+                height: downMd ? "auto" : "100%",
+                width: "auto",
+              }}
+              src={permanent_eyebrow_makeup_2}
+            />
+          </Grid>
+        </Grid>
+
         <Grid size={12}>
           <Divider />
         </Grid>
@@ -380,48 +476,6 @@ export default function PermanentEyebrowMakeupView() {
               fontStyle="italic"
             >
               {language.webLanguage === "PL"
-                ? "JAK PRZYGOTOWAĆ SIĘ DO ZABIEGU?"
-                : "HOW TO PREPARE FOR THE PROCEDURE?"}
-            </Typography>
-            {language.webLanguage === "PL" &&
-              pernamentEyebrowMakeupDataPL.preparationForTreatment.map(
-                (preparation, index) => (
-                  <Typography
-                    variant={downMd ? "body2" : "body1"}
-                    textAlign="left"
-                    width="100%"
-                    key={index}
-                  >
-                    - {preparation}
-                  </Typography>
-                )
-              )}
-            {language.webLanguage === "ENG" &&
-              pernamentEyebrowMakeupDataEN.preparationForTreatment.map(
-                (preparation, index) => (
-                  <Typography
-                    variant={downMd ? "body2" : "body1"}
-                    textAlign="left"
-                    width="100%"
-                    key={index}
-                  >
-                    - {preparation}
-                  </Typography>
-                )
-              )}
-          </Grid>
-          <Grid size={12}>
-            <Divider />
-          </Grid>
-          <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
-            <Typography
-              variant={downMd ? "body1" : "h6"}
-              textAlign="left"
-              sx={{ fontWeight: "200" }}
-              width={"100%"}
-              fontStyle="italic"
-            >
-              {language.webLanguage === "PL"
                 ? "JAK PRZEBIEGA ZABIEG?"
                 : "HOW DOES THE TREATMENT WORK?"}
             </Typography>
@@ -512,32 +566,7 @@ export default function PermanentEyebrowMakeupView() {
                 )
               )}
           </Grid>
-          <Grid size={12}>
-            <Divider />
-          </Grid>
-          <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
-            <Typography
-              variant={downMd ? "body1" : "h6"}
-              textAlign="left"
-              sx={{ fontWeight: "200" }}
-              width={"100%"}
-              fontStyle="italic"
-            >
-              {language.webLanguage === "PL"
-                ? "JAK CZĘSTO POWTARZAĆ ZABIEG?"
-                : "HOW OFTEN TO REPEAT THE TREATMENT?"}
-            </Typography>
 
-            <Typography
-              variant={downMd ? "body2" : "body1"}
-              textAlign="left"
-              width="100%"
-            >
-              {language.webLanguage === "PL"
-                ? pernamentEyebrowMakeupDataPL.treatmentCycles
-                : pernamentEyebrowMakeupDataEN.treatmentCycles}
-            </Typography>
-          </Grid>
           <Grid size={12}>
             <Divider />
           </Grid>

@@ -21,10 +21,8 @@ import RepeatIcon from "@mui/icons-material/Repeat";
 import EventRepeatIcon from "@mui/icons-material/EventRepeat";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import permanent_lip_makeup_effect_0 from "../../../../public/images/permanent_lip_makeup_effect_0.png";
-import permanent_lip_makeup_effect_1 from "../../../../public/images/permanent_lip_makeup_effect_1.jpg";
 import permanent_lip_makeup_effect_3 from "../../../../public/images/permanent_lip_makeup_effect_3.jpg";
 import permanent_lip_makeup_effect_4 from "../../../../public/images/permanent_lip_makeup_effect_4.jpg";
-
 import permanent_lip_makeup_effect_11 from "../../../../public/images/permanent_lip_makeup_effect_11.png";
 import permanent_lip_makeup_effect_2 from "../../../../public/images/permanent_lip_makeup_effect_2.png";
 import permanent_lip_makeup_effect_5 from "../../../../public/images/permanent_lip_makeup_effect_5.png";
@@ -32,6 +30,7 @@ import permanent_lip_makeup_effect_6 from "../../../../public/images/permanent_l
 import permanent_lip_makeup_effect_7 from "../../../../public/images/permanent_lip_makeup_effect_7.png";
 import permanent_lip_makeup_effect_8 from "../../../../public/images/permanent_lip_makeup_effect_8.png";
 import permanent_lip_makeup from "../../../../public/images/permanent_lip_makeup.png";
+import permanent_lip_makeup_2 from "../../../../public/images/permanent_lip_makeup_2.png";
 
 import {
   permanentLipMakeupDataPL,
@@ -198,12 +197,12 @@ export default function PermanentLipMakeupView() {
             </Box>
           </Grid>
         </Grid>
-        <Grid size={12} container p={1} alignItems={"center"}>
+        <Grid size={12} container p={1} alignItems={"stretch"}>
           <Grid size={downMd ? 12 : 4}>
             <Box
               component="img"
               sx={{
-                height: "auto",
+                height: downMd ? "auto" : "100%",
                 width: "auto",
               }}
               src={permanent_lip_makeup}
@@ -264,6 +263,78 @@ export default function PermanentLipMakeupView() {
                 )}
             </Grid>
           </Grid>
+        </Grid>
+        <Grid size={12}>
+          <Divider />
+        </Grid>
+        <Grid
+          size={8}
+          display="flex"
+          flexDirection={"column"}
+          rowGap={2}
+          justifyContent={"space-between"}
+        >
+          <Typography
+            variant={downMd ? "body1" : "h6"}
+            textAlign="left"
+            sx={{ fontWeight: "200" }}
+            width={"100%"}
+            fontStyle="italic"
+          >
+            {language.webLanguage === "PL"
+              ? "JAK PRZEBIEGA ZABIEG?"
+              : "HOW DOES THE TREATMENT WORK?"}
+          </Typography>
+          {language.webLanguage === "PL" &&
+            permanentLipMakeupDataPL.courseOfTreatment.map((item, index) => (
+              <React.Fragment key={index}>
+                <Typography
+                  variant={downMd ? "body2" : "body1"}
+                  textAlign="left"
+                  width="100%"
+                >
+                  {index + 1}. {item.title}
+                </Typography>
+                <Typography
+                  variant={downMd ? "body2" : "body1"}
+                  textAlign="left"
+                  width="100%"
+                  fontWeight={300}
+                >
+                  {item.description}
+                </Typography>
+              </React.Fragment>
+            ))}
+          {language.webLanguage === "ENG" &&
+            permanentLipMakeupDataEN.courseOfTreatment.map((item, index) => (
+              <React.Fragment key={index}>
+                <Typography
+                  variant={downMd ? "body2" : "body1"}
+                  textAlign="left"
+                  width="100%"
+                >
+                  {index + 1}. {item.title}
+                </Typography>
+                <Typography
+                  variant={downMd ? "body2" : "body1"}
+                  textAlign="left"
+                  width="100%"
+                  fontWeight={300}
+                >
+                  {item.description}
+                </Typography>
+              </React.Fragment>
+            ))}
+        </Grid>
+        <Grid size={downMd ? 12 : 4}>
+          <Box
+            component="img"
+            sx={{
+              height: downMd ? "auto" : "100%",
+              width: "auto",
+            }}
+            src={permanent_lip_makeup_2}
+          />
         </Grid>
         <Grid size={12}>
           <Divider />
@@ -366,62 +437,6 @@ export default function PermanentLipMakeupView() {
                   </Typography>
                 )
               )}
-          </Grid>
-          <Grid size={12}>
-            <Divider />
-          </Grid>
-          <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
-            <Typography
-              variant={downMd ? "body1" : "h6"}
-              textAlign="left"
-              sx={{ fontWeight: "200" }}
-              width={"100%"}
-              fontStyle="italic"
-            >
-              {language.webLanguage === "PL"
-                ? "JAK PRZEBIEGA ZABIEG?"
-                : "HOW DOES THE TREATMENT WORK?"}
-            </Typography>
-            {language.webLanguage === "PL" &&
-              permanentLipMakeupDataPL.courseOfTreatment.map((item, index) => (
-                <React.Fragment key={index}>
-                  <Typography
-                    variant={downMd ? "body2" : "body1"}
-                    textAlign="left"
-                    width="100%"
-                  >
-                    {index + 1}. {item.title}
-                  </Typography>
-                  <Typography
-                    variant={downMd ? "body2" : "body1"}
-                    textAlign="left"
-                    width="100%"
-                    fontWeight={300}
-                  >
-                    {item.description}
-                  </Typography>
-                </React.Fragment>
-              ))}
-            {language.webLanguage === "ENG" &&
-              permanentLipMakeupDataEN.courseOfTreatment.map((item, index) => (
-                <React.Fragment key={index}>
-                  <Typography
-                    variant={downMd ? "body2" : "body1"}
-                    textAlign="left"
-                    width="100%"
-                  >
-                    {index + 1}. {item.title}
-                  </Typography>
-                  <Typography
-                    variant={downMd ? "body2" : "body1"}
-                    textAlign="left"
-                    width="100%"
-                    fontWeight={300}
-                  >
-                    {item.description}
-                  </Typography>
-                </React.Fragment>
-              ))}
           </Grid>
           <Grid size={12}>
             <Divider />
