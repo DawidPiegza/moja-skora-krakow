@@ -20,7 +20,9 @@ import GoogleIcon from "@mui/icons-material/Google";
 import RepeatIcon from "@mui/icons-material/Repeat";
 import EventRepeatIcon from "@mui/icons-material/EventRepeat";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
-import laser_removal from "../../../../public/images/laser_removal.png";
+import laser_removal_1 from "../../../../public/images/laser_removal_1.jpg";
+import laser_removal_2 from "../../../../public/images/laser_removal_2.jpg";
+
 import laser_removal_effect_0 from "../../../../public/images/laser_removal_effect_0.png";
 import laser_removal_effect_1 from "../../../../public/images/laser_removal_effect_1.png";
 import laser_removal_effect_2 from "../../../../public/images/laser_removal_effect_2.png";
@@ -199,18 +201,18 @@ export default function LipAugmentationAndContouringView() {
             </Box>
           </Grid>
         </Grid>
-        <Grid size={12} container p={1} alignItems={"center"}>
+        <Grid size={12} container p={1} alignItems={"stretch"}>
           <Grid size={downMd ? 12 : 4}>
             <Box
               component="img"
               sx={{
-                height: "100%",
-                width: "100%",
+                height: downMd ? "auto" : "100%",
+                width: "auto",
               }}
-              src={laser_removal}
+              src={laser_removal_1}
             />
           </Grid>
-          <Grid size={downMd ? 12 : 8} p={1} container spacing={3}>
+          <Grid size={downMd ? 12 : 8} p={1} container spacing={2}>
             <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
               <Typography
                 variant={downMd ? "body2" : "body1"}
@@ -266,72 +268,123 @@ export default function LipAugmentationAndContouringView() {
                   )
                 )}
             </Grid>
+            <Grid size={12}>
+              <Divider />
+            </Grid>
+            <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
+              <Typography
+                variant={downMd ? "body1" : "h6"}
+                textAlign="left"
+                sx={{ fontWeight: "200" }}
+                width={"100%"}
+                fontStyle="italic"
+              >
+                {language.webLanguage === "PL"
+                  ? "ZALECENIA POZABIEGOWE"
+                  : "POST-TREATMENT RECOMMENDATIONS"}
+              </Typography>
+              {language.webLanguage === "PL" &&
+                laserRemovalOfPermanentMakeupAndTattoosPL.postTreatmentRecommendations.map(
+                  (care, index) => (
+                    <Typography
+                      variant={downMd ? "body2" : "body1"}
+                      textAlign="left"
+                      width="100%"
+                      key={index}
+                    >
+                      - {care}
+                    </Typography>
+                  )
+                )}
+              {language.webLanguage !== "PL" &&
+                laserRemovalOfPermanentMakeupAndTattoosEN.postTreatmentRecommendations.map(
+                  (care, index) => (
+                    <Typography
+                      variant={downMd ? "body2" : "body1"}
+                      textAlign="left"
+                      width="100%"
+                      key={index}
+                    >
+                      - {care}
+                    </Typography>
+                  )
+                )}
+            </Grid>
           </Grid>
         </Grid>
         <Grid size={12}>
           <Divider />
         </Grid>
-        <Grid size={12} p={1} container spacing={3}>
-          <Grid
-            size={downMd ? 12 : 5}
-            display="flex"
-            flexDirection={"column"}
-            rowGap={2}
+        <Grid
+          size={downMd ? 12 : 7}
+          display="flex"
+          flexDirection={"column"}
+          rowGap={2}
+        >
+          <Typography
+            variant={downMd ? "body1" : "h6"}
+            textAlign="left"
+            sx={{ fontWeight: "200" }}
+            width={"100%"}
+            fontStyle="italic"
           >
-            <Typography
-              variant={downMd ? "body1" : "h6"}
-              textAlign="left"
-              sx={{ fontWeight: "200" }}
-              width={"100%"}
-              fontStyle="italic"
-            >
-              {language.webLanguage === "PL"
-                ? "PRZECIWWSKAZANIA DO ZABIEGU"
-                : "CONTRAINDICATIONS TO THE TREATMENT"}
-            </Typography>
-            {language.webLanguage === "PL" &&
-              laserRemovalOfPermanentMakeupAndTattoosPL.contraindications.map(
-                (contrindication, index) => (
-                  <Typography
-                    variant={downMd ? "body2" : "body1"}
-                    textAlign="left"
-                    width="100%"
-                    key={index}
-                  >
-                    - {contrindication}
-                  </Typography>
-                )
-              )}
-            {language.webLanguage === "ENG" &&
-              laserRemovalOfPermanentMakeupAndTattoosEN.contraindications.map(
-                (contrindication, index) => (
-                  <Typography
-                    variant={downMd ? "body2" : "body1"}
-                    textAlign="left"
-                    width="100%"
-                    key={index}
-                  >
-                    - {contrindication}
-                  </Typography>
-                )
-              )}
+            {language.webLanguage === "PL"
+              ? "PRZECIWWSKAZANIA DO ZABIEGU"
+              : "CONTRAINDICATIONS TO THE TREATMENT"}
+          </Typography>
+          {language.webLanguage === "PL" &&
+            laserRemovalOfPermanentMakeupAndTattoosPL.contraindications.map(
+              (contrindication, index) => (
+                <Typography
+                  variant={downMd ? "body2" : "body1"}
+                  textAlign="left"
+                  width="100%"
+                  key={index}
+                >
+                  - {contrindication}
+                </Typography>
+              )
+            )}
+          {language.webLanguage === "ENG" &&
+            laserRemovalOfPermanentMakeupAndTattoosEN.contraindications.map(
+              (contrindication, index) => (
+                <Typography
+                  variant={downMd ? "body2" : "body1"}
+                  textAlign="left"
+                  width="100%"
+                  key={index}
+                >
+                  - {contrindication}
+                </Typography>
+              )
+            )}
+        </Grid>
+        {!downMd && (
+          <Grid size={1} display={"flex"} justifyContent={"center"}>
+            <Divider orientation="vertical" />
           </Grid>
-          {downMd && (
-            <Grid size={12}>
-              <Divider />
-            </Grid>
-          )}
-          {!downMd && (
-            <Grid size={2} display={"flex"} justifyContent={"center"}>
-              <Divider orientation="vertical" />
-            </Grid>
-          )}
-          <Grid
-            size={downMd ? 12 : 5}
-            display="flex"
-            flexDirection={"column"}
-            rowGap={2}
-          >
+        )}
+
+        <Grid
+          size={downMd ? 12 : 4}
+          container
+          direction={"column"}
+          sx={{
+            justifyContent: "flex-start",
+            alignItems: "center",
+          }}
+        >
+          <Grid size={12}>
+            <Box
+              component="img"
+              sx={{
+                height: "auto",
+                width: "auto",
+              }}
+              src={laser_removal_2}
+            />
+          </Grid>
+          <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
             <Typography
               variant={downMd ? "body1" : "h6"}
               textAlign="left"
@@ -370,108 +423,69 @@ export default function LipAugmentationAndContouringView() {
                 )
               )}
           </Grid>
-          <Grid size={12}>
-            <Divider />
-          </Grid>
-          <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
-            <Typography
-              variant={downMd ? "body1" : "h6"}
-              textAlign="left"
-              sx={{ fontWeight: "200" }}
-              width={"100%"}
-              fontStyle="italic"
-            >
-              {language.webLanguage === "PL"
-                ? "JAK PRZEBIEGA ZABIEG?"
-                : "HOW DOES THE TREATMENT WORK?"}
-            </Typography>
-            {language.webLanguage === "PL" &&
-              laserRemovalOfPermanentMakeupAndTattoosPL.courseOfTreatment.map(
-                (item, index) => (
-                  <React.Fragment key={index}>
-                    <Typography
-                      variant={downMd ? "body2" : "body1"}
-                      textAlign="left"
-                      width="100%"
-                    >
-                      {index + 1}. {item.title}
-                    </Typography>
-                    <Typography
-                      variant={downMd ? "body2" : "body1"}
-                      textAlign="left"
-                      width="100%"
-                      fontWeight={300}
-                    >
-                      {item.description}
-                    </Typography>
-                  </React.Fragment>
-                )
-              )}
-            {language.webLanguage === "ENG" &&
-              laserRemovalOfPermanentMakeupAndTattoosEN.courseOfTreatment.map(
-                (item, index) => (
-                  <React.Fragment key={index}>
-                    <Typography
-                      variant={downMd ? "body2" : "body1"}
-                      textAlign="left"
-                      width="100%"
-                    >
-                      {index + 1}. {item.title}
-                    </Typography>
-                    <Typography
-                      variant={downMd ? "body2" : "body1"}
-                      textAlign="left"
-                      width="100%"
-                      fontWeight={300}
-                    >
-                      {item.description}
-                    </Typography>
-                  </React.Fragment>
-                )
-              )}
-          </Grid>
-          <Grid size={12}>
-            <Divider />
-          </Grid>
-          <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
-            <Typography
-              variant={downMd ? "body1" : "h6"}
-              textAlign="left"
-              sx={{ fontWeight: "200" }}
-              width={"100%"}
-              fontStyle="italic"
-            >
-              {language.webLanguage === "PL"
-                ? "ZALECENIA POZABIEGOWE"
-                : "POST-TREATMENT RECOMMENDATIONS"}
-            </Typography>
-            {language.webLanguage === "PL" &&
-              laserRemovalOfPermanentMakeupAndTattoosPL.postTreatmentRecommendations.map(
-                (care, index) => (
+        </Grid>
+
+        <Grid size={12}>
+          <Divider />
+        </Grid>
+        <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
+          <Typography
+            variant={downMd ? "body1" : "h6"}
+            textAlign="left"
+            sx={{ fontWeight: "200" }}
+            width={"100%"}
+            fontStyle="italic"
+          >
+            {language.webLanguage === "PL"
+              ? "JAK PRZEBIEGA ZABIEG?"
+              : "HOW DOES THE TREATMENT WORK?"}
+          </Typography>
+          {language.webLanguage === "PL" &&
+            laserRemovalOfPermanentMakeupAndTattoosPL.courseOfTreatment.map(
+              (item, index) => (
+                <React.Fragment key={index}>
                   <Typography
                     variant={downMd ? "body2" : "body1"}
                     textAlign="left"
                     width="100%"
-                    key={index}
                   >
-                    - {care}
+                    {index + 1}. {item.title}
                   </Typography>
-                )
-              )}
-            {language.webLanguage !== "PL" &&
-              laserRemovalOfPermanentMakeupAndTattoosEN.postTreatmentRecommendations.map(
-                (care, index) => (
                   <Typography
                     variant={downMd ? "body2" : "body1"}
                     textAlign="left"
                     width="100%"
-                    key={index}
+                    fontWeight={300}
                   >
-                    - {care}
+                    {item.description}
                   </Typography>
-                )
-              )}
-          </Grid>
+                </React.Fragment>
+              )
+            )}
+          {language.webLanguage === "ENG" &&
+            laserRemovalOfPermanentMakeupAndTattoosEN.courseOfTreatment.map(
+              (item, index) => (
+                <React.Fragment key={index}>
+                  <Typography
+                    variant={downMd ? "body2" : "body1"}
+                    textAlign="left"
+                    width="100%"
+                  >
+                    {index + 1}. {item.title}
+                  </Typography>
+                  <Typography
+                    variant={downMd ? "body2" : "body1"}
+                    textAlign="left"
+                    width="100%"
+                    fontWeight={300}
+                  >
+                    {item.description}
+                  </Typography>
+                </React.Fragment>
+              )
+            )}
+        </Grid>
+        <Grid size={12} p={1} container spacing={3}>
           <Grid size={12}>
             <Divider />
           </Grid>

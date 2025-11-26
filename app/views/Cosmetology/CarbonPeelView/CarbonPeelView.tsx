@@ -20,7 +20,8 @@ import GoogleIcon from "@mui/icons-material/Google";
 import RepeatIcon from "@mui/icons-material/Repeat";
 import EventRepeatIcon from "@mui/icons-material/EventRepeat";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
-import carbon_peeling from "../../../../public/images/carbon_peeling.png";
+import carbon_peeling from "../../../../public/images/carbon_peeling.jpg";
+import carbon_peeling_2 from "../../../../public/images/carbon_peeling_2.jpg";
 import { carbonPeelDataPL, carbonPeelDataEN } from "./data/carbonPeelData";
 export default function CarbonPeelView() {
   const { language } = React.useContext(WebsiteLanguageContext);
@@ -180,7 +181,7 @@ export default function CarbonPeelView() {
             </Box>
           </Grid>
         </Grid>
-        <Grid size={12} container p={1} alignItems={"center"}>
+        <Grid size={12} container p={1} alignItems={"flex-start"}>
           <Grid size={downMd ? 12 : 4}>
             <Box
               component="img"
@@ -271,7 +272,7 @@ export default function CarbonPeelView() {
         </Grid>
         <Grid size={12} p={1} container spacing={3}>
           <Grid
-            size={downMd ? 12 : 5}
+            size={downMd ? 12 : 7}
             display="flex"
             flexDirection={"column"}
             rowGap={2}
@@ -311,60 +312,70 @@ export default function CarbonPeelView() {
                 </Typography>
               ))}
           </Grid>
-          {downMd && (
-            <Grid size={12}>
-              <Divider />
-            </Grid>
-          )}
           {!downMd && (
-            <Grid size={2} display={"flex"} justifyContent={"center"}>
+            <Grid size={1} display={"flex"} justifyContent={"center"}>
               <Divider orientation="vertical" />
             </Grid>
           )}
           <Grid
-            size={downMd ? 12 : 5}
-            display="flex"
-            flexDirection={"column"}
-            rowGap={2}
+            size={downMd ? 12 : 4}
+            container
+            direction={"column"}
+            sx={{
+              justifyContent: "flex-start",
+              alignItems: "center",
+            }}
           >
-            <Typography
-              variant={downMd ? "body1" : "h6"}
-              textAlign="left"
-              sx={{ fontWeight: "200" }}
-              width={"100%"}
-              fontStyle="italic"
-            >
-              {language.webLanguage === "PL"
-                ? "WSKAZANIA DO ZABIEGU"
-                : "INDICATIONS FOR THE TREATMENT"}
-            </Typography>
+            <Grid size={12}>
+              <Box
+                component="img"
+                sx={{
+                  height: "auto",
+                  width: "auto",
+                }}
+                src={carbon_peeling_2}
+              />
+            </Grid>
+            <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
+              <Typography
+                variant={downMd ? "body1" : "h6"}
+                textAlign="left"
+                sx={{ fontWeight: "200" }}
+                width={"100%"}
+                fontStyle="italic"
+              >
+                {language.webLanguage === "PL"
+                  ? "WSKAZANIA DO ZABIEGU"
+                  : "INDICATIONS FOR THE TREATMENT"}
+              </Typography>
 
-            {language.webLanguage === "PL" &&
-              carbonPeelDataPL.indicationsToTreatment.map(
-                (indication, index) => (
-                  <Typography
-                    variant={downMd ? "body2" : "body1"}
-                    textAlign="left"
-                    width="100%"
-                    key={index}
-                  >
-                    - {indication}
-                  </Typography>
-                )
-              )}
-            {language.webLanguage !== "PL" &&
-              carbonPeelDataEN.indicationsToTreatment.map(
-                (indication, index) => (
-                  <Typography
-                    variant={downMd ? "body2" : "body1"}
-                    textAlign="left"
-                    width="100%"
-                    key={index}
-                  >
-                    - {indication}
-                  </Typography>
-                )
-              )}
+              {language.webLanguage === "PL" &&
+                carbonPeelDataPL.indicationsToTreatment.map(
+                  (indication, index) => (
+                    <Typography
+                      variant={downMd ? "body2" : "body1"}
+                      textAlign="left"
+                      width="100%"
+                      key={index}
+                    >
+                      - {indication}
+                    </Typography>
+                  )
+                )}
+              {language.webLanguage !== "PL" &&
+                carbonPeelDataEN.indicationsToTreatment.map(
+                  (indication, index) => (
+                    <Typography
+                      variant={downMd ? "body2" : "body1"}
+                      textAlign="left"
+                      width="100%"
+                      key={index}
+                    >
+                      - {indication}
+                    </Typography>
+                  )
+                )}
+            </Grid>
           </Grid>
           <Grid size={12}>
             <Divider />

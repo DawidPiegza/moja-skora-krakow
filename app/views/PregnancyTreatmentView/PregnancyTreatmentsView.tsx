@@ -41,7 +41,7 @@ export default function PregnancyTreatmentsView() {
     {
       linkName: "Mezoterapia nanoigłowa NanoFrax",
       linkNameENG: "Nanofrax nano-needle mesotherapy",
-      url: "/cosmetology/nanofrax_mesotherapy",
+      url: "/cosmetology/nanofrax_nano_needle_mesotherapy",
     },
     {
       linkName: "Lifting rzęs",
