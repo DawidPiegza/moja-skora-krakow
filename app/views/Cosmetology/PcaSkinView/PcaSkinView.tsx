@@ -21,6 +21,8 @@ import RepeatIcon from "@mui/icons-material/Repeat";
 import EventRepeatIcon from "@mui/icons-material/EventRepeat";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import pca_skin from "../../../../public/images/pca_skin.png";
+import pca_skin_2 from "../../../../public/images/pca_skin_2.jpg";
+
 import { pcaSkinDataPL, pcaSkinDataEN } from "./data/pcaSkinData";
 import PcaSkinTreatmentTypeAccordion from "./components/PcaSkinTreatmentTypeAccordion/PcaSkinTreatmentTypeAccordion";
 import pca_skin_effect_0 from "../../../../public/images/pca_skin_effect_0.png";
@@ -197,12 +199,12 @@ export default function PcaSkinView() {
             </Box>
           </Grid>
         </Grid>
-        <Grid size={12} container p={1} alignItems={"center"}>
+        <Grid size={12} container p={1} alignItems={"stretch"}>
           <Grid size={downMd ? 12 : 4}>
             <Box
               component="img"
               sx={{
-                height: "auto",
+                height: downMd ? "auto" : "100%",
                 width: "auto",
               }}
               src={pca_skin}
@@ -268,7 +270,61 @@ export default function PcaSkinView() {
         <Grid size={12}>
           <Divider />
         </Grid>
+
         <Grid size={12} p={1} container spacing={3}>
+          <Grid
+            size={downMd ? 12 : 8}
+            display="flex"
+            flexDirection={"column"}
+            rowGap={2}
+          >
+            <Typography
+              variant={downMd ? "body1" : "h6"}
+              textAlign="left"
+              sx={{ fontWeight: "200" }}
+              width={"100%"}
+              fontStyle="italic"
+            >
+              {language.webLanguage === "PL"
+                ? "JAK PRZEBIEGA ZABIEG?"
+                : "HOW DOES THE TREATMENT WORK?"}
+            </Typography>
+            {language.webLanguage === "PL" &&
+              pcaSkinDataPL.basicStepsOfPcaSkinTreatment.map((step, index) => (
+                <Typography
+                  variant={downMd ? "body2" : "body1"}
+                  textAlign="left"
+                  width="100%"
+                  key={index}
+                >
+                  {`${index + 1}. ${step}`}
+                </Typography>
+              ))}
+            {language.webLanguage !== "PL" &&
+              pcaSkinDataEN.basicStepsOfPcaSkinTreatment.map((step, index) => (
+                <Typography
+                  variant={downMd ? "body2" : "body1"}
+                  textAlign="left"
+                  width="100%"
+                  key={index}
+                >
+                  {`${index + 1}. ${step}`}
+                </Typography>
+              ))}
+          </Grid>
+          <Grid size={downMd ? 12 : 4}>
+            <Box
+              component="img"
+              sx={{
+                height: downMd ? "auto" : "100%",
+                width: "auto",
+              }}
+              src={pca_skin_2}
+            />
+          </Grid>
+          <Grid size={12}>
+            <Divider />
+          </Grid>
           <Grid
             size={downMd ? 12 : 5}
             display="flex"
@@ -365,44 +421,7 @@ export default function PcaSkinView() {
           <Grid size={12}>
             <Divider />
           </Grid>
-          <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
-            <Typography
-              variant={downMd ? "body1" : "h6"}
-              textAlign="left"
-              sx={{ fontWeight: "200" }}
-              width={"100%"}
-              fontStyle="italic"
-            >
-              {language.webLanguage === "PL"
-                ? "JAK PRZEBIEGA ZABIEG?"
-                : "HOW DOES THE TREATMENT WORK?"}
-            </Typography>
-            {language.webLanguage === "PL" &&
-              pcaSkinDataPL.basicStepsOfPcaSkinTreatment.map((step, index) => (
-                <Typography
-                  variant={downMd ? "body2" : "body1"}
-                  textAlign="left"
-                  width="100%"
-                  key={index}
-                >
-                  {`${index + 1}. ${step}`}
-                </Typography>
-              ))}
-            {language.webLanguage !== "PL" &&
-              pcaSkinDataEN.basicStepsOfPcaSkinTreatment.map((step, index) => (
-                <Typography
-                  variant={downMd ? "body2" : "body1"}
-                  textAlign="left"
-                  width="100%"
-                  key={index}
-                >
-                  {`${index + 1}. ${step}`}
-                </Typography>
-              ))}
-          </Grid>
-          <Grid size={12}>
-            <Divider />
-          </Grid>
+
           <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
             <Typography
               variant={downMd ? "body1" : "h6"}
@@ -696,7 +715,7 @@ export default function PcaSkinView() {
           />
           <BottomNavigationAction
             component="a"
-            href="https://share.google/cZjmIrreCPS9W4K7i"
+            href="https://maps.app.goo.gl/DthUc2eKTyvEEHFN8?g_st=am"
             target="_blank"
             rel="noopener noreferrer"
             label="Google"

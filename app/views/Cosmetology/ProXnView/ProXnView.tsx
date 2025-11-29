@@ -18,7 +18,7 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import GoogleIcon from "@mui/icons-material/Google";
 import { proXnDataPL, proXnDataEN } from "./data/proXnData";
-import pro_xn from "../../../../public/images/pro_xn.png";
+import pro_xn from "../../../../public/images/pro_xn.jpg";
 import pro_xn_effect_0 from "../../../../public/images/pro_xn_effect_0.png";
 import pro_xn_effect_1 from "../../../../public/images/pro_xn_effect_1.png";
 import XanthohumolRecoveryTreatmentAccordion from "./components/XanthohumolRecoveryTreatmentAccordion/XanthohumolRecoveryTreatmentAccordion";

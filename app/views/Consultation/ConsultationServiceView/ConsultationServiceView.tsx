@@ -82,34 +82,39 @@ export default function ConsultationServiceView() {
             </Typography>
           </Grid>
         </Grid>
-        <Grid size={12} container p={1}>
-          <Grid size={downMd ? 12 : 6}>
-            <Box
-              component="img"
-              sx={{
-                height: "100%",
-                width: "100%",
-              }}
-              src={konsultacja_kosmetologiczna}
-            />
+        <Grid size={12} p={1} container spacing={3}>
+          <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
+            <Typography
+              variant={downMd ? "body2" : "body1"}
+              textAlign="left"
+              width={"100%"}
+              gutterBottom
+            >
+              {language.webLanguage === "PL"
+                ? consultationServiceData.pl.overview
+                : consultationServiceData.en.overview}
+            </Typography>
           </Grid>
-          <Grid size={downMd ? 12 : 6} p={1} container spacing={3}>
-            <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
-              <Typography
-                variant={downMd ? "body2" : "body1"}
-                textAlign="left"
-                width={"100%"}
-                gutterBottom
-              >
-                {language.webLanguage === "PL"
-                  ? consultationServiceData.pl.overview
-                  : consultationServiceData.en.overview}
-              </Typography>
+          <Grid size={12}>
+            <Divider />
+          </Grid>
+          <Grid size={12} container alignItems={"stretch"}>
+            <Grid size={downMd ? 12 : 4}>
+              <Box
+                component="img"
+                sx={{
+                  height: downMd ? "auto" : "100%",
+                  width: "auto",
+                }}
+                src={konsultacja_kosmetologiczna}
+              />
             </Grid>
-            <Grid size={12}>
-              <Divider />
-            </Grid>
-            <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
+            <Grid
+              size={downMd ? 12 : 8}
+              display="flex"
+              flexDirection={"column"}
+              rowGap={2}
+            >
               <Typography
                 variant={downMd ? "body1" : "h6"}
                 textAlign="left"
@@ -166,23 +171,24 @@ export default function ConsultationServiceView() {
                   )
                 )}
             </Grid>
-            <Grid size={12}>
-              <Divider />
-            </Grid>
-            <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
-              <Typography
-                variant={downMd ? "body1" : "h6"}
-                textAlign="left"
-                sx={{ fontWeight: "200" }}
-                width={"100%"}
-                fontStyle="italic"
-              >
-                {language.webLanguage === "PL" &&
-                  consultationServiceData.pl.consultationSummary}
-                {language.webLanguage === "ENG" &&
-                  consultationServiceData.en.consultationSummary}
-              </Typography>
-            </Grid>
+          </Grid>
+
+          <Grid size={12}>
+            <Divider />
+          </Grid>
+          <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
+            <Typography
+              variant={downMd ? "body1" : "h6"}
+              textAlign="left"
+              sx={{ fontWeight: "200" }}
+              width={"100%"}
+              fontStyle="italic"
+            >
+              {language.webLanguage === "PL" &&
+                consultationServiceData.pl.consultationSummary}
+              {language.webLanguage === "ENG" &&
+                consultationServiceData.en.consultationSummary}
+            </Typography>
           </Grid>
         </Grid>
       </Grid>

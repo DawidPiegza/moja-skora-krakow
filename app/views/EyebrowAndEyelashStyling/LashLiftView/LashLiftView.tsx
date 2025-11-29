@@ -20,7 +20,9 @@ import GoogleIcon from "@mui/icons-material/Google";
 import RepeatIcon from "@mui/icons-material/Repeat";
 import EventRepeatIcon from "@mui/icons-material/EventRepeat";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
-import lash_lift from "../../../../public/images/lash_lift.png";
+import lash_lift_1 from "../../../../public/images/lash_lift_1.jpg";
+import lash_lift_2 from "../../../../public/images/lash_lift_2.jpg";
+
 import lash_lift_effect_0 from "../../../../public/images/lash_lift_effect_0.png";
 import lash_lift_effect_1 from "../../../../public/images/lash_lift_effect_1.png";
 import lash_lift_effect_2 from "../../../../public/images/lash_lift_effect_2.png";
@@ -39,7 +41,13 @@ export default function LashLiftView() {
   const downMd = useMediaQuery(theme.breakpoints.down("md"));
   return (
     <Container maxWidth="xl">
-      <Grid container spacing={2} paddingTop={2} paddingBottom={"80px"}>
+      <Grid
+        container
+        spacing={2}
+        paddingTop={2}
+        paddingBottom={"80px"}
+        alignItems={"flex-start"}
+      >
         <Grid size={12}>
           <Breadcrumbs aria-label="breadcrumb">
             <Link
@@ -191,15 +199,15 @@ export default function LashLiftView() {
             </Box>
           </Grid>
         </Grid>
-        <Grid size={12} container p={1} alignItems={"center"}>
+        <Grid size={12} container p={1} alignItems={"stretch"}>
           <Grid size={downMd ? 12 : 4}>
             <Box
               component="img"
               sx={{
-                height: "auto",
+                height: downMd ? "auto" : "100%",
                 width: "auto",
               }}
-              src={lash_lift}
+              src={lash_lift_1}
             />
           </Grid>
           <Grid size={downMd ? 12 : 8} p={1} container spacing={3}>
@@ -261,6 +269,95 @@ export default function LashLiftView() {
         <Grid size={12}>
           <Divider />
         </Grid>
+        <Grid
+          size={downMd ? 12 : 8}
+          spacing={2}
+          container
+          alignItems={"flex-start"}
+        >
+          <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
+            <Typography
+              variant={downMd ? "body1" : "h6"}
+              textAlign="left"
+              sx={{ fontWeight: "200" }}
+              width={"100%"}
+              fontStyle="italic"
+            >
+              {language.webLanguage === "PL"
+                ? "CZYM JEST BOTOX RZĘS?"
+                : "WHAT IS LASH BOTOX?"}
+            </Typography>
+            <Typography
+              variant={downMd ? "body2" : "body1"}
+              textAlign="left"
+              width={"100%"}
+              gutterBottom
+            >
+              {language.webLanguage === "PL"
+                ? lashLiftDataPL.lashBotoxDescription
+                : lashLiftDataEN.lashBotoxDescription}
+            </Typography>
+          </Grid>
+          <Grid size={12}>
+            <Divider />
+          </Grid>
+          <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
+            <Typography
+              variant={downMd ? "body1" : "h6"}
+              textAlign="left"
+              sx={{ fontWeight: "200" }}
+              width={"100%"}
+              fontStyle="italic"
+            >
+              {language.webLanguage === "PL"
+                ? "ZALECENIA POZABIEGOWE"
+                : "POST-TREATMENT RECOMMENDATIONS"}
+            </Typography>
+            {language.webLanguage === "PL" &&
+              lashLiftDataPL.postTreatmentRecommendations.map(
+                (recommendation, index) => (
+                  <React.Fragment key={index}>
+                    <Typography
+                      variant={downMd ? "body2" : "body1"}
+                      textAlign="left"
+                      width="100%"
+                    >
+                      - {recommendation}
+                    </Typography>
+                  </React.Fragment>
+                )
+              )}
+            {language.webLanguage === "ENG" &&
+              lashLiftDataEN.postTreatmentRecommendations.map(
+                (recommendation, index) => (
+                  <React.Fragment key={index}>
+                    <Typography
+                      variant={downMd ? "body2" : "body1"}
+                      textAlign="left"
+                      width="100%"
+                    >
+                      - {recommendation}
+                    </Typography>
+                  </React.Fragment>
+                )
+              )}
+          </Grid>
+        </Grid>
+        <Grid size={downMd ? 12 : 4}>
+          <Box
+            component="img"
+            sx={{
+              height: "auto",
+              width: "auto",
+            }}
+            src={lash_lift_2}
+          />
+        </Grid>
+
+        <Grid size={12}>
+          <Divider />
+        </Grid>
+
         <Grid size={12} p={1} container spacing={3}>
           <Grid
             size={downMd ? 12 : 5}
@@ -358,76 +455,7 @@ export default function LashLiftView() {
                 </Typography>
               ))}
           </Grid>
-          <Grid size={12}>
-            <Divider />
-          </Grid>
-          <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
-            <Typography
-              variant={downMd ? "body1" : "h6"}
-              textAlign="left"
-              sx={{ fontWeight: "200" }}
-              width={"100%"}
-              fontStyle="italic"
-            >
-              {language.webLanguage === "PL"
-                ? "ZALECENIA POZABIEGOWE"
-                : "POST-TREATMENT RECOMMENDATIONS"}
-            </Typography>
-            {language.webLanguage === "PL" &&
-              lashLiftDataPL.postTreatmentRecommendations.map(
-                (recommendation, index) => (
-                  <React.Fragment key={index}>
-                    <Typography
-                      variant={downMd ? "body2" : "body1"}
-                      textAlign="left"
-                      width="100%"
-                    >
-                      - {recommendation}
-                    </Typography>
-                  </React.Fragment>
-                )
-              )}
-            {language.webLanguage === "ENG" &&
-              lashLiftDataEN.postTreatmentRecommendations.map(
-                (recommendation, index) => (
-                  <React.Fragment key={index}>
-                    <Typography
-                      variant={downMd ? "body2" : "body1"}
-                      textAlign="left"
-                      width="100%"
-                    >
-                      - {recommendation}
-                    </Typography>
-                  </React.Fragment>
-                )
-              )}
-          </Grid>
-          <Grid size={12}>
-            <Divider />
-          </Grid>
-          <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
-            <Typography
-              variant={downMd ? "body1" : "h6"}
-              textAlign="left"
-              sx={{ fontWeight: "200" }}
-              width={"100%"}
-              fontStyle="italic"
-            >
-              {language.webLanguage === "PL"
-                ? "CZYM JEST BOTOX RZĘS?"
-                : "WHAT IS LASH BOTOX?"}
-            </Typography>
-            <Typography
-              variant={downMd ? "body2" : "body1"}
-              textAlign="left"
-              width={"100%"}
-              gutterBottom
-            >
-              {language.webLanguage === "PL"
-                ? lashLiftDataPL.lashBotoxDescription
-                : lashLiftDataEN.lashBotoxDescription}
-            </Typography>
-          </Grid>
+
           <Grid size={12}>
             <Divider />
           </Grid>
