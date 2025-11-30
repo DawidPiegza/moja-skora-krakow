@@ -3,9 +3,9 @@ import type { ILipAugmentationAndContouring } from "../utils/interfaces/ILipAugm
 export const lipAugmentationAndContouringDataPL: ILipAugmentationAndContouring =
   {
     infoTable: {
-      recommendedNumber: "1 zabieg",
+      recommendedNumber: "Indywidualnie",
       timeOfTreatment: "45–60 minut",
-      intervals: "co 3 miesiące",
+      intervals: "Indywidualnie",
     },
     effectsOfTratment: [
       "Likwidacja asymetrii",
@@ -96,9 +96,9 @@ export const lipAugmentationAndContouringDataPL: ILipAugmentationAndContouring =
 export const lipAugmentationAndContouringDataEN: ILipAugmentationAndContouring =
   {
     infoTable: {
-      recommendedNumber: "1 treatment",
+      recommendedNumber: "Individually",
       timeOfTreatment: "45–60 minutes",
-      intervals: "3 months",
+      intervals: "Individually",
     },
     effectsOfTratment: [
       "Correction of asymmetry",

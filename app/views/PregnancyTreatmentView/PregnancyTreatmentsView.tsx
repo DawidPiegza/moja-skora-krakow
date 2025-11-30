@@ -168,10 +168,7 @@ export default function PregnancyTreatmentsView() {
                       minWidth: 0,
                     }}
                   >
-                    <Typography
-                      component="span"
-                      variant={downMd ? "body2" : "body1"}
-                    >
+                    <Typography variant={"body2"}>
                       {language.webLanguage === "PL"
                         ? link.linkName
                         : link.linkNameENG}

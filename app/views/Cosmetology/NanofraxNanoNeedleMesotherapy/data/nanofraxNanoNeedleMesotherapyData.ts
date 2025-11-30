@@ -21,9 +21,9 @@ export const nanofraxNanoNeedleMesotherapyData: INanofraxNanoNeedleMesotherapy =
     ],
     advantagesOfTreatment: {
       advantages: [
-        "łagodna alternatywa dla klasycznej mezoterapii mikroigłowej",
-        "wstęp do silniejszych terapii przebudowujących",
-        "całoroczna forma profilaktycznej pielęgnacji skóry",
+        "Łagodna alternatywa dla klasycznej mezoterapii mikroigłowej",
+        "Wstęp do silniejszych terapii przebudowujących",
+        "Całoroczna forma profilaktycznej pielęgnacji skóry",
       ],
       additionalInfo:
         "Podczas zabiegu do naskórka dostarczane są odpowiednio dobrane preparaty – bogate w kwas hialuronowy, witaminy, peptydy i antyoksydanty – które intensywnie nawilżają, regenerują i poprawiają kondycję skóry. Dzięki nanonakłuciom zwiększa się wchłanianie składników aktywnych, a naturalne procesy naprawcze zostają pobudzone.",
@@ -37,7 +37,7 @@ export const nanofraxNanoNeedleMesotherapyData: INanofraxNanoNeedleMesotherapy =
       {
         title: "KONSULTACJA",
         description:
-          "Zabieg rozpoczyna się od konsultacji z kosmetologiem, który przeprowadza szczegółowy wywiad, pytając o możliwe przeciwwskazania, obawy oraz oczekiwania, Na podstawie uzyskanych informacji oraz dokładnej oceny stanu skóry, kosmetolog dobiera odpowiedni preparat, dopasowany do indywidualnych potrzeb i problemów skóry.",
+          "Zabieg rozpoczyna się od konsultacji z kosmetologiem, który przeprowadza szczegółowy wywiad, pytając o możliwe przeciwwskazania, obawy oraz oczekiwania. Na podstawie uzyskanych informacji oraz dokładnej oceny stanu skóry, kosmetolog dobiera odpowiedni preparat, dopasowany do indywidualnych potrzeb i problemów skóry.",
       },
       {
         title: "OCZYSZCZENIE SKÓRY",

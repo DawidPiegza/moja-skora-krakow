@@ -23,7 +23,7 @@ export const nanofraxMesotherapyDataPL: INanofraxMesotherapyData = {
   causesOfEfficiency: `Dzięki wykorzystaniu najwyższej jakości składników aktywnych, mezoterapia mikroigłowa NANOFRAX to zabieg, który przynosi spektakularne efekty odmłodzenia oraz poprawy kondycji skóry. W trakcie zabiegu aplikowane są indywidualnie dobrane preparaty, które stymulują regenerację skóry, poprawiają jej wygląd oraz opóźniają procesy starzenia.`,
 
   effectsOfTratment: [
-    "Dtymuluje produkcję kolagenu i elastyny",
+    "Stymuluje produkcję kolagenu i elastyny",
     "Redukuje oznaki starzenia",
     "Wzmacnia naczynia krwionośne, łagodzi rumień",
     "Poprawia jędrność i kondycję skóry",

@@ -523,6 +523,33 @@ export default function NeedleMesotherapyView() {
               </React.Fragment>
             )}
           </Grid>
+          <Grid size={12}>
+            <Divider />
+          </Grid>
+          <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
+            <Typography
+              variant={downMd ? "body1" : "h6"}
+              textAlign="left"
+              sx={{ fontWeight: "200" }}
+              width={"100%"}
+              fontStyle="italic"
+            >
+              {language.webLanguage === "PL"
+                ? "MOŻLIWOŚĆ ZAKUPU PAKIETU"
+                : "POSSIBILITY OF PURCHASING A PACKAGE"}
+            </Typography>
+            <Typography
+              variant={downMd ? "body2" : "body1"}
+              textAlign="left"
+              width="100%"
+              gutterBottom
+            >
+              {language.webLanguage === "PL" &&
+                "W naszym gabinecie możesz skorzystać z pakietu zabiegów, który zawiera bazową, rekomendowaną liczbę wizyt potrzebnych do uzyskania optymalnych efektów. Zakup pakietu to nie tylko wygoda, ale również korzyść finansowa – oszczędzasz w porównaniu do pojedynczych wizyt. Zapytaj o dostępne opcje pakietów podczas konsultacji – pomożemy dobrać najlepszy wariant. Dostępne warianty pakietowe można znaleźć również w systemie rezerwacyjnym Booksy."}
+              {language.webLanguage !== "PL" &&
+                "In our clinic, you can take advantage of a treatment package that includes the basic, recommended number of visits needed to achieve optimal results. Purchasing a package offers not only convenience but also financial benefits — you save compared to individual appointments. Ask about available package options during your consultation — we will help you choose the best variant. Package options can also be found in the Booksy booking system."}
+            </Typography>
+          </Grid>
         </Grid>
       </Grid>
       <Box

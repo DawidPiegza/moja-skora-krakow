@@ -508,16 +508,33 @@ export default function NanofraxNanoNeedleMesotherapy() {
                 ? "PIELĘGNACJA POZABIEGOWA"
                 : "POST-TREATMENT CARE"}
             </Typography>
-            <Typography
-              variant={downMd ? "body2" : "body1"}
-              textAlign="left"
-              width="100%"
-              gutterBottom
-            >
-              {language.webLanguage === "PL"
-                ? nanofraxNanoNeedleMesotherapyData.postTreatmentCare
-                : nanofraxNanoNeedleMesotherapyDataEN.postTreatmentCare}
-            </Typography>
+
+            {language.webLanguage === "PL" &&
+              (
+                nanofraxNanoNeedleMesotherapyData.postTreatmentCare as string[]
+              ).map((recomendation, index) => (
+                <Typography
+                  variant={downMd ? "body2" : "body1"}
+                  textAlign="left"
+                  width="100%"
+                  key={index}
+                >
+                  - {recomendation}
+                </Typography>
+              ))}
+            {language.webLanguage === "ENG" &&
+              (
+                nanofraxNanoNeedleMesotherapyDataEN.postTreatmentCare as string[]
+              ).map((recomendation, index) => (
+                <Typography
+                  variant={downMd ? "body2" : "body1"}
+                  textAlign="left"
+                  width="100%"
+                  key={index}
+                >
+                  - {recomendation}
+                </Typography>
+              ))}
           </Grid>
           <Grid size={12}>
             <Divider />

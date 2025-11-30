@@ -22,6 +22,9 @@ import {
   oxygenatingTrioDataEN,
 } from "./data/oxygenatingTrioData";
 import oxygenating_trio from "../../../../public/images/oxygenating_trio.png";
+import RepeatIcon from "@mui/icons-material/Repeat";
+import EventRepeatIcon from "@mui/icons-material/EventRepeat";
+import AccessTimeIcon from "@mui/icons-material/AccessTime";
 
 export default function OxygenatingTrioView() {
   const { language } = React.useContext(WebsiteLanguageContext);
@@ -96,6 +99,85 @@ export default function OxygenatingTrioView() {
                 ? "Oxygenating Trio".toUpperCase()
                 : "Oxygenating Trio".toUpperCase()}
             </Typography>
+          </Grid>
+        </Grid>
+        <Grid size={12} container>
+          <Grid size={downMd ? 12 : 4}>
+            <Box
+              p={1}
+              width="100%"
+              display="flex"
+              flexDirection="column"
+              justifyContent="center"
+              component={Paper}
+              variant="outlined"
+              textAlign="center"
+              alignItems="center"
+              rowGap={0.5}
+              height={"100%"}
+            >
+              <AccessTimeIcon fontSize="medium" sx={{ color: "#616161" }} />
+              <Typography variant="body1" fontWeight={400}>
+                {language.webLanguage === "PL" ? "45 minut" : "45 minutes"}
+              </Typography>
+              <Typography variant="body2" fontWeight={300}>
+                {language.webLanguage === "PL"
+                  ? "CZAS TRWANIA ZABIEGU"
+                  : "DURATION OF THE TREATMENT"}
+              </Typography>
+            </Box>
+          </Grid>
+          <Grid size={downMd ? 12 : 4}>
+            <Box
+              p={1}
+              width="100%"
+              display="flex"
+              flexDirection="column"
+              justifyContent="center"
+              component={Paper}
+              variant="outlined"
+              textAlign="center"
+              alignItems="center"
+              rowGap={0.5}
+              height={"100%"}
+            >
+              <RepeatIcon fontSize="medium" sx={{ color: "#616161" }} />
+              <Typography variant="body1" fontWeight={400}>
+                {language.webLanguage === "PL"
+                  ? "4-6 zabiegów"
+                  : "4-6 treatments"}
+              </Typography>
+              <Typography variant="body2" fontWeight={300}>
+                {language.webLanguage === "PL"
+                  ? "REKOMENDOWANA LICZBA ZABIEGÓW"
+                  : "RECOMMENDED NUMBER OF TREATMENTS"}
+              </Typography>
+            </Box>
+          </Grid>
+          <Grid size={downMd ? 12 : 4}>
+            <Box
+              p={1}
+              width="100%"
+              display="flex"
+              flexDirection="column"
+              justifyContent="center"
+              component={Paper}
+              variant="outlined"
+              textAlign="center"
+              alignItems="center"
+              rowGap={0.5}
+              height={"100%"}
+            >
+              <EventRepeatIcon fontSize="medium" sx={{ color: "#616161" }} />
+              <Typography variant="body1" fontWeight={400}>
+                {language.webLanguage === "PL" ? "2-4 tygodnie" : "2-4 weeks"}
+              </Typography>
+              <Typography variant="body2" fontWeight={300}>
+                {language.webLanguage === "PL"
+                  ? "ODSTĘPY POMIĘDZY ZABIEGAMI"
+                  : "INTERVALS BETWEEN TREATMENTS"}
+              </Typography>
+            </Box>
           </Grid>
         </Grid>
         <Grid size={12} container p={1} alignItems={"sttretch"}>
