@@ -4,6 +4,8 @@ import {
   AccordionSummary,
   Box,
   Breadcrumbs,
+  Card,
+  CardMedia,
   Container,
   Divider,
   Grid,
@@ -39,6 +41,7 @@ import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import { AnimatePresence, motion } from "framer-motion";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import moja_skora_movie from "../../../public/images/moja_skora_movie.mp4";
 
 export default function AboutUsView() {
   const { language } = React.useContext(WebsiteLanguageContext);
@@ -485,6 +488,29 @@ export default function AboutUsView() {
                 }}
                 aboutMeText={AboutBasiaText}
               />
+            </Grid>
+            <Grid size={12}>
+              <Divider />
+            </Grid>
+            <Grid
+              size={downMd ? 12 : 6}
+              display={"flex"}
+              alignItems="center"
+              justifyContent={"flex-start"}
+              p={1}
+            >
+              <Card sx={{ padding: 1, width: "100%" }}>
+                <CardMedia
+                  component="video"
+                  sx={{
+                    height: "auto",
+                  }}
+                  src={moja_skora_movie}
+                  autoPlay
+                  loop
+                  muted
+                />
+              </Card>
             </Grid>
           </Grid>
         </Container>

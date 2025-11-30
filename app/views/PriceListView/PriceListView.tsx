@@ -22,7 +22,7 @@ import {
   useMediaQuery,
   useTheme,
 } from "@mui/material";
-import { PriceList } from "./data/PriceList";
+import { PriceList, PriceListEN } from "./data/PriceList";
 import React, { useEffect, useState } from "react";
 import { WebsiteLanguageContext } from "../../shared/contexts/LanguageContext";
 import FacebookIcon from "@mui/icons-material/Facebook";
@@ -44,32 +44,61 @@ export default function PriceListView() {
   const [inputWord, setInputWord] = useState<string>("");
 
   useEffect(() => {
-    if (inputWord !== "") {
-      const filteredCategories = PriceList.categories
-        .map((category) => {
-          if (
-            category.category.toLowerCase().includes(inputWord.toLowerCase())
-          ) {
-            return category;
-          } else {
-            return {
-              ...category,
-              priceListItems: category.priceListItems.filter((el) =>
-                el.itemName.toLowerCase().includes(inputWord.toLowerCase())
-              ),
-            };
-          }
-        })
-        .filter((cat) => cat !== undefined && cat.priceListItems.length > 0);
+    if (language.webLanguage === "PL") {
+      if (inputWord !== "") {
+        const filteredCategories = PriceList.categories
+          .map((category) => {
+            if (
+              category.category.toLowerCase().includes(inputWord.toLowerCase())
+            ) {
+              return category;
+            } else {
+              return {
+                ...category,
+                priceListItems: category.priceListItems.filter((el) =>
+                  el.itemName.toLowerCase().includes(inputWord.toLowerCase())
+                ),
+              };
+            }
+          })
+          .filter((cat) => cat !== undefined && cat.priceListItems.length > 0);
 
-      setFilteredPriceList({
-        ...PriceList,
-        categories: filteredCategories,
-      });
-    } else {
-      setFilteredPriceList({ ...PriceList });
+        setFilteredPriceList({
+          ...PriceList,
+          categories: filteredCategories,
+        });
+      } else {
+        setFilteredPriceList({ ...PriceList });
+      }
     }
-  }, [inputWord]);
+    if (language.webLanguage === "ENG") {
+      if (inputWord !== "") {
+        const filteredCategories = PriceListEN.categories
+          .map((category) => {
+            if (
+              category.category.toLowerCase().includes(inputWord.toLowerCase())
+            ) {
+              return category;
+            } else {
+              return {
+                ...category,
+                priceListItems: category.priceListItems.filter((el) =>
+                  el.itemName.toLowerCase().includes(inputWord.toLowerCase())
+                ),
+              };
+            }
+          })
+          .filter((cat) => cat !== undefined && cat.priceListItems.length > 0);
+
+        setFilteredPriceList({
+          ...PriceList,
+          categories: filteredCategories,
+        });
+      } else {
+        setFilteredPriceList({ ...PriceListEN });
+      }
+    }
+  }, [inputWord, language.webLanguage]);
 
   return (
     <Container maxWidth="xl">

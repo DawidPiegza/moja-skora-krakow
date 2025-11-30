@@ -181,18 +181,18 @@ export default function GlassSkinView() {
             </Box>
           </Grid>
         </Grid>
-        <Grid size={12} container p={1}>
+        <Grid size={12} container p={1} alignItems={"stretch"}>
           <Grid size={downMd ? 12 : 5}>
             <Box
               component="img"
               sx={{
                 height: downMd ? "auto" : "100%",
-                width: downMd ? "auto" : "100%",
+                width: "auto",
               }}
               src={glass_skin}
             />
           </Grid>
-          <Grid size={downMd ? 12 : 7} p={1} container spacing={3}>
+          <Grid size={downMd ? 12 : 7} p={1} container spacing={2}>
             <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
               <Typography
                 variant={downMd ? "body2" : "body1"}

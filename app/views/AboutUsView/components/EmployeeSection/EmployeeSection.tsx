@@ -61,7 +61,7 @@ export default function EmployeeSection({
             </Typography>
           </Grid>
           <Grid
-            size={downLG ? 12 : 12}
+            size={12}
             display={"flex"}
             alignItems="center"
             justifyContent={"flex-start"}
@@ -79,7 +79,6 @@ export default function EmployeeSection({
                   },
                 }}
                 image={photoURL}
-                alt="Description of the image"
               />
             </Card>
           </Grid>
