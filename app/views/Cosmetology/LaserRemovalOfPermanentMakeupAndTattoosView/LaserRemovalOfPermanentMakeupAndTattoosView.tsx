@@ -212,7 +212,7 @@ export default function LipAugmentationAndContouringView() {
               src={laser_removal_1}
             />
           </Grid>
-          <Grid size={downMd ? 12 : 8} p={1} container spacing={2}>
+          <Grid size={downMd ? 12 : 8} p={1} container spacing={1}>
             <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
               <Typography
                 variant={downMd ? "body2" : "body1"}

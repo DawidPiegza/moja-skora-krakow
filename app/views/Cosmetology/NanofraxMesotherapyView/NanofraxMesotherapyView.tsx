@@ -186,17 +186,12 @@ export default function NanofraxMesotherapyView() {
             </Box>
           </Grid>
         </Grid>
-        <Grid
-          size={12}
-          container
-          p={1}
-          alignItems={downMd ? "flex-start" : "stretch"}
-        >
+        <Grid size={12} container p={1} alignItems={"stretch"}>
           <Grid size={downMd ? 12 : 4}>
             <Box
               component="img"
               sx={{
-                height: "auto",
+                height: downMd ? "auto" : "100%",
                 width: "auto",
               }}
               src={nanofrax_mesotherapy}

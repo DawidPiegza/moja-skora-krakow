@@ -269,12 +269,7 @@ export default function LashLiftView() {
         <Grid size={12}>
           <Divider />
         </Grid>
-        <Grid
-          size={downMd ? 12 : 8}
-          spacing={2}
-          container
-          alignItems={"flex-start"}
-        >
+        <Grid size={downMd ? 12 : 8} spacing={2} container>
           <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
             <Typography
               variant={downMd ? "body1" : "h6"}
@@ -347,7 +342,7 @@ export default function LashLiftView() {
           <Box
             component="img"
             sx={{
-              height: "auto",
+              height: downMd ? "auto" : "100%",
               width: "auto",
             }}
             src={lash_lift_2}

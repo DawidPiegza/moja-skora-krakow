@@ -204,7 +204,7 @@ export default function LipAugmentationAndContouringView() {
             </Box>
           </Grid>
         </Grid>
-        <Grid size={12} container p={1} alignItems={"flex-start"}>
+        <Grid size={12} container p={1} alignItems={"stretch"}>
           <Grid size={downMd ? 12 : 4}>
             <Box
               component="img"
@@ -215,7 +215,7 @@ export default function LipAugmentationAndContouringView() {
               src={lip_augmentation_and_contouring_1}
             />
           </Grid>
-          <Grid size={downMd ? 12 : 8} p={1} container spacing={3}>
+          <Grid size={downMd ? 12 : 8} p={1} container spacing={1}>
             <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
               <Typography
                 variant={downMd ? "body2" : "body1"}
@@ -317,7 +317,129 @@ export default function LipAugmentationAndContouringView() {
         <Grid size={12}>
           <Divider />
         </Grid>
-        <Grid size={12} p={1} container spacing={3}>
+        <Grid size={12} p={1} container spacing={3} alignItems={"stretch"}>
+          <Grid size={downMd ? 12 : 8} container alignItems={"flex-start"}>
+            <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
+              <Typography
+                variant={downMd ? "body1" : "h6"}
+                textAlign="left"
+                sx={{ fontWeight: "200" }}
+                width={"100%"}
+                fontStyle="italic"
+              >
+                {language.webLanguage === "PL"
+                  ? "ZALECENIA POZABIEGOWE"
+                  : "POST-TREATMENT RECOMMENDATIONS"}
+              </Typography>
+              {language.webLanguage === "PL" &&
+                lipAugmentationAndContouringDataPL.postTreatmentRecommendations.map(
+                  (recomendation, index) => (
+                    <Typography
+                      variant={downMd ? "body2" : "body1"}
+                      textAlign="left"
+                      width="100%"
+                      key={index}
+                    >
+                      - {recomendation}
+                    </Typography>
+                  )
+                )}
+              {language.webLanguage !== "PL" &&
+                lipAugmentationAndContouringDataEN.postTreatmentRecommendations.map(
+                  (recomendation, index) => (
+                    <Typography
+                      variant={downMd ? "body2" : "body1"}
+                      textAlign="left"
+                      width="100%"
+                      key={index}
+                    >
+                      - {recomendation}
+                    </Typography>
+                  )
+                )}
+            </Grid>
+            <Grid size={12}>
+              <Divider />
+            </Grid>
+            <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
+              <Typography
+                variant={downMd ? "body1" : "h6"}
+                textAlign="left"
+                sx={{ fontWeight: "200" }}
+                width={"100%"}
+                fontStyle="italic"
+              >
+                {language.webLanguage === "PL"
+                  ? "PIELĘGNACJA UST PO ZABIEGU"
+                  : "POST-TREATMENT CARE"}
+              </Typography>
+              {language.webLanguage === "PL" &&
+                lipAugmentationAndContouringDataPL.postTreatmentCare.map(
+                  (care, index) => (
+                    <Typography
+                      variant={downMd ? "body2" : "body1"}
+                      textAlign="left"
+                      width="100%"
+                      key={index}
+                    >
+                      - {care}
+                    </Typography>
+                  )
+                )}
+              {language.webLanguage !== "PL" &&
+                lipAugmentationAndContouringDataEN.postTreatmentCare.map(
+                  (care, index) => (
+                    <Typography
+                      variant={downMd ? "body2" : "body1"}
+                      textAlign="left"
+                      width="100%"
+                      key={index}
+                    >
+                      - {care}
+                    </Typography>
+                  )
+                )}
+            </Grid>
+            <Grid size={12}>
+              <Divider />
+            </Grid>
+            <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
+              <Typography
+                variant={downMd ? "body1" : "h6"}
+                textAlign="left"
+                sx={{ fontWeight: "200" }}
+                width={"100%"}
+                fontStyle="italic"
+              >
+                {language.webLanguage === "PL"
+                  ? "CZAS REKONWALESCENCJI"
+                  : "RECOVERY TIME"}
+              </Typography>
+
+              <Typography
+                variant={downMd ? "body2" : "body1"}
+                textAlign="left"
+                width="100%"
+              >
+                {language.webLanguage === "PL"
+                  ? lipAugmentationAndContouringDataPL.convalescence
+                  : lipAugmentationAndContouringDataEN.convalescence}
+              </Typography>
+            </Grid>
+          </Grid>
+          <Grid size={downMd ? 12 : 4}>
+            <Box
+              component="img"
+              sx={{
+                height: downMd ? "auto" : "100%",
+                width: "auto",
+              }}
+              src={lip_augmentation_and_contouring_2}
+            />
+          </Grid>
+          <Grid size={12}>
+            <Divider />
+          </Grid>
           <Grid
             size={downMd ? 12 : 5}
             display="flex"
@@ -475,128 +597,6 @@ export default function LipAugmentationAndContouringView() {
                   </React.Fragment>
                 )
               )}
-          </Grid>
-          <Grid size={12}>
-            <Divider />
-          </Grid>
-          <Grid size={downMd ? 12 : 8} container alignItems={"flex-start"}>
-            <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
-              <Typography
-                variant={downMd ? "body1" : "h6"}
-                textAlign="left"
-                sx={{ fontWeight: "200" }}
-                width={"100%"}
-                fontStyle="italic"
-              >
-                {language.webLanguage === "PL"
-                  ? "ZALECENIA POZABIEGOWE"
-                  : "POST-TREATMENT RECOMMENDATIONS"}
-              </Typography>
-              {language.webLanguage === "PL" &&
-                lipAugmentationAndContouringDataPL.postTreatmentRecommendations.map(
-                  (recomendation, index) => (
-                    <Typography
-                      variant={downMd ? "body2" : "body1"}
-                      textAlign="left"
-                      width="100%"
-                      key={index}
-                    >
-                      - {recomendation}
-                    </Typography>
-                  )
-                )}
-              {language.webLanguage !== "PL" &&
-                lipAugmentationAndContouringDataEN.postTreatmentRecommendations.map(
-                  (recomendation, index) => (
-                    <Typography
-                      variant={downMd ? "body2" : "body1"}
-                      textAlign="left"
-                      width="100%"
-                      key={index}
-                    >
-                      - {recomendation}
-                    </Typography>
-                  )
-                )}
-            </Grid>
-            <Grid size={12}>
-              <Divider />
-            </Grid>
-            <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
-              <Typography
-                variant={downMd ? "body1" : "h6"}
-                textAlign="left"
-                sx={{ fontWeight: "200" }}
-                width={"100%"}
-                fontStyle="italic"
-              >
-                {language.webLanguage === "PL"
-                  ? "PIELĘGNACJA UST PO ZABIEGU"
-                  : "POST-TREATMENT CARE"}
-              </Typography>
-              {language.webLanguage === "PL" &&
-                lipAugmentationAndContouringDataPL.postTreatmentCare.map(
-                  (care, index) => (
-                    <Typography
-                      variant={downMd ? "body2" : "body1"}
-                      textAlign="left"
-                      width="100%"
-                      key={index}
-                    >
-                      - {care}
-                    </Typography>
-                  )
-                )}
-              {language.webLanguage !== "PL" &&
-                lipAugmentationAndContouringDataEN.postTreatmentCare.map(
-                  (care, index) => (
-                    <Typography
-                      variant={downMd ? "body2" : "body1"}
-                      textAlign="left"
-                      width="100%"
-                      key={index}
-                    >
-                      - {care}
-                    </Typography>
-                  )
-                )}
-            </Grid>
-            <Grid size={12}>
-              <Divider />
-            </Grid>
-            <Grid size={12} display="flex" flexDirection={"column"} rowGap={2}>
-              <Typography
-                variant={downMd ? "body1" : "h6"}
-                textAlign="left"
-                sx={{ fontWeight: "200" }}
-                width={"100%"}
-                fontStyle="italic"
-              >
-                {language.webLanguage === "PL"
-                  ? "CZAS REKONWALESCENCJI"
-                  : "RECOVERY TIME"}
-              </Typography>
-
-              <Typography
-                variant={downMd ? "body2" : "body1"}
-                textAlign="left"
-                width="100%"
-              >
-                {language.webLanguage === "PL"
-                  ? lipAugmentationAndContouringDataPL.convalescence
-                  : lipAugmentationAndContouringDataEN.convalescence}
-              </Typography>
-            </Grid>
-          </Grid>
-          <Grid size={downMd ? 12 : 4}>
-            <Box
-              component="img"
-              sx={{
-                height: downMd ? "auto" : "100%",
-                width: "auto",
-              }}
-              src={lip_augmentation_and_contouring_2}
-            />
           </Grid>
 
           <Grid size={12}>
