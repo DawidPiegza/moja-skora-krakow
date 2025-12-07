@@ -499,15 +499,11 @@ export default function AboutUsView() {
               justifyContent={"flex-start"}
               p={1}
             >
-              <Card sx={{ padding: 1, width: "100%" }}>
+              <Card sx={{ padding: 3, width: "100%" }}>
                 <CardMedia
                   component="video"
                   sx={{
                     height: "auto",
-                    position: "relative",
-                    zIndex: 0,
-                    overflow: "hidden",
-                    WebkitTransform: "translateZ(0)",
                   }}
                   src={moja_skora_movie}
                   autoPlay
