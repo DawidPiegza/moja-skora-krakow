@@ -518,7 +518,7 @@ export default function AboutUsView() {
               p={3}
               container
               direction={"column"}
-              spacing={3}
+              spacing={!downMd ? 3 : 1}
               sx={{
                 justifyContent: "flex-start",
                 alignItems: "flex-start",
@@ -555,7 +555,14 @@ export default function AboutUsView() {
                 </Typography>
               </Grid>
               <Grid size={12}>
-                <Typography variant="body1" bgcolor={"yellow"} gutterBottom>
+                <Typography
+                  variant={downMd ? "body1" : "h6"}
+                  textAlign="left"
+                  sx={{ fontWeight: "200" }}
+                  width={"100%"}
+                  fontStyle="italic"
+                  gutterBottom
+                >
                   {language.webLanguage === "PL" &&
                     "Tutaj zaczyna się Twoja droga do promiennej, zadbanej cery."}
                   {language.webLanguage === "ENG" &&
