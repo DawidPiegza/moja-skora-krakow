@@ -30,7 +30,6 @@ import pca_skin_effect_1 from "../../../../public/images/pca_skin_effect_1.png";
 import pca_skin_effect_2 from "../../../../public/images/pca_skin_effect_2.png";
 import pca_skin_effect_3 from "../../../../public/images/pca_skin_effect_3.png";
 import pca_skin_effect_5 from "../../../../public/images/pca_skin_effect_5.png";
-import pca_skin_effect_6 from "../../../../public/images/pca_skin_effect_6.png";
 import pca_skin_effect_7 from "../../../../public/images/pca_skin_effect_7.png";
 import pca_skin_effect_8 from "../../../../public/images/pca_skin_effect_8.jpg";
 import pca_skin_effect_9 from "../../../../public/images/pca_skin_effect_9.png";
@@ -638,18 +637,6 @@ export default function PcaSkinView() {
                     width: "100%",
                   }}
                   src={pca_skin_effect_3}
-                />
-              </Grid>
-
-              <Grid size={downMd ? 12 : 4}>
-                <Box
-                  p={2}
-                  component="img"
-                  sx={{
-                    height: "100%",
-                    width: "100%",
-                  }}
-                  src={pca_skin_effect_6}
                 />
               </Grid>
               <Grid size={downMd ? 12 : 4}>

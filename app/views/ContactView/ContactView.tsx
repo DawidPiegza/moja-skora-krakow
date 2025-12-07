@@ -326,26 +326,7 @@ export default function ContactView() {
                         },
                       }}
                     />
-                    <TextField
-                      placeholder={
-                        language.webLanguage === "PL"
-                          ? "Numer kontaktowy"
-                          : "Contact Number"
-                      }
-                      variant="standard"
-                      fullWidth
-                      size={downMd ? "small" : "medium"}
-                      slotProps={{
-                        input: {
-                          sx: (theme) => ({
-                            ...theme.typography.body2,
-                            "&::placeholder": {
-                              ...theme.typography.body2,
-                            },
-                          }),
-                        },
-                      }}
-                    />
+
                     <TextField
                       placeholder={
                         language.webLanguage === "PL"

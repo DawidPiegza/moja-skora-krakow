@@ -504,13 +504,75 @@ export default function AboutUsView() {
                   component="video"
                   sx={{
                     height: "auto",
+                    position: "relative",
+                    zIndex: 0,
+                    overflow: "hidden",
+                    WebkitTransform: "translateZ(0)",
                   }}
                   src={moja_skora_movie}
                   autoPlay
                   loop
                   muted
+                  playsInline
                 />
               </Card>
+            </Grid>
+            <Grid
+              size={downMd ? 12 : 6}
+              p={3}
+              container
+              direction={"column"}
+              spacing={3}
+              sx={{
+                justifyContent: "flex-start",
+                alignItems: "flex-start",
+              }}
+            >
+              <Grid size={12}>
+                <Typography
+                  variant={downMd ? "body1" : "h6"}
+                  textAlign="left"
+                  sx={{ fontWeight: "200" }}
+                  width={"100%"}
+                  fontStyle="italic"
+                  gutterBottom
+                >
+                  {language.webLanguage === "PL" &&
+                    "Moja Skóra to miejsce, w którym wiedza spotyka się z troską o Twoją skórę. Pracujemy w oparciu o doświadczenie i świadome terapie. Zawsze indywidualnie, z uważnością i szacunkiem dla potrzeb skóry. "}
+                  {language.webLanguage === "ENG" &&
+                    "Moja Skóra is a place where knowledge meets care for your skin. We work based on experience and conscious therapies. Always individually, with attention and respect for the skin's needs. "}
+                </Typography>
+              </Grid>
+              <Grid size={12}>
+                <Typography
+                  variant={downMd ? "body1" : "h6"}
+                  textAlign="left"
+                  sx={{ fontWeight: "200" }}
+                  width={"100%"}
+                  fontStyle="italic"
+                  gutterBottom
+                >
+                  {language.webLanguage === "PL" &&
+                    "Wierzymy, że zdrowa skóra to proces, a naszą estetykę budujemy na naturalnych efektach, dlatego każdy etap prowadzimy z pełnym zaangażowaniem. "}
+                  {language.webLanguage === "ENG" &&
+                    "We believe that healthy skin is a process, and we build our aesthetics on natural results, which is why we approach every step with full commitment. "}
+                </Typography>
+              </Grid>
+              <Grid size={12}>
+                <Typography
+                  variant={downMd ? "body1" : "h6"}
+                  textAlign="left"
+                  sx={{ fontWeight: "200" }}
+                  width={"100%"}
+                  fontStyle="italic"
+                  gutterBottom
+                >
+                  {language.webLanguage === "PL" &&
+                    "Tutaj zaczyna się Twoja droga do promiennej, zadbanej cery."}
+                  {language.webLanguage === "ENG" &&
+                    "This is where your journey to radiant, well-cared-for skin begins."}
+                </Typography>
+              </Grid>
             </Grid>
           </Grid>
         </Container>
