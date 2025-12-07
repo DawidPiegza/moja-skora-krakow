@@ -555,14 +555,7 @@ export default function AboutUsView() {
                 </Typography>
               </Grid>
               <Grid size={12}>
-                <Typography
-                  variant={downMd ? "body1" : "h6"}
-                  textAlign="left"
-                  sx={{ fontWeight: "200" }}
-                  width={"100%"}
-                  fontStyle="italic"
-                  gutterBottom
-                >
+                <Typography variant="body1" bgcolor={"yellow"} gutterBottom>
                   {language.webLanguage === "PL" &&
                     "Tutaj zaczyna się Twoja droga do promiennej, zadbanej cery."}
                   {language.webLanguage === "ENG" &&
