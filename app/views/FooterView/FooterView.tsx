@@ -148,7 +148,7 @@ export default function FooterView() {
           <IconButton
             size="large"
             sx={{ width: "max-content" }}
-            href="https://share.google/32LRhJnCcYcSInxw7"
+            href="https://maps.app.goo.gl/DthUc2eKTyvEEHFN8?g_st=am"
             target="blank"
           >
             <GoogleIcon />
